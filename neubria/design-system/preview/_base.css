@@ -1,0 +1,12 @@
+/* Shared specimen card styles. Tokens come from ../colors_and_type.css (never redefined here). */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg-base); }
+body { font-family: var(--font-sans); color: var(--text-primary); padding: 24px 28px; -webkit-font-smoothing: antialiased; }
+.card-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin: 0 0 14px; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
+.sw { width: 110px; }
+.sw .chip { height: 72px; border: 1px solid rgba(0,0,0,0.06); }
+.sw .name { font-size: 12px; font-weight: 500; color: var(--ink); margin-top: 8px; }
+.sw .hex { font-size: 11px; color: var(--text-secondary); letter-spacing: 0.04em; }
+.sw .use { font-size: 10px; color: var(--text-muted); line-height: 1.4; margin-top: 2px; }
+.label { font-size: 10px; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }

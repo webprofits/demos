@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeuBiotic Her - probiotic for women | Neubria</title>
+<meta name="description" content="NeuBiotic Her: 4 clinically researched strains, 25 billion live cultures per capsule, specially formulated for women's intimate health.">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg-base); font-family: var(--font-sans); color: var(--text-primary); font-size: var(--fs-body); line-height: var(--lh-body); letter-spacing: var(--tracking-body); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--brand); }
+  h1, h2, h3, h4 { margin: 0; font-weight: var(--fw-regular); color: var(--ink); letter-spacing: 0; }
+  p { margin: 0; }
+  .wrap { max-width: var(--wrap-max); margin: 0 auto; padding: 0 var(--gutter-md); }
+
+  /* Utility bar + header (mirrors the live theme) */
+  .utility { background: var(--bg-charcoal); color: #fff; text-align: center; font-size: 12px; padding: 9px 16px; letter-spacing: 0.06em; }
+  .utility a { color: #fff; text-decoration: none; }
+  .header { border-bottom: 1px solid var(--border-soft); }
+  .header__top { display: flex; align-items: center; justify-content: space-between; padding: 18px var(--gutter-md); max-width: var(--wrap-max); margin: 0 auto; }
+  .header__top img { width: 160px; }
+  .header__meta { font-size: 13px; color: var(--text-primary); display: flex; gap: 22px; }
+  .header__meta a { color: var(--text-primary); text-decoration: none; }
+  .nav { background: var(--brand); }
+  .nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 36px; }
+  .nav a { display: block; white-space: nowrap; color: #fff; font-size: 14px; line-height: 21px; padding: 12px 0; text-decoration: none; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 620px; }
+  .hero__media { background: var(--berry); position: relative; overflow: hidden; }
+  .hero__media img { width: 100%; height: 100%; object-fit: cover; }
+  .hero__copy { padding: 64px var(--gutter) 64px 64px; display: flex; flex-direction: column; justify-content: center; }
+  .hero h1 { font-size: var(--fs-display); line-height: 1.15; font-weight: var(--fw-semibold); color: var(--ink); margin: 10px 0 18px; }
+  .hero__bullets { list-style: none; padding: 0; margin: 0 0 24px; }
+  .hero__bullets li { position: relative; padding-left: 30px; margin-bottom: 8px; font-size: 16px; color: var(--text-primary); }
+  .hero__bullets li::before { content: "+"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: var(--brand); color: #fff; font-size: 15px; line-height: 20px; text-align: center; font-weight: 500; }
+  .rating { display: flex; align-items: center; gap: 10px; font-size: 14px; margin-bottom: 22px; }
+  .stars { color: var(--brand-cta); letter-spacing: 2px; font-size: 16px; }
+  .price-line { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+  .price-line .now { font-size: 26px; color: var(--ink-black); letter-spacing: var(--tracking-price); }
+  .price-line .was { font-size: 16px; color: var(--text-muted); text-decoration: line-through; }
+  .price-line .tag { background: var(--brand); color: #fff; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; padding: 3px 10px; border-radius: var(--r-badge); }
+  .hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero__note { font-size: 12px; color: var(--text-muted); margin-top: 14px; }
+
+  /* Proof strip */
+  .proof { border-bottom: 1px solid var(--border-soft); }
+  .proof ul { list-style: none; margin: 0 auto; padding: 26px var(--gutter-md); max-width: var(--wrap-max); display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+  .proof li { text-align: center; padding: 0 12px; border-left: 1px solid var(--border-soft); }
+  .proof li:first-child { border-left: 0; }
+  .proof b { display: block; font-size: 26px; font-weight: var(--fw-bold); color: var(--berry); line-height: 1.1; }
+  .proof span { font-size: 12px; color: var(--text-primary); line-height: 1.4; display: block; margin-top: 4px; }
+
+  /* Sections */
+  .section { padding: var(--section-pad) 0; }
+  .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand); }
+  .section h2 { font-size: var(--fs-h2); line-height: var(--lh-heading); margin: 6px 0 14px; }
+  .section .lead { font-size: var(--fs-lead); line-height: 1.5; color: var(--text-primary); }
+  .center { text-align: center; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  .berry { background: var(--berry); color: #fff; }
+  .berry h2, .berry h3 { color: #fff; }
+  .berry .eyebrow { color: var(--chip-blush); }
+  .berry p { color: rgba(255,255,255,0.9); }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .split--reverse .split__media { order: 2; }
+  .strain-list { list-style: none; padding: 0; margin: 22px 0 0; }
+  .strain-list li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.22); font-size: 14px; }
+  .strain-list li span:last-child { white-space: nowrap; font-weight: 500; }
+
+  /* Claim icons */
+  .icons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; margin-top: 36px; }
+  .icons figure { margin: 0; text-align: center; }
+  .icons img { width: 100%; max-width: 132px; margin: 0 auto; }
+  .icons figcaption { font-size: 13px; color: #fff; margin-top: 10px; line-height: 1.4; }
+
+  /* Formula statement */
+  .statement { background: var(--bg-alt); }
+  .statement blockquote { margin: 0; font-size: 26px; line-height: 1.5; color: var(--ink); font-weight: var(--fw-regular); }
+  .chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+  .chip { padding: 8px 18px; border-radius: var(--r-pill); font-size: 12px; line-height: 1.6; color: var(--text-primary); }
+
+  /* What's inside */
+  .inside { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  table.nutri { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 18px; }
+  table.nutri th { text-align: left; font-weight: 500; color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 0; border-bottom: 1px solid var(--ink); }
+  table.nutri td { padding: 12px 0; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+  table.nutri td:last-child, table.nutri th:last-child { text-align: right; white-space: nowrap; }
+  details { border-bottom: 1px solid var(--border-soft); }
+  details summary { list-style: none; cursor: pointer; padding: 18px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-logo); display: flex; justify-content: space-between; align-items: center; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; width: 22px; height: 22px; border-radius: 50%; background: var(--brand); color: #fff; text-align: center; line-height: 22px; font-size: 16px; flex: none; transition: transform var(--dur-fast) var(--ease); }
+  details[open] summary::after { transform: rotate(45deg); }
+  details .body { padding: 0 0 18px; font-size: 14px; line-height: 1.7; }
+
+  /* Reviews */
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+  .review { border: 1px solid var(--border-soft); padding: 26px; background: #fff; display: flex; flex-direction: column; }
+  .review h3 { font-size: 15px; font-weight: 500; margin: 10px 0 8px; }
+  .review p { font-size: 14px; line-height: 1.7; flex: 1; margin-top: 12px; }
+  .review .who { font-size: 12px; color: var(--ink); font-weight: 500; margin-top: 16px; }
+  .review .who span { display: block; color: var(--text-muted); font-weight: 400; }
+  .score { display: inline-flex; align-items: center; gap: 12px; margin-top: 4px; }
+  .score b { font-size: 40px; font-weight: var(--fw-bold); color: var(--ink); line-height: 1; }
+
+  /* Subscribe */
+  .sub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 30px; }
+  .sub-card { border-top: 2px solid var(--brand); padding-top: 16px; }
+  .sub-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 6px; }
+  .sub-card p { font-size: 14px; line-height: 1.6; }
+
+  /* Science */
+  .science { background: var(--bg-charcoal); color: #fff; }
+  .science h2 { color: #fff; }
+  .science p { color: rgba(255,255,255,0.85); }
+  .science .eyebrow { color: var(--brand); }
+
+  /* Buy box */
+  .buy { background: var(--brand-hot); }
+  .buy__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; }
+  .buy__media { background: #fff; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .buy__form { padding: 48px; }
+  .buy__form h2 { font-size: var(--fs-h2); color: #000; margin: 4px 0 8px; }
+  .option { display: flex; justify-content: space-between; align-items: center; gap: 14px; border: 1px solid var(--border); padding: 16px 18px; margin-top: 10px; cursor: pointer; font-size: 14px; }
+  .option:has(input:checked) { border-color: var(--ink); background: var(--brand-bg); }
+  .option input { accent-color: var(--brand-cta); margin-right: 10px; }
+  .option small { display: block; color: var(--text-muted); font-size: 12px; margin-left: 24px; line-height: 1.5; }
+  .option .p { font-size: 16px; color: var(--ink-black); white-space: nowrap; }
+  .qty { display: inline-flex; align-items: center; gap: 14px; margin: 18px 0; font-size: 15px; }
+  .qty button { width: 32px; height: 32px; border-radius: 50%; border: 0; background: rgba(119,119,119,0.5); color: #fff; font-size: 18px; cursor: pointer; font-family: inherit; }
+  .buy__form .ds-btn { width: 100%; min-height: 54px; font-size: 16px; }
+  .fine { font-size: 12px; color: var(--text-muted); margin-top: 12px; line-height: 1.6; }
+
+  /* Footer */
+  .footer { background: var(--bg-charcoal); color: rgba(255,255,255,0.8); padding: 48px 0 32px; font-size: 13px; }
+  .footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+  .footer img { width: 150px; margin-bottom: 14px; }
+  .footer a { color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 8px; }
+  .footer .legal { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 32px; padding-top: 18px; font-size: 11px; color: rgba(255,255,255,0.55); }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .wrap { padding: 0 var(--gutter-sm); }
+    .hero, .split, .inside, .buy__inner { grid-template-columns: 1fr; }
+    .hero__media { height: 380px; }
+    .hero__copy { padding: 36px var(--gutter-sm) 44px; }
+    .hero h1 { font-size: 34px; }
+    .split--reverse .split__media { order: 0; }
+    .proof ul { grid-template-columns: repeat(2, 1fr); row-gap: 20px; padding: 22px var(--gutter-sm); }
+    .proof li { border-left: 0; }
+    .icons { grid-template-columns: repeat(3, 1fr); }
+    .reviews, .sub-grid { grid-template-columns: 1fr; }
+    .footer__grid { grid-template-columns: 1fr; }
+    .nav ul { gap: 18px; overflow-x: auto; justify-content: flex-start; padding: 0 16px; }
+    .header__meta { display: none; }
+    .section { padding: var(--section-pad-sm) 0; }
+    .buy__form { padding: 30px 22px; }
+    .statement blockquote { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="utility"><a href="#buy">Free UK shipping on all UK orders above &pound;20</a></div>
+
+<header class="header">
+  <div class="header__top">
+    <a href="#"><img src="../../assets/neubria-logo-transparent.svg" alt="Neubria"></a>
+    <div class="header__meta"><a href="#">Log in</a><a href="#buy">Basket</a></div>
+  </div>
+  <nav class="nav" aria-label="Main">
+    <ul>
+      <li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Kids</a></li><li><a href="#">Drinks</a></li><li><a href="#">Best sellers</a></li><li><a href="#">All products</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__media"><img src="../../assets/neubio-lifestyle.jpg" alt="NeuBiotic Her box and bottle held on a pink background"></div>
+    <div class="hero__copy">
+      <span class="eyebrow">NeuBiotic Her, probiotic for women</span>
+      <h1>Specially formulated for women's intimate health</h1>
+      <ul class="hero__bullets">
+        <li>Balance intimate microflora and pH</li>
+        <li>4 clinically researched strains of live friendly bacteria</li>
+        <li>25 billion live cultures per capsule, one a day</li>
+      </ul>
+      <div class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span><b>4.67 / 5</b> from 52 reviews</span></div>
+      <div class="price-line"><span class="now">&pound;16.96</span><span class="was">&pound;19.95</span><span class="tag">SUBSCRIBE &amp; SAVE 15%</span></div>
+      <div class="hero__ctas">
+        <a class="ds-btn ds-btn--cta" href="#buy">Add to basket</a>
+        <a class="ds-btn ds-btn--ghost" href="#inside">What's inside</a>
+      </div>
+      <p class="hero__note">One time purchase &pound;19.95. Subscriptions deliver monthly, cancel at any time.</p>
+    </div>
+  </section>
+
+  <!-- Proof strip -->
+  <section class="proof" aria-label="Key facts">
+    <ul>
+      <li><b>25bn</b><span>live cultures per capsule</span></li>
+      <li><b>4</b><span>clinically researched strains</span></li>
+      <li><b>1</b><span>capsule a day, with or without food</span></li>
+      <li><b>100%</b><span>vegan formula</span></li>
+      <li><b>30</b><span>vegan capsules, 1 month's supply</span></li>
+    </ul>
+  </section>
+
+  <!-- Strains -->
+  <section class="section berry">
+    <div class="wrap split">
+      <div class="split__media"><img src="../../assets/neubiotic-her-strains.jpg" alt="NeuBiotic Her pack with the 4 clinically researched strains listed"></div>
+      <div>
+        <span class="eyebrow">The formula</span>
+        <h2>Scientifically researched strains</h2>
+        <p><b>4 clinically researched strains</b> of live probiotic bacteria, taken daily supports <b>female intimate health</b>, as well as <b>overall gut health</b>, bloating and abdominal discomfort.</p>
+        <ul class="strain-list">
+          <li><span>Lactobacillus paracasei IMC 502</span><span>5bn CFU</span></li>
+          <li><span>Lactobacillus reuteri LR 92</span><span>5bn CFU</span></li>
+          <li><span>Lactobacillus rhamnosus IMC 501</span><span>5bn CFU</span></li>
+          <li><span>Bifidobacterium animalis spp. lactis BLC 1</span><span>10bn CFU</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="icons">
+        <figure><img src="../../assets/icon-vegan.jpg" alt=""><figcaption>Vegan</figcaption></figure>
+        <figure><img src="../../assets/icon-menopause.jpg" alt=""><figcaption>Suitable during menopause</figcaption></figure>
+        <figure><img src="../../assets/icon-gluten-free.jpg" alt=""><figcaption>Gluten free</figcaption></figure>
+        <figure><img src="../../assets/icon-yeast-free.jpg" alt=""><figcaption>Yeast free</figcaption></figure>
+        <figure><img src="../../assets/icon-pregnancy.jpg" alt=""><figcaption>Suitable during pregnancy</figcaption></figure>
+        <figure><img src="../../assets/icon-dairy-free.jpg" alt=""><figcaption>Dairy free</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement -->
+  <section class="section statement">
+    <div class="wrap narrow center">
+      <span class="eyebrow">Patented blend</span>
+      <blockquote style="margin-top:12px">Contains a patented blend of friendly bacteria strains clinically proven to colonise the vaginal tract when taken orally.</blockquote>
+      <div class="chips">
+        <span class="chip" style="background:var(--chip-blush)">Scientifically tested</span>
+        <span class="chip" style="background:var(--chip-peach)">No need to refrigerate</span>
+        <span class="chip" style="background:var(--chip-sage)">30 vegan capsules, 1 month's supply</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supports -->
+  <section class="section">
+    <div class="wrap split split--reverse">
+      <div class="split__media"><img src="../../assets/neubiotic-her-supports.jpg" alt="NeuBiotic Her supports female intimate health, constipation, bloating and overall gut health"></div>
+      <div>
+        <span class="eyebrow">Made for her</span>
+        <h2>A friendly bacteria food supplement, formulated for women</h2>
+        <p class="lead" style="margin-bottom:16px">Neubria NeuBiotic Her contains a blend of 4 species of live microorganisms specifically formulated for women.</p>
+        <p>The one a day formula is 100% vegan and contains 25 billion live cultures per capsule. Take it with or without food, keep it in the cupboard, and make it part of your daily routine.</p>
+        <div style="margin-top:26px"><a class="ds-btn ds-btn--dark" href="#buy">Shop NeuBiotic Her</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's inside -->
+  <section class="section" id="inside" style="padding-top:0">
+    <div class="wrap inside">
+      <div>
+        <span class="eyebrow">Nutritional information</span>
+        <h2>What's inside every capsule</h2>
+        <table class="nutri">
+          <thead><tr><th>Per capsule</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr><td>NeuBiotic Her probiotic blend</td><td>25 x 10<sup>9</sup> CFU</td></tr>
+            <tr><td>Lactobacillus paracasei IMC 502; DSM 16105</td><td>5bn CFU</td></tr>
+            <tr><td>Lactobacillus reuteri LR 92; DSM 26866</td><td>5bn CFU</td></tr>
+            <tr><td>Lactobacillus rhamnosus IMC 501; DSM 16104</td><td>5bn CFU</td></tr>
+            <tr><td>Bifidobacterium animalis spp. lactis BLC 1; DSM 17741</td><td>10bn CFU</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="padding-top:28px">
+        <details open><summary>How to take</summary><div class="body">Take one capsule daily, with or without food. For optimal results, take it at least 2 to 3 hours before or after taking antibiotics to avoid any interaction.</div></details>
+        <details><summary>Ingredients</summary><div class="body">Capsule shell (hydroxypropylmethylcellulose), bulking agent (microcrystalline cellulose), NeuBiotic Her probiotic complex: Lactobacillus reuteri, Lactobacillus rhamnosus, Bifidobacterium animalis lactis, Lactobacillus paracasei, anti caking agent (magnesium stearate). Always read the label before use.</div></details>
+        <details><summary>Suitable for</summary><div class="body">Vegan, gluten free, yeast free and dairy free. Suitable during pregnancy and suitable during menopause.</div></details>
+        <details><summary>Storage</summary><div class="body">No need to refrigerate. 30 vegan capsules, one month's supply.</div></details>
+        <details><summary>Subscribe &amp; save</summary><div class="body">Monthly plan: payment taken and delivery made monthly. Cancel at any time. Stick to your new habit for 6 months and you'll receive an additional 5% off.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section statement">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Customer reviews</span>
+        <h2>Let customers speak for us</h2>
+        <div class="score"><b>4.67</b><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span style="font-size:13px">from 52 NeuBiotic Her reviews</span></span></div>
+      </div>
+      <div class="reviews">
+        <article class="review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>It's a must for my intimate flora, especially in summer and in holiday when eating out mess everything a bit! It's a lifestyle, once a day every day all year around. Easy to swallow.</p><div class="who">Fatima<span>Originally posted on Holland &amp; Barrett</span></div></article>
+        <article class="review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>Better than other brands that have to be kept in fridge.</p><div class="who">Anonymous<span>Originally posted on Holland &amp; Barrett</span></div></article>
+        <article class="review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>I've been using it for several months and I can see the effect, it's great.</p><div class="who">Maryam<span>Originally posted on Holland &amp; Barrett</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe benefits -->
+  <section class="section">
+    <div class="wrap">
+      <div class="narrow center">
+        <span class="eyebrow">Subscribe &amp; save</span>
+        <h2>Never run out of your daily probiotic</h2>
+        <p class="lead">Our products deliver the best results when they are taken continuously, and the biggest reason for missing your daily supplement is running out.</p>
+      </div>
+      <div class="sub-grid">
+        <div class="sub-card"><h3>Save money</h3><p>15% off the RRP on every delivery, &pound;16.96 instead of &pound;19.95.</p></div>
+        <div class="sub-card"><h3>Save hassle</h3><p>No need to remember to visit the website every month to reorder.</p></div>
+        <div class="sub-card"><h3>Never run out</h3><p>Your NeuBiotic Her arrives when you need it.</p></div>
+        <div class="sub-card"><h3>No obligation</h3><p>Cancel at any time from your account. Stay 6 months for an extra 5% off.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Science -->
+  <section class="section science">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">A brand rooted in science</span>
+        <h2>Formulated by a pharmacist, made in the UK</h2>
+        <p style="margin-bottom:14px">Neubria was born in 2018, founded on the belief that the mind and body are deeply connected. Synology, the science behind the range, is the brainchild of pharmacist Mike Wakeman, Neubria's Head of Science and Innovation.</p>
+        <p>Neubria invests in clinical trials with the brain lab at Northumbria University, and launched in Holland &amp; Barrett stores across the UK.</p>
+      </div>
+      <div><img src="../../assets/neubiotic-her-capsule-icons.jpg" alt="NeuBiotic Her capsule with the vegan, gluten free, yeast free, dairy free, menopause and pregnancy icons"></div>
+    </div>
+  </section>
+
+  <!-- Buy box -->
+  <section class="section buy" id="buy">
+    <div class="wrap">
+      <div class="buy__inner">
+        <div class="buy__media"><img src="../../assets/neubiotic-her-pack.jpg" alt="NeuBiotic Her bottle and box"></div>
+        <form class="buy__form" action="#" method="post" onsubmit="return false;">
+          <span class="eyebrow">Probiotic for women</span>
+          <h2>NeuBiotic Her</h2>
+          <div class="rating" style="margin-bottom:8px"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.67 / 5 from 52 reviews</span></div>
+          <p style="font-size:14px">Specially formulated for women's intimate health. 30 vegan capsules, one month's supply.</p>
+          <fieldset style="border:0;padding:0;margin:14px 0 0">
+            <legend class="eyebrow" style="color:var(--ink)">Purchase options</legend>
+            <label class="option"><span><input type="radio" name="plan" value="sub" checked>Subscribe &amp; save 15%<small>Delivered every month. Cancel at any time.</small></span><span class="p">&pound;16.96</span></label>
+            <label class="option"><span><input type="radio" name="plan" value="once">One time purchase</span><span class="p">&pound;19.95</span></label>
+          </fieldset>
+          <div class="qty" aria-label="Quantity"><button type="button" aria-label="Decrease quantity">&minus;</button><span>1</span><button type="button" aria-label="Increase quantity">+</button></div>
+          <button class="ds-btn ds-btn--cta" type="submit">Add to basket</button>
+          <p class="fine">Taxes included. Free UK shipping on all UK orders above &pound;20. Food supplement: always read the label before use.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div><img src="../../assets/neubria-logo-on-dark.svg" alt="Neubria"><p>Natural vitamins and supplements for mind and body. UK manufactured with evidence based science.</p></div>
+      <div><a href="#">About us</a><a href="#">Blog</a><a href="#">Learn about Synology&reg;</a><a href="#">Contact us</a></div>
+      <div><a href="#">Privacy policy</a><a href="#">Terms &amp; conditions</a><a href="#">Refund policy</a><a href="#">Shipping policy</a></div>
+    </div>
+    <div class="legal">&copy; 2026 Neubria. NeuBiotic Her is a food supplement. Always read the label before use.</div>
+  </div>
+</footer>
+
+</body>
+</html>

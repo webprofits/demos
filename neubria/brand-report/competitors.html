@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Neubria - Brand Research - October 2026 | Webprofits</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAkFBMVEUAAADrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRkfrRke0ZpdwAAAAL3RSTlMA9QXrUqBE+ttIPhjw4MaOhHTZwrdfOB0NCaWafU4xp2pmLdG+spN4WhPkqiXIb6MDSYwAAAHXSURBVFjD7ZTdcuIwDIUPOOQfEkJIwz+ULoW2u37/t1vHimVgdrxJLzv5LhifwZEl+cgYGBj4Wewui2kqijLzanyDYyiZdBKjJ/WbfKTsF2LFx1sOJ8/3fe+0zXww+wrMLcuPXhx7x/wdG/5sujnu4ui0HklLBkMiZcSikgy4+CVvncgWEa1gmEu5ZjGuZrRjESOgVZHAYiJsYQnVGbAkesMvtdpSJDrK7ta8g3ltdGT1qjk4pNxm58Ucj/htgmCyRq+fAjquq6AILzCIRo7GrE9K/nZc7vKpCRHpHQylUr4jwHhEN2v0p5a2hpv+04Gxx76NF5AcmV7nSizh4ou+mHBFhGcTFHBDTgnGRpQ6iU8bcA43ntRcW9d81OHdPRS0ciN0gLfWxgccqAZjkxz/I7dWKJoPd2xeLNTiBgfsdjppTwmnuikr4IW766Y0Vsho/9rUsGGPuuChf4XQpuMaavVbogtTGkmVcWrdGWCpo3ZhrgOEygSXu2fiqt7QGTpRB7Kl4okifHSCX6YPNjBRoCP7p6f1wBPRlTPP5H0NAp25UhtZp1r/QTe46u1jU0bowUUqvlhGZO7OkO3PTyNaow8z83JwDRv0IhYigaUS0wQDAwMD/+QvePNkiMkkdeEAAAAASUVORK5CYII=">
+<style>
+/* ============================================================
+   WEBPROFITS DESIGN SYSTEM
+   Canonical CSS bundle for all Webprofits HTML deliverables.
+   Owned by skill: webprofits-brand
+   Consumers: performance-reporting, meta-ads-creative, audits, dashboards,
+   landing pages, presentations, ad packs.
+   See SKILL.md + references/components.md for HTML templates + usage rules.
+   ============================================================ */
+
+/* --- Brand font: Gellix (5 weights, self-hosted woff2) ---
+   Gellix replaced Poppins as the brand font in the May 2026 design refresh
+   (aligns deliverables with the live webprofits.com.au design language).
+   Poppins remains the fallback stack so older/un-bundled contexts degrade gracefully.
+
+   These @font-face rules use RELATIVE paths - they resolve against the location of
+   the HTML file (or linked stylesheet), so a consuming skill MUST copy the skill's
+   assets/fonts/ folder next to the deliverable (or its CSS) for Gellix to load.
+
+   For a truly self-contained SINGLE-FILE deliverable (no sibling fonts/ folder),
+   DON'T rely on these - instead paste the base64-embedded faces from
+   assets/fonts/gellix-base64.css into the inlined <style>. That guarantees Gellix
+   renders with zero network / CORS / relative-path dependency (the dominant
+   single-file pattern). See SKILL.md - "Asset strategy".
+
+   Why not hotlink from webprofits.com.au? The hosted woff2 serve without an
+   Access-Control-Allow-Origin header, so a cross-origin @font-face is CORS-blocked
+   on any deliverable not served from webprofits.com.au. Fonts are bundled; only
+   images are linked (see SKILL.md). */
+@font-face { font-family: 'Gellix'; src: url('fonts/GellixRegular.woff2')   format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Gellix'; src: url('fonts/GellixMedium.woff2')    format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Gellix'; src: url('fonts/GellixSemiBold.woff2')  format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Gellix'; src: url('fonts/GellixBold.woff2')      format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Gellix'; src: url('fonts/GellixExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+
+/* --- Tokens ---
+   Canonical source of truth. Mirrors the :root block in SKILL.md.
+   If you change a value here, update SKILL.md too. */
+:root {
+  /* Backgrounds */
+  --bg-base: #FFFFFF;
+  --bg-alt:  #F7F6F5;
+  --bg-card: #FFFFFF;
+
+  /* Borders */
+  --border:     #E0DEDC;
+  --border-med: #C8C5C2;
+
+  /* Text */
+  --text-primary:   #070909;
+  --text-secondary: #4A4A4A;
+  --text-muted:     #888888;
+
+  /* Brand - Mandarin Red */
+  --wp:      #EA4648;
+  --wp-soft: #D63A3C;
+  --wp-bg:   rgba(234, 70, 72, 0.06);   /* = #FEF4F4 on white (the kit swatch prints the hex) */
+  --wp-red:   var(--wp);        /* June 2026 kit swatch names for the two reds */
+  --wp-hover: var(--wp-soft);
+
+  /* Semantic */
+  --green:    #047857;
+  --green-bg: rgba(4, 120, 87, 0.07);
+  --amber:    #B45309;
+  --amber-bg: rgba(180, 83, 9, 0.07);
+  --blue:     #1D4ED8;
+  --blue-bg:  rgba(29, 78, 216, 0.07);
+  --purple:   #7C3AED;
+  --purple-bg: rgba(124, 58, 237, 0.07);
+
+  /* Channel */
+  --meta-blue:    #0668E1;
+  --meta-bg:      rgba(6, 104, 225, 0.07);
+  --google-color: #34A853;
+  --google-bg:    rgba(52, 168, 83, 0.07);
+
+  /* June 2026 Figma swatches (kit page, Neutrals + Semantic rows). --bg-dark is the
+     dark band (table header, footer, CTA); --acc-yellow the review-star accent; the
+     two gradients are surface fills. NOTE: the Figma red drawn on the hero accent,
+     nav wordmark and primary CTA is #F54949 and the hero title / nav links are
+     #272727 - the designer draws those raw, so the rules below write them raw too. */
+  --bg-dark:         #070909;
+  --acc-yellow:      #F5A623;
+  --bg-gradient:     linear-gradient(180deg, #000000 0%, #F7F6F5 100%);
+  --bg-red-gradient: linear-gradient(180deg, #EB8389 0%, #FEF4F4 100%);
+
+  /* Radius */
+  --r-sm:   6px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  20px;
+  --r-full: 999px;
+  --card-radius: 16px;   /* website case/testimonial/proof cards (v10 design language) */
+
+  /* Layout */
+  --sidebar-w:    320px;
+  --app-header-h:  60px;
+  --wrap-max:    1180px;
+
+  /* Typography base - Gellix first (May 2026 refresh), Poppins fallback */
+  --font-sans:    'Gellix', 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-display: var(--font-sans);   /* v10 alias - display + body share Gellix */
+  --font-body:    var(--font-sans);   /* v10 alias */
+
+  /* v10 webprofits.com.au token aliases (point at the canonical tokens above so
+     CSS copied straight from the website / a v10-derived page resolves unchanged) */
+  --red:           var(--wp);
+  --red-hover:     var(--wp-soft);
+  --red-subtle:    var(--wp-bg);
+  --ink:           var(--text-primary);
+  --ink-secondary: var(--text-secondary);
+  --ink-muted:     var(--text-muted);
+  --bg-white:      var(--bg-base);
+  --bg-cream:      var(--bg-alt);
+}
+
+/* --- Base --- */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg-base); color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px; line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/* June 2026 Figma alignment: the 28px lateral gutter moved OFF .wrap and onto
+   section / hero / footer, so the content column is a true 1180px with a 28px
+   gutter at every width (the old .wrap padding shrank it to 1124px on desktop
+   and 22 / 18 / 14 / 12px gutters below). .wrap now only caps + centres. */
+.wrap { max-width: var(--wrap-max); margin: 0 auto; }
+.label { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.2; text-transform: uppercase; color: var(--wp); display: block; margin-bottom: 12px; } /* 0.16em = the Figma 1.92px at 12px */
+.section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 800; line-height: 1.12; color: var(--text-primary); margin-bottom: 14px; }
+.section-sub { font-size: 16px; font-weight: 400; color: var(--text-secondary); max-width: 720px; margin-bottom: 40px; line-height: 1.4; }
+p { margin-bottom: 16px; color: var(--text-secondary); line-height: 1.7; }
+strong { color: var(--text-primary); font-weight: 700; }
+em { font-style: italic; }
+a { color: var(--wp); text-decoration: none; }
+a:hover { text-decoration: underline; }
+section, .section { padding: 28px 28px 36px; scroll-margin-top: 80px; max-width: calc(var(--wrap-max) + 56px); margin: 0 auto; }
+section + section, .section + .section { border-top: 1px solid var(--border); }
+/* All sections share the white base background - removed alternating bg-alt
+   per design feedback 2026-05-09 (looked like cards within cards). */
+/* Trailing-margin reset: when a grid/list is the last child in its container, drop its bottom margin so section padding controls bottom rhythm */
+section > .wrap > *:last-child,
+.section > .wrap > *:last-child,
+section > *:last-child,
+.section > *:last-child { margin-bottom: 0 !important; }
+/* --- Website section header (v10 / May 2026 canonical) ---
+   The marketing-page header treatment from webprofits.com.au: a small red eyebrow
+   label (12px / 700 / 1.92px tracking), a large weight-700 heading (clamp 28-36,
+   letter-spacing -0.36px) and an optional 16px / 1.4 subtitle. June 2026 Figma
+   alignment moved the label from 13px / 600 and the heading cap from 44px.
+   Distinct from the report `.section-header` (inline title + label on one baseline)
+   and the legacy stacked `.label` + `.section-title`. Reach for this trio when a
+   deliverable should read like the website (about pages, credibility sections,
+   case-study walls, proposal narrative). */
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.2; text-transform: uppercase; color: var(--wp); display: block; margin-bottom: 16px; }
+.section-label--sm { font-size: 12px; }
+.section-heading { font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 4vw, 36px); line-height: 1.1; letter-spacing: -0.36px; color: var(--text-primary); max-width: 760px; margin: 0 0 14px; }
+.section-heading--centered, .section-heading.centered { margin-left: auto; margin-right: auto; text-align: center; }
+.section-subtitle { font-size: 16px; font-weight: 400; line-height: 1.4; color: var(--text-secondary); max-width: 660px; margin: 0 0 8px; }
+.section-subtitle--centered, .section-subtitle.centered { margin-left: auto; margin-right: auto; text-align: center; }
+
+/* --- Section header (canonical, kit pattern) ---
+   Title + small red eyebrow label inline on the same baseline.
+   Use INSTEAD OF a stacked `.label` + h2 when matching the Atlas Apparel kit.
+   June 2026 Figma alignment: the inline title moved from 28px/800 to the Figma
+   display scale - clamp(32-48px), weight 700, no tracking. */
+.section-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+.section-header .section-title { font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: 0; line-height: 1.05; margin: 0; }
+.section-header .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wp); margin: 0; display: inline; }
+
+/* --- Commentary callout (kit pattern) ---
+   Warm-grey insight box with a Mandarin Red left border. Used under section content
+   for one-sentence narrative ("the system is working more efficiently...").
+   June 2026 Figma alignment: 16px / 500 / 1.4 (was 14px / 400 / 1.65). */
+.commentary {
+  background: var(--bg-alt); border-radius: var(--r-lg);
+  padding: 16px 20px; margin-top: 16px;
+  font-size: 16px; font-weight: 500; color: var(--text-secondary); line-height: 1.4;
+  border-left: 3px solid var(--wp);
+}
+
+/* --- Typography utility classes (kit canonical) ---
+   Heading roles (.h-*) and content type roles (.t-*) for use OUTSIDE the standard
+   component HTML - e.g. a one-off page section that needs a hero-sized headline
+   without all the .hero-* component scaffolding. Same sizes as the named components.
+*/
+.h-hero { font-size: clamp(34px, 4.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--text-primary); }
+.h-hero em { font-style: normal; color: var(--wp); }
+.h-hero-sub { font-size: 16px; color: var(--text-primary); font-weight: 500; line-height: 1.4; }
+.h-section { font-size: clamp(28px, 4vw, 36px); font-weight: 700; line-height: 1.1; letter-spacing: -0.36px; color: var(--text-primary); }
+.h-section-sub { font-size: 16px; color: var(--text-secondary); max-width: 720px; line-height: 1.7; }
+.h-label { font-size: 12px; font-weight: 700; letter-spacing: 1.92px; text-transform: uppercase; color: var(--wp); display: block; }
+/* Sub-section heading (Figma H4 token, June 2026 alignment). The heading above a
+   component group or a list column inside a section - replaces inline-styled <h3>s.
+   `.lead` drops the top margin for the first one directly under a `.section-header`. */
+.kit-subhead { font-size: clamp(22px, 3vw, 28px); font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; color: var(--text-primary); margin: 40px 0 8px; }
+.kit-subhead.lead { margin-top: 8px; }
+
+.t-kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+.t-kpi-value { font-size: 38px; font-weight: 900; color: var(--text-primary); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.t-kpi-comp-label { font-size: 10px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.t-kpi-comp-value { font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.t-card-title { font-size: 15px; font-weight: 800; color: var(--text-primary); }
+.t-card-body  { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.t-table-th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.t-table-td { font-size: 13px; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.t-meta { font-size: 12px; color: var(--text-muted); }
+.page-hero { padding: 48px 0 36px; background: var(--bg-base); }
+.page-hero .hero-badge { margin-bottom: 22px; }
+.page-hero .hero-heading { font-size: clamp(34px, 5vw, 48px); margin-bottom: 12px; }
+.page-hero .hero-sub { margin-bottom: 0; }
+ul, ol { padding-left: 20px; margin-bottom: 16px; color: var(--text-secondary); }
+ul li, ol li { margin-bottom: 8px; line-height: 1.7; }
+/* Red Mandarin bullet markers on unordered lists. Ordered lists keep default
+   colour so the numerals don't read as if they're a separate accent. Lists
+   with their own custom markers (.checklist) are unaffected - they override
+   list-style and use ::before. */
+ul li::marker { color: var(--wp); }
+/* Two-column list layout (June 2026 Figma alignment): a 28px heading over each
+   column, e.g. "Key highlights:" beside "Next steps:". Columns stack below 768px. */
+.lists-cols { display: flex; gap: 28px; align-items: flex-start; margin: 18px 0 0; }
+.lists-col { flex: 1 1 0; min-width: 0; }
+.lists-head { font-size: 28px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; color: var(--text-primary); margin: 0 0 10px; }
+code, .mono { font-family: 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace; font-size: 0.92em; background: var(--bg-alt); padding: 1px 6px; border-radius: var(--r-sm); color: var(--text-primary); }
+hr { border: 0; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* --- Top sticky nav (canonical for reports - kit pattern) ---
+   June 2026 Figma alignment: 36px wordmark in brand red, 16px/500 links pushed
+   right beside the controls, min-height 64px with the inner row allowed to wrap.
+   Burger collapse below 768px, where the period + Download PDF leave the bar and
+   live inside the open menu (see .nav-menu-extra + the 768px block).
+   The 28px lateral gutter sits on <nav> (10px 28px), matching the section gutter.
+   Wordmark fill and link colour are the Figma values drawn raw (#F54949 / #272727),
+   NOT --wp / --text-primary - Alex's ruling 2026-09-14: follow the designer exactly. */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  min-height: 64px; display: flex; align-items: center;
+  padding: 10px 28px;
+}
+.nav-inner {
+  max-width: var(--wrap-max); margin: 0 auto;
+  width: 100%;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px;
+}
+.nav-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nav-logo { display: block; flex-shrink: 0; }
+.nav-logo, .nav-logo svg { height: 36px; width: auto; }
+.nav-logo svg, .nav-logo path, .nav-logo svg path { fill: #F54949; }   /* the fill on the outer svg is what a <use href="#wp-wordmark"> inherits */
+
+.nav-links { display: flex; gap: 2px; align-items: center; margin-left: auto; }
+.nav-links a {
+  font-size: 16px; font-weight: 500; color: #272727;
+  text-decoration: none; padding: 6px 14px; border-radius: var(--r-sm);
+  white-space: nowrap; transition: color .15s, background .15s;
+}
+.nav-links a:hover { color: var(--text-primary); background: var(--bg-alt); text-decoration: none; }
+.nav-links a.cur { color: var(--text-primary); background: var(--bg-alt); }
+
+.nav-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; margin-left: auto; }
+.nav-period { font-size: 16px; font-weight: 500; color: var(--text-muted); letter-spacing: 0; }
+/* Period + Download PDF copy that only appears inside the open mobile menu.
+   Markup: place <div class="nav-menu-extra"> as the LAST child of .nav-links,
+   holding a duplicate .nav-period + .btn-download. Hidden on desktop. */
+.nav-menu-extra { display: none; }
+/* Legacy alias - older reports use .nav-badge for the period label */
+.nav-badge { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.06em; display: flex; align-items: center; gap: 10px; }
+
+/* Burger toggle - hidden on desktop, shown only at mobile (<768px) via @media block below */
+.nav-burger {
+  display: none; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: var(--r-sm);
+  background: transparent; border: 1px solid var(--border);
+  cursor: pointer; color: var(--text-primary);
+  transition: background .15s, border-color .15s, transform .1s;
+  padding: 0; flex-shrink: 0;
+}
+.nav-burger:hover { background: var(--bg-alt); border-color: var(--text-primary); }
+.nav-burger:active { transform: scale(0.96); }
+.nav-burger svg { width: 18px; height: 18px; stroke: currentColor; fill: none; }
+.nav-burger .icon-close { display: none; }
+nav.is-open .nav-burger .icon-open { display: none; }
+nav.is-open .nav-burger .icon-close { display: block; }
+
+/* --- Hero (kit canonical) ---
+   `.hero` and `#hero` both supported. `.hero-eyebrow` is the kit's small red label;
+   `.hero-badge` is the legacy pill variant (kept for older reports). */
+#hero, .hero { padding: 64px 28px 36px; background: var(--bg-base); }   /* gutter lives here now, not on .wrap */
+.hero-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wp); display: block; margin-bottom: 16px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: var(--r-full); font-size: 12px; color: var(--text-muted); padding: 5px 16px; margin-bottom: 28px; background: var(--bg-alt); font-weight: 600; }
+.hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--wp); display: block; }
+.hero-heading, .hero-title { font-size: clamp(36px, 6vw, 60px); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; color: var(--text-primary); margin: 0 0 18px; max-width: 880px; }
+.hero-heading em, .hero-title em { font-style: normal; color: var(--wp); }
+.hero-sub { font-size: 18px; color: var(--text-secondary); font-weight: 400; max-width: 720px; margin: 0; line-height: 1.7; }
+/* --- Hero, centred variant (June 2026 Figma alignment) ---
+   Add `.hero--center` to `.hero` for the kit / marketing hero: eyebrow, title and
+   sub all centred on a white-to-off-white wash, 28px lateral gutter, display-scale
+   title (clamp 40-72px, weight 700). Text columns capped at 880px / 680px.
+   Use it full-bleed (outside `.wrap`) so the gradient spans the viewport. */
+.hero.hero--center { text-align: center; padding: 96px 28px; background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-alt) 100%); }
+/* Figma draws the centred hero raw: eyebrow + accent #F54949, title #272727 (not --wp / --text-primary) */
+.hero.hero--center .hero-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 1.92px; line-height: 1.2; color: #F54949; margin-bottom: 18px; }
+.hero.hero--center .hero-title { font-size: clamp(40px, 6.4vw, 72px); font-weight: 700; line-height: 1.05; letter-spacing: 0; color: #272727; max-width: 880px; margin: 0 auto 18px; }
+.hero.hero--center .hero-title em { color: #F54949; font-style: normal; }
+.hero.hero--center .hero-sub { font-size: 20px; font-weight: 400; line-height: 1.4; color: var(--text-secondary); max-width: 680px; margin: 0 auto; }
+
+/* --- KPI tiles --- */
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0 0; }
+/* Odd-count helpers:
+   - 1 tile: spans full row, centred + capped at 50% so it doesn't look like a banner.
+   - 2 tiles: each takes 1.5 cols so they fill the row.
+   - 4 tiles: let the 4th sit naturally bottom-left in row 2. (A previous rule
+     auto-centred it; that looked awkward and isolated.) */
+.kpi-grid > .kpi-tile:nth-child(2):last-child { grid-column: span 2; }
+.kpi-grid > .kpi-tile:only-child { grid-column: span 3; max-width: 50%; justify-self: center; }
+.kpi-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px; text-align: center; }
+.kpi-tile-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
+.kpi-tile-value { font-size: 38px; font-weight: 900; color: var(--text-primary); line-height: 1.1; margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+.kpi-tile-comps { display: flex; justify-content: center; gap: 24px; }
+.kpi-comp { text-align: center; }
+.kpi-comp-label { font-size: 12px; color: var(--text-muted); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 2px; }
+.kpi-comp-value { font-size: 12px; font-weight: 700; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+/* June 2026 Figma alignment: the comparison reads monochrome - up is ink, down is
+   Mandarin Red. The semantic green left every component in the kit. */
+.kpi-comp-value.up { color: var(--text-primary); }
+.kpi-comp-value.down { color: var(--wp); }
+
+/* --- KPI tile (kit variant) ---
+   Use `.kpi-tile.kit` for the Atlas Apparel kit layout: left-aligned, comp rows
+   justified to the tile edges instead of centred. Pair with .kpi-label / .kpi-value /
+   .kpi-comp-row inside .kpi-comp (flex container, not the legacy .kpi-tile-comps). */
+.kpi-tile.kit { text-align: left; padding: 22px 22px 20px; }   /* the kit tile keeps its 20px foot (Figma page) */
+.kpi-tile.kit .kpi-comp { display: flex; justify-content: space-between; gap: 12px; }
+.kpi-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; line-height: 1.2; color: var(--text-muted); display: block; }
+.kpi-value { font-size: clamp(34px, 4.4vw, 48px); font-weight: 700; color: var(--text-primary); line-height: 1.05; margin: 10px 0 14px; font-variant-numeric: tabular-nums; }
+.kpi-comp-row { display: flex; flex-direction: column; gap: 2px; }
+
+/* --- Tables (kit canonical) ---
+   Black header bar (12px / 700 / 1.92px caps, 13/18 padding), 16px / 1.4 body cells
+   at 16/18 padding, tabular-nums on body cells. First column reads in ink, the
+   rest in secondary grey (June 2026 Figma alignment - was 10px / 13px). Add class `.num`
+   to any numeric th/td (both header and body) for right-alignment.
+   `.table-wrap` is the kit name for the rounded card frame; `.campaign-table-wrap`
+   is the legacy alias kept for performance-reporting consumers.
+   `tr.total` is the kit name; `tr.total-row` is the legacy alias. */
+.campaign-table-wrap, .table-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; margin: 20px 0; overflow-x: auto; }
+.campaign-table, .table-wrap > table { width: 100%; border-collapse: collapse; }
+.campaign-table { min-width: 700px; }
+.campaign-table thead th, .table-wrap thead th { background: var(--bg-dark); color: #fff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; line-height: 1.2; padding: 13px 18px; text-align: left; white-space: nowrap; }
+.campaign-table thead th.num, .table-wrap thead th.num { text-align: right; }
+.campaign-table tbody td, .table-wrap tbody td { padding: 16px 18px; font-size: 16px; font-weight: 400; line-height: 1.4; color: var(--text-secondary); border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+.campaign-table tbody td.num, .table-wrap tbody td.num { text-align: right; }
+.campaign-table tbody td strong, .table-wrap tbody td strong { color: var(--text-secondary); font-weight: 800; }
+.campaign-table tbody td:first-child, .campaign-table tbody td:first-child strong, .table-wrap tbody td:first-child, .table-wrap tbody td:first-child strong { color: var(--text-primary); }
+.campaign-table tbody tr:last-child td, .table-wrap tbody tr:last-child td { border-bottom: none; }
+.campaign-table .total-row td, .campaign-table tr.total td, .table-wrap tr.total td { background: var(--bg-alt); font-weight: 800; color: var(--text-primary); font-size: 14px; }
+/* Status pill (kit canonical) - `.pill` is the kit name, `.status-pill` is the legacy alias */
+.status-pill, .pill { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; line-height: 1.2; padding: 6px 12px; border-radius: var(--r-full); }
+.status-pill.active, .pill.active { background: var(--text-primary); color: #fff; }   /* June 2026: ink, not green */
+.status-pill.paused, .pill.paused { background: var(--bg-alt); color: var(--text-muted); }
+
+/* --- Changes list (kit canonical) ---
+   Each item is its own card with subtle hover. Container uses gap-based spacing
+   (no internal margins on items). Kit alias .changes works alongside .change-list.
+   June 2026 Figma alignment: the card sits on --bg-alt, the icon is a 32px white
+   circle with a 1px border holding an 18px red outline SVG (check-circle), title
+   20px / 700 / 1.4, description 16px / 400 / 1.4. The four tinted icon classes
+   (.fix / .cut / .bid / .test) are kept as aliases only - every icon is red ink. */
+.change-list, .changes { display: flex; flex-direction: column; gap: 10px; margin: 28px 0; }
+.change-item, .change {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--r-md);
+  padding: 14px 18px;
+  transition: border-color .15s, background .15s;
+}
+.change-item:hover, .change:hover { border-color: var(--border-med); background: var(--bg-alt); }
+.change-icon {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff; border: 1px solid var(--border); color: var(--wp);
+  font-size: 14px;   /* only reaches a legacy text glyph; the SVG sizes itself below */
+}
+.change-icon svg { width: 18px; height: 18px; display: block; }
+.change-icon.fix, .change-icon.cut, .change-icon.bid, .change-icon.test { color: var(--wp); }   /* legacy aliases - no tint since June 2026 */
+.change-body { flex: 1; min-width: 0; }
+.change-title { font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 2px; line-height: 1.4; }
+.change-desc  { font-size: 16px; font-weight: 400; color: var(--text-secondary); line-height: 1.4; margin: 0; }
+
+/* --- Next cards (kit canonical) ---
+   3-col grid by default, hover lifts border to red + translateY.
+   Drop the legacy red left-stripe - the eyebrow + hover do the work. */
+.next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+.next-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: 22px;
+  transition: border-color .15s, transform .15s;
+}
+.next-card:hover { border-color: var(--wp); transform: translateY(-2px); }
+/* June 2026 Figma alignment: eyebrow 12px / 1.92px caps, title 20px / 700, desc 16px / 1.4 */
+.next-card-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.2; text-transform: uppercase; color: var(--wp); margin-bottom: 10px; }
+.next-card-title { font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; line-height: 1.4; }
+.next-card-desc { font-size: 16px; font-weight: 400; color: var(--text-secondary); line-height: 1.4; margin: 0; }
+
+/* --- Footer (kit canonical) ---
+   Black band (#070909 = --text-primary), white wordmark drawn large at 60px,
+   16px upright tagline in warm off-white (--bg-alt). June 2026 Figma alignment
+   replaced the 22px logo + italic 14px 40%-white tagline.
+   Logo + tagline both centred via `text-align: center` on the outer band and
+   `margin: 0 auto 18px` on the logo SVG (which also gives the 18px gap to the
+   tagline below). No `.wrap` wrapper - the kit HTML is `.footer > .footer-logo + p`
+   directly. */
+footer, .footer { background: var(--bg-dark); padding: 56px 0 64px; margin-top: 64px; text-align: center; }
+footer .wrap, .footer .wrap { padding: 0 28px; }   /* footer.html still wraps its content; the gutter lives here since .wrap lost its padding */
+.footer-logo svg, footer svg, .footer svg { height: 60px; width: auto; max-width: none; display: block; margin: 0 auto 18px; }
+footer p, .footer p { font-size: 16px; font-weight: 400; color: var(--bg-alt); font-style: normal; margin: 0; }
+footer p em, .footer p em { font-style: normal; } /* footer.html wraps the tagline in <em>; the kit draws it upright */
+
+/* --- Buttons (June 2026 Figma alignment) ---
+   Base primary + ghost are the Figma pill: 16px / 600 / no tracking, 12x32 padding,
+   999 radius, 16px icon (was 11px / 700 in a 7x16 pill). Fill is the Figma CTA red
+   #F54949 with hover #E23A3A, drawn raw (not --wp / --wp-soft). */
+.btn-download { display: inline-flex; align-items: center; gap: 6px; background: #F54949; color: #fff; border: none; cursor: pointer; font-family: var(--font-sans); font-size: 16px; font-weight: 600; letter-spacing: 0; padding: 12px 32px; border-radius: var(--r-full); transition: background .15s, transform .1s; white-space: nowrap; text-decoration: none; }
+.btn-download:hover { background: #E23A3A; transform: translateY(-1px); text-decoration: none; color: #fff; }
+.btn-download:active { transform: translateY(0); }
+.btn-download svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Ghost / outline button variant (e.g. secondary download link) */
+.btn-ghost { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--text-primary); border: 1px solid var(--border-med); cursor: pointer; font-family: var(--font-sans); font-size: 16px; font-weight: 600; letter-spacing: 0; padding: 12px 32px; border-radius: var(--r-full); transition: background .15s, border-color .15s, color .15s; white-space: nowrap; text-decoration: none; }
+.btn-ghost:hover { background: var(--bg-alt); border-color: var(--text-primary); color: var(--text-primary); text-decoration: none; }
+.btn-ghost svg { width: 13px; height: 13px; flex-shrink: 0; }   /* the Figma restyle only grew the primary button's icon */
+
+/* Compact buttons inside the 60px app header and the sidebar footer. The Figma
+   kit has no app chassis, so these two contexts keep the pre-June compact pill
+   (11px / 700 / 7x16) rather than growing the report chrome. Scoped, not base. */
+.app-header .btn-download, .sidebar .btn-download, .app-header .btn-ghost, .sidebar .btn-ghost { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; padding: 7px 16px; }
+.app-header .btn-download svg, .sidebar .btn-download svg, .app-header .btn-ghost svg, .sidebar .btn-ghost svg { width: 13px; height: 13px; }
+
+/* --- Print header (hidden on screen) --- */
+.print-header { display: none; }
+.print-header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 0 16px 0; margin-bottom: 28px; border-bottom: 2px solid #EA4648; }
+.print-header-left { display: flex; flex-direction: column; gap: 2px; }
+.print-header-title { font-size: 11px; font-weight: 700; color: #070909; letter-spacing: 0.02em; }
+.print-header-date { font-size: 10px; font-weight: 500; color: #888; }
+.print-header-logo { height: 22px; width: auto; }
+
+/* ============================================================
+   STYLE-GUIDE-BUILDER EXTENSIONS
+   Additive on top of core tokens
+   ============================================================ */
+
+/* Section eyebrow with channel badge */
+.channel-badges { display: inline-flex; gap: 6px; margin-left: 10px; vertical-align: middle; }
+/* June 2026 Figma alignment: channel tags are monochrome pills - 12px / 700 in
+   sentence case, 6x12 padding, 999 radius. Meta = ink, Google = --border-med,
+   PMax / Klaviyo = red on the red wash, All = --bg-alt. The platform colours
+   (--meta-blue, --google-color) stay as tokens for charts but no longer tag. */
+.channel-tag { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1; letter-spacing: 0; text-transform: none; padding: 6px 12px; border-radius: var(--r-full); border: 1px solid transparent; }
+/* The 20% platform-colour rings are what the designer's page renders (his restyle
+   left the May 2026 border-colors in place) - reproduced so the kit matches exactly. */
+.channel-tag.meta { background: var(--text-primary); color: #fff; border-color: rgba(6,104,225,0.2); }
+.channel-tag.google { background: var(--border-med); color: #fff; border-color: rgba(52,168,83,0.2); }
+.channel-tag.pmax { background: #FEF4F4; color: var(--wp); border-color: rgba(124,58,237,0.2); }
+.channel-tag.klaviyo { background: #FEF4F4; color: var(--wp-soft); border-color: rgba(180,83,9,0.2); }
+.channel-tag.all { background: var(--bg-alt); color: var(--text-primary); }
+
+/* Band badge (S / A / B / C / D / F) - June 2026: 28px monochrome discs, white
+   letter. S + A ink, B secondary grey, C + D --wp-soft, F Mandarin Red. */
+.band-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: var(--r-full); font-size: 12px; font-weight: 700; line-height: 1; margin-right: 8px; }
+.band-badge.s, .band-badge.a { background: var(--text-primary); color: #fff; }
+.band-badge.b { background: var(--text-secondary); color: #fff; }
+.band-badge.c, .band-badge.d { background: var(--wp-soft); color: #fff; }
+.band-badge.f { background: var(--wp); color: #fff; }
+/* Hairline rings on A / B / C / D as the designer's page renders them (May 2026 borders his restyle did not clear) */
+.band-badge.a { border: 1px solid rgba(4,120,87,0.3); }
+.band-badge.b { border: 1px solid var(--border); }
+.band-badge.c { border: 1px solid rgba(180,83,9,0.3); }
+.band-badge.d { border: 1px solid rgba(234,70,72,0.3); }
+
+/* Hook card (single extracted hook with example) */
+.hook-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+.hook-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px 22px; }
+.hook-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; gap: 12px; }
+.hook-card-id { font-size: 11px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.hook-card-title { font-size: 15px; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
+.hook-card-example { font-size: 14px; color: var(--text-secondary); font-style: italic; padding: 10px 14px; border-left: 3px solid var(--wp); background: var(--wp-bg); border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: 10px 0; line-height: 1.55; }
+.hook-card-meta { font-size: 12px; color: var(--text-muted); margin-top: 10px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* Verbatim example card (hero ad) */
+.example-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px 24px; margin: 20px 0; }
+.example-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; gap: 16px; flex-wrap: wrap; }
+.example-title { font-size: 17px; font-weight: 800; color: var(--text-primary); line-height: 1.3; }
+.example-meta { font-size: 12px; color: var(--text-muted); font-family: 'SFMono-Regular', monospace; }
+.example-metrics {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 0; margin: 18px 0; padding: 0;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: var(--r-md); overflow: hidden;
+}
+.example-metric {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 16px 18px; position: relative;
+  border-left: 1px solid var(--border);
+}
+.example-metric:first-child { border-left: none; }
+.example-metric-val {
+  font-size: 20px; font-weight: 900; color: var(--text-primary);
+  line-height: 1.1; font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.example-metric-lbl {
+  font-size: 10px; color: var(--text-muted); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.2;
+}
+/* Colour the value when band badge is present */
+.example-metric.val-roas .example-metric-val,
+.example-metric.val-positive .example-metric-val { color: var(--green); }
+.example-metric.val-warning .example-metric-val { color: var(--amber); }
+.example-metric.val-negative .example-metric-val { color: var(--wp); }
+.example-copy { font-size: 14px; color: var(--text-secondary); white-space: pre-wrap; line-height: 1.65; padding: 16px 18px; background: var(--bg-alt); border-radius: var(--r-md); border-left: 3px solid var(--wp); }
+.example-row { margin-bottom: 12px; }
+.example-row-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+.example-row-val { font-size: 14px; color: var(--text-primary); font-weight: 600; }
+
+/* Pattern table (headlines / descriptions / ctas etc) */
+.pattern-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; margin: 20px 0; }
+.pattern-table th { background: var(--text-primary); color: #fff; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 14px; text-align: left; }
+.pattern-table td { padding: 12px 14px; font-size: 13px; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+.pattern-table tbody tr:last-child td { border-bottom: none; }
+.pattern-table td:first-child { font-weight: 600; color: var(--text-primary); }
+.pattern-table .count { font-variant-numeric: tabular-nums; text-align: right; font-weight: 800; color: var(--text-primary); }
+
+/* Anti-pattern block (avoid / do-instead) */
+.ap-block { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.ap-side { padding: 20px 22px; }
+.ap-side.avoid { background: var(--wp-bg); border-right: 1px solid var(--border); }
+.ap-side.instead { background: var(--green-bg); }
+.ap-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.ap-side.avoid .ap-label { color: var(--wp); }
+.ap-side.instead .ap-label { color: var(--green); }
+.ap-quote { font-size: 14px; color: var(--text-primary); font-style: italic; line-height: 1.55; font-weight: 500; }
+.ap-why { font-size: 13px; color: var(--text-secondary); margin-top: 10px; line-height: 1.6; }
+.ap-name { font-size: 16px; font-weight: 800; color: var(--text-primary); grid-column: 1 / -1; padding: 14px 22px 0; margin-bottom: 0; }
+.ap-block { grid-template-areas: "name name" "avoid instead"; grid-template-columns: 1fr 1fr; }
+.ap-name { grid-area: name; }
+.ap-side.avoid { grid-area: avoid; }
+.ap-side.instead { grid-area: instead; }
+
+/* Rule block (voice rules 1-5) */
+.rule-list { margin: 28px 0; display: flex; flex-direction: column; gap: 20px; }
+.rule { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--wp); border-radius: var(--r-lg); padding: 22px 24px; }
+.rule-num { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--wp); margin-bottom: 6px; }
+.rule-title { font-size: 18px; font-weight: 800; color: var(--text-primary); margin-bottom: 10px; line-height: 1.3; }
+.rule-body { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; }
+.rule-example { font-size: 13px; color: var(--text-primary); font-style: italic; padding: 10px 14px; background: var(--green-bg); border-radius: var(--r-sm); border-left: 3px solid var(--green); margin-top: 10px; }
+.rule-counter { font-size: 13px; color: var(--text-primary); font-style: italic; padding: 10px 14px; background: var(--wp-bg); border-radius: var(--r-sm); border-left: 3px solid var(--wp); margin-top: 8px; }
+
+/* Checklist block */
+.checklist { margin: 24px 0; list-style: none; padding-left: 0; }
+.checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-primary); }
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before { content: "☐"; font-size: 18px; color: var(--text-muted); flex-shrink: 0; margin-top: -2px; }
+
+/* Stat callout (big number + label) */
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 24px 0; }
+.stat-row.callouts { grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.stat-row.callouts .stat-tile { padding: 14px 14px; text-align: center; }
+.stat-row.callouts .stat-tile-lbl { font-size: 11px; }
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px 20px; text-align: left; }
+.stat-tile-val { font-size: 28px; font-weight: 900; color: var(--text-primary); line-height: 1.1; margin-bottom: 4px; }
+.stat-tile-lbl { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ============================================================
+   RESPONSIVE (mobile-first refinements)
+   ============================================================ */
+
+/* Tablet: 1024px and below */
+@media (max-width: 1024px) {
+  /* lateral gutter lives on sections / hero now, not .wrap */
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .next-grid { grid-template-columns: repeat(2, 1fr); }
+  .hook-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stat-row.callouts { grid-template-columns: repeat(3, 1fr); }
+  .ap-block { grid-template-columns: 1fr 1fr; } /* still side-by-side at tablet */
+}
+
+/* Mobile: 768px and below */
+@media (max-width: 768px) {
+  /* Base rhythm */
+  section { padding: 48px 28px 52px; }
+  p, .section-sub { font-size: 15px; line-height: 1.65; }
+  .section-sub { margin-bottom: 28px; }
+
+  /* Hero */
+  #hero { padding: 52px 28px 44px; }
+  .hero-heading { font-size: clamp(28px, 8vw, 36px); letter-spacing: -0.02em; margin-bottom: 14px; }
+  .hero-sub { font-size: 15px; line-height: 1.6; }
+  .hero.hero--center .hero-sub { font-size: 17px; }
+  .hero-badge { font-size: 11px; padding: 4px 12px; margin-bottom: 20px; }
+
+  /* Nav - collapse links + controls behind burger toggle.
+     Period + Download PDF leave the bar and live inside the open menu (.nav-menu-extra).
+     The dropdown positions against <nav> (sticky = positioned), so .nav-inner goes static. */
+  nav { padding: 0; }
+  .nav-inner { gap: 8px; padding: 0 18px; position: static; justify-content: space-between; }
+  .nav-right { display: none; }
+  .nav-burger { display: inline-flex; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: rgba(255,255,255,0.99); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 18px 16px; flex-direction: column; align-items: stretch;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    max-height: calc(100vh - 64px); overflow-y: auto; gap: 2px;
+    margin-left: 0;
+  }
+  nav.is-open .nav-links { display: flex; }
+  .nav-links a { font-size: 14px; padding: 10px 14px; }
+  .nav-menu-extra { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; padding: 14px 14px 4px; border-top: 1px solid var(--border); }
+  .nav-menu-extra .nav-period { font-size: 13px; }
+  .nav-menu-extra .btn-download { width: 100%; justify-content: center; font-size: 14px; padding: 12px 18px; }
+  .nav-badge { gap: 6px; }
+  .nav-badge span { display: none; }
+  /* Buttons keep the Figma 16px pill on mobile (the June 2026 kit does not shrink them) */
+
+  /* KPI tiles - compact grid, still 2-col */
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0; }
+  /* June 2026: tile padding + comparison rows keep their desktop size on mobile */
+  .kpi-tile-label { font-size: 10px; margin-bottom: 4px; letter-spacing: 0.06em; }
+  .kpi-tile-value { font-size: 26px; margin-bottom: 10px; }
+  .kpi-tile-comps { gap: 14px; }
+  .kpi-value { font-size: 34px; }   /* June 2026 Figma mobile scale (.proof-num gets the same after the website block) */
+
+  /* Stat tiles - 2-col compact cards */
+  .stat-row { grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0; }
+  .stat-row.callouts { grid-template-columns: repeat(2, 1fr); }
+  .stat-tile { padding: 14px 14px; border-radius: var(--r-md); }
+  .stat-tile-val { font-size: 20px; line-height: 1.2; margin-bottom: 3px; }
+  .stat-tile-lbl { font-size: 10px; letter-spacing: 0.06em; line-height: 1.3; }
+
+  /* Hook cards - full width stacked with snug padding */
+  .hook-grid { gap: 12px; margin: 20px 0; }
+  .hook-card { padding: 16px 18px; }
+  .hook-card-title { font-size: 14px; }
+  .hook-card-example { font-size: 13px; padding: 8px 12px; margin: 8px 0; }
+  .hook-card-meta { font-size: 11px; gap: 8px; margin-top: 8px; }
+
+  /* Example cards - lighter padding, metrics wrap into 2-3 col grid */
+  .example-card { padding: 18px 18px; margin: 16px 0; }
+  .example-head { flex-direction: column; gap: 8px; margin-bottom: 12px; }
+  .example-title { font-size: 15px; }
+  .example-meta { font-size: 11px; }
+  .example-metrics { grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); }
+  .example-metric { padding: 12px 14px; gap: 4px; }
+  .example-metric-val { font-size: 16px; }
+  .example-metric-lbl { font-size: 9px; }
+  .example-copy { font-size: 13px; padding: 12px 14px; }
+  .example-row { margin-bottom: 10px; }
+  .example-row-lbl { font-size: 10px; margin-bottom: 3px; }
+  .example-row-val { font-size: 13px; }
+
+  /* Anti-pattern blocks stack */
+  .ap-block { grid-template-columns: 1fr; grid-template-areas: "name" "avoid" "instead"; gap: 0; }
+  .ap-name { font-size: 15px; padding: 14px 18px 0; }
+  .ap-side { padding: 16px 18px; }
+  .ap-side.avoid { border-right: none; border-bottom: 1px solid var(--border); }
+  .ap-quote { font-size: 13px; }
+  .ap-why { font-size: 12px; }
+
+  /* Rule cards */
+  .rule { padding: 18px 20px; }
+  .rule-title { font-size: 16px; }
+  .rule-body { font-size: 13px; }
+  .rule-example, .rule-counter { font-size: 12px; padding: 8px 12px; }
+
+  /* Tables scroll horizontally inside rounded frame */
+  .campaign-table-wrap, .pattern-table { border-radius: var(--r-md); }
+  .pattern-table { display: block; overflow-x: auto; max-width: 100%; }
+  .pattern-table thead, .pattern-table tbody { white-space: nowrap; }
+  .pattern-table th, .pattern-table td { padding: 10px 12px; font-size: 12px; }
+  .campaign-table thead th { padding: 10px 10px; font-size: 9px; }
+  .campaign-table tbody td { padding: 10px 10px; font-size: 12px; }
+  .table-wrap thead th { font-size: 11px; letter-spacing: 1.2px; padding: 11px 12px; }   /* June 2026 Figma mobile scale */
+  .table-wrap tbody td { font-size: 14px; padding: 12px 12px; }
+
+  /* Changes list - card padding + description keep their desktop size (June 2026) */
+  .change-icon { width: 26px; height: 26px; font-size: 13px; }
+  .change-title { font-size: 18px; }   /* June 2026 Figma mobile scale */
+
+  /* Next cards - stack on mobile; padding + description keep their desktop size (June 2026) */
+  .next-grid { grid-template-columns: 1fr; gap: 12px; }
+  .next-card-title { font-size: 18px; }   /* June 2026 Figma mobile scale */
+  .next-card:hover { transform: none; } /* disable hover-lift on touch */
+
+  /* Checklist */
+  .checklist li { padding: 8px 0; font-size: 13px; gap: 10px; }
+  .checklist li::before { font-size: 16px; }
+
+  /* Two-column lists stack */
+  .lists-cols { flex-direction: column; gap: 20px; }
+
+  /* Section title */
+  .section-title { font-size: 24px; margin-bottom: 10px; }
+  .label { font-size: 11px; margin-bottom: 10px; }
+
+  /* Band badges + channel tags keep their desktop size (June 2026 kit); only the badge gap tightens */
+  .band-badge { margin-right: 6px; }
+}
+
+/* Small phone: 480px and below */
+@media (max-width: 480px) {
+  section { padding: 36px 28px 40px; }
+
+  /* Hero tighter */
+  #hero { padding: 40px 28px 32px; }
+  .hero-heading { font-size: clamp(26px, 9vw, 32px); }
+  .hero-sub { font-size: 14px; }
+
+  /* KPI tiles - still 2-col but more compact */
+  /* One column below 480px: at the Figma scale (34px value, 22px padding) two kit tiles
+     need 442px at 390 and force a horizontal scroll - the designer's page shows the
+     same overflow, so the stack is the one consumer-safety deviation from it. */
+  .kpi-grid { grid-template-columns: 1fr; gap: 10px; }
+  .kpi-grid > .kpi-tile:nth-child(2):last-child, .kpi-grid > .kpi-tile:only-child { grid-column: auto; max-width: none; }
+  .kpi-tile-value { font-size: 22px; }
+  .kpi-tile-comps { flex-direction: column; gap: 8px; }
+
+  /* Stat tiles stay 2-col (not 1) - looks better balanced */
+  .stat-row { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stat-tile { padding: 12px 12px; }
+  .stat-tile-val { font-size: 17px; line-height: 1.2; }
+  .stat-tile-lbl { font-size: 9px; }
+
+  /* Hook + example cards tighter */
+  .hook-card { padding: 14px 16px; }
+  .example-card { padding: 16px 16px; }
+  .example-metrics { grid-template-columns: repeat(2, 1fr); }
+  .example-metric { padding: 10px 12px; }
+  .example-metric:nth-child(2n+1) { border-left: none; }
+  .example-metric:nth-child(n+3) { border-top: 1px solid var(--border); }
+  .example-metric-val { font-size: 15px; }
+
+  /* AP */
+  .ap-name { font-size: 14px; padding: 12px 16px 0; }
+  .ap-side { padding: 14px 16px; }
+
+  /* Rule cards */
+  .rule { padding: 16px 18px; }
+
+  /* Nav - at 480px show burger + logo only, hide date and ghost download */
+  .nav-badge { gap: 4px; }
+  .nav-badge .btn-ghost { display: none; } /* hide MD download at very small widths - still accessible via scroll */
+  .nav-inner { padding: 0 14px; }
+
+  /* Section label smaller */
+  .section-title { font-size: 22px; }
+}
+
+/* Ultra-small: 360px and below (rare but Android minis) */
+@media (max-width: 360px) {
+  /* .wrap lateral padding removed - gutter is on sections / hero */
+  .stat-row { grid-template-columns: 1fr; }
+  .kpi-grid { grid-template-columns: 1fr; }
+  .hero-heading { font-size: 24px; }
+}
+
+/* Print / PDF */
+@media print {
+  @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+  body { background: #fff !important; font-size: 13px; line-height: 1.6; }
+  nav { display: none !important; }
+  .btn-download, .btn-ghost { display: none !important; }
+  .print-header { display: block !important; }
+  .hero-badge { display: none !important; }
+  #hero { padding: 0 0 20px !important; }
+  .hero-heading { font-size: 30px !important; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .hero-sub { font-size: 13px; margin-bottom: 16px; max-width: 100%; }
+  footer { break-before: avoid; padding: 24px 0; background: #fff !important; }
+  footer p { color: rgba(0,0,0,0.3) !important; font-size: 11px; }
+  section { padding: 28px 0 32px !important; background: #fff !important; break-inside: avoid; }
+  section:nth-child(even) { background: #fff !important; }
+  section + section { border-top: 1px solid #E0DEDC; }
+  .wrap { max-width: 100%; padding: 0 !important; }
+  .section-title { font-size: 24px !important; font-weight: 800; margin-bottom: 8px; }
+  .section-sub { font-size: 13px; margin-bottom: 20px; max-width: 100%; color: #4A4A4A; }
+  .label { font-size: 10px; font-weight: 700; margin-bottom: 8px; color: #EA4648; }
+  p { font-size: 12.5px; line-height: 1.55; }
+  .kpi-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 12px; margin: 16px 0; }
+  .kpi-tile { break-inside: avoid; border: 1px solid #E0DEDC; border-radius: 10px; padding: 16px 14px; }
+  .kpi-tile-value { font-size: 28px; }
+  .next-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px; margin: 16px 0; }
+  .next-card { break-inside: avoid; padding: 16px 18px; border: 1px solid #E0DEDC; border-left: 3px solid #EA4648; border-radius: 10px; }
+  section:nth-child(even) .next-card { background: #fff; }
+  .next-card-title { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+  .next-card-desc { font-size: 11px; line-height: 1.5; }
+  .hook-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .hook-card { break-inside: avoid; }
+  .example-card { break-inside: avoid; }
+  .ap-block { break-inside: avoid; }
+  .rule { break-inside: avoid; }
+  .campaign-table-wrap { break-inside: avoid; }
+  .pattern-table { break-inside: avoid; }
+}
+
+/* ============================================================
+   PERFORMANCE-REPORTING COMPONENTS
+   Weekly card, 13-month chart, creative cards, multi-channel sidebar
+   ============================================================ */
+
+/* --- Weekly breakdown card --- */
+.weekly-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; margin: 20px 0; }
+.weekly-card-header { padding: 18px 22px 14px; border-bottom: 1px solid var(--border); }
+.weekly-card-title { font-size: 16px; font-weight: 800; }
+.weekly-card-sub { font-size: 12px; color: var(--text-muted); }
+.weekly-card-body { padding: 10px 22px 6px; }
+.weekly-table { width: 100%; border-collapse: collapse; }
+.weekly-table th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); padding: 8px 10px; text-align: left; border-bottom: 1px solid rgba(224,222,220,0.5); }
+.weekly-table td { font-size: 13px; color: var(--text-secondary); padding: 8px 10px; border-bottom: 1px solid rgba(224,222,220,0.5); }
+.weekly-table tr:last-child td { border-bottom: none; }
+.weekly-table .wk-rev { font-weight: 800; color: var(--text-primary); }
+.weekly-table .wk-roas { font-weight: 700; }
+.weekly-card-note { padding: 12px 22px; background: var(--bg-alt); font-size: 13px; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border); }
+
+/* --- 13-month bar chart --- */
+.chart-wrap { margin: 20px 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px 28px; }
+.chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.chart-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+.chart-sub { font-size: 13px; font-weight: 400; color: var(--text-secondary); line-height: 1.5; margin: 6px 0 18px; max-width: 760px; }
+.chart-legend { display: flex; gap: 16px; }
+.chart-legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
+.chart-legend-swatch { width: 10px; height: 10px; border-radius: 2px; }
+/* June 2026 Figma alignment: monochrome red chart. Above target = soft red
+   gradient (#EA6F75 -> #FAD8DA, Figma-only tints with no token), below target =
+   solid Mandarin Red. Was green / amber. */
+.chart-legend-swatch.above { background: linear-gradient(180deg, #EA6F75 0%, #FAD8DA 100%); }
+.chart-legend-swatch.below { background: var(--wp); }
+.chart-area { display: flex; align-items: stretch; gap: 6px; height: 220px; position: relative; }
+.chart-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; }
+.chart-bar-area { flex: 1; width: 100%; position: relative; }
+.chart-bar { width: 100%; border-radius: 6px 6px 0 0; position: absolute; bottom: 0; left: 0; min-height: 8px; }
+.chart-bar.above { background: linear-gradient(180deg, #EA6F75 0%, #FAD8DA 100%); }
+.chart-bar.below { background: var(--wp); }
+.chart-bar.above .chart-bar-rev { color: #fff; text-shadow: 0 1px 2px rgba(176,40,42,0.35); }   /* keeps the revenue label legible on the pale end of the gradient */
+.chart-roas { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 700; color: var(--text-primary); white-space: nowrap; padding-bottom: 4px; }
+.chart-bar-rev { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 700; color: #fff; white-space: nowrap; }
+/* Reserve a fixed height for .chart-meta so bar-area heights stay identical
+   across columns regardless of whether .chart-year is rendered. Without this,
+   columns with a year label have a taller meta, the bar-area shrinks, and the
+   bar baselines drift upward visibly on those columns. */
+.chart-meta { margin-top: 8px; text-align: center; min-height: 32px; }
+.chart-label { font-size: 12px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
+.chart-year { font-size: 11px; color: var(--text-muted); font-weight: 500; line-height: 1.3; }
+
+/* --- Creative cards (Meta ads top-performing grid) --- */
+.tc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+.tc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; position: relative; transition: box-shadow .2s; }
+.tc-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.tc-card-rank { position: absolute; top: 10px; left: 10px; z-index: 2; width: 28px; height: 28px; border-radius: 50%; background: rgba(0,0,0,0.65); color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.tc-card-visual { position: relative; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: #f1f0ee; }
+.tc-card-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tc-card-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--bg-alt); }
+.tc-card-img-placeholder span { font-size: 14px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.tc-card-visual .tc-type { position: absolute; bottom: 8px; right: 8px; }
+.tc-type { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: var(--r-sm); }
+.tc-type.dpa { background: var(--green-bg); color: var(--green); border: 1px solid rgba(4,120,87,0.2); }
+.tc-type.video { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(29,78,216,0.2); }
+.tc-type.image { background: var(--amber-bg); color: var(--amber); border: 1px solid rgba(180,83,9,0.2); }
+.tc-type.carousel { background: rgba(124,58,237,0.07); color: #7C3AED; border: 1px solid rgba(124,58,237,0.2); }
+.tc-card-info { padding: 12px 14px 8px; }
+.tc-card-name { font-size: 13px; font-weight: 700; color: var(--text-primary); line-height: 1.35; }
+.tc-card-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; line-height: 1.3; }
+.tc-card-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; padding: 10px 14px 14px; }
+.tc-card-metric { text-align: center; }
+.tc-card-metric-val { font-size: 13px; font-weight: 800; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.tc-card-metric-val.roas-top { color: var(--green); }
+.tc-card-metric-val.roas-ok { color: var(--amber); }
+.tc-card-metric-val.roas-low { color: var(--wp); }
+.tc-card-metric-lbl { font-size: 9px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+.tc-card-link { display: block; text-align: center; padding: 8px 14px; border-top: 1px solid var(--border); font-size: 11px; font-weight: 600; color: var(--blue); text-decoration: none; transition: background .15s; }
+.tc-card-link:hover { background: var(--bg-alt); }
+.tc-card-id { display: block; text-align: center; padding: 6px 14px; border-top: 1px solid var(--border); font-size: 10px; font-family: 'Courier New', monospace; color: var(--text-muted); cursor: pointer; transition: background .15s, color .15s; }
+.tc-card-id:hover { background: var(--bg-alt); color: var(--text-primary); }
+.tc-play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 48px; height: 48px; border-radius: 50%; background: rgba(0,0,0,0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.tc-play-overlay svg { width: 20px; height: 20px; fill: #fff; margin-left: 3px; }
+.tc-slide-count { position: absolute; top: 10px; right: 10px; z-index: 2; background: rgba(0,0,0,0.55); color: #fff; backdrop-filter: blur(4px); font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: var(--r-sm); letter-spacing: 0.02em; }
+.tc-card-copy-placeholder { flex-direction: column; padding: 24px 20px; text-align: center; gap: 10px; background: linear-gradient(135deg, #f8f7f6 0%, #edecea 100%); }
+.tc-copy-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 4px; }
+.tc-copy-text { font-size: 13px; color: var(--text-secondary); font-style: italic; line-height: 1.5; max-width: 220px; margin: 0 auto; }
+.tc-copy-note { font-size: 10px; color: var(--text-muted); margin-top: 6px; }
+
+/* --- SEO ranking position badges --- */
+.pos-top3 { color: var(--green); font-weight: 800; }
+.pos-up { color: var(--green); }
+.pos-down { color: var(--wp); }
+.pos-same { color: var(--text-muted); }
+
+/* ============================================================
+   SIDEBAR + APP HEADER (canonical)
+   Desktop (≥1024px): permanent left rail (320px) + top app header right of rail.
+   Mobile/tablet (<1024px): slide-out drawer with overlay + ESC + body-scroll-lock.
+   Used by: multi-channel reports, single-page TOC dashboards, audits, enrichment.
+   ============================================================ */
+
+/* --- App header (always visible, sits right of sidebar on desktop) --- */
+.app-header {
+  position: fixed; top: 0; left: var(--sidebar-w); right: 0; z-index: 250;
+  height: var(--app-header-h);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; gap: 14px;
+}
+.app-header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.app-header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.app-header-logo, .app-header-logo svg { height: 20px; width: auto; max-width: 160px; display: block; flex-shrink: 0; }
+.app-header-logo path, .app-header-logo svg path { fill: var(--text-primary) !important; }
+.app-header-title { font-size: 12px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-header-period { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; white-space: nowrap; }
+
+.sidebar-toggle {
+  display: none; /* hidden on desktop, shown on tablet/mobile */
+  width: 40px; height: 40px; border-radius: var(--r-sm);
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-primary); cursor: pointer;
+  align-items: center; justify-content: center;
+  flex-shrink: 0; padding: 0;
+  transition: background .15s, border-color .15s, transform .1s;
+  -webkit-tap-highlight-color: transparent;
+}
+.sidebar-toggle:hover { background: var(--bg-alt); border-color: var(--text-primary); }
+.sidebar-toggle:active { transform: scale(0.96); }
+.sidebar-toggle svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+
+/* --- Sidebar (desktop = permanent rail, mobile = slide-out drawer) --- */
+.sidebar {
+  position: fixed; top: 0; left: 0; bottom: 0; width: var(--sidebar-w);
+  background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border); z-index: 300;
+  display: flex; flex-direction: column; overflow-y: auto;
+  transform: none; transition: transform .25s ease;
+  box-shadow: none;
+}
+.sidebar.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.12); }
+.sidebar-header { padding: 22px 24px 18px; border-bottom: 1px solid var(--border); position: relative; flex-shrink: 0; }
+/* Apply size to BOTH the wrapper (span/div) AND the SVG inside - some HTML wraps the SVG in a span.sidebar-logo, others use the class on the svg directly */
+.sidebar-logo, .sidebar-logo svg { height: 22px; width: auto; max-width: 160px; display: block; }
+.sidebar-logo { margin-bottom: 14px; }
+.sidebar-logo path, .sidebar-logo svg path { fill: var(--text-primary) !important; }
+.sidebar-brand { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+.sidebar-period { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+.sidebar-close {
+  display: none; /* hidden on desktop (no use); shown on tablet/mobile */
+  position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px; border-radius: var(--r-sm);
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-muted); cursor: pointer;
+  align-items: center; justify-content: center; padding: 0;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.sidebar-close:hover { background: var(--bg-alt); color: var(--text-primary); border-color: var(--text-primary); }
+.sidebar-close svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+
+/* Nav with auto-numbered top-level items via CSS counter.
+   Explicit overrides reset the global `nav` rule (sticky/flex/height) when
+   used inside the drawer, which is also a <nav> element. */
+.sidebar-nav {
+  display: block; position: static; height: auto; min-height: 0;
+  background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none;
+  border-bottom: none; align-items: stretch;
+  flex: 1 1 auto; padding: 14px 0 24px; counter-reset: sb-page;
+  /* 29 Sep 2026: a long section list scrolls INSIDE the nav, so the footer (Download PDF) never slides under it */
+  min-height: 0; overflow-y: auto;
+}
+.sidebar-page { display: block; margin-bottom: 2px; }
+.sidebar-page-btn {
+  counter-increment: sb-page;
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; padding: 12px 24px;
+  border: none; background: none; cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 14px; font-weight: 600; color: var(--text-primary);
+  text-align: left; border-left: 3px solid transparent;
+  transition: color .15s, background .15s, border-color .15s;
+}
+.sidebar-page-btn::before {
+  content: counter(sb-page, decimal-leading-zero) ".";
+  font-size: 11px; font-weight: 700; color: var(--text-muted);
+  letter-spacing: 0.06em; flex-shrink: 0; min-width: 22px;
+  font-variant-numeric: tabular-nums;
+}
+.sidebar-page-btn:hover { color: var(--wp); background: rgba(234,70,72,0.03); }
+.sidebar-page-btn:hover::before { color: var(--wp); }
+.sidebar-page-btn.active { color: var(--wp); background: rgba(234,70,72,0.04); border-left-color: var(--wp); }
+.sidebar-page-btn.active::before { color: var(--wp); }
+
+.sidebar-sections { padding: 2px 0 8px 36px; display: flex; flex-direction: column; }
+.sidebar-section-link {
+  display: block; padding: 6px 24px 6px 12px;
+  font-size: 12.5px; font-weight: 500; color: var(--text-secondary);
+  text-decoration: none; line-height: 1.4;
+  border-left: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.sidebar-section-link:hover { color: var(--text-primary); border-left-color: var(--border-med); text-decoration: none; }
+.sidebar-section-link.active { color: var(--wp); border-left-color: var(--wp); font-weight: 600; }
+
+.sidebar-footer { padding: 16px 24px 22px; border-top: 1px solid var(--border); flex-shrink: 0; background: var(--bg-base); }
+
+/* --- Overlay (covers content when drawer open) --- */
+.sidebar-overlay {
+  display: none; position: fixed; inset: 0; z-index: 290;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+}
+.sidebar-overlay.visible { display: block; }
+
+/* --- Body scroll-lock when drawer open (set via JS toggleSidebar) --- */
+
+/* --- Main content (desktop: leaves room for sidebar + header) --- */
+.main { margin-left: var(--sidebar-w); padding-top: var(--app-header-h); }
+.main .wrap { max-width: 1100px; padding: 0 36px; }
+/* Inside the sidebar chassis the gutter stays on .main .wrap (36px), so sections
+   drop the June 2026 section gutter + cap here to avoid a doubled 64px gutter. */
+.main section, .main .section, .main #hero, .main .hero { padding-left: 0; padding-right: 0; max-width: none; }
+.page-content { display: none; }
+.page-content.active { display: block; }
+
+/* --- Tablet + mobile: drawer pattern --- */
+@media (max-width: 1023px) {
+  .app-header { left: 0; padding: 0 18px; }
+  .sidebar-toggle { display: inline-flex; }
+  .sidebar { transform: translateX(-100%); box-shadow: none; }
+  .sidebar.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.12); }
+  .sidebar-close { display: inline-flex; }
+  .main { margin-left: 0; }
+  .main .wrap { max-width: 1180px; padding: 0 28px; }
+}
+
+/* --- Small phone refinements --- */
+@media (max-width: 480px) {
+  :root { --sidebar-w: min(320px, 88vw); }
+  .app-header { padding: 0 14px; }
+  .app-header-title { display: none; }
+}
+
+/* --- LEGACY mobile-header alias (deprecated, maps to app-header) --- */
+.mobile-header { display: none; }
+.mobile-header-logo, .mobile-header-logo svg { height: 18px; width: auto; max-width: 140px; display: block; }
+.mobile-header-logo path, .mobile-header-logo svg path { fill: var(--text-primary) !important; }
+
+/* --- Print --- */
+@media print {
+  .app-header { display: none !important; }
+  .sidebar { display: none !important; }
+  .sidebar-overlay { display: none !important; }
+  .mobile-header { display: none !important; }
+  .main { margin-left: 0 !important; padding-top: 0 !important; }
+  .page-content { display: block !important; break-before: page; }
+  .page-content:first-child { break-before: auto; }
+  /* Creative cards in print */
+  .tc-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .tc-card { break-inside: avoid; }
+  .tc-card:hover { box-shadow: none; }
+  /* Weekly card in print */
+  .weekly-card { break-inside: avoid; border: 1px solid #E0DEDC; border-radius: 10px; margin: 12px 0; }
+  .weekly-card-header { padding: 12px 16px 10px; }
+  .weekly-card-title { font-size: 13px; }
+  .weekly-table th { font-size: 9px; padding: 6px 8px; }
+  .weekly-table td { font-size: 11px; padding: 6px 8px; }
+  .weekly-card-note { font-size: 10.5px; padding: 8px 16px; background: #F7F6F5 !important; }
+  /* Chart in print */
+  .chart-wrap { break-inside: avoid; border: 1px solid #E0DEDC; border-radius: 10px; padding: 16px 20px; margin: 12px 0; }
+  .chart-area { height: 160px; }
+  .chart-bar-rev { font-size: 9px; }
+  .chart-roas { font-size: 9px; }
+  .chart-label { font-size: 10px; }
+  .chart-year { font-size: 9px; }
+  /* Campaign table in print */
+  .campaign-table thead th { font-size: 9px; padding: 10px 10px; }
+  .campaign-table tbody td { font-size: 11px; padding: 10px 10px; }
+  /* Changes list in print */
+  .change-list, .changes { margin: 16px 0; gap: 8px; }
+  .change-item, .change { padding: 10px 14px; break-inside: avoid; gap: 12px; border: 1px solid #E0DEDC; }
+  .change-item:hover, .change:hover { background: #fff !important; }
+  .change-icon { width: 26px; height: 26px; font-size: 13px; }
+  .change-title { font-size: 13px; font-weight: 800; margin-bottom: 2px; }
+  .change-desc { font-size: 11px; line-height: 1.5; }
+}
+
+/* === Page-type chrome (added 2026-05-22) ===
+   Patterns extracted from training-expertise rebuild. Use on marketing /
+   credentialing / standalone pages where the report-style nav (period +
+   Download PDF) doesn't fit. See references/components.md for HTML templates. */
+
+/* Light page-type nav - logo + meta line, no Download PDF */
+.page-nav { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); min-height: 0; padding: 0; /* resets the report-nav min-height/padding so this stays ~64px */ }
+.page-nav .nav-inner { max-width: var(--wrap-max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; gap: 24px; }
+.page-nav .nav-logo svg { height: 22px; width: auto; }
+.page-nav .nav-meta { display: flex; align-items: baseline; gap: 12px; font-size: 13px; color: var(--text-secondary); }
+.page-nav .nav-meta .nav-role { font-weight: 700; color: var(--text-primary); letter-spacing: -0.005em; }
+.page-nav .nav-meta .nav-updated { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+@media (max-width: 768px) { .page-nav .nav-inner { padding: 12px 16px; gap: 12px; } .page-nav .nav-meta { font-size: 12px; gap: 8px; } .page-nav .nav-meta .nav-updated { display: none; } }
+
+/* Engagement card - title + red uppercase meta + body prose.
+   Use for credentialing pages, case-study walls, role progressions, project histories. */
+.engagement { padding: 26px 0; border-bottom: 1px solid var(--border); }
+.engagement:last-child { border-bottom: 0; }
+.engagement-title { font-size: 17px; font-weight: 800; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+.engagement-meta { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wp); margin-bottom: 12px; }
+.engagement p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 10px; }
+.engagement p:last-child { margin-bottom: 0; }
+
+/* 2-column timeline - date eyebrow + content. Career pages, change logs, project histories. */
+.timeline-2col { margin-top: 12px; }
+.timeline-2col .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.timeline-2col .timeline-item:last-child { border-bottom: 0; }
+.timeline-2col .timeline-date { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wp); padding-top: 3px; }
+.timeline-2col .timeline-item h4 { font-size: 15px; font-weight: 800; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+.timeline-2col .timeline-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+@media (max-width: 768px) { .timeline-2col .timeline-item { grid-template-columns: 1fr; gap: 8px; } .timeline-2col .timeline-date { padding-top: 0; } }
+
+/* Lede-block - longer narrative prose inside a section, max 820px wide. */
+.lede-block { max-width: 820px; }
+.lede-block p { font-size: 16px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+.lede-block p:last-child { margin-bottom: 0; }
+
+/* Section-intro - the subtitle paragraph below a section header. */
+.section-intro { font-size: 16px; color: var(--text-secondary); max-width: 760px; line-height: 1.65; margin-bottom: 28px; }
+
+/* H3 inside a section - secondary heading for sub-sections within a section. */
+section h3 { font-size: 18px; font-weight: 800; color: var(--text-primary); margin: 36px 0 10px; letter-spacing: -0.005em; }
+section h3:first-of-type { margin-top: 0; }
+
+/* ============================================================
+   WEBSITE CREDIBILITY COMPONENTS (v10 webprofits.com.au / May 2026 canonical)
+   Added in the May 2026 Gellix design refresh. These mirror the live website's
+   "about / why us" sections: case-study cards, testimonials, recognition rows,
+   the client logo wall, proof tiles, the AI callout, and the looked-at bullet card.
+   Use for proposals, about pages, credibility sections, pitch decks.
+
+   HARD DESIGN RULES baked in here (do NOT override inline):
+   - Client / partner / award logos NEVER sit in individual boxes or outlines.
+   - No grey bordered panel boxing a logo group. The logo wall is a bare centred flex.
+   - Use COLOUR logos (the *-color.* hosted files), never greyscale.
+   - Award medallions are sized generously (84px) via .awards-row--circles.
+   - Everything is class-driven - no inline styles - so it stays centrally editable.
+   Card corners use --card-radius (16px), the website's card radius. Logos are
+   referenced from hosted URLs (see SKILL.md "Asset strategy" + the manifest in
+   references/components.md), never bundled.
+   ============================================================ */
+
+/* --- Proof tiles (big number + label + sub) --- */
+.proof-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin: 32px 0 6px; }
+.proof-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 24px; }
+.proof-num { font-weight: 700; font-size: clamp(34px, 4.4vw, 48px); line-height: 1.05; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+.proof-label { font-size: 16px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-primary); margin-bottom: 10px; }
+.proof-sub { font-size: 12px; font-weight: 400; line-height: 1.5; color: var(--text-muted); }
+
+/* --- Case-study cards (logo -> metric -> period -> details) --- */
+.cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 28px 0 6px; }
+.case-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 24px; display: flex; flex-direction: column; transition: box-shadow .3s ease, transform .3s ease; }
+.case-card:hover { box-shadow: 0 12px 40px rgba(7,9,9,0.09); transform: translateY(-3px); }
+.case-logo { height: 46px; display: flex; align-items: center; gap: 14px; padding-bottom: 24px; border-bottom: 1px solid var(--border); margin-bottom: 22px; }
+.case-logo img { max-height: 38px; max-width: 170px; width: auto; object-fit: contain; }
+.case-logo--dual .case-logo-sep { display: inline-block; width: 1px; height: 24px; background: rgba(7,9,9,0.15); }
+.case-metric { font-weight: 700; font-size: clamp(28px, 4vw, 36px); line-height: 1.1; letter-spacing: -0.36px; color: var(--text-primary); margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+.case-period { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wp); margin-bottom: 16px; }
+.case-details { font-size: 16px; font-weight: 400; line-height: 1.4; color: var(--text-secondary); flex-grow: 1; margin: 0; }
+
+/* --- Client logo wall (colour logos, centred, NO per-logo boxes, NO outer panel) --- */
+.logo-wall { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 46px 52px; padding: 24px 0 8px; margin: 24px 0 4px; }
+.logo-wall .logo-cell { flex: 0 0 auto; width: 142px; height: 52px; display: flex; align-items: center; justify-content: center; }
+.logo-wall img { max-height: 48px; max-width: 142px; width: auto; object-fit: contain; transition: transform .2s; }
+.logo-wall .logo-cell:hover img { transform: scale(1.05); }
+
+/* --- Testimonials (stars / quote / author) --- */
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 28px 0 6px; }
+.testimonial-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 24px; display: flex; flex-direction: column; }
+.testimonial-stars { display: flex; gap: 2px; margin-bottom: 18px; }
+.testimonial-star { color: var(--acc-yellow); font-size: 14px; }
+.testimonial-quote { font-size: 16px; font-weight: 400; line-height: 1.4; color: var(--text-primary); flex-grow: 1; margin: 0 0 22px; }
+.testimonial-author { display: flex; align-items: center; gap: 14px; }
+.testimonial-avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--text-muted); flex-shrink: 0; overflow: hidden; }
+.testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonial-name { font-weight: 700; font-size: 14px; color: var(--text-primary); }
+.testimonial-role { font-size: 12px; font-weight: 400; color: var(--text-muted); margin-top: 2px; }
+
+/* --- Recognition rows (Partners / Tools / Awards) ---
+   Each row is a centred flex of pills (no boxes). Award medallions use the
+   --circles modifier for generous 84px sizing. NO bordered panel around the group. */
+.awards-block { padding: 8px 0; margin: 24px 0 4px; }
+.awards-row { margin-bottom: 36px; }
+.awards-row:last-child { margin-bottom: 0; }
+.awards-row-label { text-align: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--wp); margin-bottom: 18px; }   /* June 2026: red eyebrow, was muted grey */
+.awards-items { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 18px; }
+.award-badge { display: inline-flex; align-items: center; justify-content: center; padding: 6px 12px; transition: transform .2s; }
+.award-badge:hover { transform: translateY(-2px); }
+.award-badge img { max-height: 34px; max-width: 132px; width: auto; object-fit: contain; }
+.awards-row--circles .awards-items { gap: 22px 28px; }
+.awards-row--circles .award-badge { padding: 0; }
+.awards-row--circles .award-badge img { max-height: 84px; max-width: 84px; }
+
+/* --- AI / quote callout (first-principle statement) ---
+   June 2026 Figma alignment: a quiet --bg-alt card with a 1px border all round
+   (the red left stripe went), quote 20px / 600 upright, cite 16px / 500. */
+.ai-callout { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px 32px; margin: 24px 0 6px; }
+.ai-callout blockquote { font-size: 20px; font-weight: 600; line-height: 1.4; color: var(--text-primary); font-style: normal; margin: 0 0 8px; }
+.ai-callout cite { font-size: 16px; color: var(--text-muted); font-style: normal; font-weight: 500; }
+
+/* --- "What we looked at" bullet card (card / grid / item / dot / title / desc / btn) --- */
+.lookedat-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 32px; }   /* June 2026: 16px radius, no red left stripe */
+.lookedat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 36px; margin-bottom: 28px; }
+.lookedat-item { display: flex; gap: 12px; align-items: flex-start; }
+.lookedat-dot { flex-shrink: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--wp); margin-top: 9px; }
+.lookedat-title { display: block; font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+.lookedat-desc { font-size: 16px; font-weight: 400; color: var(--text-secondary); line-height: 1.55; }
+.lookedat-btn { display: inline-flex; align-items: center; gap: 8px; background: #F54949; color: #fff; font-weight: 600; font-size: 16px; padding: 12px 32px; border-radius: var(--r-full); text-decoration: none; transition: background .15s, transform .1s; }
+.lookedat-btn:hover { background: var(--wp-soft); transform: translateY(-1px); color: #fff; text-decoration: none; }
+
+/* Responsive - website credibility components */
+@media (max-width: 900px) {
+  .proof-tiles { grid-template-columns: repeat(2, 1fr); }
+  .cases-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .logo-wall { gap: 34px 32px; padding: 36px 22px; }
+  .logo-wall .logo-cell { width: 120px; height: 46px; }
+  .logo-wall img { max-height: 42px; max-width: 120px; }
+  .lookedat-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .proof-tiles { grid-template-columns: 1fr; }
+  .logo-wall .logo-cell { width: 40%; }
+}
+
+/* June 2026 Figma mobile scale for the website components (after their base rules so it wins) */
+@media (max-width: 768px) {
+  .proof-num { font-size: 34px; }
+  .ai-callout blockquote { font-size: 18px; }
+}
+
+/* Print - website credibility components */
+@media print {
+  .case-card, .testimonial-card, .proof-tile, .lookedat-card, .ai-callout { break-inside: avoid; }
+  .case-card:hover, .testimonial-card:hover { box-shadow: none; transform: none; }
+  .cases-grid, .testimonials-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 12px; }
+  .proof-tiles { grid-template-columns: repeat(4, 1fr) !important; gap: 12px; }
+}
+
+/* ============================================================
+   Google Search ad preview (SERP mock)
+   Depicts Google's own search-results UI, so the INSIDE of the ad
+   card intentionally uses Google's type and link colours, not the
+   Webprofits brand font. The card chrome + caption stay on brand.
+   Use for RSA / ad-copy deliverables where the reader needs to see
+   what the ad actually looks like on the page.
+   ============================================================ */
+.serp-preview { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px 24px; margin: 16px 0; }
+.serp-ad { font-family: arial, helvetica, sans-serif; max-width: 620px; }
+.serp-sponsored { font-size: 14px; font-weight: 700; color: #202124; margin-bottom: 12px; }
+.serp-brandrow { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.serp-favicon { width: 28px; height: 28px; border-radius: 50%; background: var(--bg-alt); border: 1px solid var(--border-med); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--text-primary); flex-shrink: 0; font-family: var(--font-sans); }
+.serp-brand { font-size: 14px; color: #202124; line-height: 1.3; }
+.serp-brandrow > div { min-width: 0; }   /* flex children default to min-width:auto - a long URL cannot shrink without this */
+.serp-url { font-size: 12px; color: #4d5156; line-height: 1.3; overflow-wrap: anywhere; }
+.serp-headline { font-size: 20px; line-height: 1.32; color: #1a0dab; margin: 8px 0 4px; font-weight: 400; }
+.serp-desc { font-size: 14px; line-height: 1.58; color: #4d5156; }
+.serp-sitelinks { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 10px; }
+.serp-sitelink { font-size: 14px; color: #1a0dab; }
+.serp-callouts { font-size: 14px; color: #4d5156; margin-top: 8px; line-height: 1.5; }
+.serp-call { font-size: 14px; color: #1a0dab; margin-top: 8px; }
+.serp-caption { font-family: var(--font-sans); font-size: 12px; color: var(--text-muted); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.serp-caption strong { color: var(--text-secondary); font-weight: 700; }
+@media (max-width: 768px) {
+  .serp-preview { padding: 16px 16px; }
+  .serp-headline { font-size: 17px; }
+}
+
+/* ============================================================================
+   REVIEW LAYER - deliverables a client RULES on, not just reads
+   ----------------------------------------------------------------------------
+   Added Aug 2026 for the content-brief decision instrument, but deliberately
+   deliverable-agnostic: any page that asks a named person to approve or
+   reject a section uses these. Three parts:
+     .rv-status / .rv-scope  - what stage this is, and what approving commits to
+     .rv-message             - the one claim the reader is asked to veto
+     .rv-decision            - the ONE control: comment box, author, verdict
+     .rv-sec / .rv-note      - the control surface and the prior rulings on it
+   Neutral greys deliberately: the controls are tooling, and must never compete
+   with the brand red the content uses for emphasis. Hidden in print.
+   ============================================================================ */
+
+a.sidebar-page-btn { text-decoration: none; }
+a.sidebar-page-btn:hover { text-decoration: none; }
+
+/* --- .rv-doc: a review document is READ, so it is set to be read -----------
+   A dashboard's 13px table type works when the reader is scanning numbers
+   beside a nav rail. A brief is prose and quotes IN tables, read top to bottom
+   once, and at dashboard sizes it came back as "the text is really small in a
+   lot of places" (Fitz 08/08/2026). So: no sidebar eating a fifth of the
+   viewport, and one step up the scale wherever the reader is actually reading.
+   Scoped to .rv-doc, so no report or audit inherits it. */
+.rv-doc.main { margin-left: 0; padding-top: 0; }
+.rv-doc .wrap { max-width: 1080px; }
+.rv-doc p, .rv-doc li { font-size: 17px; line-height: 1.7; }
+.rv-doc .table-wrap thead th { font-size: 11px; padding: 14px 20px; }
+.rv-doc .table-wrap tbody td { font-size: 15.5px; line-height: 1.6; padding: 16px 20px; }
+/* the left column of a quote or stat table is read word by word, not scanned */
+.rv-doc .table-wrap tbody tr > td:first-child { color: var(--text-primary); }
+.rv-doc .spine-name { font-size: 16.5px; }
+.rv-doc .spine-desc { font-size: 15px; }
+.rv-doc .rv-scope { font-size: 16.5px; }
+.rv-doc .rv-decision-scope, .rv-doc .rv-note-body,
+.rv-doc .rv-note-input, #rv-author { font-size: 15px; }
+
+.rv-banner { padding: 0 0 4px; border-top: none !important; }
+.rv-status {
+  display: block; margin: 0 0 14px;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.01em;
+  color: var(--text-secondary);
+}
+.rv-status::before {
+  content: ""; display: inline-block; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--wp); margin-right: 9px;
+  vertical-align: 1px;
+}
+.rv-scope {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-left: 3px solid var(--text-primary); border-radius: var(--r-md);
+  padding: 16px 18px; margin: 0 0 8px;
+  font-size: 15px; line-height: 1.65; color: var(--text-primary);
+}
+.rv-scope-label {
+  display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;
+}
+
+/* --- The claim to veto ------------------------------------------------------
+   A review document usually turns on ONE sentence. Set it so the eye lands
+   there first: a bare markdown blockquote inherits nothing here (the only
+   blockquote rule is scoped to .ai-callout), which left the most consequential
+   line on a brief looking exactly like the paragraph after it. */
+.rv-message {
+  margin: 4px 0 20px; padding: 18px 22px;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-left: 4px solid var(--wp); border-radius: var(--r-md);
+  font-size: 17px; font-weight: 600; line-height: 1.6; color: var(--text-primary);
+}
+
+/* --- Per-section controls, in the document --- */
+.rv-sec {
+  margin: 26px 0 4px; padding: 16px 18px 14px;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.rv-sec-head {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;
+}
+.rv-sec-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.rv-btn {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.02em; padding: 7px 15px; border-radius: var(--r-full);
+  cursor: pointer; transition: background .15s, color .15s, border-color .15s;
+  border: 1px solid var(--border-med); background: var(--bg-base);
+  color: var(--text-primary);
+}
+.rv-btn:hover { border-color: var(--text-primary); }
+.rv-btn-approve { background: var(--green); border-color: var(--green); color: #fff; }
+.rv-btn-approve:hover { background: #036446; border-color: #036446; }
+.rv-btn-change { background: var(--text-primary); border-color: var(--text-primary); color: #fff; }
+.rv-btn-change:hover { background: #26333b; border-color: #26333b; }
+.rv-btn-note { font-weight: 600; }
+.rv-note-input {
+  width: 100%; box-sizing: border-box; padding: 9px 11px;
+  font-family: var(--font-sans); font-size: 13.5px; line-height: 1.5;
+  color: var(--text-primary); background: var(--bg-base);
+  border: 1px solid var(--border-med); border-radius: var(--r-sm);
+  resize: vertical; min-height: 54px;
+}
+.rv-note-input:focus { outline: 2px solid var(--wp); outline-offset: 1px; border-color: var(--wp); }
+.rv-sec-foot { display: flex; align-items: center; gap: 12px; margin-top: 9px; }
+.rv-msg { font-size: 11px; font-weight: 700; letter-spacing: 0.03em; }
+.rv-msg[data-state="ok"] { color: var(--green); }
+.rv-msg[data-state="err"] { color: var(--wp); }
+.rv-msg[data-state="saving"] { color: var(--text-muted); }
+.rv-notes:not(:empty) { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.rv-note {
+  background: var(--bg-base); border: 1px solid var(--border);
+  border-left: 3px solid var(--border-med); border-radius: var(--r-sm);
+  padding: 9px 12px;
+}
+.rv-note[data-type="approve"] { border-left-color: var(--green); }
+.rv-note[data-type="change"] { border-left-color: var(--amber); }
+.rv-note-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.rv-note-kind {
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--text-primary);
+}
+.rv-note-by { font-size: 11px; color: var(--text-muted); }
+.rv-note-on {
+  font-size: 11px; color: var(--text-muted); font-style: italic;
+}
+.rv-note-body { font-size: 13.5px; line-height: 1.55; color: var(--text-secondary); margin-top: 4px; }
+
+/* --- Worked-example column in a rule table (voice, tone, do/don't) --- */
+.table-wrap tbody td.voice-eg { color: var(--text-primary); font-style: italic; }
+.table-wrap tbody td.voice-eg:empty::before { content: "-"; color: var(--text-muted); font-style: normal; }
+
+/* ============================================================================
+   SPINE - a plan drawn at the weight it will actually be written
+   Block height tracks --spine-weight (0-1, set inline per block), so the
+   diagram reads as the shape of the finished piece rather than a flat list.
+   ============================================================================ */
+.spine { margin: 24px 0 28px; display: flex; flex-direction: column; gap: 10px; }
+.spine-block { display: flex; gap: 14px; align-items: stretch; }
+.spine-bar {
+  flex: 0 0 6px; border-radius: var(--r-full); align-self: flex-start;
+  background: var(--wp); opacity: calc(0.35 + (var(--spine-weight) * 0.65));
+  /* height is the SIGNAL: it must track the word budget, never stretch to the
+     card. A bar that stretches just restates how much description was typed. */
+  height: calc(30px + (var(--spine-weight) * 96px));
+}
+.spine-body {
+  flex: 1 1 auto; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--r-md); padding: 12px 16px;
+}
+.spine-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; margin-bottom: 5px;
+}
+.spine-name { font-size: 15px; font-weight: 800; color: var(--text-primary); line-height: 1.3; }
+.spine-words {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--wp); font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.spine-desc { font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 0; }
+.spine-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.spine-chip {
+  font-size: 10.5px; font-weight: 600; letter-spacing: 0.02em;
+  padding: 3px 9px; border-radius: var(--r-full);
+  background: var(--bg-alt); border: 1px solid var(--border); color: var(--text-secondary);
+}
+.spine-total { font-size: 12.5px; color: var(--text-muted); margin: 4px 0 0; line-height: 1.6; }
+
+/* --- The single brief-level decision (v3.1, 08/08/2026) ---------------------
+   A brief is approved as a whole or not at all. Per-section verdicts invited a
+   half-approved brief, which the process has nowhere to put. Sections keep
+   NOTES so a change request can point at something. */
+.rv-decision { border-top: 1px solid var(--border); padding: 34px 0 42px; }
+.rv-decision .rv-sec {
+  margin: 0; padding: 24px 26px 22px;
+  border: 1px solid var(--border-med); border-left: 4px solid var(--wp);
+  background: var(--bg-alt);
+}
+.rv-decision-head {
+  font-size: 20px; font-weight: 800; letter-spacing: -0.01em;
+  color: var(--text-primary); margin-bottom: 8px;
+}
+.rv-decision-scope {
+  font-size: 14px; line-height: 1.6; color: var(--text-secondary);
+  margin: 0 0 14px; max-width: 720px;
+}
+.rv-decision-given {
+  font-size: 13.5px; line-height: 1.55; margin: 0 0 14px;
+  padding: 9px 13px; border-radius: var(--r-sm);
+  background: var(--bg-base); border: 1px solid var(--border);
+}
+.rv-decision-given[data-state="approve"] { border-left: 3px solid var(--green); }
+.rv-decision-given[data-state="change"]  { border-left: 3px solid var(--amber); }
+.rv-decision .rv-sec-actions { margin: 12px 0 0; }
+.rv-decision .rv-btn { font-size: 13px; padding: 9px 20px; }
+
+/* The name the DB requires on a verdict, next to the buttons that need it. */
+.rv-author-field { margin: 0 0 14px; max-width: 340px; }
+.rv-author-label {
+  display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px;
+}
+#rv-author {
+  width: 100%; box-sizing: border-box; padding: 9px 11px;
+  font-family: var(--font-sans); font-size: 13.5px; color: var(--text-primary);
+  border: 1px solid var(--border-med); border-radius: var(--r-sm);
+  background: var(--bg-base);
+}
+#rv-author:focus { outline: 2px solid var(--wp); outline-offset: 1px; border-color: var(--wp); }
+.rv-author-missing {
+  font-size: 11.5px; line-height: 1.45; color: var(--wp);
+  font-weight: 600; margin: 8px 0 0;
+}
+
+@media print { .rv-decision { display: none !important; } }
+
+@media (max-width: 768px) {
+  .rv-sec-actions { flex-direction: column; align-items: stretch; }
+  .rv-btn { width: 100%; }
+}
+
+@media print {
+  .rv-sec, .rv-btn { display: none !important; }
+  .rv-scope, .rv-message, .spine-block, .rv-note { break-inside: avoid; }
+}
+
+</style>
+<style>
+/* ---- enrichment dashboard: page-specific layer (tokens and components come from design-system.css) ---- */
+a.sidebar-page-btn{display:block;text-decoration:none}
+.hero.hero--compact{padding:34px 0 18px}
+.hero--compact .hero-title{font-size:clamp(28px,3vw,40px);letter-spacing:-0.02em;line-height:1.12;margin-bottom:8px}
+.hero--compact .hero-sub{font-size:16px;line-height:1.55;max-width:820px;margin:0}
+.hero--compact .hero-eyebrow{margin-bottom:8px}
+.main .section-header{margin-bottom:14px}
+.main .section-header .section-title{font-size:clamp(24px,2.4vw,32px)}
+.main .section-sub{margin-bottom:18px;max-width:820px}
+.main section h3{font-size:17px;margin:22px 0 8px}
+.main section h3:first-child{margin-top:0}
+.sub4{font-size:15px;font-weight:700;margin:16px 0 6px;color:var(--text-primary)}
+.main p{max-width:860px}
+.mini{font-size:13px;color:var(--text-muted);line-height:1.5}
+.muted{color:var(--text-muted)}
+.it{font-style:italic}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-sm);padding:0 5px;word-break:break-word}
+.main a{color:var(--text-primary);text-decoration:underline;text-decoration-color:var(--border-med);text-underline-offset:2px;overflow-wrap:anywhere}
+.main a:hover{text-decoration-color:var(--wp)}
+.main .stat-row{margin:6px 0 4px}
+.stat-tile-val{font-weight:800;font-variant-numeric:tabular-nums}
+.stat-tile-sub{font-size:13px;color:var(--text-secondary);line-height:1.4;margin-top:6px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--card-radius);padding:20px 22px;min-width:0}
+.card h3,.main section .card h3{font-size:17px;font-weight:700;margin:0 0 8px;color:var(--text-primary)}
+.card p{font-size:15px;line-height:1.55}
+.card .table-wrap{margin:10px 0 0}
+.card-eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wp);margin-bottom:6px}
+.box{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;margin:14px 0}
+.box p{font-size:15px;line-height:1.55;margin-bottom:8px}
+.box p:last-child{margin-bottom:0}
+.box-title{font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px}
+.prose-list{margin:4px 0 14px 20px;color:var(--text-secondary);font-size:15px;line-height:1.55}
+.prose-list li{margin:3px 0;padding-left:2px}
+.kv{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0;border-top:1px solid var(--border);margin:6px 0 10px}
+.kv>div{padding:9px 0;border-bottom:1px solid var(--border);font-size:15px;line-height:1.45}
+.kv>div:nth-child(odd){color:var(--text-muted);font-weight:600;padding-right:14px}
+.kv>div:nth-child(even){color:var(--text-primary)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;padding:3px 9px;border-radius:var(--r-full);white-space:nowrap;background:var(--bg-alt);color:var(--text-secondary);border:1px solid var(--border)}
+.tag-ok{background:var(--green-bg);color:var(--green);border-color:transparent}
+.tag-pend{background:var(--amber-bg);color:var(--amber);border-color:transparent}
+.tag-bad{background:var(--wp-bg);color:var(--wp-soft);border-color:transparent}
+.tag-green{background:var(--green-bg);color:var(--green);border-color:transparent}
+.tag-amber{background:var(--amber-bg);color:var(--amber);border-color:transparent}
+.tag-red{background:var(--wp-bg);color:var(--wp-soft);border-color:transparent}
+.status-list{list-style:none;margin:0;padding:0}
+.status-list li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--border);align-items:start}
+.status-list li:last-child{border-bottom:none}
+.status-list .st-name{font-size:15px;font-weight:700;color:var(--text-primary);line-height:1.35}
+.status-list .st-desc{font-size:14px;color:var(--text-secondary);line-height:1.5;margin-top:2px}
+.decisions{counter-reset:dec;list-style:none;margin:0;padding:0}
+.decisions>li{counter-increment:dec;position:relative;padding:16px 0 16px 52px;border-bottom:1px solid var(--border)}
+.decisions>li:last-child{border-bottom:none}
+.decisions>li::before{content:counter(dec);position:absolute;left:0;top:14px;width:34px;height:34px;border-radius:50%;background:var(--text-primary);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center}
+.dec-title{font-size:17px;font-weight:700;color:var(--text-primary);line-height:1.35;margin-bottom:4px}
+.dec-body{font-size:15px;color:var(--text-secondary);line-height:1.55}
+.dec-src{font-size:13px;color:var(--text-muted);margin-top:6px}
+.vq{border-left:3px solid var(--border-med);padding:4px 0 4px 14px;margin:10px 0}
+.vq p{font-size:15px;line-height:1.55;color:var(--text-primary);margin:0}
+.vq cite{display:block;font-style:normal;font-size:13px;color:var(--text-muted);margin-top:4px}
+.hp-card{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:start}
+.hp-img{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.hp-img img{width:100%;height:100%;object-fit:contain;display:block}
+.price-line{font-size:clamp(26px,2.6vw,34px);font-weight:800;color:var(--text-primary);line-height:1.1;font-variant-numeric:tabular-nums}
+.price-sub{font-size:15px;color:var(--text-secondary);margin:4px 0 14px}
+.claim-line{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);font-size:15px;line-height:1.45;color:var(--text-primary)}
+.claim-line:last-child{border-bottom:none}
+.claim-line .tag{margin-top:1px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:10px 0 6px}
+.swatch{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--bg-card)}
+.swatch-chip{height:84px;border-bottom:1px solid var(--border)}
+.swatch-meta{padding:10px 12px}
+.swatch-name{font-size:13px;font-weight:700;color:var(--text-primary)}
+.swatch-hex{font-size:13px;color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.bars{display:flex;flex-direction:column;gap:10px;margin:8px 0}
+.bar-row{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr) 120px;gap:14px;align-items:center}
+.bar-label{font-size:14px;font-weight:600;color:var(--text-primary);line-height:1.3}
+.bar-track{height:12px;background:var(--bg-alt);border-radius:var(--r-full);overflow:hidden}
+.bar-fill{height:100%;background:var(--text-primary);border-radius:var(--r-full)}
+.bar-val{font-size:14px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums;color:var(--text-primary)}
+.bar-val span{color:var(--text-muted);font-weight:500}
+details.more{border:1px solid var(--border);border-radius:var(--r-md);margin:10px 0;background:var(--bg-card)}
+details.more>summary{cursor:pointer;list-style:none;padding:11px 14px;font-size:14px;font-weight:700;color:var(--text-primary);display:flex;justify-content:space-between;align-items:center;gap:10px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:'';width:8px;height:8px;border-right:2px solid var(--text-muted);border-bottom:2px solid var(--text-muted);transform:rotate(45deg);flex:none}
+details.more[open]>summary::after{transform:rotate(-135deg)}
+details.more>.more-body{padding:4px 16px 14px}
+.persona-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.persona-card .ps-short{font-size:13px;color:var(--text-muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all;margin-bottom:8px}
+.persona-card .ps-jtbd{font-size:15px;color:var(--text-primary);line-height:1.5;margin:6px 0 10px}
+.ps-meta{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+.comp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.comp-head h3{margin:0}
+.comp-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.comp-facts>div{background:var(--bg-alt);border-radius:var(--r-md);padding:10px 12px;font-size:14px;line-height:1.45;color:var(--text-secondary);min-width:0}
+.comp-facts b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px}
+.stack-gap>*+*{margin-top:18px}
+/* tables: compact body + row expand */
+.main .table-wrap tbody td{font-size:14.5px;padding:12px 14px;vertical-align:top}
+.main .table-wrap thead th{padding:12px 14px}
+.main .table-wrap td:first-child{min-width:0}
+.cell-sub{display:block;font-size:12.5px;color:var(--text-muted);margin-top:3px;line-height:1.4}
+.row-btn{background:none;border:none;padding:0;font:inherit;font-weight:700;color:var(--text-primary);text-align:left;cursor:pointer;display:inline-flex;gap:8px;align-items:flex-start}
+.row-btn::before{content:'+';display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;flex:none;border:1px solid var(--border-med);border-radius:50%;font-size:13px;line-height:1;margin-top:2px;color:var(--text-secondary)}
+.row-btn[aria-expanded="true"]::before{content:'\2212'}
+tr.row-detail>td{background:var(--bg-alt)}
+tr.row-detail .kv{margin-top:0}
+.not-captured{color:var(--amber);font-weight:600}
+/* claims filter */
+.filter-panel{border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;margin:6px 0 14px;background:var(--bg-card)}
+.filter-panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.filter-panel-title{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)}
+.filter-groups{display:flex;flex-wrap:wrap;gap:22px}
+.filter-group legend{font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:6px;padding:0}
+.filter-group{border:none;margin:0;padding:0;min-width:0}
+.filter-opt{display:inline-flex;align-items:center;gap:7px;margin:0 14px 6px 0;font-size:14px;color:var(--text-primary);cursor:pointer}
+.filter-opt input{width:16px;height:16px;margin:0;accent-color:var(--text-primary)}
+.filter-opt .fc{font-size:12px;color:var(--text-muted)}
+.filter-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.link-btn{background:none;border:1px solid var(--border-med);border-radius:var(--r-full);font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text-primary);cursor:pointer;padding:6px 14px}
+.link-btn:hover{border-color:var(--text-primary)}
+.count-line{font-size:15px;color:var(--text-secondary)}
+.count-line strong{font-size:18px}
+@media (max-width:1024px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.comp-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.grid-2,.persona-grid{grid-template-columns:1fr}.hp-card{grid-template-columns:1fr}.hp-img{max-width:260px}}
+@media (max-width:640px){
+  .grid-3,.comp-facts{grid-template-columns:1fr}
+  .kv{grid-template-columns:1fr}.kv>div:nth-child(odd){padding-bottom:0;border-bottom:none}
+  .status-list li{grid-template-columns:1fr;gap:6px}
+  .bar-row{grid-template-columns:minmax(0,1fr) 92px}.bar-row .bar-label{grid-column:1/-1}
+  .decisions>li{padding-left:46px}
+  /* stacked tables: each row becomes a labelled card */
+  .table-wrap{overflow:visible}
+  table.stack thead{display:none}
+  table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%}
+  table.stack tr{border-bottom:1px solid var(--border);padding:8px 0}
+  table.stack tr:last-child{border-bottom:none}
+  .main table.stack tbody td{border-bottom:none;padding:5px 14px;text-align:left}
+  table.stack td::before{content:attr(data-label);display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px}
+  table.stack td[data-label=""]::before{display:none}
+  table.stack tr.row-detail[hidden]{display:none}
+  table.stack tr.row-detail>td::before{display:none}
+}
+@media print{details.more{border:none}details.more>.more-body{display:block}.filter-panel{display:none}tr.row-detail[hidden]{display:table-row}}
+
+.changes{display:flex;flex-direction:column;gap:10px}
+.callout-quote{border-left:3px solid var(--border-med);padding:4px 0 4px 14px;margin:10px 0}
+.callout-quote p{font-size:15px;line-height:1.55;color:var(--text-primary);margin:0}
+.q-flag{display:inline-block;margin-left:6px}
+.claim-card .claim-say{font-size:18px;font-weight:700;color:var(--text-primary);line-height:1.4;margin:0 0 10px}
+.claim-card .kv{grid-template-columns:150px minmax(0,1fr)}
+.theme-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.theme-head h3{margin:0}
+.theme-meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--text-secondary);margin:8px 0}
+.theme-meta strong{color:var(--text-primary)}
+.off-list{list-style:none;margin:0;padding:0}
+.off-list li{padding:12px 0;border-bottom:1px solid var(--border)}
+.off-list li:last-child{border-bottom:none}
+.off-title{font-size:16px;font-weight:700;color:var(--text-primary)}
+.off-desc{font-size:15px;color:var(--text-secondary);line-height:1.5;margin-top:2px}
+.need-list{list-style:none;counter-reset:need;margin:0;padding:0}
+.need-list li{counter-increment:need;display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
+.need-list li:last-child{border-bottom:none}
+.need-list li::before{content:counter(need);width:32px;height:32px;border-radius:50%;border:1px solid var(--border-med);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:var(--text-primary)}
+.need-title{font-size:17px;font-weight:700;color:var(--text-primary);line-height:1.4}
+.need-desc{font-size:15px;color:var(--text-secondary);line-height:1.5;margin-top:2px}
+@media (max-width:640px){.claim-card .kv{grid-template-columns:1fr}.main .tag{white-space:normal;max-width:100%}
+  .main .card,.main .kv>div,.main td,.main p,.main li{overflow-wrap:anywhere;min-width:0}.main .grid-2>*{min-width:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="wp-wordmark" viewBox="0 0 110.72 23.37">
+      <path d="M28.4,7.47c-1.32,0-2.19,1.28-2.47,2.76l3.28-.09c1.17,0,1.36-.24,1.36-.61.04-1.1-.83-2.03-1.93-2.07-.08,0-.16,0-.24,0M32.3,10.89h-6.47c0,.43-.07.88-.07,1.33,0,2.64,1.37,3.93,3.47,3.93,1.21-.05,2.33-.63,3.07-1.58.07-.11.35.08.35.41,0,.07-.03.13-.07.18-.9,1.46-2.47,2.38-4.18,2.46-2.84-.08-5.08-2.45-5-5.29,0-.03,0-.06,0-.09,0-2.85,1.91-5.52,5-5.52,2.24-.08,4.14,1.62,4.32,3.85,0,.21-.17.32-.42.32"/>
+      <path d="M39.45,7.59c-1.16,0-2.43,1.09-2.43,1.89v5.45c0,.87,1.7,1.91,2.71,1.91,2.22,0,3-2.38,3-4.62,0-2.69-1.06-4.63-3.28-4.63M40.02,17.59c-2,0-2.2-.8-3.45-.8-.51-.02-.98.28-1.18.75,0,.09-.16.14-.28.14s-.31-.07-.31-.19c0-.49.1-1.41.1-2.38V3.63c0-1.25-.19-1.51-1.3-1.63-.12,0-.19-.12-.19-.28s.07-.33.19-.33c1.07-.21,2.08-.62,3-1.2.07-.12.19-.19.33-.19.19,0,.33.07.33.19-.07,1-.19,2.9-.19,4.12v3.54c.73-.7,1.7-1.1,2.71-1.11,2.79-.18,5.2,1.93,5.38,4.72.01.22.01.44,0,.66,0,2.88-2.38,5.5-5.09,5.5"/>
+      <path d="M52.41,8.04c-.94.03-1.82.5-2.36,1.27v5.78c0,1.07,1.11,1.77,2.31,1.77,2.36,0,3.3-2,3.3-4.64s-1.18-4.18-3.25-4.18M52.41,17.62c-.83.03-1.66-.16-2.4-.54v3.63c0,1.51.23,1.84,1.6,2,.1,0,.19.14.19.33s-.09.33-.19.33c-1,0-1.53-.14-2.64-.14s-1.68.14-2.67.14c-.09,0-.18-.16-.18-.33s.09-.33.18-.33c1.37-.16,1.61-.49,1.61-2v-10.46c0-1.25-.19-1.51-1.32-1.63-.1,0-.19-.14-.19-.31s.09-.28.19-.28c1.02-.21,1.99-.63,2.85-1.23.1,0,.17-.18.33-.18s.33.09.33.18l-.09,1.49c.79-.86,1.85-1.42,3-1.58,3.37,0,5,2.5,5,5.52.05,2.93-2.28,5.34-5.21,5.39-.13,0-.25,0-.38,0"/>
+      <path d="M66.78,9.03c-1,0-1.06-.61-1.72-.61-.64.04-1.22.37-1.59.89v5.31c0,1.51.5,1.82,1.87,2,.12,0,.19.14.19.33s-.07.33-.19.33c-1,0-1.79-.14-2.93-.14s-1.67.14-2.66.14c-.1,0-.19-.14-.19-.33-.02-.14.06-.28.19-.33,1.39-.16,1.6-.47,1.6-2v-4.37c0-1.25-.19-1.51-1.32-1.63-.09,0-.19-.14-.19-.31s.1-.28.19-.28c1.03-.22,2.01-.63,2.88-1.23.07,0,.14-.18.33-.18s.33.09.33.18l-.1,1.49c.76-.89,1.83-1.46,3-1.58.69-.03,1.27.49,1.32,1.18.03.59-.41,1.09-1,1.13"/>
+      <path d="M74.1,7.48c-2.1,0-3.1,2.12-3.1,4.77s1,4.64,3.12,4.64,3.11-2,3.11-4.64-1-4.74-3.11-4.74M74.12,17.65c-2.89.16-5.36-2.06-5.52-4.95,0-.15,0-.3,0-.45,0-3.04,2.46-5.5,5.5-5.5s5.5,2.46,5.5,5.5c.09,2.88-2.17,5.29-5.05,5.38-.15,0-.29,0-.44,0"/>
+      <path d="M93.28,17.25c-1,0-1.51-.14-2.64-.14s-1.56.14-2.55.14c-.12,0-.19-.14-.19-.33s.07-.33.19-.33c1.37-.16,1.48-.47,1.48-2v-4.34c0-1.28-.18-1.51-1.29-1.63-.12,0-.19-.14-.19-.31s.07-.28.19-.28c1.07-.21,2.09-.63,3-1.23.07,0,.14-.18.33-.18s.33.09.33.18c-.1,1-.19,2.88-.19,4.11v3.68c0,1.53.21,1.84,1.58,2,.12,0,.19.14.19.33s-.07.33-.19.33M90.52,2.63c-1.06,0-1-1.11-2.92-1.11s-2.76,1.08-2.76,3.54v9.53c0,1.53.11,1.84,1.51,2,.09,0,.16.14.16.33s-.07.33-.16.33c-1,0-1.44-.14-2.58-.14s-1.65.14-2.64.14c-.12,0-.18-.14-.18-.33s.06-.33.18-.33c1.37-.16,1.58-.47,1.58-2v-5.61c0-.19-.09-.33-.28-.33h-1.2c-.14,0-.24-.18-.24-.3,0-.15.07-.29.21-.36.62-.16,1.51-.37,1.51-.66,0-3.25,2.43-7.22,6.33-7.22,1.34,0,2.64.81,2.64,1.59,0,.63-.4.94-1.16.94"/>
+      <path d="M101.64,8.51l-3.52-.09v5.66c0,1.49.47,2.22,1.58,2.22.61.02,1.22-.13,1.75-.45.12-.07.28.16.28.38,0,.1-.05.19-.12.25-.75.67-1.73,1.03-2.73,1-1.54.09-2.87-1.09-2.96-2.63,0-.15,0-.31.01-.46v-5.73c.02-.16-.1-.31-.27-.33,0,0-.01,0-.02,0h-.9c-.15-.02-.27-.15-.25-.31,0,0,0,0,0,0,0-.14.09-.27.21-.35,1.13-.7,2.1-1.64,2.85-2.74.07-.11.2-.18.33-.18.17,0,.33.09.33.18l-.04,2.32h3.47c.19,0,.3.28.3.64s-.11.63-.3.63"/>
+      <path d="M106.9,17.62c-1,0-2.24-.43-3-.43-.09-.82-.31-1.88-.42-2.5,0-.09.16-.19.33-.19.14-.02.27.06.33.19.4,1.2,1.47,2.05,2.73,2.17.93.1,1.76-.56,1.87-1.49.01-.12.01-.23,0-.35,0-2.31-5.1-1.81-5.1-5.28,0-1.7,1.73-3,3.61-3,1,0,2,.33,2.52.33,0,.83.08,1.65.15,2.36,0,.09-.15.19-.33.19s-.31-.07-.33-.19c-.03-1.04-.86-1.87-1.89-1.93-1.28,0-1.84.58-1.84,1.6,0,2.19,5.19,2.29,5.19,5.14-.12,2-1.84,3.52-3.84,3.4,0,0-.02,0-.03,0"/>
+      <path d="M17.07,17.35c.03.09.06.17.11.25h.49c.18,0,.26-.08.35-.28h0l3.85-8.4c.25-.75.81-1.36,1.54-1.67v-.3c0-.15-.08-.26-.16-.26-.69,0-1.11.12-1.57.12-.8,0-1-.12-1.82-.12-.08,0-.15.11-.16.26h0v.3c.39.08.77.24.77.83-.03.53-.15,1.06-.36,1.55l-1.91,4.4h-.05l-2.4-7.19h-.69l-2.53,7h-.05l-1.73-4.59c-.18-.4-.29-.82-.33-1.26,0-.39.31-.7.7-.7.01,0,.03,0,.04,0v-.29h0c0-.15,0-.27-.15-.27-.8,0-1.14.12-2,.12-.59,0-.94,0-1.33-.08-1.37-.95-3.02-1.4-4.68-1.3C1.38,5.63-.09,6.75,0,7.69c.08.76.6,1.09,1.51,1,1.28-.13,1.12-1.46,3.39-1.68.62-.08,1.25,0,1.83.26.7.39,1.22,1.04,1.44,1.81l3.38,8.27h0c.09.2.17.28.35.28h.5c.04-.08.08-.16.11-.25l2.29-6.67h.05l2.22,6.64Z"/>
+    </symbol>
+  </defs>
+</svg>
+<header class="app-header">
+  <div class="app-header-left">
+    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open navigation" aria-expanded="false"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <a href="index.html" class="app-header-logo" aria-label="Webprofits"><svg viewBox="0 0 110.72 23.37" style="fill:var(--text-primary)"><use href="#wp-wordmark"></use></svg></a>
+    <span class="app-header-title">Neubria - Brand research</span>
+  </div>
+  <div class="app-header-right">
+    <span class="app-header-period">OCT 2026</span>
+    <button class="btn-download" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download PDF</button>
+  </div>
+</header>
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+<aside class="sidebar" aria-label="Primary navigation" aria-hidden="true">
+  <div class="sidebar-header">
+    <a href="index.html" class="sidebar-logo" aria-label="Webprofits"><svg viewBox="0 0 110.72 23.37" style="fill:var(--text-primary)"><use href="#wp-wordmark"></use></svg></a>
+    <div class="sidebar-brand">BRAND RESEARCH</div>
+    <div class="sidebar-period">OCT 2026</div>
+    <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close navigation"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav class="sidebar-nav"><div class="sidebar-page"><a class="sidebar-page-btn" href="index.html">Overview</a></div><div class="sidebar-page"><a class="sidebar-page-btn" href="reviews.html">What customers say</a></div><div class="sidebar-page"><a class="sidebar-page-btn" href="claims.html">What your ads can say</a></div><div class="sidebar-page"><a class="sidebar-page-btn active" href="competitors.html" aria-current=page>Competitors</a><div class="sidebar-sections"><a class="sidebar-section-link" href="#gaps">Where Neubria can win</a><a class="sidebar-section-link" href="#rivals">Who they are</a><a class="sidebar-section-link" href="#compare">Side by side</a></div></div></nav>
+  <div class="sidebar-footer"><button class="btn-download" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download PDF</button></div>
+</aside>
+<main class="main">
+<section class="hero hero--compact" id="top"><div class="wrap"><span class="hero-eyebrow">COMPETITORS</span><h1 class="hero-title">9 UK competitors and <em>where Neubria can win</em></h1><p class="hero-sub">Most charge more than £16.96, lean on clinical or health-condition language, and show review numbers that are hard to check. Those are 3 gaps Neubria can own.</p></div></section><section id="gaps"><div class="wrap"><div class="section-header"><h2 class="section-title">Where Neubria can win</h2><span class="section-label">01 Gaps to own</span></div><div class="commentary">Three gaps are Neubria&#x27;s to own: a price below most of the field, a plain product-led voice where competitors lean on health-condition and clinical language, and a rating with a named source. The wider NeuBiotic range adds a family story no single-product competitor can tell.</div></div></section><section id="rivals"><div class="wrap"><div class="section-header"><h2 class="section-title">Who they are</h2><span class="section-label">02 9 competitors</span></div><div class="stack-gap"><div class="card"><div class="card-eyebrow">Category leader</div><h3>Optibac</h3><p>The category leader, and the default answer on the shelf and in search. It leads with research and science.</p><div class="comp-facts"><div><b>Price</b>£21.49 for 30 capsules (£17.19 on a 20% promotion)</div><div><b>Strength</b>Says it&#x27;s the UK&#x27;s top-selling brand of its kind, with 4.8 out of 5 from 7,846 Trustpilot reviews.</div><div><b>Where they're weak</b>Costs more than NeuBiotic Her, and free delivery is for subscribers only.</div></div></div><div class="card"><div class="card-eyebrow">Dtc incumbent</div><h3>Healthspan</h3><p>A practical, value-led brand with lots of reviews across its site.</p><div class="comp-facts"><div><b>Price</b>£21.99, or £19.99 on subscription</div><div><b>Strength</b>A familiar name and a clear ingredient story with D-mannose and cranberry.</div><div><b>Where they're weak</b>Its product page has only 11 reviews, and its capsule holds 6 billion live cultures from 3 strains.</div></div></div><div class="card"><div class="card-eyebrow">Dtc incumbent</div><h3>Cytoplan</h3><p>A premium brand recommended by practitioners, with a long list of claimed benefits.</p><div class="comp-facts"><div><b>Price</b>From £37.99</div><div><b>Strength</b>9 strains, 20,854 reviews across its site and about 700 Google ads across its range.</div><div><b>Where they're weak</b>The highest price in the group, and a long claim that&#x27;s hard to take in.</div></div></div><div class="card"><div class="card-eyebrow">Direct</div><h3>Bettervits</h3><p>An online brand that leads with its strain count, a money-back guarantee and a quiz.</p><div class="comp-facts"><div><b>Price</b>£35.00 a bottle, down to £25.00 each for 6</div><div><b>Strength</b>50 billion live cultures from 10 strains, a 90-day money-back guarantee and bundle pricing.</div><div><b>Where they're weak</b>Its product name mentions a health condition, its review numbers don&#x27;t match up, and the first bottle costs more than double NeuBiotic Her on subscription.</div></div></div><div class="card"><div class="card-eyebrow">Direct</div><h3>Daye</h3><p>A London women&#x27;s health brand with an educational voice and strong search presence.</p><div class="comp-facts"><div><b>Price</b>£27.50</div><div><b>Strength</b>Ranks 2nd and 3rd on Google for the main UK search, with a product page and a guide.</div><div><b>Where they're weak</b>Its headline promises more than a supplement is allowed to, and it costs £10.54 more than NeuBiotic Her on subscription.</div></div></div><div class="card"><div class="card-eyebrow">Direct</div><h3>ProVen Biotics</h3><p>A value-led brand leaning on its manufacturing background.</p><div class="comp-facts"><div><b>Price</b>£20.99 on its own site, £14.96 at Holland &amp; Barrett</div><div><b>Strength</b>The cheapest named competitor on the Holland &amp; Barrett shelf, right next to NeuBiotic Her.</div><div><b>Where they're weak</b>It undercuts its own site price in store, and its formula has no stand-out point.</div></div></div><div class="card"><div class="card-eyebrow">Direct</div><h3>Bio-Kult</h3><p>A science-led brand with a practitioner panel and a wide range.</p><div class="comp-facts"><div><b>Price</b>Not shown - the product page didn&#x27;t load</div><div><b>Strength</b>Sold in Boots, with 58 Google ads and 35% off the first 2 orders.</div><div><b>Where they're weak</b>Its own women&#x27;s product page didn&#x27;t load, and the women&#x27;s product isn&#x27;t its main one.</div></div></div><div class="card"><div class="card-eyebrow">Direct</div><h3>SMART STRAINS</h3><p>A product fronted by a known expert, Dr Megan Rossi, and sold at Boots.</p><div class="comp-facts"><div><b>Price</b>£21.99 for 30 capsules at Boots</div><div><b>Strength</b>A known expert face and a spot in Google&#x27;s AI answers for UK searches.</div><div><b>Where they're weak</b>£5.03 more than NeuBiotic Her on subscription, and only seen in Boots, with no ads of its own found.</div></div></div><div class="card"><div class="card-eyebrow">Aggregator</div><h3>Amazon UK</h3><p>The marketplace, where shoppers see a grid of unbranded listings.</p><div class="comp-facts"><div><b>Price</b>£10 to £22 across the listings</div><div><b>Strength</b>2 Amazon pages rank on Google&#x27;s first page for the main UK search.</div><div><b>Where they're weak</b>No brand story, so the lowest price tends to win.</div></div></div></div></div></section><section id="compare"><div class="wrap"><div class="section-header"><h2 class="section-title">Side by side</h2><span class="section-label">03 Comparison</span></div><div class="table-wrap"><table class="stack"><thead><tr><th>Brand</th><th>Type</th><th>Price</th><th>Google ads in the UK</th></tr></thead><tbody><tr><td data-label="Brand"><strong>NeuBiotic Her</strong></td><td data-label="Type">Neubria</td><td data-label="Price">£19.95, or £16.96 on subscription</td><td data-label="Google ads in the UK">None</td></tr><tr><td data-label="Brand"><strong>Optibac</strong></td><td data-label="Type">Category leader</td><td data-label="Price">£21.49 for 30 capsules (£17.19 on a 20% promotion)</td><td data-label="Google ads in the UK">50</td></tr><tr><td data-label="Brand"><strong>Healthspan</strong></td><td data-label="Type">Dtc incumbent</td><td data-label="Price">£21.99, or £19.99 on subscription</td><td data-label="Google ads in the UK">97</td></tr><tr><td data-label="Brand"><strong>Cytoplan</strong></td><td data-label="Type">Dtc incumbent</td><td data-label="Price">From £37.99</td><td data-label="Google ads in the UK">About 700</td></tr><tr><td data-label="Brand"><strong>Bettervits</strong></td><td data-label="Type">Direct</td><td data-label="Price">£35.00 a bottle, down to £25.00 each for 6</td><td data-label="Google ads in the UK">64</td></tr><tr><td data-label="Brand"><strong>Daye</strong></td><td data-label="Type">Direct</td><td data-label="Price">£27.50</td><td data-label="Google ads in the UK">Not checked</td></tr><tr><td data-label="Brand"><strong>ProVen Biotics</strong></td><td data-label="Type">Direct</td><td data-label="Price">£20.99 on its own site, £14.96 at Holland &amp; Barrett</td><td data-label="Google ads in the UK">Not checked</td></tr><tr><td data-label="Brand"><strong>Bio-Kult</strong></td><td data-label="Type">Direct</td><td data-label="Price">Not shown - the product page didn&#x27;t load</td><td data-label="Google ads in the UK">58</td></tr><tr><td data-label="Brand"><strong>SMART STRAINS</strong></td><td data-label="Type">Direct</td><td data-label="Price">£21.99 for 30 capsules at Boots</td><td data-label="Google ads in the UK">Not checked</td></tr><tr><td data-label="Brand"><strong>Amazon UK</strong></td><td data-label="Type">Aggregator</td><td data-label="Price">£10 to £22 across the listings</td><td data-label="Google ads in the UK">Not checked</td></tr></tbody></table></div></div></section>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-logo"><svg viewBox="0 0 110.72 23.37" style="fill:#fff" aria-label="Webprofits"><use href="#wp-wordmark"></use></svg></div>
+    <p><em>"We believe there's always a smarter, faster + better way of doing things"</em></p>
+  </div>
+</footer>
+</main>
+<script>
+function toggleSidebar() {
+  var sidebar = document.querySelector('.sidebar');
+  var overlay = document.querySelector('.sidebar-overlay');
+  var toggle = document.querySelector('.sidebar-toggle');
+  var willOpen = !sidebar.classList.contains('open');
+  sidebar.classList.toggle('open', willOpen);
+  if (overlay) overlay.classList.toggle('visible', willOpen);
+  if (toggle) toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  sidebar.setAttribute('aria-hidden', willOpen ? 'false' : 'true');
+  document.body.style.overflow = willOpen ? 'hidden' : '';
+}
+document.querySelectorAll('.sidebar-page-btn, .sidebar-section-link').forEach(function(el) {
+  el.addEventListener('click', function() {
+    var sidebar = document.querySelector('.sidebar');
+    if (sidebar && sidebar.classList.contains('open')) toggleSidebar();
+  });
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var sidebar = document.querySelector('.sidebar');
+    if (sidebar && sidebar.classList.contains('open')) toggleSidebar();
+  }
+});
+document.querySelectorAll('[data-toggle]').forEach(function(b) {
+  b.addEventListener('click', function() {
+    var t = document.getElementById(b.getAttribute('data-toggle'));
+    if (!t) return;
+    var open = t.hasAttribute('hidden');
+    if (open) t.removeAttribute('hidden'); else t.setAttribute('hidden', '');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var tr = b.closest('tr'); if (tr) tr.classList.toggle('is-open', open);
+  });
+});
+</script>
+</body>
+</html>
