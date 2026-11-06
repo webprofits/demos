@@ -173,7 +173,12 @@
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
     /* Rhythm: section 6rem, label 12 > heading 16 > intro 40 > content, heading-only sections get 2.5rem to the content */
     section { padding: 6rem 0; }
-    .faq { margin-top: 2rem; }
+    .faq { margin-top: 2.5rem; }
+    .steps > div { text-align: center; }
+    .steps > div p { margin-left: auto; margin-right: auto; max-width: 300px; }
+    .step__n { margin-left: auto; margin-right: auto; }
+    #buy .picker__card { margin-bottom: 0; }
+    #buy .form__privacy { margin-bottom: 0; }
     .section__intro { margin-bottom: 2.5rem !important; }
     @media (max-width: 900px) { section { padding: 4.5rem 0; } }
     @media (max-width: 600px) { section { padding: 3.5rem 0; } .steps { margin-top: 1.75rem; gap: 1.75rem; } }
