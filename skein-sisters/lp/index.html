@@ -178,7 +178,8 @@
     .pick-opt { flex: 1; border: 1px solid #cfd8db; border-radius: 12px; padding: .8rem; cursor: pointer; text-align: center; font-size: .88rem; text-transform: none; letter-spacing: 0; color: var(--teal); margin: 0; display: flex; gap: .5rem; align-items: center; justify-content: center; }
     .pick-opt:has(input:checked) { border-color: var(--brand); background: var(--bg-alt); }
     .pick-opt input { accent-color: var(--brand); margin: 0; }
-    .lead-form .btn { width: 100%; justify-content: center; }
+    .lead-form .btn, .btn--block { width: 100%; justify-content: center; }
+    .picker__card .btn--block { margin-top: .25rem; }
     .lead-form .btn + .btn { margin-top: .6rem; }
     .form__privacy { font-size: .8rem; color: var(--text-muted); margin-top: 1rem; max-width: none; text-align: center; }
     .picker__copy .ticks li { color: rgba(255,255,255,.9); }
@@ -251,7 +252,7 @@
         <span class="hero__badge">Hand-dyed in Sydney · 140+ shades · $41.90 a skein</span>
         <h1>Plump, hand-dyed sock yarn that holds its shape and colour, wash after wash</h1>
         <p class="hero__sub">Fabulous Sock is <strong>80% Australian extra fine superwash merino and 20% nylon</strong>. 400 metres in every 100g skein, dyed by us in our Dulwich Hill studio, in more than 140 shades.</p>
-        <div class="cta-row"><a href="#form" class="btn btn--accent">Choose your colour <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><a href="#colours" class="btn btn--ghost">See the shades</a></div>
+        <div class="cta-row"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><a href="#colours" class="btn btn--ghost">See the shades</a></div>
         <ul class="hero__trust">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 5.0 from 9 reviews</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 4.9 on Ravelry, 441 projects</li>
@@ -338,7 +339,7 @@
       <div class="swatches">
         <a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702363504827"><img src="images/colour-tango-train.jpg" alt="Fabulous Sock in Tango Train" loading="lazy"><em class="tag">Dyed to order</em><span>Tango Train</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46558622580923"><img src="images/colour-antique-shop.jpg" alt="Fabulous Sock in Antique Shop" loading="lazy"><em class="tag tag--stock">In stock</em><span>Antique Shop</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46546092622011"><img src="images/colour-twine-time.jpg" alt="Fabulous Sock in Twine Time" loading="lazy"><em class="tag tag--stock">In stock</em><span>Twine Time</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702365470907"><img src="images/colour-olive-you.jpg" alt="Fabulous Sock in Olive You" loading="lazy"><em class="tag">Dyed to order</em><span>Olive You</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702365405371"><img src="images/colour-medusa.jpg" alt="Fabulous Sock in Medusa" loading="lazy"><em class="tag">Dyed to order</em><span>Medusa</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47432080654523"><img src="images/colour-marine.jpg" alt="Fabulous Sock in Marine" loading="lazy"><em class="tag tag--stock">In stock</em><span>Marine</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366617787"><img src="images/colour-reef-project.jpg" alt="Fabulous Sock in Reef Project" loading="lazy"><em class="tag">Dyed to order</em><span>Reef Project</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47432080982203"><img src="images/colour-waterglass.jpg" alt="Fabulous Sock in Waterglass" loading="lazy"><em class="tag tag--stock">In stock</em><span>Waterglass</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366224571"><img src="images/colour-sorcery.jpg" alt="Fabulous Sock in Sorcery" loading="lazy"><em class="tag">Dyed to order</em><span>Sorcery</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366060731"><img src="images/colour-magic-land.jpg" alt="Fabulous Sock in Magic Land" loading="lazy"><em class="tag">Dyed to order</em><span>Magic Land</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702364782779"><img src="images/colour-all-dolled-up.jpg" alt="Fabulous Sock in All Dolled Up" loading="lazy"><em class="tag">Dyed to order</em><span>All Dolled Up</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702364520635"><img src="images/colour-marshmallow.jpg" alt="Fabulous Sock in Marshmallow" loading="lazy"><em class="tag">Dyed to order</em><span>Marshmallow</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702365667515"><img src="images/colour-rosy-tea.jpg" alt="Fabulous Sock in Rosy Tea" loading="lazy"><em class="tag">Dyed to order</em><span>Rosy Tea</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366847163"><img src="images/colour-waterlilies.jpg" alt="Fabulous Sock in Waterlilies" loading="lazy"><em class="tag">Dyed to order</em><span>Waterlilies</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46546092490939"><img src="images/colour-barn-owl.jpg" alt="Fabulous Sock in Barn Owl" loading="lazy"><em class="tag tag--stock">In stock</em><span>Barn Owl</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46558622810299"><img src="images/colour-blast-furnace.jpg" alt="Fabulous Sock in Blast Furnace" loading="lazy"><em class="tag tag--stock">In stock</em><span>Blast Furnace</span></a>
       </div>
-      <p class="text-centre" style="max-width:none;margin-top:1.5rem;"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--outline">See all 140+ colourways</a></p>
+      <p class="text-centre" style="max-width:none;margin-top:1.5rem;"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Shop all 140+ colourways <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
     </div>
   </section>
 
@@ -358,7 +359,7 @@
             <div><dt><b>2</b>Julia dyes it</dt><dd>Your skeins join the next batch. The dye date shows on the page.</dd></div>
             <div><dt><b>3</b>Dried and posted</dt><dd>Ships as soon as it is dry, dye lots matched before packing.</dd></div>
           </dl>
-          <div class="cta-row" style="margin-top:1.618rem"><a href="#form" class="btn btn--accent">Choose your colour <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+          <div class="cta-row" style="margin-top:1.618rem"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
     </div>
@@ -422,12 +423,12 @@
     </div>
   </section>
 
-  <section id="form" class="section--dark">
+  <section id="buy" class="section--dark">
     <div class="container picker">
       <div class="picker__copy">
         <span class="label">Your next pair</span>
         <h2>Pick your colour and cast on this week</h2>
-        <p>Choose a shade, from stock or dyed to order, and you'll land on the product page with it selected.</p>
+        <p>140+ shades, from stock or dyed to order at the same price. Choose yours on the product page and it ships with Australia Post tracking.</p>
         <ul class="ticks">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 100% Happiness Guarantee on stock skeins</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Afterpay on orders from $50</li>
@@ -436,152 +437,14 @@
       </div>
       <div class="picker__card">
         <h3>Fabulous Sock, $41.90 a skein</h3>
-        <p>100g, 400m, 80% Australian merino, 20% nylon.</p>
-      <form class="lead-form" id="picker-form" action="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" method="get">
-        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium">
-        <input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content"><input type="hidden" name="gclid">
-        <input type="hidden" name="variant" id="pick-variant">
-        <label for="pick-colour">Colour</label>
-        <select id="pick-colour" name="colour" required>
-            <option value="">Choose a shade</option>
-            <option value="After Midnight">After Midnight</option>
-            <option value="Agave">Agave</option>
-            <option value="All Dolled Up">All Dolled Up</option>
-            <option value="Anemone">Anemone</option>
-            <option value="Antique Shop">Antique Shop</option>
-            <option value="As You Wish">As You Wish</option>
-            <option value="Balmoral Beach">Balmoral Beach</option>
-            <option value="Barn Owl">Barn Owl</option>
-            <option value="Better Beehive">Better Beehive</option>
-            <option value="Bibble">Bibble</option>
-            <option value="Blast Furnace">Blast Furnace</option>
-            <option value="Bubble Bath">Bubble Bath</option>
-            <option value="Butterscotch Sprinkles">Butterscotch Sprinkles</option>
-            <option value="Celestial">Celestial</option>
-            <option value="Claypan">Claypan</option>
-            <option value="Closer to Fine">Closer to Fine</option>
-            <option value="Cocoon">Cocoon</option>
-            <option value="Crepuscule">Crepuscule</option>
-            <option value="Crocodile Tears">Crocodile Tears</option>
-            <option value="Crushed Velvet">Crushed Velvet</option>
-            <option value="Crypsis">Crypsis</option>
-            <option value="Curio">Curio</option>
-            <option value="Daphne">Daphne</option>
-            <option value="Daydream">Daydream</option>
-            <option value="DePeach Mode">DePeach Mode</option>
-            <option value="Disco Inferno">Disco Inferno</option>
-            <option value="Dried Roses">Dried Roses</option>
-            <option value="End of the Rainbow">End of the Rainbow</option>
-            <option value="Ethereal">Ethereal</option>
-            <option value="Faded Moon">Faded Moon</option>
-            <option value="Fairground">Fairground</option>
-            <option value="Fairy Dust">Fairy Dust</option>
-            <option value="Fairy Footsteps">Fairy Footsteps</option>
-            <option value="Far Far Away">Far Far Away</option>
-            <option value="Flamboyance">Flamboyance</option>
-            <option value="Fruit Tingle">Fruit Tingle</option>
-            <option value="Fuchsia Proof">Fuchsia Proof</option>
-            <option value="Funhouse">Funhouse</option>
-            <option value="Future Violets">Future Violets</option>
-            <option value="Get Outta My Swamp">Get Outta My Swamp</option>
-            <option value="Golden Hour">Golden Hour</option>
-            <option value="Hokey Pokey">Hokey Pokey</option>
-            <option value="Honey I Shrunk the Knits">Honey I Shrunk the Knits</option>
-            <option value="Hypercolour">Hypercolour</option>
-            <option value="Incantation">Incantation</option>
-            <option value="Jacaranda">Jacaranda</option>
-            <option value="Jasper">Jasper</option>
-            <option value="Jellyroll">Jellyroll</option>
-            <option value="Jitterbug">Jitterbug</option>
-            <option value="Just Beach">Just Beach</option>
-            <option value="Karma">Karma</option>
-            <option value="Lacy">Lacy</option>
-            <option value="Last Dance">Last Dance</option>
-            <option value="Leapfrog">Leapfrog</option>
-            <option value="Legacy">Legacy</option>
-            <option value="Limelight">Limelight</option>
-            <option value="Liquid Amber">Liquid Amber</option>
-            <option value="Locket">Locket</option>
-            <option value="Lollipop">Lollipop</option>
-            <option value="Lullaby">Lullaby</option>
-            <option value="Macchiato">Macchiato</option>
-            <option value="Magic Beach">Magic Beach</option>
-            <option value="Magic Land">Magic Land</option>
-            <option value="Marine">Marine</option>
-            <option value="Marshmallow">Marshmallow</option>
-            <option value="Marsupial">Marsupial</option>
-            <option value="Medusa">Medusa</option>
-            <option value="Melba">Melba</option>
-            <option value="Mid Century">Mid Century</option>
-            <option value="New Leaf">New Leaf</option>
-            <option value="Olive You">Olive You</option>
-            <option value="Pandemonium">Pandemonium</option>
-            <option value="Paperbark">Paperbark</option>
-            <option value="Passionflower">Passionflower</option>
-            <option value="Peachy Keen">Peachy Keen</option>
-            <option value="Phantoms Forever">Phantoms Forever</option>
-            <option value="Pink Pixel">Pink Pixel</option>
-            <option value="Plumage">Plumage</option>
-            <option value="Poison Apple">Poison Apple</option>
-            <option value="Popsicle">Popsicle</option>
-            <option value="Pout">Pout</option>
-            <option value="Pretty in Pink">Pretty in Pink</option>
-            <option value="Purly Pearl">Purly Pearl</option>
-            <option value="Queen Bee">Queen Bee</option>
-            <option value="Raspberry Cream">Raspberry Cream</option>
-            <option value="Razzle Dazzle Rose">Razzle Dazzle Rose</option>
-            <option value="Red Kangaroo">Red Kangaroo</option>
-            <option value="Red Rattler">Red Rattler</option>
-            <option value="Reef Project">Reef Project</option>
-            <option value="Revenge">Revenge</option>
-            <option value="Ritual">Ritual</option>
-            <option value="Romantic">Romantic</option>
-            <option value="Roots Corrode">Roots Corrode</option>
-            <option value="Rosy Tea">Rosy Tea</option>
-            <option value="Sage Advice">Sage Advice</option>
-            <option value="Scorcher">Scorcher</option>
-            <option value="Seashell">Seashell</option>
-            <option value="Snowbird">Snowbird</option>
-            <option value="Soft Coral">Soft Coral</option>
-            <option value="Sorcery">Sorcery</option>
-            <option value="Spellbound">Spellbound</option>
-            <option value="Spindrift">Spindrift</option>
-            <option value="Stained Glass">Stained Glass</option>
-            <option value="Stolen Thunder">Stolen Thunder</option>
-            <option value="Strawberry Moon">Strawberry Moon</option>
-            <option value="Summer Carnival">Summer Carnival</option>
-            <option value="Super Graphic Ultra Modern">Super Graphic Ultra Modern</option>
-            <option value="Sweet Peach">Sweet Peach</option>
-            <option value="Sylvan">Sylvan</option>
-            <option value="Séance">Séance</option>
-            <option value="Tango Train">Tango Train</option>
-            <option value="Teddy Bear">Teddy Bear</option>
-            <option value="That&#x27;s my Jam!">That&#x27;s my Jam!</option>
-            <option value="The Rhiona">The Rhiona</option>
-            <option value="Titanic">Titanic</option>
-            <option value="Turmeric Latte">Turmeric Latte</option>
-            <option value="Twine Time">Twine Time</option>
-            <option value="Underwing">Underwing</option>
-            <option value="Vampire Money">Vampire Money</option>
-            <option value="Volcano">Volcano</option>
-            <option value="Waterglass">Waterglass</option>
-            <option value="Waterlilies">Waterlilies</option>
-            <option value="Watermelon Rind">Watermelon Rind</option>
-            <option value="YoYo">YoYo</option>
-            <option value="You Make Me Blush">You Make Me Blush</option>
-        </select>
-        <div class="pick-row">
-          <label class="pick-opt"><input type="radio" name="order" value="stock" checked> <span id="stock-label">From stock, ships now</span></label>
-          <label class="pick-opt"><input type="radio" name="order" value="dto"> Dyed to order, same price</label>
-        </div>
-        <button type="submit" class="btn btn--accent">Choose your colour</button>
-        <p class="form__privacy">You'll land on skeinsisters.com.au with this colour selected. Secure Shopify checkout, Afterpay from $50. Stock shown as at 6 November 2026.</p>
-      </form>
+        <p>100g, 400m, 80% Australian extra fine superwash merino, 20% nylon. Machine washable.</p>
+        <a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent btn--block">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <p class="form__privacy">Secure Shopify checkout on skeinsisters.com.au. Free shipping over $200 in Australia and New Zealand.</p>
       </div>
     </div>
   </section>
 
-  <div class="sticky"><span>Fabulous Sock<br>$41.90 a skein</span><a href="#form" class="btn btn--accent">Choose your colour</a></div>
+  <div class="sticky"><span>Fabulous Sock<br>$41.90 a skein</span><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy now</a></div>
 
   <footer class="footer">
     <div class="container">
@@ -624,6 +487,7 @@
     // colour picker: resolve colour + order type to a Shopify variant id
     var V = {"Strawberry Moon":{"stock":47405893025979,"dto":47702365044923,"s":1,"d":1},"Ethereal":{"stock":47432079704251,"dto":47702365634747,"s":0,"d":1},"Seashell":{"stock":46558622974139,"dto":47702364389563,"s":0,"d":1},"Flamboyance":{"stock":46546092523707,"dto":47702363242683,"s":0,"d":1},"Barn Owl":{"stock":46546092490939,"dto":47702363209915,"s":1,"d":1},"Marsupial":{"stock":46546092687547,"dto":47702363734203,"s":1,"d":1},"Paperbark":{"stock":46558622548155,"dto":47702363701435,"s":0,"d":1},"Purly Pearl":{"stock":46546092458171,"dto":47702363177147,"s":0,"d":1},"Pink Pixel":{"stock":46558623006907,"dto":47702364422331,"s":0,"d":1},"Snowbird":{"stock":47432081277115,"dto":47702367207611,"s":0,"d":1},"Balmoral Beach":{"stock":46546092654779,"dto":47702363668667,"s":1,"d":1},"Romantic":{"stock":47432079638715,"dto":47702365569211,"s":1,"d":1},"Underwing":{"stock":47405892993211,"dto":47702365110459,"s":1,"d":1},"Twine Time":{"stock":46546092622011,"dto":47702363635899,"s":1,"d":1},"Better Beehive":{"stock":46558622154939,"dto":47702363046075,"s":1,"d":1},"Hokey Pokey":{"stock":46558622122171,"dto":47702363013307,"s":1,"d":1},"Turmeric Latte":{"stock":46558622187707,"dto":47702363078843,"s":1,"d":1},"YoYo":{"stock":46749081993403,"dto":47702363144379,"s":1,"d":1},"Golden Hour":{"stock":46749082091707,"dto":47702364717243,"s":0,"d":0},"Far Far Away":{"stock":46558623400123,"dto":47702364848315,"s":1,"d":1},"Honey I Shrunk the Knits":{"stock":46558622220475,"dto":47702363111611,"s":0,"d":1},"Peachy Keen":{"stock":46546092589243,"dto":47702363537595,"s":0,"d":1},"Queen Bee":{"stock":46558622613691,"dto":47702363832507,"s":0,"d":1},"Mid Century":{"stock":46558622515387,"dto":47702363603131,"s":0,"d":1},"Butterscotch Sprinkles":{"stock":46558622482619,"dto":47702363570363,"s":0,"d":0},"End of the Rainbow":{"stock":48096579977403,"dto":48096580010171,"s":0,"d":1},"Locket":{"stock":46749082026171,"dto":47702363865275,"s":0,"d":0},"Liquid Amber":{"stock":46558622646459,"dto":47702363898043,"s":0,"d":1},"Sweet Peach":{"stock":46558622351547,"dto":47702363373755,"s":0,"d":1},"DePeach Mode":{"stock":46558622417083,"dto":47702363439291,"s":0,"d":0},"Crepuscule":{"stock":46558622449851,"dto":47702363472059,"s":0,"d":1},"Lollipop":{"stock":47954077974715,"dto":47954078007483,"s":0,"d":1},"Pandemonium":{"stock":46558622744763,"dto":47702364127419,"s":0,"d":1},"Scorcher":{"stock":46546092785851,"dto":47702364160187,"s":0,"d":1},"Disco Inferno":{"stock":46558622711995,"dto":47702364061883,"s":0,"d":1},"Volcano":{"stock":46558622777531,"dto":47702364094651,"s":1,"d":1},"Anemone":{"stock":46558622253243,"dto":47702363275451,"s":0,"d":1},"Blast Furnace":{"stock":46558622810299,"dto":47702364225723,"s":1,"d":1},"Tango Train":{"stock":46546092556475,"dto":47702363504827,"s":0,"d":1},"Popsicle":{"stock":46877638361275,"dto":47702364192955,"s":1,"d":1},"Fairy Dust":{"stock":47432079933627,"dto":47702365864123,"s":0,"d":1},"Incantation":{"stock":47432080457915,"dto":47702366388411,"s":1,"d":1},"Magic Beach":{"stock":47876105765051,"dto":47876105797819,"s":0,"d":1},"Rosy Tea":{"stock":47432079737019,"dto":47702365667515,"s":0,"d":1},"Raspberry Cream":{"stock":46558623039675,"dto":47702364455099,"s":0,"d":1},"Daphne":{"stock":46558622941371,"dto":47702364356795,"s":1,"d":1},"You Make Me Blush":{"stock":47432079802555,"dto":47702365733051,"s":0,"d":1},"Fairground":{"stock":47432079769787,"dto":47702365700283,"s":1,"d":1},"Melba":{"stock":46558622318779,"dto":47702363340987,"s":0,"d":1},"Soft Coral":{"stock":46558622286011,"dto":47702363308219,"s":1,"d":1},"Lullaby":{"stock":48277268889787,"dto":48277268922555,"s":0,"d":1},"Daydream":{"stock":47432079605947,"dto":47702365536443,"s":0,"d":1},"As You Wish":{"stock":47432079671483,"dto":47702365601979,"s":1,"d":1},"Claypan":{"stock":46558623236283,"dto":47702364651707,"s":0,"d":1},"Dried Roses":{"stock":46558623269051,"dto":47702364684475,"s":1,"d":1},"Crushed Velvet":{"stock":47432079835323,"dto":47702365765819,"s":1,"d":1},"Pretty in Pink":{"stock":46558623432891,"dto":47702364913851,"s":0,"d":1},"Fairy Footsteps":{"stock":47358851055803,"dto":47702365175995,"s":0,"d":1},"Summer Carnival":{"stock":46558622384315,"dto":47702363406523,"s":0,"d":1},"Marshmallow":{"stock":46558623105211,"dto":47702364520635,"s":0,"d":1},"Razzle Dazzle Rose":{"stock":46558623072443,"dto":47702364487867,"s":1,"d":1},"Fruit Tingle":{"stock":46558623367355,"dto":47702364815547,"s":1,"d":1},"Super Graphic Ultra Modern":{"stock":48348826828987,"dto":48348826861755,"s":0,"d":1},"All Dolled Up":{"stock":46558623334587,"dto":47702364782779,"s":0,"d":1},"Magic Land":{"stock":47432080130235,"dto":47702366060731,"s":0,"d":1},"Funhouse":{"stock":46558622908603,"dto":47702364324027,"s":0,"d":1},"Jellyroll":{"stock":46558623137979,"dto":47702364553403,"s":1,"d":1},"Fuchsia Proof":{"stock":46558623170747,"dto":47702364586171,"s":1,"d":1},"Poison Apple":{"stock":46558623203515,"dto":47702364618939,"s":1,"d":1},"Pout":{"stock":46558622843067,"dto":47702364258491,"s":1,"d":1},"Red Kangaroo":{"stock":47344318906555,"dto":47702365143227,"s":1,"d":1},"Red Rattler":{"stock":47432079868091,"dto":47702365798587,"s":1,"d":1},"Vampire Money":{"stock":48096580042939,"dto":48096580075707,"s":0,"d":1},"Karma":{"stock":46558623301819,"dto":47702364750011,"s":0,"d":1},"Revenge":{"stock":46558622875835,"dto":47702364291259,"s":1,"d":1},"Ritual":{"stock":47432079900859,"dto":47702365831355,"s":1,"d":1},"Waterlilies":{"stock":47432080916667,"dto":47702366847163,"s":0,"d":1},"Jacaranda":{"stock":47432080392379,"dto":47702366322875,"s":0,"d":1},"Lacy":{"stock":48277268758715,"dto":48277268791483,"s":0,"d":1},"Hypercolour":{"stock":47432080195771,"dto":47702366126267,"s":1,"d":1},"That's my Jam!":{"stock":47432080228539,"dto":47702366159035,"s":0,"d":1},"Legacy":{"stock":47432080163003,"dto":47702366093499,"s":0,"d":1},"Phantoms Forever":{"stock":47432079966395,"dto":47702365896891,"s":1,"d":1},"Last Dance":{"stock":48277268824251,"dto":48277268857019,"s":0,"d":1},"Future Violets":{"stock":47432079999163,"dto":47702365929659,"s":0,"d":1},"S\u00e9ance":{"stock":47432080097467,"dto":47702366027963,"s":1,"d":1},"Sorcery":{"stock":47432080294075,"dto":47702366224571,"s":0,"d":1},"Spellbound":{"stock":47432080031931,"dto":47702365962427,"s":0,"d":1},"Faded Moon":{"stock":47432080425147,"dto":47702366355643,"s":0,"d":1},"Passionflower":{"stock":47432080261307,"dto":47702366191803,"s":0,"d":1},"Closer to Fine":{"stock":47432080359611,"dto":47702366290107,"s":0,"d":1},"After Midnight":{"stock":47432080326843,"dto":47702366257339,"s":0,"d":1},"Curio":{"stock":46546092720315,"dto":47702363766971,"s":0,"d":1},"Stained Glass":{"stock":47432080064699,"dto":47702365995195,"s":1,"d":1},"Roots Corrode":{"stock":46749082058939,"dto":47702363963579,"s":0,"d":0},"Teddy Bear":{"stock":46558622679227,"dto":47702363930811,"s":0,"d":1},"Antique Shop":{"stock":46558622580923,"dto":47702363799739,"s":1,"d":1},"Stolen Thunder":{"stock":47405892894907,"dto":47702365012155,"s":0,"d":1},"Jasper":{"stock":46558622089403,"dto":47702364029115,"s":0,"d":1},"Macchiato":{"stock":46546092753083,"dto":47702363996347,"s":0,"d":1},"Plumage":{"stock":47344318873787,"dto":47702364979387,"s":1,"d":1},"Jitterbug":{"stock":47432079278267,"dto":47702365208763,"s":0,"d":1},"Just Beach":{"stock":47432080621755,"dto":47702366552251,"s":0,"d":1},"Get Outta My Swamp":{"stock":50525786276027,"dto":50525786308795,"s":1,"d":1},"Limelight":{"stock":47432079311035,"dto":47702365241531,"s":0,"d":1},"Watermelon Rind":{"stock":47432079343803,"dto":47702365274299,"s":0,"d":1},"The Rhiona":{"stock":47432079442107,"dto":47702365372603,"s":1,"d":1},"Sylvan":{"stock":47405892927675,"dto":47702365077691,"s":0,"d":1},"Cocoon":{"stock":47432079573179,"dto":47702365503675,"s":0,"d":1},"Crypsis":{"stock":47432079409339,"dto":47702365339835,"s":0,"d":1},"Olive You":{"stock":47432079540411,"dto":47702365470907,"s":0,"d":1},"Crocodile Tears":{"stock":47432079507643,"dto":47702365438139,"s":1,"d":1},"Bubble Bath":{"stock":47432080490683,"dto":47702366421179,"s":0,"d":1},"Spindrift":{"stock":47432079376571,"dto":47702365307067,"s":1,"d":1},"Agave":{"stock":47432080523451,"dto":47702366453947,"s":0,"d":1},"Medusa":{"stock":47432079474875,"dto":47702365405371,"s":0,"d":1},"Sage Advice":{"stock":47432080556219,"dto":47702366486715,"s":1,"d":1},"New Leaf":{"stock":47432080588987,"dto":47702366519483,"s":0,"d":1},"Leapfrog":{"stock":47405892960443,"dto":47702364946619,"s":1,"d":1},"Reef Project":{"stock":47432080687291,"dto":47702366617787,"s":0,"d":1},"Bibble":{"stock":47432080720059,"dto":47702366650555,"s":1,"d":1},"Marine":{"stock":47432080654523,"dto":47702366585019,"s":1,"d":1},"Waterglass":{"stock":47432080982203,"dto":47702366912699,"s":1,"d":1},"Celestial":{"stock":47432080752827,"dto":47702366683323,"s":0,"d":1},"Titanic":{"stock":47432081014971,"dto":47702366945467,"s":1,"d":1}};
     var form = document.getElementById('picker-form');
+    if (form) (function () {
     function chosen() {
       var c = document.getElementById('pick-colour').value;
       var o = (document.querySelector('input[name="order"]:checked') || {}).value || 'stock';
@@ -651,6 +515,7 @@
         window.location.href = 'https://www.skeinsisters.com.au/cart/' + id + ':1';
       });
     }
+    })();
     // testimonial slider
     var track = document.getElementById('ttrack'), dots = document.getElementById('tdots');
     if (track) {
