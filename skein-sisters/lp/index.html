@@ -94,6 +94,22 @@
     .pf--shape { background: #7e2640; }
     .pf--colour { background: #71445b; }
     .pf--dto { background: #5f5646; }
+    /* proof cards: the photo IS the card top, in its own backdrop; copy below on white */
+    .pcards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-top: 2.5rem; }
+    .pcard { background: #fff; border: 1px solid #eadfe3; border-radius: 1.25rem; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
+    .pcard__pic { position: relative; margin: 0; aspect-ratio: 4/3; overflow: hidden; }
+    .pcard__pic img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform .8s ease; }
+    .pcard:hover .pcard__pic img { transform: scale(1.03); }
+    .pcard__chip { position: absolute; left: 1.1rem; top: 1.1rem; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; padding: .42rem .85rem; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--teal); }
+    .pcard__body { padding: 1.75rem 2rem 2rem; }
+    .pcard__body h3 { font-size: 1.5rem; line-height: 1.1; margin-bottom: 1.25rem; color: var(--teal); }
+    .facts.facts--light > div { border-left-color: var(--brand); }
+    .facts.facts--light dt { color: var(--teal); }
+    .facts.facts--light dd { color: var(--text-light); }
+    .pcard__quote { margin: 1.25rem 0 0; padding: .9rem 1.1rem; border-radius: .9rem; background: var(--bg-alt); font-size: .92rem; color: var(--teal); }
+    .pcard__quote cite { display: block; font-style: normal; font-size: .72rem; color: var(--text-muted); margin-top: .3rem; }
+    @media (max-width: 900px) { .pcards { grid-template-columns: 1fr; gap: 1.25rem; } }
+    @media (max-width: 600px) { .pcard__body { padding: 1.3rem 1.25rem 1.5rem; } }
     .facts.facts--steps { grid-template-columns: repeat(3, 1fr); }
     .facts--steps dt { color: #fff; }
     .facts--steps dt b { display: inline-block; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: #fff; color: #5f5646; text-align: center; line-height: 1.6rem; font-size: .8rem; margin-right: .45rem; }
@@ -279,33 +295,32 @@
         <p class="section__intro">Two things do the work. The nylon and the ply hold the shape. The base and the dye bath hold the colour.</p>
       </div>
 
-      <div class="pf pf--shape fade-up">
-        <div class="pf__img"><img src="images/proof-sock.jpg" alt="A skein of speckled Fabulous Sock beside the lace-panel sock knitted from it, on a raspberry backdrop" loading="lazy"></div>
-        <div class="pf__body">
-          <span class="pf__eyebrow">Shape</span>
-          <h3>Built so the heel outlasts the winter</h3>
-          <dl class="facts">
-            <div><dt>20% nylon</dt><dd>Takes the friction at heels and toes. Keeps the shape, resists pilling.</dd></div>
-            <div><dt>19.5-micron merino</dt><dd>Fine enough for skin, not so fine it pills.</dd></div>
-            <div><dt>Four plies, twisted round</dt><dd>Structure in cables and lace. Smooth in stocking stitch.</dd></div>
-            <div><dt>Superwash</dt><dd>Delicate cycle, dry flat. Same shape every wash.</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="pf pf--colour fade-up">
-        <div class="pf__img"><img src="images/proof-colour.jpg" alt="A speckled pink skein of Fabulous Sock beside the sock knitted from it, on a plum backdrop" loading="lazy"></div>
-        <div class="pf__body">
-          <span class="pf__eyebrow">Colour</span>
-          <h3>Dyed deep, then locked in</h3>
-          <dl class="facts">
-            <div><dt>Superwash base</dt><dd>The treatment opens the fibre, so dye goes deep and comes out bright.</dd></div>
-            <div><dt>Hand-dyed by Julia</dt><dd>8 to 16 skeins a batch. Dye lots matched before packing.</dd></div>
-            <div><dt>Heat-set in an acid bath</dt><dd>The dye bonds to the fibre instead of sitting on it.</dd></div>
-            <div><dt>Built against pooling</dt><dd>Julia's colour technique blends. It never stripes.</dd></div>
-          </dl>
-          <blockquote class="proof-quote">&ldquo;&hellip;can greatly improve the dyeability of wool.&rdquo;<cite>Journal of the Society of Dyers and Colourists, on the superwash treatment</cite></blockquote>
-        </div>
+      <div class="pcards">
+        <article class="pcard fade-up">
+          <figure class="pcard__pic"><img src="images/proof-sock.jpg" alt="A skein of speckled Fabulous Sock beside the lace-panel sock knitted from it, on a raspberry backdrop" loading="lazy"><span class="pcard__chip">Shape</span></figure>
+          <div class="pcard__body">
+            <h3>Built so the heel outlasts the winter</h3>
+            <dl class="facts facts--light">
+              <div><dt>20% nylon</dt><dd>Takes the friction at heels and toes. Keeps the shape, resists pilling.</dd></div>
+              <div><dt>19.5-micron merino</dt><dd>Fine enough for skin, not so fine it pills.</dd></div>
+              <div><dt>Four plies, twisted round</dt><dd>Structure in cables and lace. Smooth in stocking stitch.</dd></div>
+              <div><dt>Superwash</dt><dd>Delicate cycle, dry flat. Same shape every wash.</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="pcard fade-up">
+          <figure class="pcard__pic"><img src="images/proof-colour.jpg" alt="A speckled pink skein of Fabulous Sock beside the sock knitted from it, on a plum backdrop" loading="lazy"><span class="pcard__chip">Colour</span></figure>
+          <div class="pcard__body">
+            <h3>Dyed deep, then locked in</h3>
+            <dl class="facts facts--light">
+              <div><dt>Superwash base</dt><dd>The treatment opens the fibre, so dye goes deep and comes out bright.</dd></div>
+              <div><dt>Hand-dyed by Julia</dt><dd>8 to 16 skeins a batch. Dye lots matched before packing.</dd></div>
+              <div><dt>Heat-set in an acid bath</dt><dd>The dye bonds to the fibre instead of sitting on it.</dd></div>
+              <div><dt>Built against pooling</dt><dd>Julia's colour technique blends. It never stripes.</dd></div>
+            </dl>
+            <blockquote class="pcard__quote">&ldquo;&hellip;can greatly improve the dyeability of wool.&rdquo;<cite>Journal of the Society of Dyers and Colourists, on the superwash treatment</cite></blockquote>
+          </div>
+        </article>
       </div>
 
       <p class="footnote">Sources: skeinsisters.com.au; Woolmark, "Machine washable wool"; D. M. Lewis, Journal of the Society of Dyers and Colourists, 1975; Symfonie Yarns, March 2026; Little Skein; SweetGeorgia Yarns, December 2025.</p>
