@@ -108,7 +108,19 @@
     .facts.facts--light dd { color: var(--text-light); }
     .pcard__quote { margin: 1.25rem 0 0; padding: .9rem 1.1rem; border-radius: .9rem; background: var(--bg-alt); font-size: .92rem; color: var(--teal); }
     .pcard__quote cite { display: block; font-style: normal; font-size: .72rem; color: var(--text-muted); margin-top: .3rem; }
-    @media (max-width: 900px) { .pcards { grid-template-columns: 1fr; gap: 1.25rem; } }
+    /* dyed-to-order card: copy left on white, the studio photo as the card's right half */
+    .dcard { display: grid; grid-template-columns: 1.1fr 1fr; background: #fff; border: 1px solid #eadfe3; border-radius: 1.25rem; overflow: hidden; margin-top: 2.5rem; text-align: left; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
+    .dcard__body { padding: 2.5rem 2.5rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .dcard__body h3 { font-size: 1.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--teal); }
+    .dsteps { list-style: none; margin: 0 0 1.75rem; padding: 0; display: grid; gap: 1.1rem; }
+    .dsteps li { display: flex; gap: .9rem; align-items: flex-start; }
+    .dsteps__n { flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: .85rem; margin-top: .05rem; }
+    .dsteps b { display: block; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; color: var(--teal); margin-bottom: .15rem; }
+    .dsteps div > span { font-size: .95rem; color: var(--text-light); line-height: 1.45; }
+    .dcard__body .btn { align-self: flex-start; }
+    .dcard__pic { position: relative; margin: 0; min-height: 420px; }
+    .dcard__pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    @media (max-width: 900px) { .pcards { grid-template-columns: 1fr; gap: 1.25rem; } .dcard { grid-template-columns: 1fr; } .dcard__pic { order: -1; min-height: 0; aspect-ratio: 4/3; } .dcard__body { padding: 1.75rem; } }
     @media (max-width: 600px) { .pcard__body { padding: 1.3rem 1.25rem 1.5rem; } }
     .facts.facts--steps { grid-template-columns: repeat(3, 1fr); }
     .facts--steps dt { color: #fff; }
@@ -223,7 +235,9 @@
       .pf__img { position: static; width: 100%; height: 44vh; margin-bottom: 1.25rem; }
       .pf__img img { -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
       .pf__body { padding: 0 1.25rem; }
-      .tslide { grid-template-columns: 1fr 1fr; }
+      .tslide { display: contents; }
+      .tcard { flex: 0 0 58%; scroll-snap-align: center; }
+      .tslider__btn { display: none; }
       .tslider__btn--prev { left: -10px; } .tslider__btn--next { right: -10px; }
       .stats__row { grid-template-columns: repeat(2, 1fr); }
       .guarantee { grid-template-columns: 1fr; text-align: center; justify-items: center; }
@@ -246,8 +260,7 @@
       .picker__card { padding: 1.5rem; }
       .scroll-hint { display: block; }
       .icon { width: 40px; height: 40px; }
-      .tslide { display: contents; }
-      .tcard { flex: 0 0 86%; scroll-snap-align: center; }
+      .tcard { flex: 0 0 86%; }
       .tslider__btn { display: none; }
       .facts, .facts.facts--steps { grid-template-columns: 1fr; }
       .pf__img { height: 40vh; }
@@ -342,7 +355,7 @@
         <button class="tslider__btn tslider__btn--next" type="button" aria-label="Next reviews">&#8250;</button>
       </div>
       <div class="tslider__dots" id="tdots"></div>
-      <p class="footnote">Reviewer names as shown on each platform, surnames shortened. Ravelry rating and counts read 30 October 2026.</p>
+      <p class="footnote">Reviewer names as shown on each platform, surnames shortened.</p>
     </div>
   </section>
 
@@ -364,19 +377,18 @@
         <span class="label">Never out of your colour</span>
         <h2>Sold out? Choose 'Dyed to order' and we'll dye it for you, same price</h2>
       </div>
-      <div class="pf pf--dto fade-up">
-        <div class="pf__img"><img src="images/proof-julia.jpg" alt="Julia, Skein Sisters' master dyer, lifting a freshly dyed skein from the dye bath in the studio" loading="lazy"></div>
-        <div class="pf__body">
-          <span class="pf__eyebrow">Dyed to order</span>
+      <article class="dcard fade-up">
+        <div class="dcard__body">
           <h3>We dye every skein ourselves, so a colour is never gone</h3>
-          <dl class="facts facts--steps">
-            <div><dt><b>1</b>Pick the shade</dt><dd>Sold out from stock? Choose 'Dyed to order', same price.</dd></div>
-            <div><dt><b>2</b>Julia dyes it</dt><dd>Your skeins join the next batch. The dye date shows on the page.</dd></div>
-            <div><dt><b>3</b>Dried and posted</dt><dd>Ships as soon as it is dry, dye lots matched before packing.</dd></div>
-          </dl>
-          <div class="cta-row" style="margin-top:1.618rem"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+          <ol class="dsteps">
+            <li><span class="dsteps__n">1</span><div><b>Pick the shade</b><span>Sold out from stock? Choose 'Dyed to order', same price.</span></div></li>
+            <li><span class="dsteps__n">2</span><div><b>Julia dyes it</b><span>Your skeins join the next batch. The dye date shows on the page.</span></div></li>
+            <li><span class="dsteps__n">3</span><div><b>Dried and posted</b><span>Ships as soon as it is dry, dye lots matched before packing.</span></div></li>
+          </ol>
+          <a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         </div>
-      </div>
+        <figure class="dcard__pic"><img src="images/proof-julia.jpg" alt="Julia, Skein Sisters' master dyer, lifting a freshly dyed skein from the dye bath in the studio" loading="lazy"><span class="pcard__chip">Dyed to order</span></figure>
+      </article>
     </div>
   </section>
 
@@ -534,7 +546,7 @@
     // testimonial slider
     var track = document.getElementById('ttrack'), dots = document.getElementById('tdots');
     if (track) {
-      var mobile = function () { return window.innerWidth <= 600; };
+      var mobile = function () { return window.innerWidth <= 900; };
       var items = function () { return mobile() ? track.querySelectorAll('.tcard') : track.querySelectorAll('.tslide'); };
       var step = function () { var it = items()[0]; return it ? it.getBoundingClientRect().width + (mobile() ? 16 : 16) : track.clientWidth; };
       var buildDots = function () {
