@@ -24,6 +24,12 @@
     .check { width: 20px; height: 20px; flex: none; color: var(--brand); margin-top: .2rem; }
 
     /* Nav */
+    .demo-bar { position: relative; z-index: 110; background: #fff; color: var(--ink); border-bottom: 1px solid var(--line); font-size: .82rem; }
+    .demo-bar .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; }
+    .demo-bar__dl { display: inline-flex; align-items: center; gap: .45rem; color: var(--ink); text-decoration: none; font-weight: 600; border: 1px solid var(--ink); border-radius: 999px; padding: .35rem .85rem; transition: background .2s, color .2s; }
+    .demo-bar__dl:hover { background: var(--ink); color: #fff; }
+    .demo-bar__dl svg { width: 14px; height: 14px; }
+    @media (max-width: 600px) { .demo-bar__note { display: none; } .demo-bar .container { justify-content: flex-end; } }
     .nav { padding: .8rem 0; }
     .nav__logo img { height: 30px; filter: brightness(0) invert(1); transition: filter .3s ease; }
     .nav--scrolled .nav__logo img { filter: none; }
@@ -295,6 +301,7 @@
   </style>
 </head>
 <body id="top">
+  <div class="demo-bar" id="demoBar"><div class="container"><span class="demo-bar__note">Webprofits Academy Live Build Session demo. This page as data:</span><a class="demo-bar__dl" href="page.json" download="mister-wallpaper-page.json"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download page.json</a></div></div>
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a href="#top" class="nav__logo"><img src="images/logo.png" alt="Mister Wallpaper"></a>
@@ -964,7 +971,10 @@
   <script>
   (function () {
     var nav = document.getElementById('nav');
-    window.addEventListener('scroll', function () { nav.classList.toggle('nav--scrolled', window.scrollY > 80); }, { passive: true });
+    var demoBar = document.getElementById('demoBar');
+    function placeNav() { var h = demoBar ? demoBar.offsetHeight : 0; nav.style.top = Math.max(0, h - window.scrollY) + 'px'; }
+    placeNav(); window.addEventListener('resize', placeNav);
+    window.addEventListener('scroll', function () { nav.classList.toggle('nav--scrolled', window.scrollY > 80); placeNav(); }, { passive: true });
 
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
