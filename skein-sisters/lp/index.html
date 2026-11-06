@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Fabulous Sock hand-dyed sock yarn | Skein Sisters</title>
+  <meta name="description" content="Plump 4ply sock yarn, 80% Australian extra fine superwash merino and 20% nylon, hand-dyed in Sydney in 140+ shades. 400m a skein, machine washable, $41.90.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root { --text: #3d5e69; --text-light: #4f6d77; --text-muted: #6b8089; --bg-alt: #f5eef0; --teal: #3d5e69; --aqua: #badad6; --pink: #efafe8; --apricot: #e0a580; --radius: 1rem; }
+    body { line-height: 1.55; }
+    h1, h2, h3 { text-transform: uppercase; letter-spacing: -0.02em; font-weight: 500; color: var(--teal); }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.1; }
+    h3 { font-size: 1.15rem; }
+    .section--dark h2, .section--dark h3, .section--dark .label { color: #fff; }
+    .section--dark .label { color: var(--aqua); }
+    .section--dark p { color: rgba(255,255,255,.88); }
+    .btn { text-transform: uppercase; letter-spacing: .05em; font-weight: 500; font-size: .9rem; }
+    .btn--accent { background: var(--brand); color: #fff; }
+    .btn--light { background: #fff; color: var(--brand); }
+    .btn--ghost { background: transparent; border: 1px solid rgba(255,255,255,.6); color: #fff; }
+    .btn--outline { background: #fff; border: 1px solid var(--brand); color: var(--brand); }
+    .cta-row { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
+    .cta-note { font-size: .85rem; color: var(--text-muted); margin-top: .75rem; max-width: none; }
+    .text-centre { text-align: center; }
+    /* nav */
+    .nav { padding: .75rem 0; }
+    .nav__logo img { height: 42px; }
+    .nav .logo-colour { display: none; }
+    .nav--scrolled .logo-colour { display: block; }
+    .nav--scrolled .logo-white { display: none; }
+    .nav .btn { padding: .65rem 1.3rem; font-size: .78rem; }
+    /* hero */
+    .hero { background: var(--dark); color: #fff; padding: 7.5rem 0 4.5rem; min-height: 100svh; display: flex; align-items: center; overflow: hidden; position: relative; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 60% at 80% 20%, rgba(143,75,136,.35), transparent 70%); pointer-events: none; }
+    .hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3.5rem; align-items: center; position: relative; }
+    .hero__badge { display: inline-block; background: rgba(255,255,255,.12); border-radius: 999px; padding: .5rem 1.1rem; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1.4rem; line-height: 1.4; }
+    .hero h1 { color: #fff; font-size: clamp(1.9rem, 3.3vw, 2.75rem); line-height: 1.05; margin-bottom: 1.25rem; }
+    .hero__sub { font-size: 1.08rem; color: rgba(255,255,255,.9); max-width: 560px; }
+    .hero__sub strong { color: #fff; font-weight: 500; }
+    .hero__trust { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; margin-top: 1.6rem; font-size: .84rem; color: rgba(255,255,255,.85); padding: 0; list-style: none; }
+    .hero__trust li { display: flex; align-items: center; gap: .4rem; }
+    .hero__trust svg { color: var(--aqua); flex: none; }
+    .hero__img img { width: 100%; height: auto; border-radius: 1.25rem; box-shadow: 0 24px 60px rgba(0,0,0,.35); display: block; }
+    .hero__price { display: inline-flex; align-items: baseline; gap: .5rem; background: var(--brand); color: #fff; border-radius: 999px; padding: .45rem 1.1rem; font-size: .9rem; margin-left: .5rem; vertical-align: middle; }
+    .hero__price b { font-size: 1.15rem; font-weight: 500; }
+    /* v1: the photo bleeds into a background sampled from its own backdrop */
+    .hero--bleed { background: linear-gradient(90deg, #2a4e59 0%, #2c5361 40%, #3a6977 70%, #4a8090 100%); }
+    .hero--bleed::before { display: none; }
+    .hero--bleed .hero__grid { grid-template-columns: minmax(0, 620px) 1fr; position: static; }
+    .hero--bleed .hero__grid > div:first-child { position: relative; z-index: 1; max-width: 600px; }
+    .hero__img--bleed { position: absolute; top: 0; right: 0; bottom: 0; width: 60%; }
+    .hero__img--bleed img { width: 100%; height: 100%; object-fit: cover; object-position: right center; border-radius: 0; box-shadow: none; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 42%); mask-image: linear-gradient(to right, transparent 0, #000 42%); }
+    /* stats strip */
+    .stats { background: var(--brand); color: #fff; padding: 1.6rem 0; }
+    .stats__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+    .stats__n { font-size: 1.55rem; font-weight: 500; line-height: 1.1; }
+    .stats__l { font-size: .8rem; opacity: .9; letter-spacing: .05em; text-transform: uppercase; margin-top: .25rem; }
+    /* icon cards */
+    .icon { width: 50px; height: 50px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; color: var(--brand); margin-bottom: 1rem; }
+    .card p { font-size: .97rem; color: var(--text-light); }
+    .cards-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    /* pain list */
+    .pains { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .pains li { display: flex; gap: .8rem; align-items: flex-start; background: #fff; border-radius: var(--radius); padding: 1.1rem 1.25rem; border: 1px solid #eadfe3; font-size: .98rem; }
+    .pains svg { color: var(--accent); flex: none; margin-top: .15rem; }
+    /* mechanism */
+    .mech { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+    .mech__img img { width: 100%; border-radius: 1.25rem; display: block; }
+    .mech__points { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    .point { display: flex; gap: 1rem; align-items: flex-start; background: #fff; border-radius: var(--radius); padding: 1rem 1.2rem; border: 1px solid #eadfe3; }
+    .point .icon { width: 40px; height: 40px; margin: 0; flex: none; }
+    .point b { display: block; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; font-size: .85rem; color: var(--brand); }
+    .point span { font-size: .95rem; color: var(--text-light); }
+    /* swatches */
+    .filters { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 2rem; }
+    .filter { border: 1px solid var(--brand); color: var(--brand); background: #fff; border-radius: 999px; padding: .5rem 1.1rem; font: inherit; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; cursor: pointer; transition: background .2s, color .2s; }
+    .filter.active, .filter:hover { background: var(--brand); color: #fff; }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+    .swatch { display: block; text-decoration: none; color: var(--teal); text-align: center; border-radius: var(--radius); overflow: hidden; background: #fff; border: 1px solid #eadfe3; transition: transform .25s, box-shadow .25s; }
+    .swatch img { width: 100%; aspect-ratio: 1; display: block; }
+    .swatch span { display: block; padding: .6rem .4rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+    .swatch:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(61,94,105,.15); }
+    .swatch.hidden { display: none; }
+    .swatch { position: relative; }
+    .tag { position: absolute; top: .5rem; left: .5rem; font-style: normal; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; background: rgba(255,255,255,.92); color: var(--brand); border-radius: 999px; padding: .2rem .55rem; }
+    .tag--stock { background: var(--brand); color: #fff; }
+    .swatch-note { text-align: center; margin: 2rem auto 0; max-width: 680px; font-size: .95rem; color: var(--text-light); }
+    /* proof: each photo bleeds into a panel coloured from its own backdrop; copy 61.8%, photo 38.2% */
+    .pf { position: relative; display: grid; grid-template-columns: 61.8fr 38.2fr; align-items: center; border-radius: 1.618rem; overflow: hidden; color: #fff; padding: 2.618rem; min-height: 480px; margin-top: 1.618rem; }
+    .pf--shape { background: #7e2640; }
+    .pf--colour { background: #71445b; }
+    .pf--dto { background: #5f5646; }
+    /* proof cards: the photo IS the card top, in its own backdrop; copy below on white */
+    .pcards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-top: 2.5rem; }
+    .pcard { background: #fff; border-radius: 1.25rem; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
+    .pcard__pic { position: relative; margin: 0; aspect-ratio: 4/3; overflow: hidden; }
+    .pcard__pic img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform .8s ease; }
+    .pcard:hover .pcard__pic img { transform: scale(1.03); }
+    .pcard__chip { position: absolute; left: 1.1rem; top: 1.1rem; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; padding: .42rem .85rem; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--teal); }
+    .pcard__head { padding: 1.75rem 2rem 0; }
+    .pcard__head h3 { font-size: 1.5rem; line-height: 1.1; margin: 0 0 1.25rem; color: var(--teal); }
+    .pcard__pic { order: -1; }
+    .pcard__body { padding: 0 2rem 2rem; }
+    .facts.facts--light > div { border-left-color: var(--brand); }
+    .facts.facts--light dt { color: var(--teal); }
+    .facts.facts--light dd { color: var(--text-light); }
+    .pcard__quote { margin: 1.25rem 0 0; padding: .9rem 1.1rem; border-radius: .9rem; background: var(--bg-alt); font-size: .92rem; color: var(--teal); }
+    .pcard__quote cite { display: block; font-style: normal; font-size: .72rem; color: var(--text-muted); margin-top: .3rem; }
+    /* dyed-to-order card: copy left on white, the studio photo as the card's right half */
+    .dcard { display: grid; grid-template-columns: 1.1fr 1fr; grid-template-rows: auto 1fr; background: #fff; border-radius: 1.25rem; overflow: hidden; margin-top: 2.5rem; text-align: left; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
+    .dcard__head { grid-column: 1; padding: 2.5rem 2.5rem 0; }
+    .dcard__head h3 { font-size: 1.5rem; line-height: 1.1; margin: 0 0 1.5rem; color: var(--teal); }
+    .dcard__body { grid-column: 1; padding: 0 2.5rem 2.5rem; display: flex; flex-direction: column; }
+    .dcard__pic { grid-column: 2; grid-row: 1 / span 2; }
+    .dsteps { list-style: none; margin: 0 0 1.75rem; padding: 0; display: grid; gap: 1.1rem; }
+    .dsteps li { display: flex; gap: .9rem; align-items: flex-start; }
+    .dsteps__n { flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: .85rem; margin-top: .05rem; }
+    .dsteps b { display: block; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; color: var(--teal); margin-bottom: .15rem; }
+    .dsteps div > span { font-size: .95rem; color: var(--text-light); line-height: 1.45; }
+    .dcard__body .btn { align-self: flex-start; }
+    .dcard__pic { position: relative; margin: 0; min-height: 420px; }
+    .dcard__pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    @media (max-width: 900px) { .pcards { grid-template-columns: 1fr; gap: 1.25rem; } .pcard__pic { order: 0; aspect-ratio: 16/10; } .pcard__head { padding: 1.5rem 1.5rem 0; } .pcard__body { padding: 1.25rem 1.5rem 1.5rem; } .dcard { grid-template-columns: 1fr; grid-template-rows: auto; } .dcard__head { grid-column: auto; padding: 1.5rem 1.5rem 0; } .dcard__pic { grid-column: auto; grid-row: auto; min-height: 0; aspect-ratio: 16/10; } .dcard__body { grid-column: auto; padding: 1.25rem 1.5rem 1.5rem; } }
+    @media (max-width: 600px) { .pcard__body { padding: 1.3rem 1.25rem 1.5rem; } }
+    .facts.facts--steps { grid-template-columns: repeat(3, 1fr); }
+    .facts--steps dt { color: #fff; }
+    .facts--steps dt b { display: inline-block; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: #fff; color: #5f5646; text-align: center; line-height: 1.6rem; font-size: .8rem; margin-right: .45rem; }
+    .steps p { font-size: .97rem; color: var(--text-light); }
+    .pf__img { position: absolute; top: 0; right: 0; bottom: 0; width: 48%; }
+    .pf__img img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 42%), linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0, #000 42%), linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%); mask-composite: intersect; }
+    .pf__body { position: relative; z-index: 1; grid-column: 1; }
+    .pf__eyebrow { display: inline-block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #fff; background: rgba(255,255,255,.14); border-radius: 999px; padding: .3rem .85rem; margin-bottom: 1rem; }
+    .pf__body h3 { font-size: 1.618rem; line-height: 1.1; margin-bottom: 1.618rem; color: #fff; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.618rem; margin: 0; }
+    .facts > div { border-left: 2px solid rgba(255,255,255,.45); padding-left: 1rem; }
+    .facts dt { font-size: 1.02rem; font-weight: 500; color: #fff; text-transform: uppercase; letter-spacing: .02em; line-height: 1.2; margin-bottom: .3rem; }
+    .facts dd { margin: 0; font-size: .92rem; color: rgba(255,255,255,.85); line-height: 1.45; }
+    .proof-quote { margin: 1.618rem 0 0; background: rgba(255,255,255,.12); border-radius: 1rem; padding: 1rem 1.25rem; font-size: 1.05rem; color: #fff; max-width: none; }
+    .proof-quote cite { display: block; font-style: normal; font-size: .72rem; color: rgba(255,255,255,.7); margin-top: .35rem; letter-spacing: .04em; text-transform: uppercase; }
+    /* testimonial slider */
+    .tslider { position: relative; margin-top: 1rem; }
+    .tslider__track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 1rem; }
+    .tslider__track::-webkit-scrollbar { display: none; }
+    .tslide { flex: 0 0 100%; scroll-snap-align: start; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1.25rem; }
+    .tcard { background: #fff; border: 1px solid #eadfe3; border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; }
+    .tcard blockquote { font-size: .97rem; color: var(--teal); margin: .6rem 0 1rem; max-width: none; flex: 1; }
+    .tcard cite { font-style: normal; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--brand); display: flex; flex-direction: column; gap: .15rem; }
+    .tcard cite span { color: var(--text-muted); text-transform: none; letter-spacing: 0; font-size: .78rem; }
+    .tslider__btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--brand); background: #fff; color: var(--brand); font-size: 1.6rem; line-height: 1; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(61,94,105,.12); }
+    .tslider__btn--prev { left: -22px; } .tslider__btn--next { right: -22px; }
+    .tslider__btn:hover { background: var(--brand); color: #fff; }
+    .tslider__dots { display: flex; justify-content: center; gap: .5rem; margin-top: 1.25rem; }
+    .tslider__dots button { width: 10px; height: 10px; border-radius: 50%; border: 0; background: #cfd8db; cursor: pointer; padding: 0; }
+    .tslider__dots button.active { background: var(--brand); }
+    .tslider__count { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand); }
+    /* reviews */
+    .reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .review { background: #fff; border-radius: var(--radius); padding: 1.75rem; border: 1px solid #eadfe3; }
+    .stars { color: #639697; letter-spacing: 2px; font-size: 1rem; }
+    .review blockquote { font-size: 1.02rem; margin: .75rem 0 1rem; color: var(--teal); max-width: none; }
+    .review cite { font-style: normal; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--brand); }
+    .proof-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 2rem; margin-top: 2.5rem; font-size: .9rem; color: var(--text-light); }
+    .proof-row b { color: var(--brand); font-weight: 500; }
+    .footnote { text-align: center; max-width: none; font-size: .78rem; color: var(--text-muted); margin-top: 1.25rem; }
+    /* projects */
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .project { border-radius: var(--radius); overflow: hidden; background: #fff; border: 1px solid #eadfe3; }
+    .project img { width: 100%; aspect-ratio: 4 / 5; display: block; }
+    .project div { padding: 1rem 1.2rem 1.25rem; }
+    .project b { display: block; text-transform: uppercase; letter-spacing: .05em; font-weight: 500; font-size: .85rem; color: var(--brand); margin-bottom: .3rem; }
+    .project span { font-size: .92rem; color: var(--text-light); }
+    /* steps */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
+    /* Rhythm: section 6rem, label 12 > heading 16 > intro 40 > content, heading-only sections get 2.5rem to the content */
+    section { padding: 6rem 0; }
+    .faq { margin-top: 2.5rem; }
+    .section--centred h2 { max-width: 760px; margin-left: auto; margin-right: auto; text-wrap: balance; }
+    .hero h1 { text-wrap: balance; }
+    .steps > div { text-align: center; }
+    .steps > div p { margin-left: auto; margin-right: auto; max-width: 300px; }
+    .step__n { margin-left: auto; margin-right: auto; }
+    #buy .picker__card { margin-bottom: 0; }
+    #buy .form__privacy { margin-bottom: 0; }
+    .section__intro { margin-bottom: 2.5rem !important; }
+    @media (max-width: 900px) { section { padding: 4.5rem 0; } }
+    @media (max-width: 600px) { section { padding: 3.5rem 0; } .steps { margin-top: 1.75rem; gap: 1.75rem; } }
+    .step__n { width: 44px; height: 44px; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 500; margin-bottom: 1rem; }
+    .step p { font-size: .97rem; color: var(--text-light); }
+    /* admission */
+    .admit { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+    .admit__compare { background: #fff; border-radius: 1.25rem; border: 1px solid #eadfe3; overflow: hidden; }
+    .admit__compare div { padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 1px solid #eadfe3; }
+    .admit__compare div:last-child { border-bottom: 0; background: var(--bg-alt); }
+    .admit__compare small { color: var(--text-muted); font-size: .85rem; }
+    .admit__compare b { font-size: 1.6rem; font-weight: 500; color: var(--teal); white-space: nowrap; }
+    .admit__compare div:last-child b { color: var(--brand); }
+    .ticks { list-style: none; padding: 0; margin: 1.25rem 0; display: grid; gap: .6rem; }
+    .ticks li { display: flex; gap: .6rem; align-items: flex-start; font-size: .97rem; }
+    .ticks svg { color: var(--brand); flex: none; margin-top: .3rem; }
+    /* guarantee */
+    .guarantee { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; background: #fff; border-radius: 1.25rem; padding: 2.5rem; border: 2px solid var(--aqua); }
+    .guarantee .icon { width: 84px; height: 84px; margin: 0; }
+    .guarantee .icon svg { width: 40px; height: 40px; }
+    /* faq */
+    .faq__item { border-bottom: 1px solid #e3dcdc; }
+    .faq__q { width: 100%; background: none; border: 0; text-align: left; padding: 1.15rem 2.5rem 1.15rem 0; font: inherit; font-size: 1.05rem; font-weight: 500; color: var(--teal); cursor: pointer; position: relative; }
+    .faq__q::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.6rem; color: var(--brand); font-weight: 400; }
+    .faq__item.open .faq__q::after { content: "\2212"; }
+    .faq__a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq__a p { padding: 0 0 1.2rem; color: var(--text-light); max-width: none; }
+    /* picker */
+    .picker { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+    .picker__card { background: #fff; color: var(--teal); border-radius: 1.25rem; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+    .picker__card h3 { margin-bottom: .35rem; color: var(--teal); }
+    .picker__card > p { color: var(--text-light); font-size: .95rem; margin-bottom: 1.25rem; }
+    .lead-form label { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; color: var(--brand); }
+    .lead-form select { width: 100%; padding: .85rem 1rem; border: 1px solid #cfd8db; border-radius: 12px; font: inherit; color: var(--teal); background: #f6f7f8; margin-bottom: 1rem; }
+    .pick-row { display: flex; gap: .75rem; margin-bottom: 1.25rem; }
+    .pick-opt { flex: 1; border: 1px solid #cfd8db; border-radius: 12px; padding: .8rem; cursor: pointer; text-align: center; font-size: .88rem; text-transform: none; letter-spacing: 0; color: var(--teal); margin: 0; display: flex; gap: .5rem; align-items: center; justify-content: center; }
+    .pick-opt:has(input:checked) { border-color: var(--brand); background: var(--bg-alt); }
+    .pick-opt input { accent-color: var(--brand); margin: 0; }
+    .lead-form .btn, .btn--block { width: 100%; justify-content: center; }
+    .picker__card .btn--block { margin-top: .25rem; }
+    .lead-form .btn + .btn { margin-top: .6rem; }
+    .form__privacy { font-size: .8rem; color: var(--text-muted); margin-top: 1rem; max-width: none; text-align: center; }
+    .picker__copy .ticks li { color: rgba(255,255,255,.9); }
+    .picker__copy .ticks svg { color: var(--aqua); }
+    /* sticky bar */
+    .sticky { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #e3dcdc; padding: .6rem 1rem; display: none; z-index: 90; align-items: center; justify-content: space-between; gap: 1rem; box-shadow: 0 -6px 20px rgba(0,0,0,.08); }
+    .sticky span { font-size: .8rem; color: var(--teal); text-transform: uppercase; letter-spacing: .05em; line-height: 1.2; }
+    .sticky .btn { width: auto; padding: .65rem 1.2rem; font-size: .78rem; }
+    /* footer */
+    .footer { padding: 2.5rem 0; background: var(--bg-alt); text-align: center; font-size: .85rem; color: var(--text-light); }
+    .footer p { max-width: none; margin-top: 1rem; }
+    .footer a { color: var(--brand); }
+    .scroll-hint { display: none; text-align: center; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); padding: .75rem 0 0; }
+    @media (max-width: 900px) {
+      .hero { padding: 6.5rem 0 3.5rem; min-height: 0; }
+      .hero__grid, .mech, .admit, .picker { grid-template-columns: 1fr; gap: 2.25rem; }
+      .hero__img { order: -1; }
+      .hero--bleed { padding-top: 0; background: #2c5361; }
+      .hero--bleed .hero__grid { grid-template-columns: 1fr; gap: 0; }
+      .hero__img--bleed { position: static; width: calc(100% + 2.5rem); margin: 0 -1.25rem 1.5rem; height: 52vh; }
+      .hero__img--bleed img { border-radius: 0; -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%); mask-image: linear-gradient(to bottom, #000 60%, transparent 100%); }
+      .cards-6, .projects, .steps { grid-template-columns: 1fr 1fr; }
+      .reviews, .pains { grid-template-columns: 1fr; }
+      .pf { display: block; padding: 0 0 1.618rem; min-height: 0; }
+      .pf__img { position: static; width: 100%; height: 44vh; margin-bottom: 1.25rem; }
+      .pf__img img { -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
+      .pf__body { padding: 0 1.25rem; }
+      .tslide { display: contents; }
+      .tcard { flex: 0 0 58%; scroll-snap-align: center; }
+      .tslider__btn { display: none; }
+      .tslider__btn--prev { left: -10px; } .tslider__btn--next { right: -10px; }
+      .stats__row { grid-template-columns: repeat(2, 1fr); }
+      .guarantee { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero__img img { max-height: 38vh; object-fit: cover; border-radius: .9rem; }
+      .hero__img--bleed { height: 34vh; }
+      .hero__img--bleed img { max-height: none; height: 100%; }
+      .hero__sub { font-size: .95rem; }
+      .hero__price { margin: .5rem 0 0; }
+      .cards-6, .projects, .steps { grid-template-columns: 1fr; }
+      .swatches { grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+      .swatch span { font-size: .65rem; padding: .45rem .2rem; }
+      .stats__n { font-size: 1.25rem; }
+      .sticky { display: flex; }
+      body { padding-bottom: 64px; }
+      .nav .btn { width: auto; font-size: .7rem; padding: .55rem 1rem; }
+      .admit__compare b { font-size: 1.25rem; }
+      .picker__card { padding: 1.5rem; }
+      .scroll-hint { display: block; }
+      .icon { width: 40px; height: 40px; }
+      .tcard { flex: 0 0 86%; }
+      .tslider__btn { display: none; }
+      .facts, .facts.facts--steps { grid-template-columns: 1fr; }
+      .pf__img { height: 40vh; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo"><img class="logo-white" src="images/logo-white.png" alt="Skein Sisters"><img class="logo-colour" src="images/logo-aqua-plum.png" alt="Skein Sisters"></a>
+      
+    </div>
+  </header>
+
+  <section class="hero hero--bleed" id="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__badge">Hand-dyed in Sydney · 140+ shades · $41.90 a skein</span>
+        <h1>Plump, hand-dyed sock yarn that holds its shape and colour, wash after wash</h1>
+        <p class="hero__sub">Fabulous Sock is <strong>80% Australian extra fine superwash merino and 20% nylon</strong>. 400 metres in every 100g skein, dyed by us in our Dulwich Hill studio, in more than 140 shades.</p>
+        <div class="cta-row"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><a href="#colours" class="btn btn--ghost">See the shades</a></div>
+        <ul class="hero__trust">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 5.0 from 9 reviews</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 4.9 on Ravelry, 441 projects</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Free shipping over $200 Australia-wide</li>
+        </ul>
+      </div>
+      <div class="hero__img hero__img--bleed"><img src="images/hero-skeins.jpg" alt="A stack of Fabulous Sock skeins in speckled white, aqua, mustard, rust, navy and pink on a teal backdrop, with the Fabulous Sock ball band" width="1500" height="1492" fetchpriority="high"></div>
+    </div>
+  </section>
+  <p class="scroll-hint">Scroll for the yarn, the colours and the reviews</p>
+
+  <div class="stats"><div class="container stats__row">
+    <div><div class="stats__n">80 / 20</div><div class="stats__l">Merino / nylon</div></div>
+    <div><div class="stats__n">400m</div><div class="stats__l">Per 100g skein</div></div>
+    <div><div class="stats__n">2.25 to 4mm</div><div class="stats__l">Needles or hook</div></div>
+    <div><div class="stats__n">Machine</div><div class="stats__l">Washable, dry flat</div></div>
+  </div></div>
+
+  <section id="proof">
+    <div class="container">
+      <div class="section--centred">
+        <span class="label">The proof</span>
+        <h2>Why it holds its shape, and why it holds its colour</h2>
+        <p class="section__intro">Two things do the work. The nylon and the ply hold the shape. The base and the dye bath hold the colour.</p>
+      </div>
+
+      <div class="pcards">
+        <article class="pcard fade-up">
+          <div class="pcard__head"><h3>Built so the heel outlasts the winter</h3></div>
+          <figure class="pcard__pic"><img src="images/proof-sock.jpg" alt="A skein of speckled Fabulous Sock beside the lace-panel sock knitted from it, on a raspberry backdrop" loading="lazy"><span class="pcard__chip">Shape</span></figure>
+          <div class="pcard__body">
+            <dl class="facts facts--light">
+              <div><dt>20% nylon</dt><dd>Takes the friction at heels and toes. Keeps the shape, resists pilling.</dd></div>
+              <div><dt>19.5-micron merino</dt><dd>Fine enough for skin, not so fine it pills.</dd></div>
+              <div><dt>Four plies, twisted round</dt><dd>Structure in cables and lace. Smooth in stocking stitch.</dd></div>
+              <div><dt>Superwash</dt><dd>Delicate cycle, dry flat. Same shape every wash.</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="pcard fade-up">
+          <div class="pcard__head"><h3>Dyed deep, then locked in</h3></div>
+          <figure class="pcard__pic"><img src="images/proof-colour.jpg" alt="A speckled pink skein of Fabulous Sock beside the sock knitted from it, on a plum backdrop" loading="lazy"><span class="pcard__chip">Colour</span></figure>
+          <div class="pcard__body">
+            <dl class="facts facts--light">
+              <div><dt>Superwash base</dt><dd>The treatment opens the fibre, so dye goes deep and comes out bright.</dd></div>
+              <div><dt>Hand-dyed by Julia</dt><dd>8 to 16 skeins a batch. Dye lots matched before packing.</dd></div>
+              <div><dt>Heat-set in an acid bath</dt><dd>The dye bonds to the fibre instead of sitting on it.</dd></div>
+              <div><dt>Built against pooling</dt><dd>Julia's colour technique blends. It never stripes.</dd></div>
+            </dl>
+            <blockquote class="pcard__quote">&ldquo;&hellip;can greatly improve the dyeability of wool.&rdquo;<cite>Journal of the Society of Dyers and Colourists, on the superwash treatment</cite></blockquote>
+          </div>
+        </article>
+      </div>
+
+      <p class="footnote">Sources: skeinsisters.com.au; Woolmark, "Machine washable wool"; D. M. Lewis, Journal of the Society of Dyers and Colourists, 1975; Symfonie Yarns, March 2026; Little Skein; SweetGeorgia Yarns, December 2025.</p>
+    </div>
+  </section>
+
+  <section class="section--alt section--centred" id="reviews">
+    <div class="container">
+      <span class="label">What knitters say</span>
+      <h2>5.0 from every Fabulous Sock review, 4.9 on Ravelry, 246 shop reviews</h2>
+      <p class="section__intro">Verbatim, from the product page, the shop's own reviews and Google. Swipe or use the arrows.</p>
+      <div class="tslider" id="tslider">
+        <button class="tslider__btn tslider__btn--prev" type="button" aria-label="Previous reviews">&#8249;</button>
+        <div class="tslider__track" id="ttrack">
+          <div class="tslide"><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;I&#x27;ve knitted a lot of socks and this is by far the softest, plumpest, prettiest 4-ply. Lovely to work with, looks beautiful knitted up.&rdquo;</blockquote><cite>Kirsten<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;I received my yarn yesterday and I&#x27;m so impressed. Absolutely stunning colours, I got &#x27;Fruit Tingle&#x27; and &#x27;Sorcery&#x27;, I can&#x27;t get over how beautiful they are. Thank you Skein Sisters!&rdquo;</blockquote><cite>Jess<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;It had the softness and fineness with the little extra support that comes from the nylon. The texture and colour variations are ideal for crafting that uniquely handmade aesthetic.&rdquo;</blockquote><cite>Christopher C.<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Always the most beautiful yarn, the colour is delicious and always stunning to knit with.&rdquo;</blockquote><cite>AddyLou<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;This is a fabulous colour and has a wonderfully silky look and feel. Its texture feels great whilst knitting and it is surprisingly springy and sits beautifully in the colour drift scarf I&#x27;m making. I would love to buy more for a colourful cardigan for autumn.&rdquo;</blockquote><cite>Vanessa T.<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;I am thrilled with the Fabulous Sock yarn that I recently purchased. I ordered Antique Shop and it is really beautiful and such a joy to knit. I definitely will be ordering more colours. This certainly is a premium yarn. Recommend highly.&rdquo;</blockquote><cite>Jennifer<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Thank you so much for providing quality products and the beautiful colours along with your knowledge and care.&rdquo;</blockquote><cite>Esther<span>Fabulous Sock review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Whoever packaged my order went to the trouble of ensuring each of the three colours I ordered were matching dye lots. This alone will prompt me to order again from Skein Sisters.&rdquo;</blockquote><cite>Jenny W.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;My yarns arrived beautifully packed within 3-4 days from when I put my order in and they included colours not necessarily in their stock.&rdquo;</blockquote><cite>Denise T.<span>Google review</span></cite></div></div>
+          <div class="tslide"><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;The wool I bought from Skein Sisters was a pleasure to knit with. My first time knitting socks with butterflies turned out better than I imagined. The wool was a quality which made knitting easier.&rdquo;</blockquote><cite>Anne M.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;There were so many interesting ones, but the Skein Sisters hand dyed range were definitely my fave and I can&#x27;t wait to knit them up!&rdquo;</blockquote><cite>Stacey A.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;I&#x27;d saved up all my birthday and Christmas money to buy some of the lovely Fabulous Sock yarn for a certain project I&#x27;d been planning for quite a while. It will be my first stop next time I&#x27;m in Sydney.&rdquo;</blockquote><cite>Chelle C.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;7th heaven. Beautiful selections of yarns and colours. Knowledgeable and helpful staff.&rdquo;</blockquote><cite>Karen E.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;The colours really pop and the yarn is soft and perfect for this project.&rdquo;</blockquote><cite>Anne O.<span>Skein Sisters Poet review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;The staff are so knowledgeable and helpful, the yarns are gorgeous, and ordering online is so easy. Great website and delivery was next day to regional NSW. So good!&rdquo;</blockquote><cite>Joanne E.<span>Skein Sisters Romance review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;I have only begun to work up the yarn itself and it&#x27;s incredibly easy and soft to work with. The transition between the two shades are delightful, I&#x27;ve had no issues with snagging or frogging it, and it&#x27;s beginning to have a lovely drape.&rdquo;</blockquote><cite>T. Cruz<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Fantastic yarns! The quality is fantastic.&rdquo;</blockquote><cite>Taylah M.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Their yarn is beautiful and their service is fantastic.&rdquo;</blockquote><cite>Christina P.<span>Google review</span></cite></div></div>
+          <div class="tslide"><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Ordered multiple times online and had great experience. The yarn is incredible and was packed beautifully and with care. Highly recommend. 10/10&rdquo;</blockquote><cite>Mia K.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Order was posted the next business day, the yarn was beautiful and amazing quality, wrapped in a gorgeous environmentally friendly packaging with a personalised note. Will be buying again.&rdquo;</blockquote><cite>Yevghenia P.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;I will gladly shop with them again and recommend them to anyone looking for quality yarn and outstanding customer service.&rdquo;</blockquote><cite>Kelly A.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Beautiful yarns and patterns and lovely helpful people. This isn&#x27;t just a yarn shop, it&#x27;s a therapy centre for knitters.&rdquo;</blockquote><cite>Caroline A.<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Great service, beautiful yarn, and quick delivery.&rdquo;</blockquote><cite>Rosemary L.<span>Shop review, skeinsisters.com.au</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Your website is beautiful and super functional, truly well done and it&#x27;s a treat for us visual people. The service when buying yarn recently was excellent.&rdquo;</blockquote><cite>Christina S.<span>Shop review, skeinsisters.com.au</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;A gorgeous yarn store with outstanding customer service and to die for yarn.&rdquo;</blockquote><cite>Vera<span>Google review</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Yes, this is a yarn store, a great one. But it has heart, expertise and joy too. It brings people together. What more can you ask?&rdquo;</blockquote><cite>Adrienne<span>Shop review, skeinsisters.com.au</span></cite></div><div class="tcard"><span class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Fantastic online shopping experience. The team here went above and beyond to help me out, and beautifully prompt communication. Very impressed!&rdquo;</blockquote><cite>Sarah<span>Shop review, skeinsisters.com.au</span></cite></div></div>
+        </div>
+        <button class="tslider__btn tslider__btn--next" type="button" aria-label="Next reviews">&#8250;</button>
+      </div>
+      <div class="tslider__dots" id="tdots"></div>
+      <p class="footnote">Reviewer names as shown on each platform, surnames shortened.</p>
+    </div>
+  </section>
+
+  <section class="section--alt section--centred" id="colours">
+    <div class="container">
+      <span class="label">Find your colour</span>
+      <h2>More than 140 shades, dyed by hand in batches of 8 to 16 skeins</h2>
+      <p class="section__intro">Solids, semi-solids and speckles, from soft pastels to neons. Tap a colour to open it on the product page.</p>
+      <div class="swatches">
+        <a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702363504827"><img src="images/colour-tango-train.jpg" alt="Fabulous Sock in Tango Train" loading="lazy"><em class="tag">Dyed to order</em><span>Tango Train</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46558622580923"><img src="images/colour-antique-shop.jpg" alt="Fabulous Sock in Antique Shop" loading="lazy"><em class="tag tag--stock">In stock</em><span>Antique Shop</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46546092622011"><img src="images/colour-twine-time.jpg" alt="Fabulous Sock in Twine Time" loading="lazy"><em class="tag tag--stock">In stock</em><span>Twine Time</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702365470907"><img src="images/colour-olive-you.jpg" alt="Fabulous Sock in Olive You" loading="lazy"><em class="tag">Dyed to order</em><span>Olive You</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702365405371"><img src="images/colour-medusa.jpg" alt="Fabulous Sock in Medusa" loading="lazy"><em class="tag">Dyed to order</em><span>Medusa</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47432080654523"><img src="images/colour-marine.jpg" alt="Fabulous Sock in Marine" loading="lazy"><em class="tag tag--stock">In stock</em><span>Marine</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366617787"><img src="images/colour-reef-project.jpg" alt="Fabulous Sock in Reef Project" loading="lazy"><em class="tag">Dyed to order</em><span>Reef Project</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47432080982203"><img src="images/colour-waterglass.jpg" alt="Fabulous Sock in Waterglass" loading="lazy"><em class="tag tag--stock">In stock</em><span>Waterglass</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366224571"><img src="images/colour-sorcery.jpg" alt="Fabulous Sock in Sorcery" loading="lazy"><em class="tag">Dyed to order</em><span>Sorcery</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366060731"><img src="images/colour-magic-land.jpg" alt="Fabulous Sock in Magic Land" loading="lazy"><em class="tag">Dyed to order</em><span>Magic Land</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702364782779"><img src="images/colour-all-dolled-up.jpg" alt="Fabulous Sock in All Dolled Up" loading="lazy"><em class="tag">Dyed to order</em><span>All Dolled Up</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702364520635"><img src="images/colour-marshmallow.jpg" alt="Fabulous Sock in Marshmallow" loading="lazy"><em class="tag">Dyed to order</em><span>Marshmallow</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702365667515"><img src="images/colour-rosy-tea.jpg" alt="Fabulous Sock in Rosy Tea" loading="lazy"><em class="tag">Dyed to order</em><span>Rosy Tea</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=47702366847163"><img src="images/colour-waterlilies.jpg" alt="Fabulous Sock in Waterlilies" loading="lazy"><em class="tag">Dyed to order</em><span>Waterlilies</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46546092490939"><img src="images/colour-barn-owl.jpg" alt="Fabulous Sock in Barn Owl" loading="lazy"><em class="tag tag--stock">In stock</em><span>Barn Owl</span></a><a class="swatch" href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock?variant=46558622810299"><img src="images/colour-blast-furnace.jpg" alt="Fabulous Sock in Blast Furnace" loading="lazy"><em class="tag tag--stock">In stock</em><span>Blast Furnace</span></a>
+      </div>
+      <p class="text-centre" style="max-width:none;margin-top:1.5rem;"><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Shop all 140+ colourways <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+    </div>
+  </section>
+
+  <section id="dyed-to-order">
+    <div class="container">
+      <div class="section--centred">
+        <span class="label">Never out of your colour</span>
+        <h2>Sold out? Choose 'Dyed to order' and we'll dye it for you, same price</h2>
+      </div>
+      <article class="dcard fade-up">
+        <div class="dcard__head"><h3>We dye every skein ourselves, so a colour is never gone</h3></div>
+        <figure class="dcard__pic"><img src="images/proof-julia.jpg" alt="Julia, Skein Sisters' master dyer, lifting a freshly dyed skein from the dye bath in the studio" loading="lazy"><span class="pcard__chip">Dyed to order</span></figure>
+        <div class="dcard__body">
+          <ol class="dsteps">
+            <li><span class="dsteps__n">1</span><div><b>Pick the shade</b><span>Sold out from stock? Choose 'Dyed to order', same price.</span></div></li>
+            <li><span class="dsteps__n">2</span><div><b>Julia dyes it</b><span>Your skeins join the next batch. The dye date shows on the page.</span></div></li>
+            <li><span class="dsteps__n">3</span><div><b>Dried and posted</b><span>Ships as soon as it is dry, dye lots matched before packing.</span></div></li>
+          </ol>
+          <a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section--alt section--centred" id="how">
+    <div class="container">
+      <span class="label">How it works</span>
+      <h2>From colour to cast-on in three steps</h2>
+      <div class="steps stagger">
+        <div class="fade-up"><div class="step__n">1</div><h3>Pick your colour</h3><p>From stock, or dyed to order if the shade has sold out.</p></div>
+        <div class="fade-up"><div class="step__n">2</div><h3>We pack it with care</h3><p>Matched dye lots, Australia Post tracking, free shipping over $200.</p></div>
+        <div class="fade-up"><div class="step__n">3</div><h3>Cast on the good part</h3><p>Stuck on a heel? Our yarn specialists are a phone call away, 7 days.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container--narrow">
+      <span class="label">Good to know</span>
+      <h2>Before you cast on: yardage, washing, pooling, dye lots, shipping and returns</h2>
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-a0">How many skeins do I need for a pair of socks?</button>
+          <div class="faq__a" id="faq-a0" role="region"><p>One 100g skein (400m) knits a typical adult pair, with a little over for heels and toes. Larger feet, a longer cuff or a shawl: check the pattern&#x27;s yardage.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-a1">Can I machine wash the finished socks?</button>
+          <div class="faq__a" id="faq-a1" role="region"><p>Yes. Fabulous Sock is superwash treated, so a finished pair goes through the machine on a delicate cycle. Dry flat and skip the tumble dryer.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-a2">Will the colour pool into stripes?</button>
+          <div class="faq__a" id="faq-a2" role="region"><p>Julia designs every variegated colourway with her own colour application technique, so it blends in the fabric with little pooling. For a calmer look, choose a solid or semi-solid.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-a3">What does &#x27;dyed to order&#x27; mean, and how long does it take?</button>
+          <div class="faq__a" id="faq-a3" role="region"><p>If your colour has sold out, choose &#x27;Dyed to order&#x27; and we dye it for you at the same price. The next dye date shows when you choose it.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-a4">If I order several skeins, will they match?</button>
+          <div class="faq__a" id="faq-a4" role="region"><p>Yes. On a multi-skein order we check the dye lots match before we pack and post.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-a5">What does shipping cost, and can I return it?</button>
+          <div class="faq__a" id="faq-a5" role="region"><p>Free shipping over $200 in Australia and New Zealand, otherwise $13.50 standard or $17.50 Express. Stock skeins: return them unwound, in their packaging, within 90 days.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="buy" class="section--dark">
+    <div class="container picker">
+      <div class="picker__copy">
+        <span class="label">Your next pair</span>
+        <h2>Pick your colour and cast on this week</h2>
+        <p>140+ shades, from stock or dyed to order at the same price. Choose yours on the product page and it ships with Australia Post tracking.</p>
+        <ul class="ticks">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 100% Happiness Guarantee on stock skeins</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Afterpay on orders from $50</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Hand-dyed in Dulwich Hill, Sydney</li>
+        </ul>
+      </div>
+      <div class="picker__card">
+        <h3>Fabulous Sock, $41.90 a skein</h3>
+        <p>100g, 400m, 80% Australian extra fine superwash merino, 20% nylon. Machine washable.</p>
+        <a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent btn--block">Buy Fabulous Sock, $41.90 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <p class="form__privacy">Secure Shopify checkout on skeinsisters.com.au. Free shipping over $200 in Australia and New Zealand.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky"><span>Fabulous Sock<br>$41.90 a skein</span><a href="https://www.skeinsisters.com.au/products/skein-sisters-fabulous-sock" class="btn btn--accent">Buy now</a></div>
+
+  <footer class="footer">
+    <div class="container">
+      <img src="images/logo-aqua-plum.png" alt="Skein Sisters" style="height:40px;width:auto;">
+      <p>Skein Sisters · 721 New Canterbury Rd, Dulwich Hill NSW 2203 · <a href="tel:+61295547444">02 9554 7444</a> · Open 7 days · <a href="https://www.skeinsisters.com.au/">skeinsisters.com.au</a></p>
+      <p style="font-size:.78rem;margin-top:.5rem;">Fabulous Sock is hand-dyed in Dulwich Hill, Sydney, on the lands of the Bedigal, Wangal and Kameygal people of the Eora Nation. We pay our respects to Elders past and present.</p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () { nav.classList.toggle('nav--scrolled', window.scrollY > 80); }, { passive: true });
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
+
+    document.querySelectorAll('.faq__q').forEach(function (q) {
+      q.addEventListener('click', function () {
+        var item = q.parentElement, open = item.classList.contains('open');
+        document.querySelectorAll('.faq__item.open').forEach(function (o) { o.classList.remove('open'); o.querySelector('.faq__q').setAttribute('aria-expanded', 'false'); o.querySelector('.faq__a').style.maxHeight = null; });
+        if (!open) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); var a = item.querySelector('.faq__a'); a.style.maxHeight = a.scrollHeight + 'px'; }
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (ev) {
+        var t = document.querySelector(a.getAttribute('href')); if (!t) return;
+        ev.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
+      });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(function (k) {
+      var f = document.querySelector('input[name="' + k + '"]'); if (f && params.get(k)) f.value = params.get(k);
+    });
+
+    // colour picker: resolve colour + order type to a Shopify variant id
+    var V = {"Strawberry Moon":{"stock":47405893025979,"dto":47702365044923,"s":1,"d":1},"Ethereal":{"stock":47432079704251,"dto":47702365634747,"s":0,"d":1},"Seashell":{"stock":46558622974139,"dto":47702364389563,"s":0,"d":1},"Flamboyance":{"stock":46546092523707,"dto":47702363242683,"s":0,"d":1},"Barn Owl":{"stock":46546092490939,"dto":47702363209915,"s":1,"d":1},"Marsupial":{"stock":46546092687547,"dto":47702363734203,"s":1,"d":1},"Paperbark":{"stock":46558622548155,"dto":47702363701435,"s":0,"d":1},"Purly Pearl":{"stock":46546092458171,"dto":47702363177147,"s":0,"d":1},"Pink Pixel":{"stock":46558623006907,"dto":47702364422331,"s":0,"d":1},"Snowbird":{"stock":47432081277115,"dto":47702367207611,"s":0,"d":1},"Balmoral Beach":{"stock":46546092654779,"dto":47702363668667,"s":1,"d":1},"Romantic":{"stock":47432079638715,"dto":47702365569211,"s":1,"d":1},"Underwing":{"stock":47405892993211,"dto":47702365110459,"s":1,"d":1},"Twine Time":{"stock":46546092622011,"dto":47702363635899,"s":1,"d":1},"Better Beehive":{"stock":46558622154939,"dto":47702363046075,"s":1,"d":1},"Hokey Pokey":{"stock":46558622122171,"dto":47702363013307,"s":1,"d":1},"Turmeric Latte":{"stock":46558622187707,"dto":47702363078843,"s":1,"d":1},"YoYo":{"stock":46749081993403,"dto":47702363144379,"s":1,"d":1},"Golden Hour":{"stock":46749082091707,"dto":47702364717243,"s":0,"d":0},"Far Far Away":{"stock":46558623400123,"dto":47702364848315,"s":1,"d":1},"Honey I Shrunk the Knits":{"stock":46558622220475,"dto":47702363111611,"s":0,"d":1},"Peachy Keen":{"stock":46546092589243,"dto":47702363537595,"s":0,"d":1},"Queen Bee":{"stock":46558622613691,"dto":47702363832507,"s":0,"d":1},"Mid Century":{"stock":46558622515387,"dto":47702363603131,"s":0,"d":1},"Butterscotch Sprinkles":{"stock":46558622482619,"dto":47702363570363,"s":0,"d":0},"End of the Rainbow":{"stock":48096579977403,"dto":48096580010171,"s":0,"d":1},"Locket":{"stock":46749082026171,"dto":47702363865275,"s":0,"d":0},"Liquid Amber":{"stock":46558622646459,"dto":47702363898043,"s":0,"d":1},"Sweet Peach":{"stock":46558622351547,"dto":47702363373755,"s":0,"d":1},"DePeach Mode":{"stock":46558622417083,"dto":47702363439291,"s":0,"d":0},"Crepuscule":{"stock":46558622449851,"dto":47702363472059,"s":0,"d":1},"Lollipop":{"stock":47954077974715,"dto":47954078007483,"s":0,"d":1},"Pandemonium":{"stock":46558622744763,"dto":47702364127419,"s":0,"d":1},"Scorcher":{"stock":46546092785851,"dto":47702364160187,"s":0,"d":1},"Disco Inferno":{"stock":46558622711995,"dto":47702364061883,"s":0,"d":1},"Volcano":{"stock":46558622777531,"dto":47702364094651,"s":1,"d":1},"Anemone":{"stock":46558622253243,"dto":47702363275451,"s":0,"d":1},"Blast Furnace":{"stock":46558622810299,"dto":47702364225723,"s":1,"d":1},"Tango Train":{"stock":46546092556475,"dto":47702363504827,"s":0,"d":1},"Popsicle":{"stock":46877638361275,"dto":47702364192955,"s":1,"d":1},"Fairy Dust":{"stock":47432079933627,"dto":47702365864123,"s":0,"d":1},"Incantation":{"stock":47432080457915,"dto":47702366388411,"s":1,"d":1},"Magic Beach":{"stock":47876105765051,"dto":47876105797819,"s":0,"d":1},"Rosy Tea":{"stock":47432079737019,"dto":47702365667515,"s":0,"d":1},"Raspberry Cream":{"stock":46558623039675,"dto":47702364455099,"s":0,"d":1},"Daphne":{"stock":46558622941371,"dto":47702364356795,"s":1,"d":1},"You Make Me Blush":{"stock":47432079802555,"dto":47702365733051,"s":0,"d":1},"Fairground":{"stock":47432079769787,"dto":47702365700283,"s":1,"d":1},"Melba":{"stock":46558622318779,"dto":47702363340987,"s":0,"d":1},"Soft Coral":{"stock":46558622286011,"dto":47702363308219,"s":1,"d":1},"Lullaby":{"stock":48277268889787,"dto":48277268922555,"s":0,"d":1},"Daydream":{"stock":47432079605947,"dto":47702365536443,"s":0,"d":1},"As You Wish":{"stock":47432079671483,"dto":47702365601979,"s":1,"d":1},"Claypan":{"stock":46558623236283,"dto":47702364651707,"s":0,"d":1},"Dried Roses":{"stock":46558623269051,"dto":47702364684475,"s":1,"d":1},"Crushed Velvet":{"stock":47432079835323,"dto":47702365765819,"s":1,"d":1},"Pretty in Pink":{"stock":46558623432891,"dto":47702364913851,"s":0,"d":1},"Fairy Footsteps":{"stock":47358851055803,"dto":47702365175995,"s":0,"d":1},"Summer Carnival":{"stock":46558622384315,"dto":47702363406523,"s":0,"d":1},"Marshmallow":{"stock":46558623105211,"dto":47702364520635,"s":0,"d":1},"Razzle Dazzle Rose":{"stock":46558623072443,"dto":47702364487867,"s":1,"d":1},"Fruit Tingle":{"stock":46558623367355,"dto":47702364815547,"s":1,"d":1},"Super Graphic Ultra Modern":{"stock":48348826828987,"dto":48348826861755,"s":0,"d":1},"All Dolled Up":{"stock":46558623334587,"dto":47702364782779,"s":0,"d":1},"Magic Land":{"stock":47432080130235,"dto":47702366060731,"s":0,"d":1},"Funhouse":{"stock":46558622908603,"dto":47702364324027,"s":0,"d":1},"Jellyroll":{"stock":46558623137979,"dto":47702364553403,"s":1,"d":1},"Fuchsia Proof":{"stock":46558623170747,"dto":47702364586171,"s":1,"d":1},"Poison Apple":{"stock":46558623203515,"dto":47702364618939,"s":1,"d":1},"Pout":{"stock":46558622843067,"dto":47702364258491,"s":1,"d":1},"Red Kangaroo":{"stock":47344318906555,"dto":47702365143227,"s":1,"d":1},"Red Rattler":{"stock":47432079868091,"dto":47702365798587,"s":1,"d":1},"Vampire Money":{"stock":48096580042939,"dto":48096580075707,"s":0,"d":1},"Karma":{"stock":46558623301819,"dto":47702364750011,"s":0,"d":1},"Revenge":{"stock":46558622875835,"dto":47702364291259,"s":1,"d":1},"Ritual":{"stock":47432079900859,"dto":47702365831355,"s":1,"d":1},"Waterlilies":{"stock":47432080916667,"dto":47702366847163,"s":0,"d":1},"Jacaranda":{"stock":47432080392379,"dto":47702366322875,"s":0,"d":1},"Lacy":{"stock":48277268758715,"dto":48277268791483,"s":0,"d":1},"Hypercolour":{"stock":47432080195771,"dto":47702366126267,"s":1,"d":1},"That's my Jam!":{"stock":47432080228539,"dto":47702366159035,"s":0,"d":1},"Legacy":{"stock":47432080163003,"dto":47702366093499,"s":0,"d":1},"Phantoms Forever":{"stock":47432079966395,"dto":47702365896891,"s":1,"d":1},"Last Dance":{"stock":48277268824251,"dto":48277268857019,"s":0,"d":1},"Future Violets":{"stock":47432079999163,"dto":47702365929659,"s":0,"d":1},"S\u00e9ance":{"stock":47432080097467,"dto":47702366027963,"s":1,"d":1},"Sorcery":{"stock":47432080294075,"dto":47702366224571,"s":0,"d":1},"Spellbound":{"stock":47432080031931,"dto":47702365962427,"s":0,"d":1},"Faded Moon":{"stock":47432080425147,"dto":47702366355643,"s":0,"d":1},"Passionflower":{"stock":47432080261307,"dto":47702366191803,"s":0,"d":1},"Closer to Fine":{"stock":47432080359611,"dto":47702366290107,"s":0,"d":1},"After Midnight":{"stock":47432080326843,"dto":47702366257339,"s":0,"d":1},"Curio":{"stock":46546092720315,"dto":47702363766971,"s":0,"d":1},"Stained Glass":{"stock":47432080064699,"dto":47702365995195,"s":1,"d":1},"Roots Corrode":{"stock":46749082058939,"dto":47702363963579,"s":0,"d":0},"Teddy Bear":{"stock":46558622679227,"dto":47702363930811,"s":0,"d":1},"Antique Shop":{"stock":46558622580923,"dto":47702363799739,"s":1,"d":1},"Stolen Thunder":{"stock":47405892894907,"dto":47702365012155,"s":0,"d":1},"Jasper":{"stock":46558622089403,"dto":47702364029115,"s":0,"d":1},"Macchiato":{"stock":46546092753083,"dto":47702363996347,"s":0,"d":1},"Plumage":{"stock":47344318873787,"dto":47702364979387,"s":1,"d":1},"Jitterbug":{"stock":47432079278267,"dto":47702365208763,"s":0,"d":1},"Just Beach":{"stock":47432080621755,"dto":47702366552251,"s":0,"d":1},"Get Outta My Swamp":{"stock":50525786276027,"dto":50525786308795,"s":1,"d":1},"Limelight":{"stock":47432079311035,"dto":47702365241531,"s":0,"d":1},"Watermelon Rind":{"stock":47432079343803,"dto":47702365274299,"s":0,"d":1},"The Rhiona":{"stock":47432079442107,"dto":47702365372603,"s":1,"d":1},"Sylvan":{"stock":47405892927675,"dto":47702365077691,"s":0,"d":1},"Cocoon":{"stock":47432079573179,"dto":47702365503675,"s":0,"d":1},"Crypsis":{"stock":47432079409339,"dto":47702365339835,"s":0,"d":1},"Olive You":{"stock":47432079540411,"dto":47702365470907,"s":0,"d":1},"Crocodile Tears":{"stock":47432079507643,"dto":47702365438139,"s":1,"d":1},"Bubble Bath":{"stock":47432080490683,"dto":47702366421179,"s":0,"d":1},"Spindrift":{"stock":47432079376571,"dto":47702365307067,"s":1,"d":1},"Agave":{"stock":47432080523451,"dto":47702366453947,"s":0,"d":1},"Medusa":{"stock":47432079474875,"dto":47702365405371,"s":0,"d":1},"Sage Advice":{"stock":47432080556219,"dto":47702366486715,"s":1,"d":1},"New Leaf":{"stock":47432080588987,"dto":47702366519483,"s":0,"d":1},"Leapfrog":{"stock":47405892960443,"dto":47702364946619,"s":1,"d":1},"Reef Project":{"stock":47432080687291,"dto":47702366617787,"s":0,"d":1},"Bibble":{"stock":47432080720059,"dto":47702366650555,"s":1,"d":1},"Marine":{"stock":47432080654523,"dto":47702366585019,"s":1,"d":1},"Waterglass":{"stock":47432080982203,"dto":47702366912699,"s":1,"d":1},"Celestial":{"stock":47432080752827,"dto":47702366683323,"s":0,"d":1},"Titanic":{"stock":47432081014971,"dto":47702366945467,"s":1,"d":1}};
+    var form = document.getElementById('picker-form');
+    if (form) (function () {
+    function chosen() {
+      var c = document.getElementById('pick-colour').value;
+      var o = (document.querySelector('input[name="order"]:checked') || {}).value || 'stock';
+      return V[c] ? V[c][o] : null;
+    }
+    var colourSel = document.getElementById('pick-colour'), stockOpt = document.querySelector('input[name="order"][value="stock"]'), dtoOpt = document.querySelector('input[name="order"][value="dto"]'), stockLbl = document.getElementById('stock-label'), buyBtn = document.getElementById('buy-now');
+    function refresh() {
+      var c = V[colourSel.value]; if (!c) return;
+      stockOpt.disabled = !c.s; stockLbl.textContent = c.s ? 'From stock, ships now' : 'From stock: sold out today';
+      if (c.s) stockOpt.checked = true; else dtoOpt.checked = true;
+      dtoOpt.disabled = !c.d;
+      if (buyBtn) buyBtn.style.display = (c.s || c.d) ? '' : 'none';
+    }
+    if (colourSel) { colourSel.addEventListener('change', refresh); }
+    if (form) {
+      form.addEventListener('submit', function (ev) {
+        var id = chosen(); if (!id) { ev.preventDefault(); document.getElementById('pick-colour').focus(); return; }
+        document.getElementById('pick-variant').value = id;
+        form.querySelectorAll('select, input[name="order"]').forEach(function (i) { i.disabled = true; });
+        form.querySelectorAll('input[type="hidden"]').forEach(function (i) { if (!i.value) i.disabled = true; });
+      });
+      var buy = document.getElementById('buy-now');
+      if (buy) buy.addEventListener('click', function () {
+        var id = chosen(); if (!id) { document.getElementById('pick-colour').focus(); return; }
+        window.location.href = 'https://www.skeinsisters.com.au/cart/' + id + ':1';
+      });
+    }
+    })();
+    // testimonial slider
+    var track = document.getElementById('ttrack'), dots = document.getElementById('tdots');
+    if (track) {
+      var mobile = function () { return window.innerWidth <= 900; };
+      var items = function () { return mobile() ? track.querySelectorAll('.tcard') : track.querySelectorAll('.tslide'); };
+      var step = function () { var it = items()[0]; return it ? it.getBoundingClientRect().width + (mobile() ? 16 : 16) : track.clientWidth; };
+      var buildDots = function () {
+        dots.innerHTML = ''; var n = items().length;
+        if (mobile()) { var c = document.createElement('span'); c.className = 'tslider__count'; dots.appendChild(c); mark(); return; }
+        for (var i = 0; i < n; i++) { var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to ' + (i + 1)); (function (i) { b.addEventListener('click', function () { track.scrollTo({ left: i * step(), behavior: 'smooth' }); }); })(i); dots.appendChild(b); }
+        mark();
+      };
+      var mark = function () { var i = Math.round(track.scrollLeft / step()); var c = dots.querySelector('.tslider__count'); if (c) { c.textContent = (i + 1) + ' of ' + items().length; return; } dots.querySelectorAll('button').forEach(function (b, k) { b.classList.toggle('active', k === i); }); };
+      document.querySelector('.tslider__btn--prev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+      document.querySelector('.tslider__btn--next').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+      track.addEventListener('scroll', function () { window.requestAnimationFrame(mark); }, { passive: true });
+      window.addEventListener('resize', buildDots);
+      buildDots();
+      var auto = setInterval(function () { var max = track.scrollWidth - track.clientWidth; if (track.scrollLeft >= max - 4) track.scrollTo({ left: 0, behavior: 'smooth' }); else track.scrollBy({ left: step(), behavior: 'smooth' }); }, 7000);
+      ['mouseenter', 'touchstart', 'focusin'].forEach(function (ev) { track.addEventListener(ev, function () { clearInterval(auto); }, { passive: true }); });
+    }
+    // mood filters
+    var filters = document.querySelectorAll('.filter');
+    filters.forEach(function (f) {
+      f.addEventListener('click', function () {
+        filters.forEach(function (x) { x.classList.remove('active'); }); f.classList.add('active');
+        var m = f.getAttribute('data-mood');
+        document.querySelectorAll('.swatch').forEach(function (s) { s.classList.toggle('hidden', m !== 'all' && s.getAttribute('data-mood') !== m); });
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
