@@ -240,23 +240,30 @@
 
 
     /* Difference */
-    .diff__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; text-align: left; margin-bottom: 2rem; }
-    .diff__col { border-radius: 14px; padding: 2rem; }
-    .diff__col--plain { background: var(--grey); border: 1px solid var(--line); }
-    .diff__col--mural { background: var(--ink); color: #fff; }
-    .diff__col h3 { font-size: 1.35rem; margin-bottom: .25rem; }
-    .diff__col--mural h3 { color: #fff; }
-    .diff__sub { font-size: .9rem; color: var(--text-muted); margin-bottom: 1.25rem; }
-    .diff__col--mural .diff__sub { color: rgba(255,255,255,.7); }
-    .diff__col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; }
-    .diff__col li { display: flex; gap: .8rem; align-items: flex-start; font-size: .95rem; }
-    .diff__col--mural li { color: rgba(255,255,255,.9); }
-    .diff__col .x { width: 20px; height: 20px; flex: none; color: #9CA3AF; margin-top: .2rem; }
-    .diff__img { border-radius: 14px; overflow: hidden; max-width: 960px; margin: 0 auto; }
-    .diff__img img { width: 100%; height: 420px; display: block; }
-    .diff__img figcaption { font-size: .85rem; color: var(--text-muted); padding: .7rem 0 0; }
-    @media (max-width: 900px) { .diff__grid { grid-template-columns: 1fr; } .diff__img img { height: 260px; } }
-    @media (max-width: 600px) { .diff__col { padding: 1.5rem; } }
+    .diff__grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; align-items: stretch; }
+    .diff__card { border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+    .diff__card--plain { background: #fff; border: 1px solid var(--line); }
+    .diff__card--mural { background: var(--ink); color: #fff; box-shadow: 0 30px 70px rgba(15,18,19,.22); }
+    .diff__pic { position: relative; margin: 0; aspect-ratio: 16/10; overflow: hidden; background: var(--grey); }
+    .diff__pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+    .diff__card:hover .diff__pic img { transform: scale(1.04); }
+    .diff__card--plain .diff__pic img { filter: saturate(.85); }
+    .diff__chip { position: absolute; left: 1.1rem; top: 1.1rem; font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .42rem .8rem; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--ink); backdrop-filter: blur(4px); }
+    .diff__chip--brand { background: var(--brand); color: #fff; }
+    .diff__body { padding: 1.75rem 2rem 2rem; display: flex; flex-direction: column; flex: 1; }
+    .diff__card h3 { font-size: 1.5rem; margin-bottom: .2rem; }
+    .diff__card--mural h3 { color: #fff; }
+    .diff__sub { font-size: .92rem; color: var(--text-muted); margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+    .diff__card--mural .diff__sub { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.14); }
+    .diff__rows { margin: 0; display: grid; gap: 1rem; }
+    .diff__rows > div { display: grid; grid-template-columns: 92px 1fr; gap: 1rem; align-items: start; }
+    .diff__rows dt { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); padding-top: .25rem; }
+    .diff__card--mural .diff__rows dt { color: var(--brand); }
+    .diff__rows dd { margin: 0; font-size: .95rem; line-height: 1.55; color: var(--text); }
+    .diff__card--mural .diff__rows dd { color: rgba(255,255,255,.9); }
+    .diff__vs { position: absolute; left: 50%; top: 22%; transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: 50%; background: #fff; color: var(--ink); border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(15,18,19,.18); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; z-index: 2; }
+    @media (max-width: 900px) { .diff__grid { grid-template-columns: 1fr; gap: 1.25rem; } .diff__vs { display: none; } }
+    @media (max-width: 600px) { .diff__body { padding: 1.4rem 1.3rem 1.5rem; } .diff__rows > div { grid-template-columns: 1fr; gap: .2rem; } }
 
 
     /* Review carousel */
@@ -729,31 +736,34 @@
       <h2>What's the difference between wallpaper and a wallpaper mural?</h2>
       <p class="section__intro">Wallpaper is a pattern that repeats. A wallpaper mural is one picture, made for one wall. That changes everything about how it's designed, printed and hung.</p>
       <div class="diff__grid">
-        <div class="diff__col diff__col--plain fade-up">
-          <h3>Wallpaper</h3>
-          <p class="diff__sub">Chosen from a catalogue, bought by the roll.</p>
-          <ul>
-            <li><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg><span>A repeating pattern someone else designed. The same roll is on walls all over the country.</span></li>
-            <li><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Sold in narrow rolls, so a wide wall means many joins and matching the repeat at every one.</span></li>
-            <li><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Cut to fit the wall after the fact. Whatever lands at the corners, lands there.</span></li>
-            <li><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Your logo, your colours and your city are not an option.</span></li>
-          </ul>
-        </div>
-        <div class="diff__col diff__col--mural fade-up">
-          <h3>Wallpaper mural</h3>
-          <p class="diff__sub">One image, printed to your wall's exact size.</p>
-          <ul>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>One artwork for one wall: your logo, your brand colours, a photo, an illustration or a map of your city. No repeat, no one else has it.</span></li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Printed on panels up to 125 cm wide to your measurements, so an 8 metre wall has a handful of joins and the picture reads as one piece.</span></li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Designed to the wall before it prints, with 10 cm of bleed, so the focal point sits where you want it and nothing important ends up behind a door frame.</span></li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Checked by a person at full size, then installed by the team that printed it.</span></li>
-          </ul>
-        </div>
+        <article class="diff__card diff__card--plain fade-up">
+          <figure class="diff__pic"><img src="images/diff-wallpaper-roll.jpg" alt="An office wall covered in a generic repeating geometric wallpaper pattern with visible roll joins" loading="lazy" decoding="async"><span class="diff__chip">Off the shelf</span></figure>
+          <div class="diff__body">
+            <h3>Wallpaper</h3>
+            <p class="diff__sub">Chosen from a catalogue, bought by the roll.</p>
+            <dl class="diff__rows">
+              <div><dt>Design</dt><dd>A repeating pattern someone else drew. The same roll is on walls all over the country.</dd></div>
+              <div><dt>Joins</dt><dd>Narrow rolls, so a wide wall means many joins and matching the repeat at every one.</dd></div>
+              <div><dt>Fit</dt><dd>Cut to the wall after the fact. Whatever lands at the corners, lands there.</dd></div>
+              <div><dt>Your brand</dt><dd>Your logo, your colours and your city are not an option.</dd></div>
+            </dl>
+          </div>
+        </article>
+        <span class="diff__vs" aria-hidden="true">vs</span>
+        <article class="diff__card diff__card--mural fade-up">
+          <figure class="diff__pic"><img src="images/proof-denex-office.webp" alt="Denex Group office wall with a custom printed construction skyline illustration and the company logo" loading="lazy" decoding="async"><span class="diff__chip diff__chip--brand">Made for your wall</span></figure>
+          <div class="diff__body">
+            <h3>Wallpaper mural</h3>
+            <p class="diff__sub">One image, printed to your wall's exact size.</p>
+            <dl class="diff__rows">
+              <div><dt>Design</dt><dd>One artwork for one wall: your logo, your colours, a photo, an illustration or a map of your city.</dd></div>
+              <div><dt>Joins</dt><dd>Panels up to 125 cm wide, printed to your measurements. An 8 metre wall has a handful of joins and the picture runs straight through them.</dd></div>
+              <div><dt>Fit</dt><dd>Designed to the wall before it prints, with 10 cm of bleed, so the focal point sits where you want it.</dd></div>
+              <div><dt>Your brand</dt><dd>Built around your logo and brand colours, checked by a person at full size, then installed by the team that printed it.</dd></div>
+            </dl>
+          </div>
+        </article>
       </div>
-      <figure class="diff__img fade-up">
-        <img src="images/proof-denex-office.webp" alt="Denex Group office wall with a custom printed construction skyline illustration and the company logo">
-        <figcaption>A wallpaper mural: one illustration built around the client's logo, printed to the full width of the wall.</figcaption>
-      </figure>
     </div>
   </section>
   <section class="logos">
