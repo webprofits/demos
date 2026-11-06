@@ -96,7 +96,7 @@
     .pf--dto { background: #5f5646; }
     /* proof cards: the photo IS the card top, in its own backdrop; copy below on white */
     .pcards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-top: 2.5rem; }
-    .pcard { background: #fff; border: 1px solid #eadfe3; border-radius: 1.25rem; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
+    .pcard { background: #fff; border-radius: 1.25rem; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
     .pcard__pic { position: relative; margin: 0; aspect-ratio: 4/3; overflow: hidden; }
     .pcard__pic img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform .8s ease; }
     .pcard:hover .pcard__pic img { transform: scale(1.03); }
@@ -109,7 +109,7 @@
     .pcard__quote { margin: 1.25rem 0 0; padding: .9rem 1.1rem; border-radius: .9rem; background: var(--bg-alt); font-size: .92rem; color: var(--teal); }
     .pcard__quote cite { display: block; font-style: normal; font-size: .72rem; color: var(--text-muted); margin-top: .3rem; }
     /* dyed-to-order card: copy left on white, the studio photo as the card's right half */
-    .dcard { display: grid; grid-template-columns: 1.1fr 1fr; background: #fff; border: 1px solid #eadfe3; border-radius: 1.25rem; overflow: hidden; margin-top: 2.5rem; text-align: left; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
+    .dcard { display: grid; grid-template-columns: 1.1fr 1fr; background: #fff; border-radius: 1.25rem; overflow: hidden; margin-top: 2.5rem; text-align: left; box-shadow: 0 24px 60px rgba(61,94,105,.10); }
     .dcard__body { padding: 2.5rem 2.5rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
     .dcard__body h3 { font-size: 1.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--teal); }
     .dsteps { list-style: none; margin: 0 0 1.75rem; padding: 0; display: grid; gap: 1.1rem; }
@@ -170,7 +170,13 @@
     .project b { display: block; text-transform: uppercase; letter-spacing: .05em; font-weight: 500; font-size: .85rem; color: var(--brand); margin-bottom: .3rem; }
     .project span { font-size: .92rem; color: var(--text-light); }
     /* steps */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
+    /* Rhythm: section 6rem, label 12 > heading 16 > intro 40 > content, heading-only sections get 2.5rem to the content */
+    section { padding: 6rem 0; }
+    .faq { margin-top: 2rem; }
+    .section__intro { margin-bottom: 2.5rem !important; }
+    @media (max-width: 900px) { section { padding: 4.5rem 0; } }
+    @media (max-width: 600px) { section { padding: 3.5rem 0; } .steps { margin-top: 1.75rem; gap: 1.75rem; } }
     .step__n { width: 44px; height: 44px; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 500; margin-bottom: 1rem; }
     .step p { font-size: .97rem; color: var(--text-light); }
     /* admission */
