@@ -35,9 +35,15 @@
     @media (max-width: 600px) { .nav__phone span { display: none; } .nav .btn { width: auto; font-size: .75rem; padding: .55rem 1rem; } .nav__right { gap: .9rem; } }
 
     /* Hero: split - solid panel for the words, a mosaic of office murals for the proof */
-    .hero { position: relative; min-height: 100svh; display: flex; align-items: center; overflow: hidden; padding: 7.5rem 0 4rem; background: var(--ink); background-image: radial-gradient(1200px 600px at 85% 10%, rgba(237,28,36,.18), transparent 60%); }
-    .hero__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3.5rem; align-items: center; }
-    .hero__content { position: relative; z-index: 1; color: #fff; }
+    .hero { position: relative; min-height: 100svh; display: flex; align-items: center; overflow: hidden; padding: 7.5rem 0 4rem; background: var(--ink); }
+    .hero__bg { position: absolute; inset: 0; z-index: 0; background: var(--ink); }
+    .hero__slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s ease-in-out; will-change: opacity; }
+    .hero__slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transform: scale(1); transition: transform 9s linear; }
+    .hero__slide.is-active { opacity: 1; z-index: 1; }
+    .hero__slide.is-active img { transform: scale(1.08); }
+    .hero__shade { position: absolute; inset: 0; z-index: 2; background: linear-gradient(90deg, rgba(12,12,14,.9) 0%, rgba(12,12,14,.78) 38%, rgba(12,12,14,.42) 72%, rgba(12,12,14,.3) 100%), linear-gradient(180deg, rgba(12,12,14,.55) 0%, rgba(12,12,14,0) 30%, rgba(12,12,14,.45) 100%); }
+    .hero__grid { display: grid; grid-template-columns: minmax(0, 700px); align-items: center; }
+    .hero__content { position: relative; z-index: 3; color: #fff; }
     .hero__badge { display: inline-flex; align-items: center; gap: .5rem; background: var(--brand); color: #fff; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .45rem .9rem; border-radius: 999px; margin-bottom: 1.5rem; }
     .hero__badge svg { width: 13px; height: 13px; }
     .hero h1 { color: #fff; font-size: clamp(2.1rem, 3.9vw, 3.3rem); margin-bottom: 1.25rem; }
@@ -54,13 +60,10 @@
     .hero__trust { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; font-size: .85rem; color: rgba(255,255,255,.78); }
     .hero__trust span { display: inline-flex; align-items: center; gap: .45rem; }
     .hero__trust svg { width: 14px; height: 14px; color: var(--brand); flex: none; }
-    .hero__mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; align-self: center; }
-    .hero__tile { margin: 0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/5; background: #1E2939; box-shadow: 0 20px 50px rgba(0,0,0,.45); }
-    .hero__tile img { width: 100%; height: 100%; display: block; }
-    .hero__tile:nth-child(2), .hero__tile:nth-child(5) { transform: translateY(1.5rem); }
-    @media (max-width: 1100px) { .hero__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .hero h1 { font-size: clamp(2rem, 3.6vw, 2.8rem); } }
-    @media (max-width: 900px) { .hero { padding: 6.5rem 0 3rem; min-height: 0; } .hero__grid { grid-template-columns: 1fr; gap: 2.5rem; } .hero__mosaic { gap: .5rem; } .hero__tile { aspect-ratio: 4/4.4; border-radius: 10px; } .hero__tile:nth-child(2), .hero__tile:nth-child(5) { transform: none; } }
-    @media (max-width: 600px) { .hero { padding: 5.5rem 0 2.5rem; } .hero p { font-size: 1rem; } .hero__badge { font-size: .62rem; } .hero__trust span { width: 100%; } .hero__logos { gap: 1rem; } .hero__logos img { height: 18px; } .hero__logos img.sq { height: 24px; } .hero__logos img.wide { height: 24px; } .hero__tile { aspect-ratio: 1; } }
+    @media (prefers-reduced-motion: reduce) { .hero__slide { transition: opacity .6s ease; } .hero__slide img, .hero__slide.is-active img { transform: none; transition: none; } }
+    @media (max-width: 1100px) { .hero h1 { font-size: clamp(2rem, 3.6vw, 2.8rem); } }
+    @media (max-width: 900px) { .hero { padding: 6.5rem 0 3rem; min-height: 0; } .hero__grid { grid-template-columns: 1fr; } .hero__shade { background: linear-gradient(180deg, rgba(12,12,14,.82) 0%, rgba(12,12,14,.74) 60%, rgba(12,12,14,.86) 100%); } }
+    @media (max-width: 600px) { .hero { padding: 5.5rem 0 2.5rem; } .hero p { font-size: 1rem; } .hero__badge { font-size: .62rem; } .hero__trust span { width: 100%; } .hero__logos { gap: 1rem; } .hero__logos img { height: 18px; } .hero__logos img.sq { height: 24px; } .hero__logos img.wide { height: 24px; } }
     .scroll-hint { display: none; text-align: center; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); padding: 1rem 0 0; }
     .scroll-hint svg { display: block; margin: .25rem auto 0; width: 18px; height: 18px; animation: bob 1.4s ease-in-out infinite; }
     @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
@@ -296,9 +299,18 @@
   </header>
 
   <section class="hero" id="hero">
+    <div class="hero__bg" id="heroBg" aria-hidden="true">
+      <div class="hero__slide is-active"><img src="images/hero/airtasker.jpg" alt="Airtasker boardroom brand wall" loading="eager" fetchpriority="high" decoding="async"></div>
+      <div class="hero__slide"><img src="images/hero/denex.jpg" alt="Denex Group logo wall" loading="lazy" decoding="async"></div>
+      <div class="hero__slide"><img src="images/hero/lifeworks.jpg" alt="LifeWorks curved entry mural" loading="lazy" decoding="async"></div>
+      <div class="hero__slide"><img src="images/hero/sydney-meeting-room.jpg" alt="Sydney meeting room cityscape mural" loading="lazy" decoding="async"></div>
+      <div class="hero__slide"><img src="images/hero/values-wall.jpg" alt="Company values wall in a canteen" loading="lazy" decoding="async"></div>
+      <div class="hero__slide"><img src="images/hero/think-digital.jpg" alt="Think Digital office mural" loading="lazy" decoding="async"></div>
+      <div class="hero__shade"></div>
+    </div>
     <div class="container hero__grid">
       <div class="hero__content">
-        <span class="hero__badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>5.0 stars on Google · 3,000+ wallpaper murals since 2004</span>
+        <span class="hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>3,000+ businesses helped since 2004</span>
         <h1>Wallpaper murals as unique as the personality of your office</h1>
         <p>Every mural is made for one wall and one business: your logo, your colours, your city, your story. Printed to size and installed by the team that made it, on the walls of UNSW, W Hotels, MoMA and the Royal Hospital for Women since 2004. Send us the wall and the brief.</p>
         <div class="hero__ctas">
@@ -316,14 +328,6 @@
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Installers in Sydney, Melbourne, Brisbane, Perth, Adelaide and Wollongong</span>
           </div>
         </div>
-      </div>
-      <div class="hero__mosaic" aria-hidden="true">
-        <figure class="hero__tile"><img src="images/gallery-large/office-011.webp" alt="Airtasker boardroom brand wall" loading="eager" decoding="async"></figure>
-        <figure class="hero__tile"><img src="images/gallery-large/office-015.webp" alt="Denex Group logo wall" loading="eager" decoding="async"></figure>
-        <figure class="hero__tile"><img src="images/gallery-large/office-001.webp" alt="LifeWorks curved entry mural" loading="eager" decoding="async"></figure>
-        <figure class="hero__tile"><img src="images/gallery-large/office-009.webp" alt="Sydney meeting room cityscape" loading="eager" decoding="async"></figure>
-        <figure class="hero__tile"><img src="images/gallery-large/office-005.webp" alt="Company values wall in a canteen" loading="eager" decoding="async"></figure>
-        <figure class="hero__tile"><img src="images/gallery-large/office-018.webp" alt="Think Digital office mural" loading="eager" decoding="async"></figure>
       </div>
     </div>
   </section>
@@ -1024,6 +1028,17 @@
       document.querySelector('.rv__arrow--next').addEventListener('click', function () { track.scrollBy({ left: step() * 2, behavior: 'smooth' }); });
       track.querySelectorAll('.rv__more').forEach(function (b) { b.addEventListener('click', function () { var card = b.closest('.rv__card'); var open = card.classList.toggle('is-open'); b.textContent = open ? 'Show less' : 'Read more'; }); });
     }
+
+    // Hero background: crossfade through the six walls, slow zoom on the live one, paused when the tab is hidden.
+    (function () {
+      var slides = document.querySelectorAll('#heroBg .hero__slide'); if (slides.length < 2) return;
+      var i = 0, timer;
+      function next() { slides[i].classList.remove('is-active'); i = (i + 1) % slides.length; var img = slides[i].querySelector('img'); img.style.transform = 'scale(1)'; void img.offsetWidth; img.style.transform = ''; slides[i].classList.add('is-active'); }
+      function start() { stop(); timer = setInterval(next, 6500); }
+      function stop() { if (timer) clearInterval(timer); timer = null; }
+      document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+      start();
+    })();
 
     // Demo page: a submit shows the thank-you page. Point action at the live form handler before any paid traffic.
     var form = document.getElementById('leadForm');
