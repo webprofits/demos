@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Booking Request Received | Hilton Plumbing</title>
+  <meta name="description" content="Your hot water booking request is in. A Hilton team member will call to confirm your system, price and arrival time.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { background: #0E151B; color: #fff; font-size: 16px; line-height: 1.5; }
+    img { max-width: 100%; height: auto; display: block; object-fit: initial; }
+    p { max-width: none; }
+    .nav { position: static; background: #0E151B; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.12); box-shadow: none; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1440px; margin: 0 auto; padding: 0 20px; width: auto; }
+    .nav__logo img { width: 132px; height: auto; }
+    .back { color: #fff; font-size: 15px; font-weight: 600; }
+    .thanks { padding: 72px 0 80px; background: linear-gradient(180deg, rgba(14,21,27,.94), rgba(14,21,27,.97)), url("images/hero-hot-water.jpg") center / cover no-repeat; min-height: calc(100vh - 81px); }
+    .thanks__inner { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+    .eyebrow { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: #E86000; margin: 0 0 8px; }
+    h1 { color: #fff; font-size: 42px; font-weight: 800; line-height: 1.15; margin: 0 0 12px; }
+    h1 span { color: #E86000; }
+    .lead { font-size: 18px; margin: 0 0 24px; }
+    .steps { list-style: none; counter-reset: s; margin: 0 0 24px; padding: 0; }
+    .steps li { counter-increment: s; position: relative; background: rgba(255,255,255,.12); border-radius: 5px; padding: 16px 18px 16px 62px; margin-bottom: 8px; }
+    .steps li::before { content: counter(s); position: absolute; left: 16px; top: 13px; width: 30px; height: 30px; border-radius: 5px; background: #E86000; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .sooner { font-size: 16px; margin: 0 0 20px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 32px; border-radius: 8px; border: 2px solid #E86000; background: #E86000; color: #fff; font-size: 18px; font-weight: 700; line-height: 1; text-decoration: none; width: auto; }
+    .btn:hover { transform: none; background: transparent; color: #E86000; }
+    @media (max-width: 700px) {
+      .nav__logo img { width: 116px; }
+      .thanks { padding: 40px 0 48px; }
+      h1 { font-size: 28px; }
+      .lead { font-size: 16px; }
+      .btn { width: 100%; font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="images/logo-on-dark.svg" alt="Hilton Plumbing" width="132" height="56"></a>
+      <a class="back" href="https://www.hiltonplumbing.com.au/">Back to Hilton Plumbing</a>
+    </div>
+  </header>
+  <section class="thanks">
+    <div class="thanks__inner">
+      <span class="eyebrow">Booking request received</span>
+      <h1>Thanks, Your <span>Booking Request</span> Is In</h1>
+      <p class="lead">A Hilton team member will call you to confirm your system, your price and your arrival time.</p>
+      <ol class="steps">
+        <li>We call to confirm your system and your installed price.</li>
+        <li>Your licensed plumber arrives with your new hot water system.</li>
+        <li>We install it, remove the old unit and do a final inspection.</li>
+      </ol>
+      <p class="sooner">Need it sooner? We're on the phones 7am to 5:30pm, 7 days a week.</p>
+      <a class="btn" href="tel:0863500900">Call (08) 6350 0900</a>
+    </div>
+  </section>
+</body>
+</html>
