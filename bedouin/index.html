@@ -326,6 +326,12 @@
     .pday-quote blockquote { margin: 12px 0 8px; font: 500 22px/1.4 var(--font-heading); color: var(--text-on-dark); max-width: 34em; }
     .pday-quote figcaption { font-size: 14px; color: rgba(255, 255, 255, 0.7); }
     .pday-quote cite { font-style: normal; font-weight: 600; color: var(--text-on-dark); }
+    /* Section header on a light section: centred, ink eyebrow with the gold rules */
+    .sec-head { text-align: center; margin: 0 0 32px; }
+    .sec-head h2 { margin-bottom: 12px; }
+    .sec-head h2:last-child { margin-bottom: 0; }
+    .sec-head .intro { margin: 0 auto; text-wrap: balance; }
+    .eyebrow--ink { color: var(--text-primary); }
     /* Packages */
     .pkg-for { font-size: 14px; margin-bottom: 4px; }
     .pkg .btn { margin-top: 0; }
@@ -376,6 +382,7 @@
     .contact .split { grid-template-columns: 1fr 440px; gap: 56px; align-items: center; }
     .contact .lead { color: var(--text-on-dark); }
     .wa-line { margin: 24px 0 0; }
+    .wa-line .btn { margin-top: 0; }
     .lead-form { padding: 0; overflow: hidden; border-radius: var(--r-md); box-shadow: 0 24px 48px -16px rgba(255, 198, 106, 0.22); }
     .form-head { background: linear-gradient(135deg, #FFC66A, #FFD592); color: var(--brand-ink); padding: 20px 24px; }
     .form-head span { display: block; font: 700 12px/1 var(--font-heading); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
@@ -469,6 +476,8 @@
       .faq__q { padding: 14px 16px; font-size: 16px; }
       .faq__a p { padding: 0 16px 16px; }
       .contact { padding: 32px 0; }
+      .contact .split { gap: 32px; }
+      .sec-head { margin-bottom: 24px; }
       .form-head { padding: 18px 20px; }
       .form-head h3 { font-size: 22px; }
       .form-head p { font-size: 14px; }
@@ -544,8 +553,11 @@
 
   <section class="section" id="packages">
     <div class="wrap-wide">
-      <h2>4 private packages, from 2.5 hours to an entire day</h2>
-      <p class="intro lead">Each price is for one private car of up to 4 guests. Split between 4, the Traveller package is about 400 AED each.</p>
+      <div class="sec-head">
+        <p class="eyebrow eyebrow--center eyebrow--ink">Packages and prices</p>
+        <h2>4 private packages, from 2.5 hours to an entire day</h2>
+        <p class="intro lead">Each price is for one private car of up to 4 guests. Split between 4, the Traveller package is about 400 AED each.</p>
+      </div>
       <div class="pkg-grid"><article class="card pkg">
 <img class="card-photo" src="images/pkg-traveller.jpg" alt="A guest sitting with camels at a farm as the sun sets" loading="lazy" style="object-position:center">
 <div class="card-body">
@@ -613,7 +625,10 @@
 
   <section class="section" id="questions">
     <div class="wrap">
-      <h2 class="center">What guests ask before they book</h2>
+      <div class="sec-head">
+        <p class="eyebrow eyebrow--center eyebrow--ink">Questions</p>
+        <h2>What guests ask before they book</h2>
+      </div>
       <div class="faq"><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">Is the tour private for the entire time?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>Yes. Every tour is fully private. Your group of up to 4 guests has one car, one guide and a private majlis on the sand.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">What does the price cover?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>Each price is for one private car of up to 4 guests and the activities listed in the package. If you are more or less than 4 guests, ask us for a quotation.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">Is it suitable for children?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>Yes. We tailor every tour to the family in the car, so the activities work for all ages. The Arabian Dream package adds a treasure hunt for little ones.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">What should we wear?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>Wear comfortable clothing and bring sunglasses and sunscreen. We provide traditional Arabic attire for photos on some tours.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">Are food and drinks included?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>Traveller includes Arabic coffee, Moroccan mint tea and dates. Nomad and Arabian Dream add fruit, mezzes and sweets in your private majlis. Bedouin Desert includes coffee, tea, fruits, sweets and Arabic cold dishes.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">Can we add quad bikes, a falcon show or a hot air balloon?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>Yes. Book extra activities with your tour or add them later, depending on availability.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">How do we pay?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>You pay securely through a trusted payment gateway, and we accept crypto.</p></div></div><div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">How fast will you reply?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a" role="region"><p>We reply within 24 hours.</p></div></div></div>
     </div>
   </section>

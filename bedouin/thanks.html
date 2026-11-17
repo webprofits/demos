@@ -326,6 +326,12 @@
     .pday-quote blockquote { margin: 12px 0 8px; font: 500 22px/1.4 var(--font-heading); color: var(--text-on-dark); max-width: 34em; }
     .pday-quote figcaption { font-size: 14px; color: rgba(255, 255, 255, 0.7); }
     .pday-quote cite { font-style: normal; font-weight: 600; color: var(--text-on-dark); }
+    /* Section header on a light section: centred, ink eyebrow with the gold rules */
+    .sec-head { text-align: center; margin: 0 0 32px; }
+    .sec-head h2 { margin-bottom: 12px; }
+    .sec-head h2:last-child { margin-bottom: 0; }
+    .sec-head .intro { margin: 0 auto; text-wrap: balance; }
+    .eyebrow--ink { color: var(--text-primary); }
     /* Packages */
     .pkg-for { font-size: 14px; margin-bottom: 4px; }
     .pkg .btn { margin-top: 0; }
@@ -376,6 +382,7 @@
     .contact .split { grid-template-columns: 1fr 440px; gap: 56px; align-items: center; }
     .contact .lead { color: var(--text-on-dark); }
     .wa-line { margin: 24px 0 0; }
+    .wa-line .btn { margin-top: 0; }
     .lead-form { padding: 0; overflow: hidden; border-radius: var(--r-md); box-shadow: 0 24px 48px -16px rgba(255, 198, 106, 0.22); }
     .form-head { background: linear-gradient(135deg, #FFC66A, #FFD592); color: var(--brand-ink); padding: 20px 24px; }
     .form-head span { display: block; font: 700 12px/1 var(--font-heading); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
@@ -469,6 +476,8 @@
       .faq__q { padding: 14px 16px; font-size: 16px; }
       .faq__a p { padding: 0 16px 16px; }
       .contact { padding: 32px 0; }
+      .contact .split { gap: 32px; }
+      .sec-head { margin-bottom: 24px; }
       .form-head { padding: 18px 20px; }
       .form-head h3 { font-size: 22px; }
       .form-head p { font-size: 14px; }
