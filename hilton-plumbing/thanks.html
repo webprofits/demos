@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Booking Request Received | Hilton Plumbing</title>
+  <meta name="description" content="Your hot water replacement request is in. A Hilton team member will call to confirm your system, price and arrival time.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Thank-you page: same header, type and cards as the short replacement page. */
+    :root { --navy: #012D5E; --orange: #E86000; --ink: #0E151B; --body: #242424; --muted: #5b6470; --soft: #F2F2F2; --line: #E0E0E0; --gutter: 24px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { color: var(--body); background: #fff; font-size: 16px; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+    img { max-width: 100%; height: auto; display: block; object-fit: initial; }
+    p { max-width: none; margin: 0; }
+    h1, h2 { font-family: var(--font-heading); margin: 0; }
+    .content { max-width: 1180px; margin: 0 auto; padding: 0 var(--gutter); width: 100%; }
+
+    .header { background: var(--ink); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .header-wr { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .header-logo img { width: 130px; height: auto; }
+    .phone { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .phone svg { width: 28px; height: 28px; flex: none; }
+    .phone b { display: block; color: #fff; font-size: 19px; font-weight: 800; line-height: 1.15; white-space: nowrap; }
+    .phone small { display: block; color: var(--orange); font-size: 13px; line-height: 1.2; }
+
+    .thanks { flex: 1; padding: 48px 0 56px; }
+    .thanks-wr { max-width: 640px; }
+    .tick { width: 44px; height: 44px; margin: 0 0 16px; }
+    .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--orange); margin: 0 0 8px; }
+    h1 { font-size: 40px; font-weight: 800; line-height: 1.1; letter-spacing: -.02em; color: var(--navy); margin: 0 0 16px; }
+    h1 span { color: var(--orange); }
+    .lead { font-size: 18px; line-height: 1.5; text-wrap: pretty; }
+    .block { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 32px; }
+    .block h2 { font-size: 21px; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; color: var(--navy); margin: 0 0 12px; }
+    .steps { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+    .steps li { background: var(--soft); border-radius: 6px; padding: 14px 16px; display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; font-size: 15px; line-height: 1.45; }
+    .steps .num { width: 18px; height: 18px; margin-top: 2px; display: flex; align-items: center; justify-content: center; background: var(--orange); color: #fff; border-radius: 4px; font-size: 13px; font-weight: 800; line-height: 1; }
+    .sooner { font-size: 16px; }
+    .call { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; margin-top: 20px; padding: 0 28px; font-size: 17px; font-weight: 700; line-height: 1; color: #fff; background: var(--orange); border: 2px solid var(--orange); border-radius: 4px; text-decoration: none; box-shadow: 0 6px 14px rgba(232,96,0,.28); transition: background .3s ease, color .3s ease; }
+    .call:hover { background: #fff; color: var(--orange); }
+    .call svg { width: 20px; height: 20px; flex: none; }
+    .back { display: inline-block; margin: 20px 0 0 20px; font-size: 15px; font-weight: 600; color: var(--navy); }
+
+    .footer { background: var(--soft); border-top: 1px solid var(--line); padding: 20px 0; font-size: 13px; color: #4a4a4a; }
+    .footer-wr { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-left { display: flex; align-items: center; gap: 18px; }
+    .footer-left img { width: 110px; height: auto; flex: none; }
+    .footer-right { text-align: right; white-space: nowrap; }
+    .footer a { color: var(--navy); }
+
+    @media (max-width: 700px) {
+      :root { --gutter: 20px; }
+      body { font-size: 15px; }
+      .header { padding: 10px 0; }
+      .header-logo img { width: 116px; }
+      .phone svg { width: 20px; height: 20px; }
+      .phone b { font-size: 15px; font-weight: 700; }
+      .phone small { display: none; }
+      .thanks { padding: 24px 0 32px; }
+      .tick { width: 36px; height: 36px; margin-bottom: 12px; }
+      h1 { font-size: 29px; margin-bottom: 12px; }
+      .lead { font-size: 16px; line-height: 1.45; }
+      .block { margin-top: 26px; padding-top: 26px; }
+      .block h2 { font-size: 18px; }
+      .steps { gap: 8px; }
+      .steps li { padding: 12px 14px; font-size: 14.5px; }
+      .call { display: flex; width: 100%; min-height: 52px; font-size: 16px; }
+      .back { display: block; margin: 20px 0 0; text-align: center; }
+      .footer-wr { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .footer-left { align-items: flex-start; gap: 12px; }
+      .footer-left img { width: 100px; }
+      .footer-right { text-align: left; white-space: normal; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="content header-wr">
+      <a href="index.html" class="header-logo"><img src="images/logo-on-dark.svg" alt="Hilton Plumbing" width="130" height="55"></a>
+      <a class="phone" href="tel:0863500900">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/><path d="M14.5 6.2a3.6 3.6 0 0 1 3.3 3.3M14.5 2.8a7 7 0 0 1 6.7 6.7" fill="none" stroke="#E86000" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span><b>(08) 6350 0900</b><small>No Call Out Fee</small></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="thanks">
+    <div class="content">
+      <div class="thanks-wr">
+        <svg class="tick" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#E86000"/><path d="M12.5 22.8l6.4 6.4 12.8-13.4" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="eyebrow">Booking request received</span>
+        <h1><span>Thanks,</span> Your Booking Request Is In</h1>
+        <p class="lead">A Hilton team member will call you to confirm your system, your price and your arrival time.</p>
+
+        <div class="block">
+          <span class="eyebrow">What happens next</span>
+          <h2>Your Replacement In 3 Steps</h2>
+          <ol class="steps">
+            <li><span class="num">1</span><span>We call to confirm your system and your installed price.</span></li>
+            <li><span class="num">2</span><span>Your licensed plumber arrives with your new hot water system.</span></li>
+            <li><span class="num">3</span><span>We install it, remove the old unit and do a final inspection.</span></li>
+          </ol>
+        </div>
+
+        <div class="block">
+          <p class="sooner">Need it sooner? We're on the phones 7am to 5:30pm, 7 days a week.</p>
+          <a class="call" href="tel:0863500900"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call (08) 6350 0900</a>
+          <a class="back" href="index.html">Back to the page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="content footer-wr">
+      <div class="footer-left">
+        <img src="images/logo-on-light.svg" alt="Hilton Plumbing" width="110" height="46">
+        <p>38 Sphinx Way, Bibra Lake WA 6163. Plumbing licence PL9300. Gas licence GL13608. ABN 89 168 171 177.</p>
+      </div>
+      <p class="footer-right">Copyright 2026 Hilton Plumbing. <a href="https://www.hiltonplumbing.com.au/privacy-policy/">Privacy</a> and <a href="https://www.hiltonplumbing.com.au/terms-conditions/">Terms</a></p>
+    </div>
+  </div>
+</body>
+</html>
