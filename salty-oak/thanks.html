@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Thank You | Salty Oak Photography</title>
+  <meta name="description" content="Your enquiry is with Jacynta. She replies within 24 hours.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* The thank-you page of the editorial landing page: one full-screen photograph, a few words. */
+    :root { --sage: #707F62; --sage-soft: #A3B295; --f-sc: "Playfair Display SC", Georgia, serif; --f-label: "Lato", Helvetica, Arial, sans-serif; --f-hand: "Caveat", cursive; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #fff; font-size: 17px; line-height: 1.6; background: #2b2018; -webkit-font-smoothing: antialiased; }
+    section { padding: 0; }
+    p { max-width: none; margin: 0; }
+    img { display: block; max-width: 100%; height: auto; }
+    .wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
+
+    .nav { position: absolute; top: 0; left: 0; right: 0; z-index: 5; padding: 18px 0; background: none; box-shadow: none; }
+    .nav--scrolled { background: none; box-shadow: none; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { height: 54px; width: auto; aspect-ratio: 484 / 351; }
+    .brand span { font-family: var(--f-sc); font-size: 18px; line-height: 1.1; color: #fff; white-space: nowrap; text-shadow: 0 1px 10px rgba(0, 0, 0, .4); }
+    .nav__link { font-family: var(--f-label); font-weight: 700; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: #fff; text-decoration: none; padding-bottom: 5px; border-bottom: 1px solid rgba(255, 255, 255, .75); white-space: nowrap; text-shadow: 0 1px 10px rgba(0, 0, 0, .4); }
+
+    .thanks { position: relative; min-height: min(100vh, 960px); min-height: min(100svh, 960px); display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+    .thanks > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .thanks::after { content: ""; position: absolute; inset: 0; background: rgba(20, 12, 4, .6); }
+    .thanks__in { position: relative; z-index: 1; width: min(640px, 100% - 40px); padding: 120px 0 72px; text-shadow: 0 1px 14px rgba(0, 0, 0, .5); }
+    .label { display: block; font-family: var(--f-label); font-weight: 700; font-size: 12px; line-height: 1.4; letter-spacing: .24em; text-transform: uppercase; color: #fff; margin: 0 0 12px; }
+    h1 { margin: 0 0 14px; font-weight: 400; font-size: clamp(32px, 4.1vw, 52px); line-height: 1.1; letter-spacing: -.01em; color: #fff; font-variant-ligatures: none; }
+    .lead { font-size: 18px; line-height: 1.5; max-width: 480px; margin: 0 auto; text-wrap: pretty; }
+    .next { list-style: none; margin: 24px auto 0; padding: 24px 0 0; max-width: 420px; border-top: 1px solid rgba(255, 255, 255, .4); }
+    .next li { font-size: 16px; line-height: 1.5; padding: 3px 0; }
+    .signoff { font-family: var(--f-hand); font-size: 28px; line-height: 1.2; margin-top: 20px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0 36px; margin-top: 24px; border: 1px solid #fff; border-radius: 2px; background: none; color: #fff; font-family: var(--f-label); font-weight: 700; font-size: 13px; line-height: 1; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; text-shadow: none; transition: background .2s ease, color .2s ease; }
+    .btn:hover { background: #fff; color: #333333; transform: none; }
+
+    @media (max-width: 900px) {
+      body { font-size: 16px; }
+      .wrap { width: calc(100% - 38px); }
+      .nav { padding: 14px 0; }
+      .brand { gap: 9px; }
+      .brand img { height: 42px; }
+      .brand span { font-size: 15px; }
+      .nav__link { display: none; }
+      .thanks { min-height: min(100vh, 860px); min-height: min(100svh, 860px); }
+      .thanks__in { width: calc(100% - 38px); padding: 96px 0 48px; }
+      .lead { font-size: 16.5px; line-height: 1.45; }
+      .btn { width: 100%; min-height: 52px; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: 100%; padding-left: 19px; padding-right: 19px; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav nav--scrolled">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="brand"><img src="images/logo-light.png" width="484" height="351" alt="Salty Oak Photography logo"><span>Salty Oak Photography</span></a>
+      <a href="https://saltyoakphotography.com.au/" class="nav__link">Back to the site</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="thanks">
+      <img src="images/thanks-details.jpg" width="1920" height="1280" alt="Wedding shoes and rings on a timber table">
+      <div class="thanks__in">
+        <span class="label">Enquiry received</span>
+        <h1>Thank you, your enquiry is with Jacynta</h1>
+        <p class="lead">She replies within 24 hours with your price guide, and you might get a text from her to say hey.</p>
+        <ul class="next">
+          <li>Check your spam folder, just in case.</li>
+          <li>Have a look through the galleries while you wait.</li>
+        </ul>
+        <a href="https://saltyoakphotography.com.au/gallery/" class="btn">See The Galleries</a>
+        <p class="signoff">Big love, Jacynta xo</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
