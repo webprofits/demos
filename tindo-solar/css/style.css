@@ -1,7 +1,8 @@
 /* Tindo Adelaide page, version 2: the brand's colours, fonts and photos on our tightened landing page layout.
    One spacing scale: 8 (eyebrow to heading), 12 (heading to content), 24 phone / 32 desktop (blocks), 56 (columns). */
 
-/* The brand's label face (Ringo, licensed) is left out of this public copy. Labels use Open Sans Bold. */
+/* The brand's label face, Ringo Bold: card labels and questions. */
+@font-face { font-family: "Ringo"; src: url(../fonts/ringo-bold.woff2) format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 
 :root {
   --yellow: #FEC343;
@@ -16,7 +17,7 @@
   --ink-3: rgba(8, 35, 64, 0.55);
   --star: #FFA500;
   --font: "Open Sans", Helvetica, Arial, sans-serif;
-  --label: "Open Sans", Helvetica, Arial, sans-serif;
+  --label: "Ringo", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
