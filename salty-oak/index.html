@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Hunter Valley Wedding Photography | Salty Oak Photography</title>
+  <meta name="description" content="Wedding photography in the Hunter Valley and Newcastle, photographed as your day happens. Get the price guide from Salty Oak Photography.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Version 2: an editorial page for the bride. Full-screen photographs, one line each, the form at the end.
+       Brand: ../design-system (sage #707F62, cream #FAF7F4, Playfair Display, square corners).
+       Spacing scale: 12 label to heading, 14 heading to line, 24 line to button, 88 around a quiet section (56 on a phone). */
+    :root {
+      --sage: #707F62; --sage-soft: #A3B295; --cream: #FAF7F4; --ink: #333333; --body: #666666; --line: #D9D9D9;
+      --f-sc: "Playfair Display SC", Georgia, serif; --f-label: "Lato", Helvetica, Arial, sans-serif; --f-hand: "Caveat", cursive;
+    }
+    * { box-sizing: border-box; }
+    body { color: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    section { padding: 0; }
+    p { max-width: none; margin: 0; }
+    h1, h2 { margin: 0; font-weight: 400; font-variant-ligatures: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    .wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .label { display: block; font-family: var(--f-label); font-weight: 700; font-size: 12px; line-height: 1.4; letter-spacing: .24em; text-transform: uppercase; color: var(--sage); margin: 0 0 12px; }
+
+    /* Header: over the first photograph */
+    .nav { position: absolute; top: 0; left: 0; right: 0; z-index: 5; padding: 18px 0; background: none; box-shadow: none; }
+    .nav--scrolled { background: none; box-shadow: none; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { height: 54px; width: auto; aspect-ratio: 484 / 351; }
+    .brand span { font-family: var(--f-sc); font-size: 18px; line-height: 1.1; color: #fff; white-space: nowrap; text-shadow: 0 1px 10px rgba(0, 0, 0, .4); }
+    .nav__link { font-family: var(--f-label); font-weight: 700; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: #fff; text-decoration: none; padding-bottom: 5px; border-bottom: 1px solid rgba(255, 255, 255, .75); white-space: nowrap; text-shadow: 0 1px 10px rgba(0, 0, 0, .4); }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0 36px; border: 0; border-radius: 2px; background: var(--sage); color: #fff; font-family: var(--f-label); font-weight: 700; font-size: 13px; line-height: 1; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; text-shadow: none; cursor: pointer; transition: background .2s ease; }
+    .btn:hover { background: var(--sage-soft); transform: none; }
+
+    /* A full-screen photograph with a few words on a dark scrim */
+    .full { position: relative; min-height: min(88vh, 820px); display: flex; align-items: flex-end; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
+    .full > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .full::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 12, 4, .12) 0%, rgba(20, 12, 4, .05) 40%, rgba(20, 12, 4, .74) 100%); }
+    .full__in { position: relative; z-index: 1; width: min(720px, 100% - 40px); padding: 0 0 64px; text-shadow: 0 1px 14px rgba(0, 0, 0, .5); }
+    .full .label { color: #fff; }
+    .full h2 { color: #fff; font-size: clamp(24px, 2.7vw, 38px); line-height: 1.2; }
+
+    .hero { min-height: min(100vh, 960px); min-height: min(100svh, 960px); }
+    .hero::after { background: linear-gradient(180deg, rgba(20, 12, 4, .42) 0%, rgba(20, 12, 4, .06) 26%, rgba(20, 12, 4, .16) 52%, rgba(20, 12, 4, .76) 100%); }
+    .hero > img { object-position: 62% 45%; }
+    h1 { color: #fff; font-size: clamp(32px, 4.1vw, 52px); line-height: 1.1; letter-spacing: -.01em; margin-bottom: 14px; }
+    .lead { font-size: 18px; line-height: 1.5; color: #fff; max-width: 520px; margin: 0 auto; text-wrap: pretty; }
+    .hero .btn { margin-top: 24px; }
+    .hero__proof { margin-top: 18px; font-family: var(--f-label); font-weight: 400; font-size: 13px; letter-spacing: .06em; color: #fff; }
+
+    /* A quiet section of words on white or cream */
+    .quiet { padding: 88px 0; text-align: center; background: #fff; }
+    .quiet--cream { background: var(--cream); }
+    .quiet h2 { font-size: clamp(22px, 2.5vw, 34px); line-height: 1.3; color: var(--ink); max-width: 22em; margin: 0 auto; }
+    .quiet .pre { font-size: 18px; line-height: 1.5; color: var(--body); margin: 0 0 12px; }
+    .quiet blockquote { margin: 0 auto 14px; max-width: 24em; font-style: italic; font-size: clamp(21px, 2.3vw, 30px); line-height: 1.35; color: var(--ink); }
+    .quiet cite { font-family: var(--f-sc); font-style: normal; font-size: 16px; color: var(--sage); }
+
+    /* Words left, a tall photograph right */
+    .split { display: grid; grid-template-columns: 1fr 1fr; min-height: min(92vh, 860px); background: #fff; }
+    .split__copy { display: flex; flex-direction: column; justify-content: center; padding: 56px clamp(32px, 8vw, 120px); }
+    .split__img { position: relative; min-height: 0; }
+    .split__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .split h2 { font-size: clamp(24px, 2.7vw, 38px); line-height: 1.2; color: var(--ink); max-width: 13em; }
+
+    .after ul { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 12px auto 0; padding: 0; list-style: none; }
+    .after li { padding: 6px 30px; border-left: 1px solid var(--line); }
+    .after li:first-child { border-left: 0; }
+    .after b { display: block; font-weight: 400; font-size: 22px; line-height: 1.25; color: var(--ink); margin-bottom: 6px; }
+    .after span { display: block; font-size: 15px; line-height: 1.5; }
+    .after .btn { margin-top: 40px; }
+
+    .jacynta img { width: 132px; height: 132px; aspect-ratio: 1; object-fit: cover; margin: 0 auto 24px; filter: grayscale(1); }
+    .signoff { font-family: var(--f-hand); font-size: 26px; line-height: 1.2; color: var(--body); margin-top: 16px; }
+
+    .faq { max-width: 760px; margin: 24px auto 0; text-align: left; border-top: 1px solid var(--line); }
+    .faq__item { border-bottom: 1px solid var(--line); }
+    .faq__q { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 60px; padding: 14px 0; border: 0; background: none; text-align: left; font-family: inherit; font-weight: 400; font-size: 19px; line-height: 1.3; color: var(--ink); cursor: pointer; }
+    .faq__q::after { content: "+"; flex: none; font: 400 22px/1 var(--f-label); color: var(--sage); }
+    .faq__item.open .faq__q::after { content: "\2212"; }
+    .faq__a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq__a p { padding: 0 40px 18px 0; font-size: 16px; line-height: 1.55; }
+
+    /* The price guide: the form left, the bride right */
+    .guide .split__copy { padding-top: 72px; padding-bottom: 72px; }
+    .guide h2 { margin-bottom: 14px; }
+    .guide .intro { font-size: 17px; line-height: 1.5; max-width: 30em; }
+    .lead-form { margin-top: 20px; max-width: 480px; }
+    .lead-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+    .lead-form input[type="text"], .lead-form input[type="email"], .lead-form input[type="tel"], .lead-form input[type="date"] { display: block; width: 100%; height: 48px; margin: 0 0 10px; padding: 0 2px; border: 0; border-bottom: 1px solid #BEBEBE; border-radius: 0; background: none; font-family: var(--f-label); font-weight: 400; font-size: 16px; color: var(--ink); }
+    .lead-form input::placeholder, .lead-form textarea::placeholder { color: #8C8C8C; }
+    .lead-form input:focus, .lead-form textarea:focus { outline: none; border-bottom: 2px solid var(--sage); }
+    .lead-form .vis, .lead-form legend { display: block; padding: 0; margin: 8px 0 0; font-family: var(--f-label); font-weight: 400; font-size: 14px; line-height: 1.3; color: #8C8C8C; }
+    .lead-form textarea { display: block; width: 100%; min-height: 84px; margin: 0 0 10px; padding: 12px 2px; border: 0; border-bottom: 1px solid #BEBEBE; border-radius: 0; background: none; font-family: var(--f-label); font-weight: 400; font-size: 16px; line-height: 1.5; color: var(--ink); resize: vertical; }
+    .lead-form fieldset { border: 0; margin: 4px 0 0; padding: 0; min-width: 0; }
+    .lead-form .checks { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 8px; }
+    .lead-form .checks label { display: inline-flex; align-items: center; gap: 8px; min-height: 28px; font-family: var(--f-label); font-weight: 400; font-size: 15px; line-height: 1.3; color: var(--ink); cursor: pointer; }
+    .lead-form .checks input { width: 16px; height: 16px; margin: 0; accent-color: var(--sage); }
+    .lead-form .btn { width: 100%; margin: 24px 0 16px; }
+    .form__privacy { font-size: 14px; line-height: 1.4; text-align: center; }
+
+    .footer { padding: 40px 0; background: var(--cream); text-align: center; border-top: 1px solid var(--line); }
+    .footer .logo { height: 60px; width: auto; aspect-ratio: 484 / 351; margin: 0 auto 12px; }
+    .footer p { font-size: 14px; line-height: 1.5; }
+    .footer a { color: var(--sage); }
+    .press { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px 0; }
+    .press span { font-family: var(--f-label); font-weight: 700; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--body); }
+    .press img { width: 44px; height: 44px; aspect-ratio: 1; object-fit: contain; }
+
+    @media (max-width: 900px) {
+      body { font-size: 16px; }
+      .wrap { width: calc(100% - 38px); }
+      .nav { padding: 14px 0; }
+      .brand { gap: 9px; }
+      .brand img { height: 42px; }
+      .brand span { font-size: 15px; }
+      .nav__link { display: none; }
+      .full { min-height: min(78vh, 640px); min-height: min(78svh, 640px); }
+      .hero { min-height: min(100vh, 860px); min-height: min(100svh, 860px); }
+      .full__in { width: calc(100% - 38px); padding-bottom: 40px; }
+      .full h2, .split h2 { font-size: 25px; }
+      h1 { font-size: 32px; margin-bottom: 12px; }
+      .lead { font-size: 16.5px; line-height: 1.45; }
+      .hero .btn { width: 100%; min-height: 52px; margin-top: 20px; }
+      .hero__proof { margin-top: 16px; }
+      .quiet { padding: 56px 0; }
+      .quiet h2 { font-size: 23px; }
+      .quiet .pre { font-size: 18px; line-height: 1.5; color: var(--body); margin: 0 0 12px; }
+    .quiet blockquote { font-size: 21px; }
+      .split { display: block; min-height: 0; }
+      .split__img { aspect-ratio: 4 / 5; }
+      .split__copy { padding: 28px 19px 48px; text-align: center; align-items: center; }
+      .after ul { grid-template-columns: 1fr; margin-top: 4px; }
+      .after li { padding: 20px 0; border-left: 0; border-top: 1px solid var(--line); }
+      .after li:first-child { border-top: 0; }
+      .after .btn { width: 100%; min-height: 52px; margin-top: 24px; }
+      .faq__q { font-size: 17px; }
+      .faq__a p { padding-right: 24px; font-size: 15.5px; }
+      .guide { display: flex; flex-direction: column-reverse; }
+      .guide .split__copy { padding: 32px 19px 48px; text-align: left; align-items: stretch; }
+      .hero > img { object-position: 41% 45%; }
+      .lead-form { max-width: none; }
+      .lead-form .row { gap: 0 14px; }
+      .lead-form .btn { min-height: 52px; }
+      .footer { padding: 32px 0; }
+    }
+    @media (max-width: 480px) {
+      /* The phone: 19px gutters, every photograph full width, the form last */
+      .wrap { width: 100%; padding-left: 19px; padding-right: 19px; }
+      h1 { font-size: 32px; }
+      .lead { font-size: 16.5px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand"><img src="images/logo-light.png" width="484" height="351" alt="Salty Oak Photography logo"><span>Salty Oak Photography</span></a>
+      <a href="#form" class="nav__link">Price guide</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="full hero">
+      <img src="images/hero-veil.jpg" width="1920" height="1280" alt="A bride and groom kissing in a paddock as her veil lifts in the wind">
+      <div class="full__in">
+        <span class="label">Hunter Valley wedding photography</span>
+        <h1>Your wedding day, photographed as it happens</h1>
+        <p class="lead">You stay with your people. We photograph the day quietly, from the nervous morning to the last song.</p>
+        <a href="#form" class="btn">Get The Price Guide</a>
+        <p class="hero__proof">Published in ABIA and Memorable Moments magazine</p>
+      </div>
+    </section>
+
+    <section class="quiet">
+      <div class="wrap">
+        <p class="pre">You'll blink and the celebrant's saying you're married.</p>
+        <h2>These photos are how you get it all back.</h2>
+      </div>
+    </section>
+
+    <section class="split">
+      <div class="split__copy">
+        <span class="label">The morning</span>
+        <h2>We're with you from the slow, nervous morning.</h2>
+      </div>
+      <div class="split__img"><img src="images/morning-bride.jpg" width="1080" height="1350" alt="A bride in her dress and veil seated by a window, in black and white"></div>
+    </section>
+
+    <section class="split">
+      <div class="split__copy">
+        <span class="label">The ceremony</span>
+        <h2>We catch how your person looks at you as you walk out.</h2>
+      </div>
+      <div class="split__img"><img src="images/ceremony-exit.jpg" width="900" height="1200" alt="A bride and groom walking out of their ceremony through confetti"></div>
+    </section>
+
+    <section class="full">
+      <img src="images/vineyard-party.jpg" width="1600" height="1066" alt="A bridal party celebrating in a Hunter Valley vineyard at sunset" style="object-position:center 62%">
+      <div class="full__in">
+        <span class="label">Your people</span>
+        <h2>Family photos take 20 minutes, so you make cocktail hour.</h2>
+      </div>
+    </section>
+
+    <section class="full">
+      <img src="images/golden-hour.jpg" width="1920" height="1280" alt="A couple kissing among vines as the sun sets behind them">
+      <div class="full__in">
+        <span class="label">Just the two of you</span>
+        <h2>We give you each other and a bit of space.</h2>
+      </div>
+    </section>
+
+    <section class="split">
+      <div class="split__copy">
+        <span class="label">The night</span>
+        <h2>We stay right through to the sweaty, happy end.</h2>
+      </div>
+      <div class="split__img"><img src="images/night-sparklers.jpg" width="900" height="1200" alt="A couple kissing under sparklers held by their guests, in black and white"></div>
+    </section>
+
+    <section class="quiet quiet--cream">
+      <div class="wrap">
+        <blockquote>“We’re camera shy and they made us feel really relaxed. We absolutely love our photos.”</blockquote>
+        <cite>Paris + Jessi</cite>
+      </div>
+    </section>
+
+    <section class="quiet after">
+      <div class="wrap">
+        <span class="label">Afterwards</span>
+        <ul>
+          <li><b>Sneak peeks in 48 hours</b><span>Your first photos land while you're still floating.</span></li>
+          <li><b>Every image, yours to keep</b><span>Carefully edited and ready to keep forever.</span></li>
+          <li><b>An album for the coffee table</b><span>It gets pulled out on rainy Sundays for the rest of your life.</span></li>
+        </ul>
+        <a href="#form" class="btn">Get The Price Guide</a>
+      </div>
+    </section>
+
+    <section class="quiet quiet--cream jacynta">
+      <div class="wrap">
+        <img src="images/team-jacynta.jpg" width="480" height="480" alt="Jacynta, founder of Salty Oak Photography">
+        <span class="label">Your photographer</span>
+        <h2>Jacynta and her handpicked team photograph only 40 weddings a year.</h2>
+        <p class="signoff">Big love, Jacynta xo</p>
+      </div>
+    </section>
+
+    <section class="quiet">
+      <div class="wrap">
+        <span class="label">Before you book</span>
+        <h2>What brides ask us before they book</h2>
+        <div class="faq">
+          <div class="faq__item"><button type="button" class="faq__q">What if I'm awkward in front of the camera?</button><div class="faq__a"><p>So many of my couples say this at first, and by the end of the day they've forgotten the camera is even there. I guide you gently and keep things relaxed so you can just be yourselves.</p></div></div>
+          <div class="faq__item"><button type="button" class="faq__q">How many photos do we get?</button><div class="faq__a"><p>I never put a cap on moments. You'll get every beautiful image that tells the full story of your day, carefully edited and ready to keep forever.</p></div></div>
+          <div class="faq__item"><button type="button" class="faq__q">How far in advance should we book?</button><div class="faq__a"><p>As soon as you know your date. We only take 40 bookings a year.</p></div></div>
+          <div class="faq__item"><button type="button" class="faq__q">Do you offer payment plans?</button><div class="faq__a"><p>Yes, absolutely. Let's find something that works for you.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="split guide" id="form">
+      <div class="split__copy">
+        <span class="label">Now booking 2027 and 2028</span>
+        <h2>Get the price guide for your wedding day</h2>
+        <p class="intro">Jacynta replies within 24 hours.</p>
+        <form class="lead-form" action="#" method="post" data-thanks="thanks.html">
+          <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content"><input type="hidden" name="gclid">
+          <!-- The same fields, in the same order, as the site's own form (GoHighLevel "Salty Oak - Website", ni5laJA2PNRzTB6V0g5L) -->
+          <div class="row">
+            <div><label class="sr" for="f-first">First Name</label><input id="f-first" type="text" name="first_name" placeholder="First Name *" autocomplete="given-name" required></div>
+            <div><label class="sr" for="f-last">Last Name</label><input id="f-last" type="text" name="last_name" placeholder="Last Name *" autocomplete="family-name" required></div>
+          </div>
+          <div class="row">
+            <div><label class="sr" for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" placeholder="Phone *" autocomplete="tel" required></div>
+            <div><label class="sr" for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="Email *" autocomplete="email" required></div>
+          </div>
+          <label class="vis" for="f-date">Wedding / Event date</label><input id="f-date" type="date" name="wedding_date">
+          <label class="sr" for="f-plans">Tell me a little about your wedding plans</label><textarea id="f-plans" name="wedding_plans" rows="3" placeholder="Tell me a little about your wedding plans..." data-ghl-field="4gKFMHUepg4Os7nuT2xE"></textarea>
+          <fieldset data-ghl-field="EFgvGWskQYkyArFrBwmS">
+            <legend>How did you hear about me?</legend>
+            <div class="checks">
+              <label><input type="checkbox" name="heard_from" value="Facebook Ad">Facebook Ad</label>
+              <label><input type="checkbox" name="heard_from" value="Instagram">Instagram</label>
+              <label><input type="checkbox" name="heard_from" value="A Friend">A Friend</label>
+              <label><input type="checkbox" name="heard_from" value="Google Ad">Google Ad</label>
+              <label><input type="checkbox" name="heard_from" value="Other">Other</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn">Get The Price Guide</button>
+          <p class="form__privacy">It's free and there's no obligation to book.</p>
+        </form>
+      </div>
+      <div class="split__img"><img src="images/bride-window.jpg" width="1080" height="1350" alt="A bride holding her bouquet beside a window"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <img class="logo" src="images/logo.png" width="484" height="351" alt="Salty Oak Photography logo">
+      <p>Salty Oak Photography, Hunter Valley and Newcastle, NSW</p>
+      <div class="press">
+        <span>Published in</span>
+        <img src="images/press-abia.png" width="100" height="100" alt="ABIA magazine">
+        <img src="images/press-memorable-moments-1.png" width="100" height="100" alt="Memorable Moments magazine">
+        <img src="images/press-highly-commended.png" width="100" height="100" alt="Highly Commended award mark">
+      </div>
+      <p>Copyright 2026 Salty Oak Photography. <a href="https://saltyoakphotography.com.au/">saltyoakphotography.com.au</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    document.querySelectorAll('.faq__q').forEach(function (q) {
+      q.addEventListener('click', function () {
+        var item = q.parentElement, open = item.classList.contains('open');
+        document.querySelectorAll('.faq__item.open').forEach(function (o) { o.classList.remove('open'); o.querySelector('.faq__a').style.maxHeight = null; });
+        if (!open) { item.classList.add('open'); var a = item.querySelector('.faq__a'); a.style.maxHeight = a.scrollHeight + 'px'; }
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (ev) {
+        var t = document.querySelector(a.getAttribute('href')); if (!t) return;
+        ev.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' });
+      });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(function (k) {
+      var f = document.querySelector('input[name="' + k + '"]'); if (f && params.get(k)) f.value = params.get(k);
+    });
+
+    /* Preview only: the form has no target yet (build-notes.md), so a submit shows the thanks page and sends nothing. */
+    var form = document.querySelector('.lead-form');
+    if (form && form.getAttribute('action') === '#') {
+      form.addEventListener('submit', function (ev) { ev.preventDefault(); window.location.href = form.getAttribute('data-thanks'); });
+    }
+  })();
+  </script>
+</body>
+</html>
