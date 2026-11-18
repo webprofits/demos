@@ -31,8 +31,8 @@ ul { list-style: none; }
 
 /* Header: one row, logo, phone, one button */
 .hd { border-bottom: 1px solid var(--line); background: #fff; }
-.hd-in { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.hd-logo img { width: 132px; }
+.hd-in { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
+.hd-logo img { width: 116px; }
 .hd-r { display: flex; align-items: center; gap: 20px; }
 .hd-phone { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; text-decoration: none; white-space: nowrap; }
 .hd-phone svg { width: 16px; height: 16px; }
@@ -105,10 +105,10 @@ h1 { font: 700 44px/1.08 var(--font); letter-spacing: -0.02em; max-width: 17ch; 
 .panel { padding: 24px; border-radius: 10px; background: var(--navy) linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
 .panel .eyebrow { color: var(--yellow); }
 .panel h3 { color: #fff; }
-.panel p { font-size: 15px; line-height: 1.5; color: rgba(255, 255, 255, 0.86); max-width: 560px; }
+.panel p:not(.eyebrow) { font-size: 15px; line-height: 1.5; color: rgba(255, 255, 255, 0.86); max-width: 560px; }
 .panel .btn { margin-top: 20px; }
 .brands { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: center; margin-top: 16px; }
-.brands img { width: 100%; max-width: 132px; margin: 0 auto; }
+.brands img { width: 100%; max-width: 132px; margin: 0 auto; aspect-ratio: 24 / 7; object-fit: cover; }
 
 /* Questions */
 .faq details { border-bottom: 1px solid var(--line); }
@@ -118,14 +118,14 @@ h1 { font: 700 44px/1.08 var(--font); letter-spacing: -0.02em; max-width: 17ch; 
 .faq summary::after { content: ""; width: 9px; height: 9px; flex: none; border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy); transform: rotate(45deg); margin: -4px 4px 0 0; transition: transform 0.2s ease; }
 .faq details[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
 .faq details p { padding: 0 32px 16px 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); max-width: 620px; }
-.company { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); font-size: 14.5px; color: var(--ink-2); max-width: 600px; }
+.company { margin-top: 32px; font-size: 14.5px; color: var(--ink-2); max-width: 600px; }
 
 /* The form card: a feature */
 .fcard { border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: 0 18px 44px rgba(8, 35, 64, 0.18); overflow: hidden; }
 .fhead { padding: 20px; background: var(--navy) linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
 .fhead .eyebrow { color: var(--yellow); margin-bottom: 6px; }
 .fhead h2 { font: 700 clamp(20px, 1.7vw, 24px)/1.2 var(--font); letter-spacing: -0.01em; margin-bottom: 6px; text-wrap: balance; }
-.fhead p { font-size: 14.5px; line-height: 1.45; color: rgba(255, 255, 255, 0.86); }
+.fhead p:not(.eyebrow) { font-size: 14.5px; line-height: 1.45; color: rgba(255, 255, 255, 0.86); text-wrap: balance; }
 .fbody { padding: 20px; display: grid; gap: 10px; }
 .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .fbody label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
@@ -189,11 +189,11 @@ h1 { font: 700 44px/1.08 var(--font); letter-spacing: -0.02em; max-width: 17ch; 
   .brands { grid-template-columns: repeat(3, 1fr); }
   .fhead { padding: 18px; }
   .fhead h2 { font-size: 22px; }
-  .fhead p { font-size: 14px; }
+  .fhead p:not(.eyebrow) { font-size: 14px; }
   .fbody { padding: 18px; gap: 8px; }
   .frow { grid-template-columns: 1fr; gap: 8px; }
   .fbody .btn { min-height: 52px; font-size: 16px; }
-  .company { margin-top: 26px; padding-top: 26px; }
+  .company { margin-top: 26px; }
   .ft-in { display: block; padding: 18px 0; font-size: 12px; }
   .ft-l { gap: 14px; }
   .ft-l img { width: 104px; }
@@ -206,7 +206,7 @@ h1 { font: 700 44px/1.08 var(--font); letter-spacing: -0.02em; max-width: 17ch; 
   .btn-block { min-height: 52px; }
 }
 @media (max-width: 767px) {
-  .sec > p, .warranty p:not(.small):not(.eyebrow) { font-size: 15px; line-height: 1.5; }
+  .sec > p:not(.eyebrow), .warranty p:not(.small):not(.eyebrow) { font-size: 15px; line-height: 1.5; }
   .warranty { grid-template-columns: 64px 1fr; }
   .warranty img { width: 64px; }
 }
