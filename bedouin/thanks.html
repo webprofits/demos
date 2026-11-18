@@ -326,6 +326,12 @@
     .pday-quote blockquote { margin: 12px 0 8px; font: 500 22px/1.4 var(--font-heading); color: var(--text-on-dark); max-width: 34em; }
     .pday-quote figcaption { font-size: 14px; color: rgba(255, 255, 255, 0.7); }
     .pday-quote cite { font-style: normal; font-weight: 600; color: var(--text-on-dark); }
+    /* Section header on a light section: centred, ink eyebrow with the gold rules */
+    .sec-head { text-align: center; margin: 0 0 32px; }
+    .sec-head h2 { margin-bottom: 12px; }
+    .sec-head h2:last-child { margin-bottom: 0; }
+    .sec-head .intro { margin: 0 auto; text-wrap: balance; }
+    .eyebrow--ink { color: var(--text-primary); }
     /* Packages */
     .pkg-for { font-size: 14px; margin-bottom: 4px; }
     .pkg .btn { margin-top: 0; }
@@ -345,6 +351,24 @@
     .chips li { font-size: 15px; padding: 10px 14px; }
     /* Reviews */
     .rating-bar { margin: 24px 0; padding: 16px 24px; }
+    /* Reviews: a night section, heading centred, quote cards */
+    .reviews { background: var(--bg-dark); color: var(--text-on-dark); padding: 64px 0; }
+    .rev-head { text-align: center; margin: 0 0 32px; }
+    .eyebrow--center { justify-content: center; }
+    .eyebrow--center::after { content: ""; flex: none; width: 32px; height: 1px; background: var(--brand); }
+    .rev-stars { display: flex; justify-content: center; margin: 0 0 12px; }
+    .rev-stars .stars { gap: 6px; }
+    .rev-stars .stars svg { width: 22px; height: 22px; fill: var(--brand); }
+    .rev-head h2 { color: var(--text-on-dark); margin: 0; }
+    .rev-head h2 b { color: var(--brand); font-weight: 600; }
+    .reviews .review-grid { gap: 16px; }
+    .reviews .review { background: rgba(255, 255, 255, 0.04); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); padding: 24px; }
+    .review__mark { display: block; height: 26px; font: 600 56px/1 var(--font-heading); color: var(--brand); }
+    .reviews .review blockquote { margin: 12px 0 20px; font-size: 15.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.9); }
+    .reviews .review figcaption { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .review__av { flex: none; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font: 600 15px/1 var(--font-heading); color: var(--brand); box-shadow: inset 0 0 0 1px rgba(255, 198, 106, 0.6); }
+    .reviews .review cite { font-size: 15px; color: var(--text-on-dark); }
+    .reviews .review small { display: block; color: rgba(255, 255, 255, 0.6); }
     .rating-bar .stars svg { width: 20px; height: 20px; }
     .review blockquote { font-size: 15px; line-height: 1.5; }
     .review small { font-size: 13px; }
@@ -358,6 +382,7 @@
     .contact .split { grid-template-columns: 1fr 440px; gap: 56px; align-items: center; }
     .contact .lead { color: var(--text-on-dark); }
     .wa-line { margin: 24px 0 0; }
+    .wa-line .btn { margin-top: 0; }
     .lead-form { padding: 0; overflow: hidden; border-radius: var(--r-md); box-shadow: 0 24px 48px -16px rgba(255, 198, 106, 0.22); }
     .form-head { background: linear-gradient(135deg, #FFC66A, #FFD592); color: var(--brand-ink); padding: 20px 24px; }
     .form-head span { display: block; font: 700 12px/1 var(--font-heading); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
@@ -442,11 +467,17 @@
       .chips li { font-size: 14px; padding: 8px 12px; }
       .cta-row { margin-top: 24px; }
       .rating-bar { padding: 16px; margin: 16px 0; gap: 8px 16px; font-size: 14px; }
-      .review-grid { gap: 12px; }
+      .reviews { padding: 40px 0; }
+      .rev-head { margin-bottom: 24px; }
+      .rev-stars .stars svg { width: 20px; height: 20px; }
+      .reviews .review-grid { gap: 12px; }
+      .reviews .review { padding: 20px; }
       .review { padding: 16px; }
       .faq__q { padding: 14px 16px; font-size: 16px; }
       .faq__a p { padding: 0 16px 16px; }
       .contact { padding: 32px 0; }
+      .contact .split { gap: 32px; }
+      .sec-head { margin-bottom: 24px; }
       .form-head { padding: 18px 20px; }
       .form-head h3 { font-size: 22px; }
       .form-head p { font-size: 14px; }
