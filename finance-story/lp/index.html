@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Commercial Property Loans for Your Premises | Finance Story</title>
+  <meta name="description" content="Commercial property loans for business owners buying their own premises. A director-led feasibility check against 40+ lenders, with no obligation.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Short page: copy left, form card right. Finance Story tokens, from the site's own stylesheet. */
+    :root { --teal: #01313A; --coral: #F26550; --coral-ink: #F0523D; --mint: #8ED3CA; --mint-soft: #E8F5F3; --ink: #1A1A1A; --muted: #55656A; --soft: #F3F7F7; --line: #DBE4E5; --gutter: 24px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { color: var(--ink); background: #fff; font-size: 16px; line-height: 1.5; }
+    img { max-width: 100%; height: auto; display: block; object-fit: initial; }
+    p { max-width: none; margin: 0; }
+    h1, h2, h3 { font-family: var(--font-heading); margin: 0; }
+    .content { max-width: 1180px; margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* Header: one row, the site's deep teal with the white logo */
+    .header { background: var(--teal); padding: 10px 0; }
+    .header-wr { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .header-logo img { width: 150px; height: auto; }
+    .phone { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .phone svg { width: 28px; height: 28px; flex: none; }
+    .phone b { display: block; color: #fff; font-size: 19px; font-weight: 700; line-height: 1.15; white-space: nowrap; }
+    .phone small { display: block; color: var(--mint); font-size: 13px; line-height: 1.2; }
+
+    /* Hero split */
+    .hero { padding: 28px 0 48px; }
+    .hero-wr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 56px; align-items: start; }
+    .hero-left, .hero-right { min-width: 0; }
+    .pills { display: flex; flex-wrap: nowrap; gap: clamp(5px, .6vw, 8px); list-style: none; margin: 0 0 20px; padding: 0; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; background: var(--soft); border: 1px solid var(--line); color: var(--teal); border-radius: 100px; font-size: clamp(9.5px, .87vw, 12.5px); font-weight: 700; line-height: 1; padding: clamp(5px, .5vw, 7px) clamp(8px, .85vw, 12px); }
+    .pill svg { width: clamp(10px, .9vw, 13px); height: clamp(10px, .9vw, 13px); flex: none; }
+    .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--coral-ink); margin: 0 0 8px; }
+    h1 { font-size: clamp(34px, 3.05vw, 44px); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; color: var(--teal); margin: 0 0 16px; text-wrap: balance; }
+    h1 .hl { display: block; white-space: nowrap; color: var(--coral-ink); }
+    .lead { font-size: 18px; line-height: 1.5; max-width: 560px; text-wrap: pretty; }
+    .jump { display: none; }
+    .proofline { display: flex; align-items: center; gap: 8px; margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+    .proofline svg { width: 18px; height: 18px; flex: none; }
+    .proofline b { color: var(--ink); }
+
+    /* Blocks: one rhythm, hairline between */
+    .block { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 32px; }
+    .block h2 { font-size: 21px; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; color: var(--teal); margin: 0 0 12px; }
+    .callouts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; margin: 0; padding: 0; }
+    .callouts li { background: var(--mint-soft); border-radius: 6px; padding: 14px 16px; display: grid; grid-template-columns: 20px 1fr; gap: 2px 10px; align-items: start; align-content: start; }
+    .callouts svg, .callouts .num { width: 18px; height: 18px; margin-top: 2px; }
+    .callouts .num { display: flex; align-items: center; justify-content: center; background: var(--coral); color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; line-height: 1; }
+    .callouts b { font-size: 15px; line-height: 1.35; color: var(--teal); }
+    .callouts span.txt { grid-column: 2; font-size: 14px; line-height: 1.45; }
+    .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .tile { margin: 0; }
+    .tile img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
+    .tile figcaption { margin-top: 8px; font-size: 13.5px; line-height: 1.35; color: var(--muted); }
+    .tile figcaption b { display: block; color: var(--teal); }
+    .rev-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin: 0 0 12px; }
+    .rev-head h2 { margin: 0; }
+    .rev-nav { display: flex; align-items: center; gap: 8px; flex: none; margin: -5px 0; }
+    .rev-count { font-size: 13px; font-weight: 700; color: var(--muted); white-space: nowrap; margin-right: 4px; }
+    .rev-btn { width: 36px; height: 36px; padding: 0; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--teal); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color .3s ease, color .3s ease; }
+    .rev-btn svg { width: 14px; height: 14px; }
+    .rev-btn:hover { border-color: var(--coral); color: var(--coral); }
+    .rev-btn[disabled] { opacity: .35; cursor: default; border-color: var(--line); color: var(--teal); }
+    .quotes { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .quotes::-webkit-scrollbar { display: none; }
+    .quotes blockquote { flex: 0 0 calc((100% - 12px) / 2); scroll-snap-align: start; margin: 0; background: var(--soft); border-radius: 6px; padding: 14px 16px; font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 10px; }
+    .quotes cite { margin-top: auto; font-style: normal; font-size: 13px; color: var(--muted); }
+    .quotes cite b { color: var(--teal); }
+    .person { display: grid; grid-template-columns: 132px 1fr; gap: 20px; align-items: start; }
+    .person img { width: 132px; aspect-ratio: 3 / 4; border-radius: 6px; }
+    .person p { font-size: 15px; line-height: 1.55; }
+    .faq { border-top: 1px solid var(--line); }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; cursor: pointer; list-style: none; font-size: 15.5px; font-weight: 700; line-height: 1.35; color: var(--teal); }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: ""; flex: none; width: 10px; height: 10px; border-right: 2px solid var(--coral); border-bottom: 2px solid var(--coral); transform: rotate(45deg); margin: -4px 4px 0 0; transition: transform .3s ease; }
+    .faq details[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
+    .faq p { font-size: 14.5px; line-height: 1.55; padding: 0 28px 16px 0; }
+    .company { font-size: 14.5px; color: var(--muted); }
+
+    /* Form card: the feature */
+    .form-holder { position: sticky; top: 20px; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 18px 40px rgba(1,49,58,.18); }
+    .form-top { background: linear-gradient(135deg, #01313A 0%, #06505C 100%); padding: 20px; }
+    .form-top .eyebrow { color: var(--mint); margin-bottom: 6px; }
+    .form-top h2 { color: #fff; font-size: clamp(20px, 1.7vw, 24px); font-weight: 800; line-height: 1.2; margin: 0 0 6px; }
+    .form-top p { color: rgba(255,255,255,.86); font-size: 14.5px; }
+    .form-body { padding: 20px; }
+    .lead-form { display: grid; gap: 10px; }
+    .lead-form label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .lead-form input, .lead-form select { width: 100%; height: 48px; font-family: var(--font-body); font-size: 15px; color: var(--ink); background: #fff; border: 1px solid #c9d3d5; border-radius: 4px; padding: 0 14px; }
+    .lead-form ::placeholder { color: #7f8c90; }
+    .lead-form input:focus, .lead-form select:focus { outline: 2px solid rgba(242,101,80,.35); border-color: var(--coral); }
+    .submit { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; margin-top: 6px; font-family: var(--font-body); font-size: 17px; font-weight: 700; line-height: 1; color: #fff; background: var(--coral); border: 2px solid var(--coral); border-radius: 100px; box-shadow: 0 6px 14px rgba(242,101,80,.3); cursor: pointer; transition: background .3s ease, color .3s ease; }
+    .submit:hover { background: #fff; color: var(--coral-ink); }
+    .form-note { font-size: 13px; color: var(--muted); text-align: center; margin: 10px 0 0; }
+    .form-trust { display: flex; justify-content: space-between; gap: 6px; list-style: none; margin: 14px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink); }
+    .form-trust li { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .form-trust svg { width: 12px; height: 12px; flex: none; }
+
+    /* Footer: deep teal, because the logo exists in white only */
+    .footer { background: var(--teal); padding: 20px 0; font-size: 13px; color: rgba(255,255,255,.82); }
+    .footer-wr { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-left { display: flex; align-items: center; gap: 18px; }
+    .footer-left img { width: 110px; height: auto; flex: none; }
+    .footer-right { text-align: right; white-space: nowrap; }
+    .footer a { color: var(--mint); }
+    .footer-terms { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.16); font-size: 13px; color: rgba(255,255,255,.7); }
+
+    @media (max-width: 1000px) {
+      .hero-wr { gap: 32px; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); }
+      h1 { font-size: clamp(28px, calc((100vw - 460px) / 13.4), 34px); }
+      .tiles { gap: 10px; }
+      .form-trust { flex-wrap: wrap; justify-content: flex-start; gap: 6px 14px; }
+    }
+    @media (max-width: 860px) {
+      .hero-wr { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      .form-holder { position: static; }
+      h1 { font-size: 34px; }
+      .jump { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; margin-top: 20px; font-size: 17px; font-weight: 700; line-height: 1; color: #fff; background: var(--coral); border: 2px solid var(--coral); border-radius: 100px; text-decoration: none; }
+      .proofline { margin-top: 20px; }
+    }
+    @media (max-width: 700px) {
+      :root { --gutter: 20px; }
+      body { font-size: 15px; }
+      .header { padding: 10px 0; }
+      .header-logo img { width: 118px; }
+      .phone svg { width: 20px; height: 20px; }
+      .phone b { font-size: 15px; }
+      .phone small { display: none; }
+      .hero { padding: 16px 0 32px; }
+      .pills { flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+      .pill { font-size: 12px; padding: 5px 9px; }
+      h1 { font-size: min(29px, 6.7vw); line-height: 1.12; margin-bottom: 12px; }
+      .lead { font-size: 16px; line-height: 1.45; }
+      .block { margin-top: 26px; padding-top: 26px; }
+      .block h2 { font-size: 18px; }
+      .callouts { grid-template-columns: 1fr; gap: 8px; }
+      .callouts li { padding: 12px 14px; }
+      .callouts span.txt { font-size: 14.5px; }
+      .tiles { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .quotes { gap: 8px; }
+      .quotes blockquote { flex-basis: 100%; font-size: 14.5px; padding: 12px 14px; }
+      .rev-btn { display: none; }
+      .rev-count { margin: 0 0 3px; }
+      .person { grid-template-columns: 96px 1fr; gap: 14px; }
+      .person img { width: 96px; }
+      .person p { font-size: 14.5px; }
+      .faq summary { font-size: 15px; padding: 13px 0; }
+      .faq p { padding-right: 0; }
+      .form-holder { border-radius: 8px; }
+      .form-top { padding: 18px; }
+      .form-top h2 { font-size: 22px; }
+      .form-top p { font-size: 14px; }
+      .form-body { padding: 18px; }
+      .lead-form { gap: 8px; }
+      .lead-form input, .lead-form select { height: 46px; }
+      .submit { min-height: 52px; font-size: 16px; margin-top: 8px; }
+      .form-trust { flex-wrap: wrap; justify-content: flex-start; gap: 6px 14px; }
+      .footer-wr { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .footer-left { align-items: flex-start; gap: 12px; }
+      .footer-left img { width: 100px; }
+      .footer-right { text-align: left; white-space: normal; }
+    }
+    @media (max-width: 480px) {
+      .tile figcaption { font-size: 13px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="header">
+    <div class="content header-wr">
+      <a href="#top" class="header-logo"><img src="images/logo-white.png" alt="Finance Story" width="150" height="51"></a>
+      <a class="phone" href="tel:1300171854">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/><path d="M14.5 6.2a3.6 3.6 0 0 1 3.3 3.3M14.5 2.8a7 7 0 0 1 6.7 6.7" fill="none" stroke="#F26550" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span><b>1300 171 854</b><small>Australia wide</small></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="content hero-wr">
+      <div class="hero-left">
+        <ul class="pills">
+          <li class="pill"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>40+ lenders compared</li>
+          <li class="pill"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Director-led, no hand-offs</li>
+          <li class="pill"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No obligation</li>
+        </ul>
+        <span class="eyebrow">Commercial property loans, Australia wide</span>
+        <h1><span class="hl">Commercial property loans</span> for business owners buying their own premises</h1>
+        <p class="lead">Tell us about the property and your business. Shane, Finance Story's founder, compares 40+ lenders and tells you what's possible before you apply, with no obligation.</p>
+        <a class="jump" href="#check">Get my feasibility check</a>
+        <p class="proofline"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You deal with <b>Shane Duffy</b>, founder. 25+ years commercial experience.</span></p>
+
+        <div class="block">
+          <span class="eyebrow">Before you sign a contract</span>
+          <h2>What business owners worry about, and what we do</h2>
+          <ul class="callouts">
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Your bank says no</b><span class="txt">We compare 40+ lenders, including major banks, non-bank lenders and private options.</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Signing without finance</b><span class="txt">We ask a lender to agree in principle, like a pre-approval, before you make an offer.</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>A complicated income</b><span class="txt">We work with trusts, company structures, bonuses and multiple income streams.</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Being passed around</b><span class="txt">Shane, the founder, handles your loan himself from first chat to settlement.</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Slow lender questions</b><span class="txt">We organise your application to answer the lender's questions before they ask.</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>A rate-only comparison</b><span class="txt">We compare lenders on fit for your purchase, as well as their advertised rates.</span></li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <span class="eyebrow">Client reviews</span>
+          <div class="rev-head">
+            <h2>What clients say about working with Shane</h2>
+            <div class="rev-nav">
+              <span class="rev-count" aria-live="polite">1 of 4</span>
+              <span><button class="rev-btn" type="button" data-dir="-1" aria-label="Previous reviews"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
+              <span><button class="rev-btn" type="button" data-dir="1" aria-label="More reviews"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
+            </div>
+          </div>
+          <div class="quotes" id="reviews" tabindex="0" aria-label="Client reviews, swipe or use the arrows for more">
+            <blockquote>“You have truly been one of the most amazing people I've ever dealt with in business. Securing a loan that many would consider impossible seemed like a monumental task, but you made it achievable with your unwavering dedication and support.”<cite><b>Paul L</b>, QLD</cite></blockquote>
+            <blockquote>“Shane was absolutely excellent through the whole process of helping us change banks and setting up our loan. He is professional and extremely thorough. Have already recommended him to friends who have said the exact same.”<cite><b>Alana S</b>, VIC</cite></blockquote>
+            <blockquote>“Working with Shane at Finance story has been a fantastic experience. He truly went above and beyond as our deal certainly brought different obstacles along the way.”<cite><b>Sarah McLennan</b>, BrokerPages</cite></blockquote>
+            <blockquote>“Shane has been an invaluable asset when we have refinanced a number of properties over the last few months. I would highly recommend him and have started passing his details on to friends.”<cite><b>Tim E</b>, NSW</cite></blockquote>
+            <blockquote>“I cannot recommend Shane enough if you're looking for a mortgage advisor. He's diligent, thoughtful, empathetic and takes his time to ensure information is clearly understood so that folks put their best (and stable) foot forward.”<cite><b>Felipe Schweikart</b>, BrokerPages</cite></blockquote>
+            <blockquote>“Shane has been amazing with finding the best options for us with our loans. He is great at communicating and getting back to us and had made this journey a lot easier.”<cite><b>Jane C</b>, VIC</cite></blockquote>
+            <blockquote>“I will definitely be recommending your business to anyone. We are finished with the constant worry.”<cite><b>Natasha B</b>, VIC</cite></blockquote>
+          </div>
+        </div>
+
+        <div class="block">
+          <span class="eyebrow">What the feasibility check covers</span>
+          <h2>The 6 parts of your lending story we check</h2>
+          <ul class="callouts">
+            <li><span class="num">1</span><b>Borrower</b><span class="txt">Who is applying, whether that's you, your company, a trust or your self-managed super fund (SMSF).</span></li>
+            <li><span class="num">2</span><b>Purpose</b><span class="txt">What the finance is for, your own premises or a commercial investment.</span></li>
+            <li><span class="num">3</span><b>Security</b><span class="txt">What secures the loan, including the property and any equity you hold.</span></li>
+            <li><span class="num">4</span><b>Repayment</b><span class="txt">What income is available, and what repayments mean for your business profits.</span></li>
+            <li><span class="num">5</span><b>Documentation</b><span class="txt">What evidence supports it, from business financials to the contract of sale.</span></li>
+            <li><span class="num">6</span><b>Lender fit</b><span class="txt">Which bank, non-bank or specialist lender will understand your purchase and your business.</span></li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <span class="eyebrow">What we arrange</span>
+          <h2>Commercial property loans we arrange</h2>
+          <div class="tiles">
+            <figure class="tile"><img src="images/tile-own-premises.jpg" alt="Business owner working at a laptop in his warehouse" width="300" height="300"><figcaption><b>Your own premises</b>The building your business runs from.</figcaption></figure>
+            <figure class="tile"><img src="images/tile-investment.jpg" alt="Row of modern commercial shopfronts under a blue sky" width="300" height="300"><figcaption><b>Investment property</b>Commercial real estate bought to lease.</figcaption></figure>
+            <figure class="tile"><img src="images/tile-smsf.jpg" alt="Copper clad commercial building lit at dusk" width="300" height="300"><figcaption><b>Through your SMSF</b>Your fund buys it, your business leases it.</figcaption></figure>
+            <figure class="tile"><img src="images/tile-low-doc.jpg" alt="Brewery owner checking a laptop on the brewery floor" width="300" height="300"><figcaption><b>Low-doc options</b>Ask what's available for you.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="block">
+          <span class="eyebrow">Who you deal with</span>
+          <h2>Shane Duffy, founder of Finance Story</h2>
+          <div class="person">
+            <img src="images/shane-duffy.jpg" alt="Shane Duffy, founder of Finance Story" width="132" height="176">
+            <p>Shane founded Finance Story after more than 25 years working across manufacturing, supply chain, operations, IT, consulting and business improvement. He holds a Diploma of Finance and Mortgage Broking, and he works on your loan himself.</p>
+          </div>
+        </div>
+
+        <div class="block">
+          <span class="eyebrow">Common questions</span>
+          <h2>What business owners ask before buying premises</h2>
+          <div class="faq">
+            <details open>
+              <summary>How much deposit do I need for a commercial property loan?</summary>
+              <p>Commercial property loans usually start with a minimum deposit of 30%. It can come from cash, from equity in property you already own, or from funds in your SMSF. The feasibility check works out which sources suit your purchase.</p>
+            </details>
+            <details>
+              <summary>My bank said no. Is it still worth asking?</summary>
+              <p>Yes. Different lenders have different requirements, so a purchase that doesn't fit one lender may fit another. We compare 40+ lenders, including non-bank lenders and private options, and we're realistic about what may or may not work.</p>
+            </details>
+            <details>
+              <summary>Can my SMSF buy the premises my business runs from?</summary>
+              <p>It can. Your SMSF buys the property and is able to lease it to your business. The lending rules are complex, so we help you understand lender requirements and borrowing limits before you commit. Speak to your accountant or financial adviser first.</p>
+            </details>
+            <details>
+              <summary>Should I sort out finance before I make an offer?</summary>
+              <p>Yes. Commercial vendors often won't accept an offer that's subject to finance. Once you sign the contract, you risk losing your deposit if you can't complete the sale. We aim to have an agreement in principle from a lender before you offer.</p>
+            </details>
+            <details>
+              <summary>What does the feasibility check cost?</summary>
+              <p>Nothing, and there's no obligation. We'll contact you within the next day to arrange a first chat about the property and your business. You'll hear what's possible in plain English before you apply for anything.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="block">
+          <p class="company">Finance Story is a specialist finance brokerage working with business owners, SMSF investors and complex income clients across Australia.</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="form-holder" id="check">
+          <div class="form-top">
+            <span class="eyebrow">Free feasibility check</span>
+            <h2>Commercial property loan check for business owners</h2>
+            <p>We'll contact you within the next day to arrange a first chat.</p>
+          </div>
+          <div class="form-body">
+            <form class="lead-form" action="thanks.html" method="get" data-redirect="thanks.html">
+              <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium">
+              <input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content"><input type="hidden" name="gclid">
+              <input type="hidden" name="enquiry_type" value="Commercial property loan feasibility check">
+              <label for="f-name">First name</label><input id="f-name" type="text" name="first_name" placeholder="First name" autocomplete="given-name" required>
+              <label for="f-business">Business name</label><input id="f-business" type="text" name="business_name" placeholder="Business name" autocomplete="organization" required>
+              <label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="Email" autocomplete="email" required>
+              <label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" placeholder="Phone" autocomplete="tel" required>
+              <label for="f-buying">What are you buying?</label>
+              <select id="f-buying" name="buying">
+                <option value="">What are you buying?</option>
+                <option>Premises for my business</option>
+                <option>A commercial investment property</option>
+                <option>A property through my SMSF</option>
+                <option>Not sure yet</option>
+              </select>
+              <button type="submit" class="submit">Get my feasibility check</button>
+            </form>
+            <p class="form-note">No cost and no obligation.</p>
+            <ul class="form-trust">
+              <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>40+ lenders</li>
+              <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Director-led</li>
+              <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Australia wide</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="content">
+      <div class="footer-wr">
+        <div class="footer-left">
+          <img src="images/logo-white.png" alt="Finance Story" width="110" height="37">
+          <p>Credit Representative 527057 of Loanworx Group Licencing Pty Ltd ACN 005 819 607 Australian Credit Licence 495267.</p>
+        </div>
+        <p class="footer-right">© Copyright 2026 Finance Story Pty Ltd. <a href="https://www.financestory.com.au/privacy-policy">Privacy Policy</a> and <a href="https://www.financestory.com.au/terms-and-conditions">Terms &amp; Conditions</a></p>
+      </div>
+      <p class="footer-terms">This page is general information only and doesn't take into account your objectives, financial situation or needs. All loans are subject to lender approval, and terms, conditions, fees and charges apply.</p>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (ev) {
+        var t = document.querySelector(a.getAttribute('href')); if (!t) return;
+        ev.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth' });
+      });
+    });
+    var q = document.getElementById('reviews'), count = document.querySelector('.rev-count'), btns = document.querySelectorAll('.rev-btn');
+    if (q && count) {
+      var cards = q.children;
+      var state = function () {
+        var w = cards[0].getBoundingClientRect().width, gap = parseFloat(getComputedStyle(q).columnGap) || 12;
+        var per = Math.max(1, Math.round((q.clientWidth + gap) / (w + gap))), pages = Math.ceil(cards.length / per);
+        var idx = Math.min(pages - 1, Math.max(0, Math.round(q.scrollLeft / ((w + gap) * per))));
+        count.textContent = (idx + 1) + ' of ' + pages;
+        if (btns.length) { btns[0].disabled = idx === 0; btns[1].disabled = idx >= pages - 1; }
+      };
+      btns.forEach(function (b) { b.addEventListener('click', function () { q.scrollBy({ left: Number(b.getAttribute('data-dir')) * (q.clientWidth + 12), behavior: 'smooth' }); }); });
+      q.addEventListener('scroll', function () { window.requestAnimationFrame(state); }, { passive: true });
+      window.addEventListener('resize', state); state();
+    }
+    var form = document.querySelector('.lead-form');
+    if (form) form.addEventListener('submit', function (ev) { ev.preventDefault(); window.location.href = form.getAttribute('data-redirect') || 'thanks.html'; });
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(function (k) {
+      var f = document.querySelector('input[name="' + k + '"]'); if (f && params.get(k)) f.value = params.get(k);
+    });
+  })();
+  </script>
+</body>
+</html>
