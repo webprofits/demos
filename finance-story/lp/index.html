@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>SMSF Property Loans | Finance Story</title>
-  <meta name="description" content="SMSF loans for residential and commercial property, structured correctly from the start. Director-led advice and 40+ lenders compared.">
+  <title>SMSF Commercial Property Loans | Finance Story</title>
+  <meta name="description" content="SMSF loans for commercial property, structured correctly from the start. Director-led advice and 40+ lenders compared. Speak to an SMSF specialist.">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -44,10 +44,10 @@
     .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
     .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #01313A 0%, rgba(1,49,58,.72) 22%, rgba(1,49,58,.18) 60%, rgba(1,49,58,.1) 100%); }
     .hero-wr { position: relative; z-index: 2; display: flex; align-items: center; min-height: 560px; padding-top: 72px; padding-bottom: 72px; }
-    .hero-copy { width: 58%; }
+    .hero-copy { width: 62%; }
     .hero .eyebrow { color: var(--mint); }
-    h1 { font-size: clamp(34px, 3.2vw, 46px); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; color: #fff; margin: 0 0 16px; text-wrap: balance; }
-    h1 .hl { display: block; white-space: nowrap; color: var(--coral); }
+    h1 { font-size: clamp(30px, 2.9vw, 42px); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; color: #fff; margin: 0 0 16px; text-wrap: balance; }
+    h1 .hl { display: block; white-space: nowrap; color: var(--coral); text-wrap: balance; }
     .lead { font-size: 18px; line-height: 1.5; max-width: 540px; color: rgba(255,255,255,.9); text-wrap: pretty; }
     .acts { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
     .micro { margin-top: 18px; font-size: 14px; color: rgba(255,255,255,.72); }
@@ -75,6 +75,16 @@
     .cards .num { display: flex; align-items: center; justify-content: center; background: var(--coral); color: #fff; border-radius: 50%; font-size: 15px; font-weight: 700; line-height: 1; }
     .cards b { align-self: center; font-family: var(--font-heading); font-size: 18px; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; color: var(--teal); }
     .cards span.txt { grid-column: 2; font-size: 15px; line-height: 1.5; }
+
+    .scope { display: grid; grid-template-columns: 3fr 2fr; gap: 20px; max-width: 960px; margin: 0 auto; }
+    .panel { border-radius: 10px; padding: 26px 28px; }
+    .panel--yes { background: var(--mint-soft); }
+    .panel--no { background: var(--soft); border: 1px solid var(--line); }
+    .panel h3 { font-size: 19px; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; color: var(--teal); margin: 0 0 14px; }
+    .panel ul { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; font-size: 16.5px; line-height: 1.4; }
+    .panel li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; }
+    .panel svg { width: 22px; height: 22px; margin-top: 1px; }
+    .scope-note { margin-top: 24px; text-align: center; font-size: 16px; color: var(--muted); }
 
     .quotes { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
     .quotes::-webkit-scrollbar { display: none; }
@@ -159,6 +169,7 @@
       .hero-wr { min-height: 0; padding-top: 8px; padding-bottom: 36px; }
       .hero-copy { width: 100%; }
       h1 { font-size: 34px; }
+      h1 .hl { white-space: normal; }
     }
     @media (max-width: 700px) {
       :root { --gutter: 20px; }
@@ -170,7 +181,7 @@
       .hero-photo { height: 200px; }
       .hero-wr { padding-top: 4px; padding-bottom: 32px; }
       .hero .eyebrow { margin-bottom: 8px; }
-      h1 { font-size: 29px; line-height: 1.12; margin-bottom: 12px; }
+      h1 { font-size: 28px; line-height: 1.12; margin-bottom: 12px; }
       .lead { font-size: 16px; line-height: 1.45; }
       .acts { flex-direction: column; gap: 16px; margin-top: 20px; }
       .acts .cta { width: 100%; min-height: 52px; font-size: 16px; }
@@ -186,6 +197,11 @@
       .sec-act { margin-top: 28px; }
       .sec-act .cta { width: 100%; min-height: 52px; font-size: 16px; }
       .cards { grid-template-columns: 1fr; gap: 10px; }
+      .scope { grid-template-columns: 1fr; gap: 10px; }
+      .panel { padding: 18px; }
+      .panel h3 { font-size: 17.5px; margin-bottom: 12px; }
+      .panel ul { font-size: 15.5px; gap: 10px; }
+      .scope-note { margin-top: 16px; font-size: 15px; }
       .cards li { padding: 16px; grid-template-columns: 24px 1fr; gap: 2px 12px; }
       .cards svg, .cards .num { width: 24px; height: 24px; }
       .cards .num { font-size: 13px; }
@@ -242,8 +258,8 @@
     <div class="content hero-wr">
       <div class="hero-copy">
         <span class="eyebrow">For SMSF investors, Australia wide</span>
-        <h1><span class="hl">SMSF property loans</span> structured correctly from the start</h1>
-        <p class="lead">We arrange SMSF loans for residential and commercial property. Shane, Finance Story's founder, works out how much lenders will lend to your fund before you commit to a purchase.</p>
+        <h1><span class="hl">SMSF commercial property loans</span> structured correctly from the start</h1>
+        <p class="lead">We arrange SMSF loans for commercial property. Shane, Finance Story's founder, works out how much lenders will lend to your fund before you commit to a purchase.</p>
         <div class="acts">
           <div><a class="cta" href="#speak">Speak to an SMSF specialist</a></div>
           <div><a class="cta cta--ghost" href="tel:1300171854"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call 1300 171 854</a></div>
@@ -265,21 +281,80 @@
   <section class="sec">
     <div class="content">
       <div class="sec-head">
-        <span class="eyebrow">How we help SMSF investors</span>
-        <h2>What we work out for your fund before you buy</h2>
+        <span class="eyebrow">Commercial property only</span>
+        <h2>What your SMSF can buy</h2>
+      </div>
+      <div class="scope">
+        <div class="panel panel--yes">
+          <h3>Commercial property</h3>
+          <ul>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Office buildings</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Warehouses</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Retail premises</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Premises your own business leases from the fund</li>
+          </ul>
+        </div>
+        <div class="panel panel--no">
+          <h3>A home to live in</h3>
+          <ul>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#55656A"/><path d="M6.6 6.6l6.8 6.8M13.4 6.6l-6.8 6.8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>A house for you to live in</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#55656A"/><path d="M6.6 6.6l6.8 6.8M13.4 6.6l-6.8 6.8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>A home for your relatives to use</li>
+          </ul>
+        </div>
+      </div>
+      <p class="scope-note">Your SMSF can't buy a home for you or your relatives to live in. This page covers SMSF loans for commercial property only.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--soft">
+    <div class="content">
+      <div class="sec-head">
+        <span class="eyebrow">Borrowing capacity</span>
+        <h2>How much your SMSF can borrow</h2>
+        <p>It depends on the lender. We work out your maximum borrowing amount and your maximum purchase price before you start looking.</p>
       </div>
       <ul class="cards">
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Borrowing capacity</b><span class="txt">We work out how much each lender will lend, based on contributions, rent and investment income.</span></li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Liquidity requirements</b><span class="txt">Some lenders want cash or shares left in the fund after settlement, so we check first.</span></li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Maximum purchase price</b><span class="txt">You know your limit from the fund's cash and borrowing amount before you go looking.</span></li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Lender match</b><span class="txt">We compare banks, non-bank lenders and private options, on fit as well as advertised rates.</span></li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The documents</b><span class="txt">We check trust deeds, SMSF financials, tax returns, audits and bank statements before they go in.</span></li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Through to settlement</b><span class="txt">We work with your accountant and your solicitor or conveyancer until the loan settles.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>What lenders count</b><span class="txt">The income your fund receives through contributions, rent and other investments.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Cash left in the fund</b><span class="txt">Some lenders want cash or shares held after settlement, called a liquidity requirement.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Your maximum purchase price</b><span class="txt">Your fund's cash contribution plus the most a lender will lend to it.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="content">
+      <div class="sec-head">
+        <span class="eyebrow">Limited recourse borrowing arrangements</span>
+        <h2>How an SMSF commercial loan is set up</h2>
+      </div>
+      <ul class="cards">
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Limited recourse</b><span class="txt">The lender can claim only the property securing the loan, and none of the fund's other assets.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The bare trust</b><span class="txt">A bare trust holds the property until your fund repays the loan, then ownership passes to the fund.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The director's guarantee</b><span class="txt">Directors of the trustee company sign one, so the lender can pursue their personal assets for a shortfall.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The deposit</b><span class="txt">Your fund pays it from its own bank account, and the lender asks for proof of the cash.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The repayments</b><span class="txt">Rent, contributions and your fund's other investment income pay the loan.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The documents</b><span class="txt">Trust deeds, SMSF financials, tax returns, audits, the contract of sale and SMSF bank statements.</span></li>
       </ul>
     </div>
   </section>
 
   <section class="sec sec--soft">
+    <div class="content">
+      <div class="sec-head">
+        <span class="eyebrow">Lenders and rates</span>
+        <h2>Banks, non-bank lenders and private lenders compared</h2>
+        <p>We compare lenders on fit for your fund, as well as their advertised rates.</p>
+      </div>
+      <ul class="cards">
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Banks</b><span class="txt">Generally lower rates, with the strictest requirements and the longest turnaround times.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Non-bank lenders</b><span class="txt">Slightly higher rates, less strict requirements and much quicker turnaround times.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#F26550"/><path d="M5.5 10.4l3 3 6-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Private lenders</b><span class="txt">Higher rates and quick turnaround times. They suit experienced borrowers with complex needs.</span></li>
+      </ul>
+      <div class="sec-act"><a class="cta" href="#speak">Speak to an SMSF specialist</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
     <div class="content">
       <div class="sec-head">
         <span class="eyebrow">Why Finance Story</span>
@@ -295,7 +370,7 @@
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec sec--soft">
     <div class="content">
       <div class="sec-head">
         <span class="eyebrow">Client reviews</span>
@@ -314,20 +389,6 @@
         <span><button class="rev-btn" type="button" data-dir="-1" aria-label="Previous reviews"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
         <span class="rev-count" aria-live="polite">1 of 3</span>
         <span><button class="rev-btn" type="button" data-dir="1" aria-label="More reviews"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec sec--soft">
-    <div class="content">
-      <div class="sec-head">
-        <span class="eyebrow">What we arrange</span>
-        <h2>SMSF loans for 3 kinds of property</h2>
-      </div>
-      <div class="pcards">
-        <div class="pcard"><img src="images/card-residential.jpg" alt="Upper floors of a cream brick residential building" width="800" height="500"><h3>Residential investment</h3><p>An investment property held in your fund.</p></div>
-        <div class="pcard"><img src="images/card-commercial.jpg" alt="Row of modern commercial shopfronts under a blue sky" width="800" height="500"><h3>Commercial investment</h3><p>Office buildings, warehouses and retail premises.</p></div>
-        <div class="pcard"><img src="images/card-premises.jpg" alt="Business owner working at a laptop in his warehouse" width="800" height="500"><h3>Your business premises</h3><p>Your fund buys it and your business leases it.</p></div>
       </div>
     </div>
   </section>
@@ -353,37 +414,25 @@
   <section class="sec">
     <div class="content">
       <div class="sec-head">
-        <span class="eyebrow">Common questions</span>
-        <h2>What SMSF investors ask before they borrow</h2>
+        <span class="eyebrow">Before you call</span>
+        <h2>Questions before you call</h2>
       </div>
       <div class="faq">
         <details open>
-          <summary>How much can my SMSF borrow?</summary>
-          <p>It depends on the lender. Each one looks at the income your fund receives through contributions, rent and other investments, and lends on that. We work out your maximum borrowing amount and your maximum purchase price before you start looking.</p>
-        </details>
-        <details>
-          <summary>Do lenders need cash left in the fund after settlement?</summary>
-          <p>Some do. Some lenders require the fund to hold a percentage of the amount borrowed as cash or shares once the purchase is complete. It's called a liquidity requirement, and it can change how much you can borrow, so we check it first.</p>
-        </details>
-        <details>
-          <summary>Can my SMSF buy the premises my business runs from?</summary>
-          <p>Yes, when it's a commercial property. Your business is able to lease it from your SMSF. You and your relatives can't use a residential property your fund owns.</p>
-        </details>
-        <details>
-          <summary>What will the lender ask my fund for?</summary>
-          <p>Trust deeds, SMSF financials, tax returns and audits, the contract of sale and SMSF bank statements. The lender also asks for proof of the cash your fund contributes at settlement. We work with your accountant and solicitor so every document is up to date.</p>
+          <summary>Can my business lease the property from my fund?</summary>
+          <p>Yes. If you run your own business, your business is able to lease a commercial property from your SMSF. Your accountant or financial adviser can tell you what that means for your tax and for your fund.</p>
         </details>
         <details>
           <summary>My SMSF is new and the rollover isn't done. Can I still apply?</summary>
           <p>Yes. If your funds haven't rolled over yet, you can show that your current super fund holds the required amount. Lenders accept that as proof of the cash contribution.</p>
         </details>
         <details>
-          <summary>Is an SMSF loan limited recourse?</summary>
-          <p>Yes. SMSF loans are limited recourse borrowing arrangements, so the lender can claim only the property securing the loan and none of the fund's other assets. The directors of the trustee company also sign a director's guarantee, which lets the lender pursue their personal assets for any shortfall.</p>
+          <summary>Who advises on whether my fund should buy?</summary>
+          <p>Your accountant or financial adviser, and it's the first step. We arrange the lending and work with them on borrowing limits, repayments and the cash your fund keeps.</p>
         </details>
         <details>
-          <summary>Do you advise on whether my SMSF should buy property?</summary>
-          <p>No. That's a question for your accountant or financial adviser, and it's the first step. We arrange the lending and work with them on borrowing limits, repayments and the cash your fund keeps.</p>
+          <summary>What happens between application and settlement?</summary>
+          <p>Once we submit the loan, the process is the same as for any other loan. When the lender approves it, we work with your solicitor or conveyancer, the lender and the seller's solicitor so settlement happens on the date required.</p>
         </details>
       </div>
     </div>
@@ -393,7 +442,7 @@
     <div class="content">
       <div class="sec-head">
         <span class="eyebrow">Speak to an SMSF specialist</span>
-        <h2>Talk through your SMSF lending options</h2>
+        <h2>Talk through your SMSF commercial property loan</h2>
         <p>Tell us what your fund is looking to buy. We'll contact you within the next day.</p>
       </div>
       <div class="form-card">
@@ -407,8 +456,7 @@
           <label for="f-buying">What is your SMSF buying?</label>
           <select id="f-buying" name="buying">
             <option value="">What is your SMSF buying?</option>
-            <option>Residential investment property</option>
-            <option>Commercial investment property</option>
+            <option>A commercial investment property</option>
             <option>Premises for my business</option>
             <option>Not sure yet</option>
           </select>
@@ -416,7 +464,7 @@
         </form>
         <p class="form-note">No cost and no obligation.</p>
         <ul class="form-trust">
-          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Residential and commercial</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>40+ lenders</li>
           <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Director-led</li>
           <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="#F26550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Australia wide</li>
         </ul>
