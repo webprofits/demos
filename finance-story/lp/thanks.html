@@ -5,48 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Request Received | Finance Story</title>
-  <meta name="description" content="We have your request. We'll contact you within the next day to talk through your SMSF lending options.">
+  <meta name="description" content="We have your request. Select a time for your free 30 minute call about your SMSF commercial property loan.">
+  <link rel="preconnect" href="https://assets.calendly.com">
+  <link rel="preconnect" href="https://calendly.com">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Thank-you page: same header, type and cards as the landing page. */
-    :root { --teal: #01313A; --coral: #F26550; --coral-ink: #F0523D; --mint: #8ED3CA; --mint-soft: #E8F5F3; --ink: #1A1A1A; --muted: #55656A; --soft: #F3F7F7; --line: #DBE4E5; --gutter: 24px; }
+    /* Thank-you page: the headline, then the booking calendar. Same header, type and footer as the landing page. */
+    :root { --teal: #01313A; --coral: #F26550; --coral-ink: #F0523D; --mint: #8ED3CA; --ink: #1A1A1A; --muted: #55656A; --line: #DBE4E5; --gutter: 24px; }
     *, *::before, *::after { box-sizing: border-box; }
     body { color: var(--ink); background: #fff; font-size: 16px; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
     img { max-width: 100%; height: auto; display: block; object-fit: initial; }
     p { max-width: none; margin: 0; }
-    h1, h2 { font-family: var(--font-heading); margin: 0; }
+    h1 { font-family: var(--font-heading); margin: 0; }
     .content { max-width: 1180px; margin: 0 auto; padding: 0 var(--gutter); width: 100%; }
 
     .header { background: var(--teal); padding: 10px 0; }
     .header-wr { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .header-logo img { width: 150px; height: auto; }
     .phone { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .phone svg { width: 28px; height: 28px; flex: none; }
-    .phone b { display: block; color: #fff; font-size: 19px; font-weight: 700; line-height: 1.15; white-space: nowrap; }
+    .phone svg { width: 26px; height: 26px; flex: none; }
+    .phone b { display: block; color: #fff; font-size: 18px; font-weight: 700; line-height: 1.15; white-space: nowrap; }
     .phone small { display: block; color: var(--mint); font-size: 13px; line-height: 1.2; }
 
-    .thanks { flex: 1; padding: 48px 0 56px; }
-    .thanks-wr { max-width: 640px; }
-    .tick { width: 44px; height: 44px; margin: 0 0 16px; }
-    .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--coral-ink); margin: 0 0 8px; }
-    h1 { font-size: 40px; font-weight: 800; line-height: 1.1; letter-spacing: -.02em; color: var(--teal); margin: 0 0 16px; }
-    h1 span { color: var(--coral-ink); }
-    .lead { font-size: 18px; line-height: 1.5; text-wrap: pretty; }
-    .block { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 32px; }
-    .block h2 { font-size: 21px; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; color: var(--teal); margin: 0 0 12px; }
-    .steps { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
-    .steps li { background: var(--mint-soft); border-radius: 6px; padding: 14px 16px; display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; font-size: 15px; line-height: 1.45; }
-    .steps .num { width: 18px; height: 18px; margin-top: 2px; display: flex; align-items: center; justify-content: center; background: var(--coral); color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; line-height: 1; }
-    .sooner { font-size: 16px; }
-    .sooner a { color: var(--teal); font-weight: 700; }
-    .call { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; margin-top: 20px; padding: 0 28px; font-size: 17px; font-weight: 700; line-height: 1; color: #fff; background: var(--coral); border: 2px solid var(--coral); border-radius: 100px; text-decoration: none; box-shadow: 0 6px 14px rgba(242,101,80,.3); transition: background .3s ease, color .3s ease; }
-    .call:hover { background: #fff; color: var(--coral-ink); }
-    .call svg { width: 20px; height: 20px; flex: none; }
-    .back { display: inline-block; margin: 20px 0 0 20px; font-size: 15px; font-weight: 700; color: var(--teal); }
+    .thanks { padding: 56px 0 0; text-align: center; }
+    .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--coral-ink); margin: 0 0 12px; }
+    h1 { font-size: 42px; font-weight: 800; line-height: 1.1; letter-spacing: -.02em; color: var(--teal); margin: 0 0 16px; text-wrap: balance; }
+    .thanks-sub { font-size: 19px; line-height: 1.5; color: var(--muted); max-width: 640px; margin: 0 auto; }
 
-    .footer { background: var(--teal); padding: 20px 0; font-size: 13px; color: rgba(255,255,255,.82); }
+    .booking { flex: 1; padding: 12px 0 32px; }
+    .calendly-inline-widget { min-width: 320px; height: 700px; background: #fff; }
+    .booking-alt { text-align: center; margin-top: 16px; }
+    .booking-alt a { color: var(--teal); font-weight: 700; }
+
+    .after { padding: 0 0 56px; text-align: center; font-size: 16px; color: var(--muted); }
+    .after a { color: var(--teal); font-weight: 700; white-space: nowrap; }
+    .after .back { display: inline-block; margin-top: 12px; font-size: 15px; }
+
+    .footer { background: var(--teal); padding: 22px 0; font-size: 13px; color: rgba(255,255,255,.82); }
     .footer-wr { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .footer-left { display: flex; align-items: center; gap: 18px; }
     .footer-left img { width: 110px; height: auto; flex: none; }
@@ -60,23 +57,17 @@
       .phone svg { width: 20px; height: 20px; }
       .phone b { font-size: 15px; }
       .phone small { display: none; }
-      .thanks { padding: 24px 0 32px; }
-      .tick { width: 36px; height: 36px; margin-bottom: 12px; }
-      h1 { font-size: 29px; margin-bottom: 12px; }
-      .lead { font-size: 16px; line-height: 1.45; }
-      .block { margin-top: 26px; padding-top: 26px; }
-      .block h2 { font-size: 18px; }
-      .steps { gap: 8px; }
-      .steps li { padding: 12px 14px; font-size: 14.5px; }
-      .call { display: flex; width: 100%; min-height: 52px; font-size: 16px; }
-      .back { display: block; margin: 20px 0 0; text-align: center; }
+      .thanks { padding-top: 32px; }
+      h1 { font-size: 28px; margin-bottom: 12px; }
+      .thanks-sub { font-size: 16px; }
+      .booking { padding: 4px 0 24px; }
+      .booking .content { padding: 0; }
+      .calendly-inline-widget { height: 1040px; }
+      .after { padding-bottom: 40px; font-size: 15px; }
       .footer-wr { flex-direction: column; align-items: flex-start; gap: 10px; }
       .footer-left { align-items: flex-start; gap: 12px; }
       .footer-left img { width: 100px; }
       .footer-right { text-align: left; white-space: normal; }
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 28px; }
     }
   </style>
 </head>
@@ -93,28 +84,27 @@
 
   <div class="thanks">
     <div class="content">
-      <div class="thanks-wr">
-        <svg class="tick" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#F26550"/><path d="M12.5 22.8l6.4 6.4 12.8-13.4" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="eyebrow">Request received</span>
-        <h1><span>Thanks,</span> we have your request</h1>
-        <p class="lead">We'll contact you within the next day to talk through your SMSF lending options.</p>
+      <span class="eyebrow">Request received</span>
+      <h1>Thanks for getting in touch with us</h1>
+      <p class="thanks-sub">Please select a time for your free 30 minute call about your SMSF commercial property loan.</p>
+    </div>
+  </div>
 
-        <div class="block">
-          <span class="eyebrow">What happens next</span>
-          <h2>Your SMSF lending options in 3 steps</h2>
-          <ol class="steps">
-            <li><span class="num">1</span><span>We contact you within the next day.</span></li>
-            <li><span class="num">2</span><span>Shane works out how much lenders will lend to your fund.</span></li>
-            <li><span class="num">3</span><span>You hear your options in plain English before you commit.</span></li>
-          </ol>
-        </div>
+  <div class="booking">
+    <div class="content">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/shane_duffy/introduction-call-with-shane?primary_color=f26550&amp;text_color=1a1a1a&amp;background_color=ffffff"
+           aria-label="Book a free 30 minute call with Finance Story"></div>
+      <noscript>
+        <p class="booking-alt"><a href="https://calendly.com/shane_duffy/introduction-call-with-shane" target="_blank" rel="noopener">Book your free 30 minute call</a></p>
+      </noscript>
+    </div>
+  </div>
 
-        <div class="block">
-          <p class="sooner">Want to talk sooner? Call us, or <a href="https://calendly.com/shane_duffy/introduction-call-with-shane" target="_blank" rel="noopener">book a call with Shane online</a>.</p>
-          <a class="call" href="tel:1300171854"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call 1300 171 854</a>
-          <a class="back" href="index.html">Back to the page</a>
-        </div>
-      </div>
+  <div class="after">
+    <div class="content">
+      <p>Prefer to talk now? Call <a href="tel:1300171854">1300 171 854</a>.</p>
+      <a class="back" href="index.html">Back to the page</a>
     </div>
   </div>
 
@@ -127,5 +117,19 @@
       <p class="footer-right">© Copyright 2026 Finance Story Pty Ltd. <a href="https://www.financestory.com.au/privacy-policy">Privacy Policy</a> and <a href="https://www.financestory.com.au/terms-and-conditions">Terms &amp; Conditions</a></p>
     </div>
   </div>
+
+  <!-- Calendly inline widget: loaded after page load so it never blocks render -->
+  <script>
+  (function () {
+    function loadCalendly() {
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+    if (document.readyState === 'complete') loadCalendly();
+    else window.addEventListener('load', loadCalendly);
+  })();
+  </script>
 </body>
 </html>
