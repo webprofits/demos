@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Beginner Salsa Classes in Erina | Central Coast Salsa</title>
+  <meta name="description" content="Dance salsa with confidence in 5 weeks. 10 beginner classes in Erina with a 5-time Australian Salsa Champion. No partner needed. From $45 a week.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page-specific styles: Central Coast Salsa beginner classes. Brand: black, white, warm grey; square buttons. */
+    body { font-weight: 400; font-size: 1.02rem; }
+    h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; }
+    .label { font-weight: 500; letter-spacing: 0.12em; color: #6b6964; }
+    .section--dark .label { color: var(--accent); }
+    .section--dark p { color: rgba(255,255,255,.86); }
+    .btn { border-radius: 0; border: 2px solid var(--brand); font-family: var(--font-body); font-weight: 500; letter-spacing: .01em; cursor: pointer; }
+    .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .btn--light { background: #fff; color: #000; border-color: #fff; }
+    .btn--ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.75); }
+    .btn--outline { background: transparent; color: #000; border-color: #000; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+    .btn-row--centre { justify-content: center; }
+
+    /* Nav: solid black so the inverted logo sits flush */
+    .nav, .nav--scrolled { background: #000; box-shadow: none; padding: .5rem 0; }
+    .nav__logo img { height: 52px; width: 52px; display: block; }
+    .nav .btn { padding: .6rem 1.2rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; width: auto; }
+    .nav__right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav__phone { display: inline-flex; align-items: center; gap: .45rem; color: #fff; font-weight: 600; font-size: .95rem; text-decoration: none; white-space: nowrap; }
+    .nav__phone svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 1.600; }
+    section { padding: 4.5rem 0; }
+
+    /* Hero */
+    .hero { position: relative; min-height: 100vh; min-height: min(100svh, 860px); display: flex; align-items: flex-end; padding: 8.5rem 0 4rem; overflow: hidden; color: #fff; background: #0e0e0e; }
+    .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.72) 42%, rgba(0,0,0,.3) 80%), linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 40%); }
+    .hero__content { position: relative; z-index: 2; max-width: 760px; }
+    .hero .label { color: #d9d6d0; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(1.8rem, 3.4vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 19ch; margin-bottom: 1.1rem; }
+    .hero__sub { font-size: 1.125rem; line-height: 1.5; font-weight: 400; color: rgba(255,255,255,.94); max-width: 600px; margin-bottom: 1.4rem; text-wrap: pretty; }
+    .offer-badge { display: inline-flex; align-items: center; flex-wrap: wrap; gap: .75rem; padding: .7rem 1.1rem; margin-bottom: 1.6rem; background: rgba(168,166,161,.22); border: 1px solid rgba(255,255,255,.4); font-size: .95rem; }
+    .offer-badge b { background: #fff; color: #000; font-weight: 600; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .6rem; }
+    .hero__proof { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.5rem; margin-top: 1.6rem; font-size: .92rem; color: rgba(255,255,255,.88); }
+    .stars { display: inline-flex; gap: 2px; vertical-align: middle; }
+    .stars svg { width: 15px; height: 15px; fill: #fbbf24; }
+    .hero__proof .rating { display: inline-flex; align-items: center; gap: .5rem; color: #fff; font-weight: 500; }
+    .tick { display: inline-flex; align-items: center; gap: .4rem; }
+    .tick svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2.4; }
+
+    /* Stats bar */
+    .stats { background: var(--accent); color: #000; padding: 2.25rem 0; }
+    .stats__row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; }
+    .stats__num { font-family: var(--font-heading); font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.1; }
+    .stats__label { font-size: .9rem; }
+
+    /* Problem */
+    .lead { font-size: 1.15rem; color: var(--text); font-weight: 500; }
+    .pull { margin: 1.75rem 0 0; padding: 1.25rem 0 0 1.25rem; border-left: 3px solid var(--accent); }
+    .pull p { font-size: 1rem; font-style: italic; color: var(--text-light); max-width: none; }
+    .pull cite { display: block; margin-top: .6rem; font-style: normal; font-size: .85rem; color: var(--text-muted); }
+
+    /* Video facades */
+    .video { position: relative; display: block; width: 100%; padding: 0; border: 0; background: #000; cursor: pointer; overflow: hidden; text-decoration: none; }
+    .video--square { aspect-ratio: 1 / 1; }
+    .video--tall { aspect-ratio: 9 / 16; }
+    .video img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video__play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; border-radius: 50%; background: rgba(255,255,255,.95); display: flex; align-items: center; justify-content: center; transition: transform .2s ease; }
+    .video:hover .video__play { transform: translate(-50%, -50%) scale(1.08); }
+    .video__play svg { width: 26px; height: 26px; fill: #000; margin-left: 4px; }
+    .video__label { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .9rem; background: linear-gradient(0deg, rgba(0,0,0,.85), rgba(0,0,0,0)); color: #fff; font-size: .9rem; font-weight: 500; text-align: left; }
+    .video__caption { max-width: none; margin-top: .75rem; font-size: .92rem; font-weight: 500; color: var(--text-light); }
+    .video--tall .video__play { width: 54px; height: 54px; top: 42%; }
+    .video--tall .video__play svg { width: 20px; height: 20px; }
+
+    /* Mechanism cards */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .step-card .num { display: block; font-family: var(--font-heading); font-weight: 700; font-size: .85rem; letter-spacing: .12em; color: #8a8782; margin-bottom: .9rem; }
+    .step-card h3 { font-size: 1.15rem; }
+    .step-card p { font-size: .95rem; color: var(--text-light); }
+
+    /* Image break */
+    .image-break { position: relative; height: clamp(260px, 34vw, 460px); padding: 0; overflow: hidden; background: #0e0e0e; }
+    .image-break img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+    .image-break::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0,.1) 60%); }
+    .image-break p { position: absolute; z-index: 2; left: 0; right: 0; bottom: 2rem; max-width: none; text-align: center; color: #fff; font-family: var(--font-heading); font-weight: 600; font-size: clamp(1.2rem, 2.4vw, 1.7rem); padding: 0 1.25rem; }
+
+    /* Offer */
+    .includes { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    .includes li { display: flex; gap: .75rem; align-items: flex-start; padding: .55rem 0; border-bottom: 1px solid #ebe8e4; }
+    .includes svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: .2rem; stroke: #000; fill: none; stroke-width: 2.4; }
+    .offer__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .learn { font-size: .95rem; color: var(--text-light); max-width: none; }
+    .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 880px; margin: 3.5rem auto 0; }
+    .price { border: 2px solid #000; padding: 2rem; background: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .price h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 600; margin-bottom: .75rem; }
+    .price__amount { font-family: var(--font-heading); font-weight: 700; font-size: 2.8rem; line-height: 1; }
+    .price__amount small { font-size: 1rem; font-weight: 500; }
+    .price__was { font-size: .9rem; color: var(--text-muted); margin: .5rem 0 .9rem; }
+    .price__was s { color: #8a8782; }
+    .price p { font-size: .95rem; color: var(--text-light); margin-bottom: 1.4rem; }
+    .price .btn { margin-top: auto; }
+    .fine { text-align: center; max-width: none; margin-top: 1.25rem; font-size: .88rem; color: var(--text-muted); }
+
+    /* Guarantee */
+    .guarantee { text-align: center; }
+    .guarantee svg { display: block; width: 56px; height: 56px; stroke: var(--accent); fill: none; stroke-width: 1.600; margin: 0 auto 1.25rem; }
+    .guarantee h2 { max-width: none; }
+    .guarantee p { margin: 0 auto 1.75rem; max-width: 640px; font-size: 1.08rem; }
+
+    /* Teacher */
+    .teacher__img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .creds { list-style: none; padding: 0; margin: 1.25rem 0 0; }
+    .creds li { display: flex; gap: .75rem; padding: .45rem 0; }
+    .creds svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: .2rem; stroke: #000; fill: none; stroke-width: 2.4; }
+
+    /* Reviews */
+    .reviews__rating { display: flex; justify-content: center; align-items: center; gap: .6rem; margin-bottom: 2.5rem; font-weight: 500; }
+    .reviews__rating .stars svg { width: 20px; height: 20px; }
+    .review { display: flex; flex-direction: column; padding: 1.6rem; }
+    .review .stars { margin-bottom: .8rem; }
+    .review p { font-size: .95rem; color: var(--text); max-width: none; flex-grow: 1; }
+    .review__who { display: flex; align-items: center; gap: .7rem; margin-top: 1.1rem; font-size: .88rem; }
+    .review__who span { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #000; color: #fff; font-weight: 600; }
+    .review__who small { display: block; color: var(--text-muted); font-size: .8rem; }
+    .videos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; max-width: 980px; margin: 0 auto 2.75rem; }
+    .reviews h3 { text-align: center; margin: 3.5rem 0 1.5rem; }
+
+    /* Times */
+    .nights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; max-width: 920px; margin: 0 auto 2rem; }
+    .night { border: 2px solid #000; padding: 1.5rem 1rem; text-align: center; background: #fff; }
+    .night b { display: block; font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; }
+    .night span { font-size: 1.05rem; color: var(--text-light); }
+    .address { text-align: center; max-width: none; }
+    .address a { color: #000; font-weight: 500; }
+
+    /* Steps */
+    .steps { counter-reset: step; }
+    .steps .card { position: relative; padding-top: 3.6rem; }
+    .steps .card::before { counter-increment: step; content: counter(step); position: absolute; top: 1.4rem; left: 2rem; width: 34px; height: 34px; border-radius: 50%; background: #000; color: #fff; font-family: var(--font-heading); font-weight: 600; display: flex; align-items: center; justify-content: center; }
+    .steps p { font-size: .95rem; color: var(--text-light); }
+    .after-cta { text-align: center; max-width: none; margin-top: 1.1rem; font-size: .9rem; color: var(--text-muted); }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin: 0 auto; }
+    .faq__item { border-bottom: 1px solid #dcd8d3; }
+    .faq__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem 0; background: none; border: 0; text-align: left; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600; color: #000; cursor: pointer; }
+    .faq__icon { position: relative; width: 18px; height: 18px; flex-shrink: 0; }
+    .faq__icon::before, .faq__icon::after { content: ""; position: absolute; left: 0; top: 8px; width: 18px; height: 2px; background: #000; transition: transform .25s ease; }
+    .faq__icon::after { transform: rotate(90deg); }
+    .faq__item.open .faq__icon::after { transform: rotate(0deg); }
+    .faq__a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq__a p { max-width: none; padding: 0 2rem 1.3rem 0; color: var(--text-light); margin: 0; }
+
+    /* Final CTA + form */
+    .final { position: relative; overflow: hidden; }
+    .final__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .22; }
+    .final .container { position: relative; z-index: 2; }
+    .final .grid-2 { align-items: start; }
+    .benefits { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .benefits li { display: flex; gap: .75rem; padding: .4rem 0; color: #fff; }
+    .benefits svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: .2rem; stroke: var(--accent); fill: none; stroke-width: 2.4; }
+    .form-card { background: #fff; color: var(--text); padding: 2rem; border-radius: 8px; }
+    .form-card h3 { margin-bottom: .35rem; }
+    .form-card > p { color: var(--text-light); font-size: .95rem; margin-bottom: 1.25rem; }
+    .lead-form label { display: block; font-size: .85rem; font-weight: 500; margin-bottom: .3rem; color: var(--text); }
+    .lead-form input[type="text"], .lead-form input[type="email"], .lead-form input[type="tel"], .lead-form textarea { width: 100%; padding: .75rem .85rem; border: 1px solid #c8c9d3; border-radius: 8px; font: inherit; margin-bottom: 1rem; background: #fff; color: var(--text); }
+    .lead-form textarea { min-height: 110px; resize: vertical; }
+    .lead-form .btn { width: 100%; justify-content: center; }
+    .form__privacy { font-size: .8rem; color: var(--text-muted) !important; margin-top: .8rem; max-width: none; }
+
+    /* Footer */
+    .footer { background: #000; color: rgba(255,255,255,.8); padding: 2.5rem 0; font-size: .88rem; }
+    .footer .container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+    .footer img { height: 56px; width: 56px; }
+    .footer p { max-width: none; margin: 0; }
+    .footer a { color: #fff; }
+
+    /* Mobile sticky booking bar */
+    .book-bar { display: none; }
+
+    @media (max-width: 1000px) {
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      .videos { grid-template-columns: 1fr 1fr; max-width: 560px; }
+    }
+    @media (max-width: 900px) {
+      section { padding: 3.5rem 0; }
+      .prices { grid-template-columns: 1fr; max-width: 480px; }
+      .nights { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      body { font-size: 1rem; }
+      section { padding: 2.75rem 0; }
+      .nav__logo img { height: 44px; width: 44px; }
+      .nav .btn { display: none; }
+      .btn { min-height: 52px; font-size: 1rem; }
+      .hero { padding: 5.75rem 0 2rem; min-height: 0; }
+      .hero::after { background: linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.78) 55%, rgba(0,0,0,.62) 100%); }
+      .hero h1 { font-size: 1.8125rem; line-height: 1.1; max-width: none; margin-bottom: .75rem; }
+      .hero__sub { font-size: 1rem; line-height: 1.45; }
+      .hero .label { font-size: .6875rem; }
+      .offer-badge { font-size: .88rem; }
+      .hero__proof { gap: .45rem 1.1rem; font-size: .86rem; }
+      .hero__proof .rating { width: 100%; }
+      .stats { padding: 1.5rem 0; }
+      .stats__row { gap: .5rem; }
+      .stats__num { font-size: 1.2rem; white-space: nowrap; }
+      .stats__label { font-size: .78rem; }
+      .grid-4 { grid-template-columns: 1fr; }
+      .price { padding: 1.5rem; }
+      .form-card { padding: 1.25rem; }
+      .footer { padding: 1.5rem 0 calc(1.5rem + 76px); font-size: .8rem; }
+      .footer .container { flex-direction: column; align-items: flex-start; text-align: left; gap: .75rem; }
+      .footer img { height: 44px; width: 44px; }
+      .steps .card::before { left: 1.5rem; }
+      .book-bar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; gap: .5rem; padding: .6rem .75rem; background: #000; transform: translateY(110%); transition: transform .3s ease; }
+      .book-bar.show { transform: none; }
+      .book-bar .btn { flex: 1; width: auto; padding: .7rem .5rem; font-size: .95rem; }
+    }
+    @media (max-width: 480px) {
+      .container, .container--narrow { width: calc(100% - 36px); }
+      h2 { font-size: 1.5rem; line-height: 1.15; }
+      .lead { font-size: 1.05rem; }
+      .section__intro { font-size: 1rem; }
+      .card { padding: 1.25rem; }
+      .steps .card { padding-top: 3.4rem; }
+      .steps .card::before { left: 1.25rem; top: 1.1rem; }
+      .nights { gap: .75rem; }
+      .night { padding: 1.1rem .5rem; }
+      .videos { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo"><img src="images/logo-dark.png" alt="Central Coast Salsa" width="52" height="52"></a>
+      <div class="nav__right">
+        <a class="nav__phone" href="tel:0483912310"><svg viewBox="0 0 20 20"><path d="M6.200 2.500H3.800A1.300 1.300 0 0 0 2.500 3.900C2.900 11 9 17.100 16.100 17.500a1.300 1.300 0 0 0 1.400-1.300v-2.400l-3.300-1.300-1.700 1.700a8.500 8.500 0 0 1-4.700-4.700l1.700-1.700z"/></svg>0483 912 310</a>
+        <a href="#pricing" class="btn btn--light">Book my spot</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="hero" id="top">
+    <video class="hero__bg" autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="hero__content">
+        <span class="label">Beginner salsa classes in Erina, Central Coast</span>
+        <h1>Learn salsa in 5 weeks with a 5-time Australian Salsa Champion</h1>
+        <p class="hero__sub">The 5-week beginner program in Erina gives you 10 classes, guided practice and video lessons for $45 a week. You'll dance with confidence, or your money back.</p>
+        <div class="offer-badge"><b>Intro offer</b> $45 a week, normally $55. Couples $85, normally $95.</div>
+        <div class="btn-row">
+          <a href="https://momence.com/m/484494" class="btn btn--light">Book my spot - $45 a week <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h9M8 4l4 4-4 4"/></svg></a>
+          <a href="https://momence.com/m/642552" class="btn btn--ghost">Book as a couple - $85 a week</a>
+        </div>
+        <div class="hero__proof">
+          <span class="rating"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.8z"/></svg></span> 4.7 stars from 70 Google reviews</span>
+          <span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg> No partner needed</span>
+          <span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg> 4 nights to choose from</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats -->
+  <div class="stats">
+    <div class="container stats__row">
+      <div><div class="stats__num">4.7 stars</div><div class="stats__label">From 70 Google reviews</div></div>
+      <div><div class="stats__num">10 classes</div><div class="stats__label">In your 5-week program</div></div>
+      <div><div class="stats__num">16 years</div><div class="stats__label">Teaching beginners in Erina</div></div>
+    </div>
+  </div>
+
+  <!-- 3. Problem -->
+  <section id="why">
+    <div class="container grid-2">
+      <div class="fade-up">
+        <span class="label">If you think you can't dance</span>
+        <h2>Most of our beginners walk in saying they have two left feet</h2>
+        <p class="lead">That's how nearly everyone starts. By the end of the first class they're smiling and wondering why they waited.</p>
+        <p>You've thought about learning to dance for a while. Then you picture a room full of people who already know the steps, and you stay home.</p>
+        <p>Every person in our beginner class is new. Nobody is watching you. Everyone is counting their own steps and laughing about it.</p>
+        <blockquote class="pull">
+          <p>"Not only do you learn choreography, techniques and how to dance (coming from someone with two left feet!) but you develop good relationships in a comfortable, friendly environment where you always arrive with a smile plastered across your face!"</p>
+          <cite>Olivia Koltsis, Google review</cite>
+        </blockquote>
+      </div>
+      <div class="fade-up">
+        <a class="video video--square" href="https://vimeo.com/1157052559/01f2175aec" target="_blank" rel="noopener" data-vimeo="1157052559?h=01f2175aec" aria-label="Play the video: I can't dance, I have two left feet">
+          <img src="images/video-two-left-feet.jpg" alt="A beginner smiling as she learns her first salsa steps with a teacher in the Erina studio">
+          <span class="video__play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+        </a>
+        <p class="video__caption">Watch "I can't dance, I have two left feet"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Mechanism -->
+  <section class="section--alt section--centred" id="program">
+    <div class="container">
+      <span class="label">Why it works</span>
+      <h2>Two classes a week is why the steps stick</h2>
+      <p class="section__intro">A class once a week is easy to forget by the next one. Two classes a week, practice in between and a video to check at home is how the steps stay in your body.</p>
+      <div class="grid-4 stagger">
+        <div class="card step-card fade-up"><span class="num">01</span><h3>Two classes a week</h3><p>Come to two beginner classes each week for 5 weeks. Every class builds on the last one, so you always know what you're learning next.</p></div>
+        <div class="card step-card fade-up"><span class="num">02</span><h3>Guided practice sessions</h3><p>Practise what you learned with our instructors beside you, so we fix small mistakes before they become habits.</p></div>
+        <div class="card step-card fade-up"><span class="num">03</span><h3>Video breakdowns after class</h3><p>We film each week's steps and put them in your online portal. Go over them at home as many times as you like.</p></div>
+        <div class="card step-card fade-up"><span class="num">04</span><h3>Your first social event free</h3><p>Use your new steps on a real dance floor with the people from your class. Your first event is on us.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="image-break">
+    <img src="images/social.jpg" alt="A packed Central Coast Salsa social night with couples dancing and laughing" loading="lazy">
+    <p>Your first social event is free</p>
+  </div>
+
+  <!-- 5. Offer -->
+  <section class="section--centred" id="pricing">
+    <div class="container">
+      <span class="label">The 5-week beginner program</span>
+      <h2>Everything in your 5 weeks, from $45 a week</h2>
+      <p class="section__intro">One weekly price covers your classes, your practice and your videos.</p>
+      <div class="grid-2">
+        <div class="grid__image fade-up">
+          <img class="offer__img" src="images/class.jpg" alt="Beginners laughing as they practise partner steps with an instructor in the Erina studio" loading="lazy">
+        </div>
+        <div class="fade-up">
+          <ul class="includes">
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Two in-studio beginner classes a week, 10 across the program</span></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Guided practice sessions with our instructors</span></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Weekly video breakdowns in your online portal</span></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Our Spotify playlists to practise to</span></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>In-term workshops at no extra cost</span></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Your first social event free</span></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>The Confidence Guarantee - your success or your money back</span></li>
+          </ul>
+          <p class="learn"><strong>What you'll learn.</strong> Salsa and bachata from the first step, with merengue as your foundation. You'll learn the basic steps, Latin body movement and rhythm, turns, patterns and dips.</p>
+        </div>
+      </div>
+      <div class="prices">
+        <div class="price fade-up">
+          <h3>Individual</h3>
+          <div class="price__amount">$45 <small>a week</small></div>
+          <div class="price__was">Normally <s>$55</s></div>
+          <p>Come on your own - we rotate partners in class.</p>
+          <a href="https://momence.com/m/484494" class="btn">Book my spot - $45 a week</a>
+        </div>
+        <div class="price fade-up">
+          <h3>Couple</h3>
+          <div class="price__amount">$85 <small>a week for two</small></div>
+          <div class="price__was">Normally <s>$95</s></div>
+          <p>Dance together the entire class if you'd like to.</p>
+          <a href="https://momence.com/m/642552" class="btn">Book as a couple - $85 a week</a>
+        </div>
+      </div>
+      <p class="fine">You pay weekly through our booking system, by card or direct debit.</p>
+    </div>
+  </section>
+
+  <!-- 6. Guarantee -->
+  <section class="section--dark guarantee" id="guarantee">
+    <div class="container--narrow">
+      <svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-6.5 18-16 22C14.500 40 8 32 8 22V10z"/><path d="M16 24l6 6 10-12"/></svg>
+      <span class="label">The Confidence Guarantee</span>
+      <h2>Your success or your money back</h2>
+      <p>We've taught beginners in Erina for 16 years, and we know what 10 classes do for someone who's never danced. That's why our Confidence Guarantee covers the program. It's your success or your money back.</p>
+      <div class="btn-row btn-row--centre">
+        <a href="https://momence.com/m/484494" class="btn btn--light">Book my spot - $45 a week</a>
+        <a href="https://momence.com/m/642552" class="btn btn--ghost">Book as a couple - $85 a week</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Teacher -->
+  <section id="teacher">
+    <div class="container grid-2">
+      <div class="grid__image fade-up">
+        <img class="teacher__img" src="images/krin.jpg" alt="Krin Bajough, founder and lead instructor of Central Coast Salsa" loading="lazy">
+      </div>
+      <div class="fade-up">
+        <span class="label">Your teacher</span>
+        <h2>Krin Bajough is a 5-time Australian Salsa Champion who teaches absolute beginners</h2>
+        <p class="lead">Krin grew up on the Central Coast and opened his Erina studio 16 years ago. He's taught for over two decades, from first-timers to national champions.</p>
+        <ul class="creds">
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>5-time Australian Salsa Champion</span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Founded and directed the Australian Latin Dance Championships for 8 years</span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Selected to judge at the World Salsa Open in Puerto Rico</span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Represented Australia in two divisions at the World Salsa Open</span></li>
+        </ul>
+        <blockquote class="pull">
+          <p>"Krin and the team put so much heart into what they do. His extensive experience shows in the quality of teaching and fantastic socials with great energy to every event."</p>
+          <cite>Tatiana M, Google review</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Reviews -->
+  <section class="section--alt section--centred reviews" id="reviews">
+    <div class="container">
+      <span class="label">What beginners say</span>
+      <h2>Rated 4.7 stars from 70 Google reviews</h2>
+      <div class="reviews__rating"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><span>4.7 out of 5 on Google</span></div>
+      <p class="section__intro">These are people who started where you are now.</p>
+      <div class="grid-3">
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"It took me a few years to finally build up the courage to try dancing and I honestly wish I hadn't waited so long."</p><div class="review__who"><span>A</span><div>Anja Lehmann<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"Having never danced before, I found the beginner classes the perfect starting point for me and the online recordings are a wonderful addition. Krin brings great energy to every class, keeping them entertaining and engaging."</p><div class="review__who"><span>D</span><div>David Best<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"I had reservations before starting, as a single female joining Latin dance, but I needn't have worried. I have always felt safe and respected at the studio."</p><div class="review__who"><span>O</span><div>Olivia Davis<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"My partner and I recently participated in a 5 week Beginners Program with Central Coast Salsa and absolutely loved it."</p><div class="review__who"><span>R</span><div>Rhiana Trevenen-Smith<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"I have felt comfortable from the beginning, and I am attending by myself. I joined to get myself out of the house and meet new people. Mission accomplished!!"</p><div class="review__who"><span>L</span><div>Letitia<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"The vibe here is so welcoming and warm, even if you've never danced before, it instantly makes you feel like you belong."</p><div class="review__who"><span>E</span><div>Emma Jeffrey<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"My husband and I love our Salsa and Bachata classes. The instructors are professional and very approachable. The overall atmosphere is fun and convivial. Highly recommend it!"</p><div class="review__who"><span>P</span><div>Priscilla Proberts<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"In just 12 months I've gone from complete beginner to confidently social dancing Salsa and Bachata."</p><div class="review__who"><span>A</span><div>allan phillips<small>Google review</small></div></div></div>
+        <div class="card review fade-up"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.500l2.600 5.400 5.900.800-4.300 4.100 1 5.800L10 14.900l-5.200 2.700 1-5.800L1.500 7.700l5.900-.800z"/></svg></span><p>"You can teach an old dog new tricks.."</p><div class="review__who"><span>M</span><div>Mark Jones<small>Google review</small></div></div></div>
+      </div>
+      <h3>Hear it from our students</h3>
+      <div class="videos">
+        <a class="video video--tall" href="https://vimeo.com/1157048814" target="_blank" rel="noopener" data-vimeo="1157048814" aria-label="Play Anna's video"><img src="images/video-anna.jpg" alt="Anna, a Central Coast Salsa student, talking to camera" loading="lazy"><span class="video__play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="video__label">Anna</span></a>
+        <a class="video video--tall" href="https://vimeo.com/1156719377" target="_blank" rel="noopener" data-vimeo="1156719377" aria-label="Play Benny's video"><img src="images/video-benny.jpg" alt="Benny, a Central Coast Salsa student, talking to camera" loading="lazy"><span class="video__play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="video__label">Benny</span></a>
+        <a class="video video--tall" href="https://vimeo.com/1156719754" target="_blank" rel="noopener" data-vimeo="1156719754" aria-label="Play Libby's video"><img src="images/video-libby.jpg" alt="Libby, a Central Coast Salsa student, talking to camera" loading="lazy"><span class="video__play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="video__label">Libby</span></a>
+        <a class="video video--tall" href="https://vimeo.com/1156720090" target="_blank" rel="noopener" data-vimeo="1156720090" aria-label="Play Khan's video"><img src="images/video-khan.jpg" alt="Khan, a Central Coast Salsa student, talking to camera" loading="lazy"><span class="video__play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="video__label">Khan</span></a>
+      </div>
+      <div class="btn-row btn-row--centre">
+        <a href="https://momence.com/m/484494" class="btn">Book my spot - $45 a week</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Class times -->
+  <section class="section--centred" id="times">
+    <div class="container">
+      <span class="label">Erina class times</span>
+      <h2>4 nights a week in Erina. Pick the two that suit you.</h2>
+      <p class="section__intro">Your classes are at our own studio, above Nik &amp; Jane's Furniture and opposite Fountain Plaza.</p>
+      <div class="nights">
+        <div class="night fade-up"><b>Mondays</b><span>6:30pm</span></div>
+        <div class="night fade-up"><b>Tuesdays</b><span>6:30pm</span></div>
+        <div class="night fade-up"><b>Thursdays</b><span>7:30pm</span></div>
+        <div class="night fade-up"><b>Sundays</b><span>6:30pm</span></div>
+      </div>
+      <p class="address"><strong>Central Coast Salsa</strong>, 17C/8 Karalta Lane, Erina NSW 2250. <a href="https://share.google/vW5AuSpn1naqlH7ZT" target="_blank" rel="noopener">Open in Google Maps</a></p>
+    </div>
+  </section>
+
+  <!-- 10. How to start -->
+  <section class="section--alt section--centred" id="start">
+    <div class="container">
+      <span class="label">How to start</span>
+      <h2>Book in 60 seconds and we'll guide you from there</h2>
+      <div class="grid-3 steps stagger" style="margin-top:2.5rem;text-align:left;">
+        <div class="card fade-up"><h3>Pick your two nights</h3><p>Choose the two class nights that suit your week.</p></div>
+        <div class="card fade-up"><h3>Register to secure your spot</h3><p>Book online as an individual or as a couple.</p></div>
+        <div class="card fade-up"><h3>Turn up</h3><p>Wear something comfortable. We'll take it from your first step.</p></div>
+      </div>
+      <div class="btn-row btn-row--centre" style="margin-top:2.5rem;">
+        <a href="https://momence.com/m/484494" class="btn">Book my spot - $45 a week</a>
+        <a href="https://momence.com/m/642552" class="btn btn--outline">Book as a couple - $85 a week</a>
+      </div>
+      <p class="after-cta">No experience or partner needed, and all ages are welcome.</p>
+    </div>
+  </section>
+
+  <!-- 11. FAQ -->
+  <section class="section--centred" id="faq">
+    <div class="container">
+      <span class="label">Before your first class</span>
+      <h2>What Central Coast beginners ask before their first salsa class</h2>
+      <div class="faq" style="margin-top:2.5rem;text-align:left;">
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">Do I need a partner?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>You can come on your own. We rotate partners during the class, so you dance with lots of different people as well as our instructors and assistants. It's the fastest way to improve your lead and follow.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">I'm coming with my partner. Do we have to rotate?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>It's your choice. We recommend rotating, and if you'd like to stay together, let us know and stay put when the class rotates.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">I've never danced a step. Is this for me?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>Yes. The program is built for people who've never danced, and it progresses week by week from the first basic step.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">What will I learn in 5 weeks?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>Salsa and bachata, with merengue as the foundation. You'll learn the basic steps, Latin body movement and rhythm, turns, patterns and dips.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">How many classes can I come to each week?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>Up to two, on the nights you choose when you enrol. We believe you learn best from lots of practice, so the second class is part of your enrolment.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">What should I wear?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>Comfortable clothes you can move in. Most people wear activewear and shoes they can turn in easily. Running shoes have a lot of grip, so choose a smoother sole if you can. Many students dress up for class, and you're welcome to.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">Where is the studio?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>17C/8 Karalta Lane, Erina, above Nik &amp; Jane's Furniture and opposite Fountain Plaza.</p></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false">How do I pay?<span class="faq__icon"></span></button><div class="faq__a" role="region"><p>Online when you book. It's $45 a week for an individual or $85 a week for a couple, paid weekly by card or direct debit.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Final CTA + enquiry form -->
+  <section id="form" class="section--dark final">
+    <img class="final__bg" src="images/cta.jpg" alt="Two beginners laughing as they dance together at a Central Coast Salsa social night" loading="lazy">
+    <div class="container grid-2">
+      <div>
+        <span class="label">Join the next 5-week program</span>
+        <h2>Your first salsa class is one booking away</h2>
+        <p>Book online now, or ask us anything first.</p>
+        <ul class="benefits">
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>10 beginner classes in 5 weeks</span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Taught by a 5-time Australian Salsa Champion</span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Guided practice and video breakdowns</span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><span>Your success or your money back</span></li>
+        </ul>
+        <div class="btn-row">
+          <a href="https://momence.com/m/484494" class="btn btn--light">Book my spot - $45 a week</a>
+          <a href="https://momence.com/m/642552" class="btn btn--ghost">Book as a couple - $85 a week</a>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3>Have a question first?</h3>
+        <p>Ask it here and we'll come back to you.</p>
+        <form class="lead-form" action="thanks.html" method="get" onsubmit="event.preventDefault();window.location.href='thanks.html';">
+          <input type="hidden" name="_next" value="thanks.html">
+          <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content"><input type="hidden" name="gclid">
+          <label for="f-name">First name</label>
+          <input id="f-name" type="text" name="first_name" autocomplete="given-name" required>
+          <label for="f-email">Email</label>
+          <input id="f-email" type="email" name="email" autocomplete="email" required>
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" type="tel" name="phone" autocomplete="tel">
+          <label for="f-q">Your question</label>
+          <textarea id="f-q" name="message" required></textarea>
+          <button type="submit" class="btn">Ask my question</button>
+          <p class="form__privacy">We only use your details to answer your question.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <img src="images/logo-dark.png" alt="Central Coast Salsa" width="56" height="56">
+      <p>Central Coast Salsa, 17C/8 Karalta Lane, Erina NSW 2250<br>Call or text <a href="tel:0483912310">0483 912 310</a> &middot; <a href="mailto:dance@centralcoastsalsa.com.au">dance@centralcoastsalsa.com.au</a></p>
+      <p><a href="https://www.centralcoastsalsa.com.au/terms-conditions">Terms and conditions</a> &middot; <a href="https://www.centralcoastsalsa.com.au/">centralcoastsalsa.com.au</a></p>
+    </div>
+  </footer>
+
+  <div class="book-bar" id="bookBar">
+    <a href="#pricing" class="btn btn--light">Book my spot - from $45 a week</a>
+  </div>
+
+  <script>
+  (function () {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () { nav.classList.toggle('nav--scrolled', window.scrollY > 80); }, { passive: true });
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
+
+    document.querySelectorAll('.faq__q').forEach(function (q) {
+      q.addEventListener('click', function () {
+        var item = q.parentElement, open = item.classList.contains('open');
+        document.querySelectorAll('.faq__item.open').forEach(function (o) { o.classList.remove('open'); o.querySelector('.faq__a').style.maxHeight = null; o.querySelector('.faq__q').setAttribute('aria-expanded', 'false'); });
+        if (!open) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); var a = item.querySelector('.faq__a'); a.style.maxHeight = a.scrollHeight + 'px'; }
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (ev) {
+        var t = document.querySelector(a.getAttribute('href')); if (!t) return;
+        ev.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
+      });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(function (k) {
+      var f = document.querySelector('input[name="' + k + '"]'); if (f && params.get(k)) f.value = params.get(k);
+    });
+
+    /* Carry the ad's tracking tags through to the booking pages */
+    var keep = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'].filter(function (k) { return params.get(k); });
+    if (keep.length) {
+      document.querySelectorAll('a[href*="momence.com"]').forEach(function (a) {
+        var u = new URL(a.href); keep.forEach(function (k) { u.searchParams.set(k, params.get(k)); }); a.href = u.toString();
+      });
+    }
+
+    /* Videos load only when played */
+    var host = 'https://player.vimeo.com/video/';
+    document.querySelectorAll('.video[data-vimeo]').forEach(function (b) {
+      b.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        var id = b.getAttribute('data-vimeo'), f = document.createElement('iframe');
+        f.src = host + id + (id.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+        f.allow = 'autoplay; fullscreen; picture-in-picture'; f.allowFullscreen = true; f.title = b.getAttribute('aria-label');
+        b.innerHTML = ''; b.appendChild(f);
+      }, { once: true });
+    });
+
+    /* The hero video stays still for visitors who ask for reduced motion */
+    var hv = document.querySelector('video.hero__bg');
+    if (hv && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { hv.removeAttribute('autoplay'); hv.pause(); }
+
+    /* Mobile booking bar appears once the hero buttons scroll away */
+    var bar = document.getElementById('bookBar'), hero = document.getElementById('top'), end = document.getElementById('form');
+    function place() {
+      var past = hero.getBoundingClientRect().bottom < 0, atEnd = end.getBoundingClientRect().top < window.innerHeight * 0.6;
+      bar.classList.toggle('show', past && !atEnd);
+    }
+    window.addEventListener('scroll', place, { passive: true }); place();
+  })();
+  </script>
+</body>
+</html>
