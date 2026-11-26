@@ -1,0 +1,161 @@
+/* Landing page layer on top of the site's own stylesheet (chrome/site.css).
+   Only what the site's stylesheet has no component for, written in the site's own values:
+   ink #171819, grey #6f7275, rules at 16% ink, .56rem radius on tiles, rem sizes. */
+
+body.body-new { margin: 0; background: #171819; }
+main { display: block; position: relative; background: #fff; }
+.lp-ink { color: #171819; }
+
+/* Hero: the site's video hero with a lead and a button */
+.lp-hero .hero-bot { opacity: 1; }
+.lp-hero .hero-logo-white { display: block; height: auto; }
+.lp-hero h1.h-2-new.max-w-27-9 { max-width: 62rem; text-wrap: balance; }
+/* Review only: the draft bar sits above the site's fixed header */
+body.wp-in-site-draft .header_new { top: 2.3rem; }
+body.wp-in-site-draft .lp-hero { min-height: calc(100vh - 2.3rem); }
+body.wp-in-site-draft .lp-hero .container-5.height-100 { height: calc(100vh - 9.72rem - 2.3rem); }
+.lp-drag .slide-img { height: auto; }
+.lp-drag .slide-logo { width: auto; }
+.lp-hero-lead { max-width: 34rem; margin-top: 1.5rem; text-wrap: pretty; }
+.lp-hero .hero-bot-text { margin-top: 2.2rem; }
+.lp-btn-white { display: inline-flex; justify-content: center; align-items: center; height: 3.88889rem; padding: 0 2.6rem; background: #fff; color: #171819; font-size: 1.25rem; line-height: 130%; letter-spacing: -.02em; text-decoration: none; transition: background-color .3s, color .3s; }
+.lp-cell { display: inline-flex; }
+.lp-btn-white:hover { background: #171819; color: #fff; }
+
+/* The site's sliders, without its slider script: native scroll, drag handled in the page script */
+.lp-drag { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; cursor: grab; -webkit-overflow-scrolling: touch; }
+.lp-drag::-webkit-scrollbar { display: none; }
+.lp-drag.is-drag { cursor: grabbing; user-select: none; }
+.lp-drag .swiper-wrapper { gap: 1.11rem; width: max-content; padding-right: 2.78rem; }
+.lp-drag .swiper-slide { width: 48rem; }
+.lp-drag .swiper-slide.set-2 { width: auto; }
+.lp-drag img { -webkit-user-drag: none; user-select: none; }
+.swipper-pag { white-space: nowrap; }
+.lp-dash { display: inline-block; width: 1.1rem; height: 1px; margin: 0 .45rem; background: currentColor; vertical-align: middle; }
+
+/* Section rhythm: the site's own spacing, shortened where a block follows straight on */
+.heading-wrap.lp-hw { padding-bottom: 5.56rem; }
+.lp-statement { display: flex; align-items: flex-start; column-gap: 12.96rem; padding-top: 1.25rem; }
+
+/* (01) Measured results: the site's bordered cells as a 3 by 2 grid */
+.lp-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 5.56rem; border-top: 1px solid #17181929; }
+.lp-stats .lp-stat { width: auto; height: 17rem; border-top: 0; border-left: 0; }
+.lp-stats .lp-stat:nth-child(3n) { border-right: 0; }
+.lp-fig { position: relative; z-index: 2; white-space: nowrap; }
+.lp-stat .scroll-item-bot { right: 1.67rem; opacity: 1; }
+.lp-stat .scroll-item-bot .p-1 { font-size: 1.15rem; line-height: 130%; color: #171819; text-wrap: balance; }
+.lp-note { margin-top: 1.67rem; font-size: 1rem; }
+
+/* (02) In the control room: the product video beside the copy, the product screen under it */
+.lp-about .main-info-section-top { column-gap: 12.96rem; }
+.lp-video { flex: 1; display: flex; justify-content: flex-end; }
+.lp-second-video { position: relative; inset: auto; transform: none; width: 22rem; height: 27rem; overflow: hidden; cursor: default; }
+.lp-shot { margin: 6.67rem 0 0 14.9rem; padding: 1.11rem; background: #171819; border-radius: .56rem; }
+.lp-shot img { display: block; width: 100%; height: auto; aspect-ratio: 890 / 512; border-radius: .28rem; }
+
+/* Works with what you run: the site's pillars block with a longer headline and 6 rows */
+.lp-h0wrap { max-width: 78rem; }
+.h0.lp-h0 { font-size: 6.2rem; line-height: 94%; text-wrap: balance; }
+.list-pillars.lp-pillars { grid-row-gap: 5.56rem; margin-top: 9rem; }
+.lp-pillars .list-pillars-item { padding-bottom: 0; }
+
+/* (03) Case studies: tiles in the site's tile style */
+.lp-cases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.11rem; margin-top: 4.44rem; padding: 0 2.78rem 0 15.9rem; }
+.lp-case-img { overflow: hidden; border-radius: .56rem; background: #fff; }
+.lp-case-img img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.lp-case .slide-small-2 { margin-top: 1.11rem; max-width: none; }
+.lp-case-fact { margin-top: .4rem; font-size: 1.05rem; }
+
+/* (05) Questions: rows on the site's rules */
+.lp-faqs { margin: 5.56rem 0 0 14.9rem; border-bottom: 1px solid #17181929; }
+.lp-faq { border-top: 1px solid #17181929; }
+.lp-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 1.67rem 0; font-size: 1.75rem; letter-spacing: -.05em; cursor: pointer; list-style: none; }
+.lp-faq summary::-webkit-details-marker { display: none; }
+.lp-faq summary::after { content: "+"; flex: none; font-size: 2rem; line-height: 1; letter-spacing: 0; }
+.lp-faq[open] summary::after { content: "\2212"; }
+.lp-faq p { max-width: 46rem; padding: 0 0 2.2rem; }
+
+/* Book a demo: the site's contact form */
+.lp-book-h { max-width: 46rem; }
+.lp-book .info-form-wrap { margin-top: 3.33rem; }
+/* The form itself is the site's own block and stylesheet; only the button's hover is ours */
+.form-block-3 .black-btn_new { cursor: pointer; transition: background-color .3s; }
+.form-block-3 .black-btn_new:hover { background-color: #014bad; }
+.lp-form-note { margin-top: 1.11rem; font-size: 1rem; }
+.lp-company { margin-top: 2.5rem; max-width: 40rem; }
+
+@media screen and (max-width: 991px) {
+  .lp-drag .swiper-slide { width: 78vw; }
+  .lp-statement { column-gap: 0; }
+  .lp-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lp-stats .lp-stat:nth-child(3n) { border-right: 1px solid #17181929; }
+  .lp-stats .lp-stat:nth-child(2n) { border-right: 0; }
+  .lp-about .main-info-section-top { flex-wrap: wrap; row-gap: 3rem; }
+  .lp-video { flex: none; width: 100%; justify-content: flex-start; }
+  .lp-shot { margin-left: 0; }
+  .h0.lp-h0 { font-size: 4.2rem; }
+  .lp-cases { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-left: 2.78rem; }
+  .lp-faqs { margin-left: 0; }
+}
+@media screen and (max-width: 767px) {
+  .lp-hide-mob { display: none; }
+  /* On a phone the site's header carries a white background; over the video hero it stays clear, as on desktop */
+  .header_new { background-color: transparent; }
+  .lp-hero h1.h-2-new.max-w-27-9 { max-width: none; }
+  .lp-statement, .lp-note, .lp-faqs { padding-inline: 1rem; }
+  .lp-shot { margin-inline: 1rem; }
+  .lp-drag .h-2-new.slide-small { max-width: none; font-size: 1.3rem; }
+  .lp-drag .swiper-slide:not(.set-2) { padding: 1.75rem; row-gap: 1.75rem; }
+  .lp-hero-lead { margin-top: 1rem; font-size: 1rem; }
+  .lp-hero .hero-bot-text { margin-top: 1.5rem; }
+  .lp-hero .lp-cell { display: flex; width: 100%; }
+  .lp-btn-white { width: 100%; height: 3.4rem; font-size: 1rem; }
+  .heading-wrap.lp-hw { padding-bottom: 2.5rem; }
+  .lp-drag .swiper-wrapper { gap: .75rem; padding-right: 1.25rem; }
+  .lp-drag .swiper-slide { width: 84vw; }
+  .lp-stats { margin-top: 2.5rem; }
+  .lp-stats .lp-stat { height: 11.5rem; }
+  .lp-fig { font-size: 1.9rem; }
+  .lp-stat .scroll-item-top, .lp-stat .scroll-item-bot { inset-inline: 1rem; }
+  .lp-stat .scroll-item-top { top: 1rem; }
+  .lp-stat .scroll-item-bot { bottom: 1rem; right: 1rem; }
+  .lp-stat .p-1, .lp-stat .scroll-item-bot .p-1 { font-size: .9rem; }
+  .lp-note { font-size: .9rem; }
+  .lp-second-video { width: 100%; height: 14rem; }
+  .lp-shot { margin-top: 2.5rem; padding: .5rem; }
+  .h0.lp-h0 { font-size: 2.6rem; line-height: 100%; }
+  .list-pillars.lp-pillars { grid-row-gap: 2.5rem; margin-top: 3.5rem; }
+  .lp-cases { gap: .75rem; margin-top: 2rem; padding: 0 1.25rem; }
+  .lp-case-fact { font-size: .95rem; }
+  .lp-faqs { margin-top: 2.5rem; }
+  .lp-faq summary.h-2-new { font-size: 1.3rem; letter-spacing: -.03em; padding: 1.2rem 0; }
+  .lp-faq p { padding-bottom: 1.4rem; }
+}
+
+/* Phone pass (27 Nov 2026): the site's components, tightened for a phone.
+   The information comes before the form, the button is full width, and the gaps between blocks are shorter. */
+@media screen and (max-width: 767px) {
+  /* less air under each block: the site's desktop bottom padding is 11rem */
+  .section-9.lp-partners, .section-9.lp-cases-sec, .section-9.lp-quotes-sec { padding-bottom: 3.5rem; }
+  .section-9.lp-stats-sec, .section-9.lp-faq-sec, .section-9.lp-about, .section-9.lp-pillars-sec { padding-bottom: 4rem; }
+  .section-9.lp-book { padding-bottom: 4rem; }
+  /* logo tiles: 2 and a bit in view, so the row reads as a slider */
+  .lp-partners .slide-img-wrap { width: 9.5rem; height: 9.5rem; padding: 1.5rem; }
+  .lp-partners .slide-img { width: 100%; max-width: none; height: auto; }
+  .lp-partners .slide-img.set-1, .lp-partners .slide-img.set-1-1, .lp-partners .slide-img.set-2 { width: 72%; }
+  .lp-partners .slide-small-2 { font-size: .95rem; max-width: 9.5rem; }
+  .lp-partners .swipper-wrap { margin-top: 2rem; }
+  /* pillars: the title keeps clear of its letter */
+  .lp-pillars .h-2-new { font-size: 1.55rem; letter-spacing: -.06rem; }
+  .lp-pillars .list-pillars-item-left { column-gap: 1rem; }
+  /* the form: its 4 points first, as a 2 by 2, then the form, then a full-width button */
+  .lp-book .info-form-wrap { display: flex; flex-direction: column; row-gap: 2.5rem; margin-top: 2rem; }
+  .lp-book .info-form-left { order: -1; display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem 1rem; width: 100%; }
+  .lp-book .info-form-left-item { flex-direction: column; align-items: flex-start; row-gap: .75rem; max-width: none; }
+  .lp-book .info-form-left-item img { width: auto; height: 4.75rem; }
+  .lp-book .info-form-left-item .p-1 { font-size: .95rem; line-height: 130%; }
+  .lp-book .info-form-right { order: 0; width: 100%; }
+  .form-block-3 .black-btn_new { width: 100%; height: 3.4rem; }
+  .lp-form-note { font-size: .95rem; }
+  .lp-company { margin-top: 1.5rem; }
+}
